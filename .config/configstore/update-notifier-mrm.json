@@ -1,0 +1,10 @@
+{
+	"optOut": false,
+	"lastUpdateCheck": 1644779761128,
+	"update": {
+		"latest": "3.0.10",
+		"current": "2.6.2",
+		"type": "major",
+		"name": "mrm"
+	}
+}

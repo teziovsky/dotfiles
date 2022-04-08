@@ -1,0 +1,15 @@
+---
+"editor_view:add_cursor_above": ctrl-cmd-up
+"pane_group:resize_right": shift-cmd-right
+"editor_view:select_down": shift-cmd-N
+"input:toggle_workflows": shift-cmd-R
+"pane_group:resize_down": shift-cmd-down
+"editor:select_to_line_end": shift-cmd-E
+"editor_view:select_up": shift-cmd-P
+"editor_view:insert_newline": cmd-j
+"editor:select_to_line_start": shift-cmd-A
+"pane_group:resize_up": shift-cmd-up
+"editor_view:select_left": shift-cmd-B
+"editor_view:select_right": shift-cmd-F
+"editor_view:add_cursor_below": ctrl-cmd-down
+"pane_group:resize_left": shift-cmd-left

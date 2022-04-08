@@ -8,7 +8,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # ZSH
-# ---------------------------------------------
 ## Path to your oh-my-zsh installation.
 export ZSH="/Users/kuba/.oh-my-zsh"
 
@@ -31,13 +30,11 @@ fi
 ###-tns-completion-end-###
 
 # PATHS
-# ---------------------------------------------
 export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"
 
 # ALIASES
-# ---------------------------------------------
 ## UNALIAS
 unalias 1
 unalias 2
