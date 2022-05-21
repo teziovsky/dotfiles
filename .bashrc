@@ -1,7 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-export PATH="${PATH}:${HOME}/.local/bin"
-eval "$(fig init bash pre)"
-
 # System-wide .bashrc file for interactive bash(1) shells.
 if [ -z "$PS1" ]; then
     return
@@ -23,8 +19,4 @@ fi
 ###-tns-completion-end-###
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
-
-# Fig post block. Keep at the bottom of this file.
-eval "$(fig init bash post)"
-
 alias dotfiles='/usr/bin/git --git-dir=/Users/$HOME/.dotfiles/ --work-tree=/Users/$HOME'
