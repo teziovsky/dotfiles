@@ -31,7 +31,6 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"
 
 # ALIASES
-## UNALIAS
 unalias 1
 unalias 2
 unalias 3
@@ -43,7 +42,7 @@ unalias 8
 unalias 9
 unalias afind
 
-## Dotfiles
+## DOTFILESs
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 ## GIT
@@ -62,6 +61,10 @@ alias c="clear"
 alias e="exit"
 alias ws="webstorm ."
 alias cat="bat"
+
+## STRING FORMAT
+alias removespaces="find . -name '* *' -type d | rename 's/ /_/g'; find . -name '* *' -type f | rename 's/ /_/g'"
+alias removedashes="find . -name '*-*' -type d | rename 's/-/_/g'; find . -name '*-*' -type f | rename 's/-/_/g'"
 
 ## VOLTA
 export VOLTA_HOME="$HOME/.volta"
