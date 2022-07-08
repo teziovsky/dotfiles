@@ -1,7 +1,7 @@
 {
     "global": {
         "check_for_updates_on_startup": true,
-        "show_in_menu_bar": true,
+        "show_in_menu_bar": false,
         "show_profile_name_in_menu_bar": false
     },
     "profiles": [
@@ -134,7 +134,7 @@
                     },
                     "to": [
                         {
-                            "apple_vendor_keyboard_key_code": "spotlight"
+                            "apple_vendor_keyboard_key_code": "launchpad"
                         }
                     ]
                 },
@@ -144,7 +144,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "dictation"
+                            "apple_vendor_keyboard_key_code": "spotlight"
                         }
                     ]
                 },
@@ -154,7 +154,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "f6"
+                            "key_code": "vk_consumer_illumination_down"
                         }
                     ]
                 },
@@ -164,7 +164,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "rewind"
+                            "key_code": "vk_consumer_illumination_up"
                         }
                     ]
                 },
@@ -174,7 +174,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "play_or_pause"
+                            "consumer_key_code": "rewind"
                         }
                     ]
                 },
@@ -184,7 +184,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "fast_forward"
+                            "consumer_key_code": "play_or_pause"
                         }
                     ]
                 },
@@ -194,7 +194,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "mute"
+                            "consumer_key_code": "fast_forward"
                         }
                     ]
                 },
@@ -204,7 +204,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "volume_decrement"
+                            "consumer_key_code": "mute"
                         }
                     ]
                 },
@@ -214,7 +214,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "volume_increment"
+                            "consumer_key_code": "volume_decrement"
                         }
                     ]
                 }
