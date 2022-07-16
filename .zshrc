@@ -70,5 +70,3 @@ alias removedashes="find . -name '*-*' -type d | rename 's/-/_/g'; find . -name 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-## VPS
-alias sshmikrus="ssh teziovsky@srv10.mikr.us -p 10434"
