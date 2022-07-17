@@ -59,7 +59,8 @@ alias gpa='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.g
 ## GENERAL
 alias c="clear"
 alias e="exit"
-alias ws="webstorm ."
+alias wstorm="webstorm ."
+alias pstorm="phpstorm ."
 alias cat="bat"
 
 ## STRING FORMAT
