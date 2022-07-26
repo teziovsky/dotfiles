@@ -1,0 +1,2 @@
+[submodule "git@github.com:ohmyzsh/ohmyzsh.git"]
+	url = .oh-my-zsh

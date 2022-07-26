@@ -1,14 +1,48 @@
+[alias]
+	a = add
+	aa = add .
+	ac = commit -am
+	b = branch
+	bd = checkout develop
+	bm = checkout master
+	c = commit -m
+	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+	l = pull --recurse-submodules
+	p = push
+	s = status
+	ss = status -s
+
+	# View abbreviated SHA, description, and history graph of the latest 20 commits.
+	log20 = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+	# Interactive rebase with the given number of latest commits.
+	reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+	# Show the user email for the current repository.
+	whoami = config user.email
+
+	aliases = config --get-regexp alias
+	branches = branch --all
+	contributors = shortlog --summary --numbered
+	remotes = remote --verbose
+	standup = "log --author='$(git config user.name)' --since='yesterday.midnight' --oneline --pretty=format:'%s %Cblue(%ar)%Creset' --color"
+	tags = tag -l
+[color]
+	# Use colors in Git commands that are capable of colored output when
+	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+	ui = auto
 [user]
 	email = teziovsky@gmail.com
 	name = Jakub Soboczyński
 [core]
 	autocrlf = input
 	editor = nano
-[alias]
-	pushall = !git remote | xargs -L1 git push --all
 [init]
 	defaultBranch = main
-[color]
-	ui = true
+[push]
+	# https://git-scm.com/docs/git-config#git-config-pushdefault
+	default = simple
+	# Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
 [pull]
 	rebase = false
