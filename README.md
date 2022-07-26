@@ -1,13 +1,13 @@
 # Hey it's dotfiles! 🖖🏼
 
-> All my dotfiles with configurations.
+> All my dotfiles with configurations. Based on [this article!](https://fwuensche.medium.com/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b)
 
 ## Get started 🏁
 
 Clone the project
 
 ```bash
-  git clone --bare https://github.com/teziovsky/dotfiles.git $HOME/.dotfiles
+  git clone --bare git@github.com:teziovsky/dotfiles.git $HOME/.dotfiles
 ```
 
 Define the alias in the current shell scope
