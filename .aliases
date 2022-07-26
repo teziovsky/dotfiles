@@ -12,7 +12,7 @@ alias wstorm="webstorm"
 alias pstorm="phpstorm"
 alias clipboard="xclip -sel clip"
 alias week="date +%V"
-alias localip="ifconfig eno0"
+alias localip="curl https://ipinfo.io/json"
 
 # NPM
 alias ncupatch="ncu -ui --target patch"

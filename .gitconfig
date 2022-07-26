@@ -12,6 +12,9 @@
 	s = status
 	ss = status -s
 
+  # Undo last commit
+  undo = reset HEAD^
+
 	# View abbreviated SHA, description, and history graph of the latest 20 commits.
 	log20 = log --pretty=oneline -n 20 --graph --abbrev-commit
 
