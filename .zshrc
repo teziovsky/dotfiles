@@ -71,3 +71,5 @@ alias removedashes="find . -name '*-*' -type d | rename 's/-/_/g'; find . -name 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
+dotfiles config --local status.showUntrackedFiles no
+
