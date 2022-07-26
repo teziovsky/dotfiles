@@ -1,6 +1,6 @@
 # Hey it's dotfiles! 🖖🏼
 
-> All my dotfiles with configurations. Based on [this article!](https://fwuensche.medium.com/how-to-manage-your-dotfiles-with-git-f7aeed8adf8b)
+> All my dotfiles with configurations. Based on [this article!](https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/)
 
 ## Get started 🏁
 
@@ -14,6 +14,7 @@ Define the alias in the current shell scope
 
 ```bash
   alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+  dotfiles config --local status.showUntrackedFiles no
   source ~/.zshrc
 ```
 

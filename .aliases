@@ -1,0 +1,51 @@
+#UNALIAS
+unalias 1
+unalias 2
+unalias 3
+unalias 4
+unalias 5
+unalias 6
+unalias 7
+unalias 8
+unalias 9
+unalias afind
+
+# GREP
+alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
+alias fgrep="fegrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
+alias egrep="egrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
+
+# GENERAL
+alias c="clear"
+alias e="exit"
+alias g="git"
+alias cat="batcat"
+alias wstorm="webstorm"
+alias pstorm="phpstorm"
+alias clipboard="xclip -sel clip"
+alias week="date +%V"
+alias localip="ifconfig eno0"
+
+# NPM
+alias ncupatch="ncu -ui --target patch"
+alias ncuminor="ncu -ui --target minor"
+alias ncumajor="ncu -ui --target major"
+alias ncu="ncu -i"
+
+## GIT
+alias gsa='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; git -C "$repo" status -s | grep -q -v "^\$" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" status -s || true; done'
+alias gla='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" pull || true; done'
+alias gpa='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; git -C "$repo" status -b | grep "git push" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" push || true; done'
+
+# DOCKER
+alias dps="docker ps --format 'table {{.ID}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}\t{{.Names}}'"
+alias dpsa="docker ps -a --format 'table {{.ID}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}\t{{.Names}}'"
+alias dkill='docker rm $(docker stop $(docker ps -aq))'
+
+## STRING FORMAT
+alias removespaces="find . -name '* *' -type d | rename 's/ /_/g'; find . -name '* *' -type f | rename 's/ /_/g'"
+alias removedashes="find . -name '*-*' -type d | rename 's/-/_/g'; find . -name '*-*' -type f | rename 's/-/_/g'"
+
+## DOTFILES
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfilesupdate="dotfiles ac '`date +'%Y-%m-%d %H:%M:%S'`: update dotfiles' && dotfiles push"
