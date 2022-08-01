@@ -26,3 +26,7 @@ if [ -f $HOME/.tnsrc ]; then
     source $HOME/.tnsrc
 fi
 ###-tns-completion-end-###
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
