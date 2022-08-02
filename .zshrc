@@ -6,7 +6,7 @@ unset file;
 
 ## THEMES
 ### See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="gozilla"
+ZSH_THEME="alanpeabody"
 
 ## PLUGINS
 plugins=(zsh-syntax-highlighting zsh-autosuggestions brew)
