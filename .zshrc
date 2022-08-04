@@ -1,3 +1,8 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # CONFIG
 for file in ~/.{aliases,exports,functions}; do
         [ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -6,7 +11,7 @@ unset file;
 
 ## THEMES
 ### See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="alanpeabody"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ## PLUGINS
 plugins=(zsh-syntax-highlighting zsh-autosuggestions brew)
@@ -22,4 +27,5 @@ fi
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
-eval "$(starship init zsh)"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -39,7 +39,7 @@
 	name = Jakub Soboczyński
 [core]
 	autocrlf = input
-	editor = nano
+	editor = vim
 [init]
 	defaultBranch = main
 [push]
