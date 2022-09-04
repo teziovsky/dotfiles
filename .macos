@@ -1,4 +1,6 @@
 
+brew install --cask iina iterm2 keyboard-maestro messenger insomnia bluesnooze flux firefox dropbox discord cyberduck brave-browser bitwarden google-chrome
+
 mas install 1352778147 # Bitwarden
 mas install 1289197285 # MindNode
 mas install 937984704 # Amphetamine
