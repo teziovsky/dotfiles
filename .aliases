@@ -15,16 +15,26 @@ alias week="date +%V"
 alias localip="curl https://ipinfo.io/json"
 
 # NPM
+alias ni="npm install"
+alias nrs="npm run start -s --"
+alias nrd="npm run dev -s --"
+alias nrb="npm run build -s --"
+alias nrt="npm run test -s --"
+alias flush-npm="rm -rf node_modules package-lock.json && npm install"
 alias ncupatch="ncu -ui --target patch"
 alias ncuminor="ncu -ui --target minor"
 alias ncumajor="ncu -ui --target major"
 alias ncu="ncu -i"
 
 ## GIT
+alias git=hub
 alias gs="git status"
 alias gss="git status -s"
-alias gp="git push"
-alias gl="git pull"
+alias gp="git pull"
+alias gf="git fetch"
+alias gd="git diff"
+alias gpush="git push"
+alias gl="git log"
 alias gc="git commit"
 alias gcm="git commit -m"
 alias gsa='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; git -C "$repo" status -s | grep -q -v "^\$" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" status -s || true; done'

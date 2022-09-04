@@ -1,12 +1,163 @@
+#!/usr/bin/env bash
 
-brew install --cask iina iterm2 keyboard-maestro messenger insomnia bluesnooze flux firefox dropbox discord cyberduck brave-browser bitwarden google-chrome
+# File based on mathiasbynens and kentcdodds .macos files!
+# mathiasbynens — https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+# kentcdodds — https://github.com/kentcdodds/dotfiles/blob/master/.macos
 
-mas install 1352778147 # Bitwarden
-mas install 1289197285 # MindNode
+# Run without downloading:
+# curl https://raw.githubusercontent.com/teziovsky/dotfiles/main/.macos | bash
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+###############################################################################
+# Tezivosky's Customizations                                                  #
+###############################################################################
+
+echo "Hello $(whoami)! Let's get you set up."
+
+echo
+echo "Creating developer path"
+if [ ! -d ~/Developer ]; then
+    mkdir -p "${HOME}/Developer"
+else
+    echo
+    echo "${HOME}/Developer – already exists! 👌"
+fi
+
+echo
+echo "Installing homebrew"
+# install homebrew https://brew.sh
+if ! command -v brew &> /dev/null
+then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+    echo
+    echo "Brew – already exists! 👌"
+fi
+
+echo
+echo "Installing homebrew tools"
+# argon2: Password hashing library and CLI utility
+# bat: Clone of cat(1) with syntax highlighting and Git integration
+# bitwarden-cli: Secure and free password manager for all of your devices
+# boost: Collection of portable C++ source libraries
+# ca-certificates: Mozilla CA certificate store
+# curl: Get a file from an HTTP, HTTPS or FTP server
+# git: Distributed revision control system
+# git-delta: Syntax-highlighting pager for git and diff output
+# hub: Add GitHub support to git on the command-line
+# id3lib: ID3 tag manipulation
+# node: Platform built on V8 to build network applications
+# nvm: Manage multiple Node.js versions
+# php: General-purpose scripting language
+# pyenv: Python version management
+# python@3.10: Interpreted, interactive, object-oriented programming language
+# python@3.9: Interpreted, interactive, object-oriented programming language
+# rename: Perl-powered file rename script with many helpful built-ins
+# sqlite: Command-line interface for SQLite
+# tree: Display directories as trees (with optional color/HTML output)
+# webp: Image format providing lossless and lossy compression for web images
+# xz: General-purpose data compression with high compression ratio
+# zsh: UNIX shell (command interpreter)
+
+brew install argon2 bat bitwarden-cli boost ca-certificates curl git git-delta hub id3lib node nvm php pyenv python@3.10 python@3.9 rename sqlite tree webp xz zsh
+
+echo
+echo "Installing apps with brew --cask"
+
+brew install --cask google-chrome brave-browser firefox \
+iterm2 cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro \
+bitwarden slack jetbrains-toolbox insomnia visual-studio-code \
+qlcolorcode qlmarkdown quicklook-json qlstephen webpquicklook \
+rekordbox spotify iina discord dropbox flux notion
+
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code-nerd-font font-hack-nerd-font font-inconsolata font-roboto
+
+echo
+echo "node --version: $(node --version)"
+echo "npm --version: $(npm --version)"
+
+echo
+echo "Installing a few global npm packages"
+npm install --global @gridsome/cli @vue/cli degit gitignore md-generate npm-check-updates semantic-release-cli
+
+echo
+echo "Cloning dotfiles"
+if [ ! -d ~/.dotfiles ]; then
+    git clone --bare git@github.com:teziovsky/dotfiles.git $HOME/.dotfiles
+    alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+    dotfiles config --local status.showUntrackedFiles no
+    source ~/.zshrc
+
+    dotfiles checkout
+else
+    echo
+    echo "Dotfiles – already exists! 👌"
+fi
+
+
+
+
+
+
+# DO TEJ PORY MAM OGARNIĘTE!
+
+echo "Generating an RSA token for GitHub"
+mkdir -p ~/.ssh
+touch ~/.ssh/config
+ssh-keygen -t rsa -b 4096 -C "me+github@kentcdodds.com"
+echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
+eval "$(ssh-agent -s)"
+echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
+
+echo "making system modifications:"
+
+# Make Chrome Two finger swipe for back and forward
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool TRUE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+brew install --cask bitwarden
+
 mas install 937984704 # Amphetamine
-mas install 497799835 # Xcode
-mas install 457622435 # Yoink
+mas install 1352778147 # Bitwarden
 mas install 462054704 # Microsoft Word
 mas install 462058435 # Microsoft Excel
 mas install 462062816 # Microsoft PowerPoint
+mas install 1289197285 # MindNode
 mas install 425424353 # The Unarchiver
+mas install 497799835 # Xcode
+mas install 457622435 # Yoink
+
+echo install NTFS For Mac from https://www.seagate.com/pl/pl/support/software/paragon/
+
