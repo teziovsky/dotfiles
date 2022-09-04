@@ -54,6 +54,7 @@ echo "Installing homebrew tools"
 # git: Distributed revision control system
 # git-delta: Syntax-highlighting pager for git and diff output
 # hub: Add GitHub support to git on the command-line
+# htop: Improved top (interactive process viewer)
 # id3lib: ID3 tag manipulation
 # mas: Mac App Store command-line interface
 # node: Platform built on V8 to build network applications
@@ -63,13 +64,17 @@ echo "Installing homebrew tools"
 # python@3.10: Interpreted, interactive, object-oriented programming language
 # python@3.9: Interpreted, interactive, object-oriented programming language
 # rename: Perl-powered file rename script with many helpful built-ins
+# ssh-copy-id: Add a public key to a remote machine's authorized_keys file
 # sqlite: Command-line interface for SQLite
 # tree: Display directories as trees (with optional color/HTML output)
 # webp: Image format providing lossless and lossy compression for web images
 # xz: General-purpose data compression with high compression ratio
 # zsh: UNIX shell (command interpreter)
+# zsh-autosuggestions: Fish-like fast/unobtrusive autosuggestions for zsh
+# zsh-completions: Additional completion definitions for zsh
+# zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
 
-brew install argon2 bat bitwarden-cli boost ca-certificates curl git git-delta hub id3lib mas node nvm php pyenv python@3.10 python@3.9 rename sqlite tree webp xz zsh
+brew install argon2 bat bitwarden-cli boost ca-certificates curl git git-delta hub htop id3lib mas node nvm php pyenv python@3.10 python@3.9 rename ssh-copy-id sqlite tree webp xz zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting
 
 echo
 echo "Installing apps with brew --cask"
@@ -77,7 +82,8 @@ echo "Installing apps with brew --cask"
 brew install --cask google-chrome brave-browser firefox \
 iterm2 cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro \
 bitwarden slack jetbrains-toolbox insomnia visual-studio-code \
-qlcolorcode qlmarkdown quicklook-json qlstephen webpquicklook \
+qlcolorcode qlmarkdown qlprettypatch qlstephen qlimagesize \
+quicklook-csv quicklook-json webpquicklook \
 rekordbox spotify iina discord dropbox flux notion
 
 echo
@@ -794,6 +800,12 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # Don’t display the annoying prompt when quitting iTerm
 # defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+# Specify the preferences directory
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.config/iterm2"
+
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 ###############################################################################
 # Time Machine                                                                #
