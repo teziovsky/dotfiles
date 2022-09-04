@@ -7,13 +7,13 @@
 Clone the project
 
 ```bash
+  cd ~
   git clone --bare git@github.com:teziovsky/dotfiles.git $HOME/.dotfiles
 ```
 
 Define the alias in the current shell scope
 
 ```bash
-	cd ~
   alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
   dotfiles config --local status.showUntrackedFiles no
   source ~/.zshrc
