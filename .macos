@@ -105,7 +105,7 @@ mas install 457622435 # Yoink
 echo
 echo "Installing fonts with brew --cask"
 brew tap homebrew/cask-fonts
-brew install --cask font-fira-code-nerd-font font-hack-nerd-font font-inconsolata font-roboto
+brew install --cask font-fira-code-nerd-font font-hack-nerd-font font-inconsolata
 
 echo
 echo "node --version: $(node --version)"
@@ -271,8 +271,8 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+# defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+# defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
 # Follow the keyboard focus while zoomed in
 # defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
@@ -509,7 +509,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock persistent-apps -array
 
 # Show only open applications in the Dock
-defaults write com.apple.dock static-only -bool true
+defaults write com.apple.dock static-only -bool false
 
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool true
@@ -701,12 +701,12 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreade
 ###############################################################################
 
 # Hide Spotlight tray-icon (and subsequent helper)
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+# sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
 # Change indexing order and disable some search results
 # Yosemite-specific search results (remove them if you are using macOS 10.9 or older):
@@ -955,10 +955,13 @@ for app in "Activity Monitor" \
   "iCal"; do
   killall "${app}" &> /dev/null
 done
+
+echo
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 
+echo
 printf "TODO:\n\
 - Restart System\n\
-- Install NTFS For Mac from https://www.seagate.com/pl/pl/support/software/paragon/ \n\
+- Install NTFS For Mac fro https://www.seagate.com/pl/pl/support/software/paragon/ \n\
 - Login to literally everything \n\
 "
