@@ -74,7 +74,11 @@ echo "Installing homebrew tools"
 # zsh-completions: Additional completion definitions for zsh
 # zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
 
-brew install argon2 bat bitwarden-cli boost ca-certificates curl git git-delta hub htop id3lib mas node nvm php pyenv python@3.10 python@3.9 rename ssh-copy-id sqlite tree webp xz zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting
+brew install argon2 bat bitwarden-cli boost ca-certificates \
+curl git git-delta hub htop id3lib mas node nvm \
+php pyenv python@3.10 python@3.9 rename ssh-copy-id \
+sqlite tree webp xz zsh zsh-autosuggestions \
+zsh-completions zsh-syntax-highlighting
 
 echo
 echo "Installing apps with brew --cask"
