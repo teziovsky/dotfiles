@@ -40,6 +40,18 @@
 [core]
 	autocrlf = input
 	editor = vim
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[add.interactive]
+	useBuiltin = false
+[delta]
+	navigate = true
+	light = false
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
 [init]
 	defaultBranch = main
 [push]

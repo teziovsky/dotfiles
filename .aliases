@@ -21,6 +21,12 @@ alias ncumajor="ncu -ui --target major"
 alias ncu="ncu -i"
 
 ## GIT
+alias gs="git status"
+alias gss="git status -s"
+alias gp="git push"
+alias gl="git pull"
+alias gc="git commit"
+alias gcm="git commit -m"
 alias gsa='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; git -C "$repo" status -s | grep -q -v "^\$" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" status -s || true; done'
 alias gla='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" pull || true; done'
 alias gpa='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; git -C "$repo" status -b | grep "git push" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" push || true; done'
