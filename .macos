@@ -86,7 +86,13 @@ echo "Installing apps with brew --cask"
 brew install --cask google-chrome brave-browser firefox \
 iterm2 cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro \
 bitwarden slack jetbrains-toolbox insomnia visual-studio-code \
+qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize
 rekordbox spotify iina discord dropbox flux notion
+
+echo
+echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
+xattr -r ~/Library/QuickLook
+xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
 echo
 echo "Installing apps from App Store"
@@ -242,6 +248,9 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
+
+# Disable mouse acceleration
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
