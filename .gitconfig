@@ -5,19 +5,19 @@
 	b = branch
 	bd = checkout develop
 	bm = checkout master
-    c = commit
-    cm = commit -m
-    d = diff
-    f = fetch
+	c = commit
+	cm = commit -m
+	d = diff
+	f = fetch
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 	l = log
-    p = pull --recurse-submodules
+	p = pull --recurse-submodules
 	push = push
 	s = status
 	ss = status -s
 
-    # Undo last commit
-    undo = reset HEAD^
+	# Undo last commit
+	undo = reset HEAD^
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits.
 	log20 = log --pretty=oneline -n 20 --graph --abbrev-commit
