@@ -61,8 +61,7 @@ echo "Installing homebrew tools"
 # nvm: Manage multiple Node.js versions
 # php: General-purpose scripting language
 # pyenv: Python version management
-# python@3.10: Interpreted, interactive, object-oriented programming language
-# python@3.9: Interpreted, interactive, object-oriented programming language
+# python3: Interpreted, interactive, object-oriented programming language
 # rename: Perl-powered file rename script with many helpful built-ins
 # ssh-copy-id: Add a public key to a remote machine's authorized_keys file
 # sqlite: Command-line interface for SQLite
@@ -76,7 +75,7 @@ echo "Installing homebrew tools"
 
 brew install argon2 bat bitwarden-cli boost ca-certificates \
 curl git git-delta hub htop id3lib mas node nvm \
-php pyenv python@3.10 python@3.9 rename ssh-copy-id \
+php pyenv python3 rename ssh-copy-id \
 sqlite tree webp xz zsh zsh-autosuggestions \
 zsh-completions zsh-syntax-highlighting
 
