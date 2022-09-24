@@ -83,7 +83,7 @@ echo
 echo "Installing apps with brew --cask"
 
 brew install --cask google-chrome brave-browser firefox \
-iterm2 cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro \
+iterm2 cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro cron \
 docker bitwarden slack jetbrains-toolbox insomnia visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
 rekordbox spotify iina discord dropbox flux notion
@@ -113,7 +113,7 @@ echo "npm --version: $(npm --version)"
 
 echo
 echo "Installing a few global npm packages"
-npm install --global @gridsome/cli @vue/cli degit gitignore md-generate npm-check-updates semantic-release-cli
+npm install --global @gridsome/cli @vue/cli degit gitignore md-generate npm-check-updates npm-quick-run semantic-release-cli
 
 echo
 echo "Cloning dotfiles"
