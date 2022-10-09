@@ -134,6 +134,7 @@ export const tags = {
   'chevron-left': ['arrow-left', 'caret-left'],
   'chevron-right': ['arrow-right', 'caret-right'],
   'chevron-up': ['arrow-up', 'caret-up'],
+  'chevron-up-down': ['select', 'option'],
   'circle-stack': ['collection', 'database', 'storage'],
   clipboard: ['copy', 'cut', 'paste'],
   'clipboard-document': ['copy', 'cut', 'paste'],

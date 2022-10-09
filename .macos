@@ -82,11 +82,11 @@ zsh-completions zsh-syntax-highlighting
 echo
 echo "Installing apps with brew --cask"
 
-brew install --cask google-chrome firefox-developer-edition \
+brew install --cask google-chrome firefox-developer-edition vivaldi \
 iterm2 cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro cron \
 docker bitwarden slack jetbrains-toolbox insomnia visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
-rekordbox spotify iina discord dropbox flux notion
+rekordbox spotify iina discord dropbox flux notion messenger
 
 echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
@@ -702,6 +702,9 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreade
 ###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
+
+echo "Disabling Spotlight indexing"
+sudo mdutil -a -i off
 
 # Hide Spotlight tray-icon (and subsequent helper)
 # sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
