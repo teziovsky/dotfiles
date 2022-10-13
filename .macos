@@ -82,7 +82,7 @@ zsh-completions zsh-syntax-highlighting
 echo
 echo "Installing apps with brew --cask"
 
-brew install --cask google-chrome firefox-developer-edition vivaldi \
+brew install --cask google-chrome firefox-developer-edition brave-browser \
 iterm2 cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro cron \
 docker bitwarden slack jetbrains-toolbox insomnia visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
@@ -92,6 +92,10 @@ echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
 xattr -r ~/Library/QuickLook
 xattr -d -r com.apple.quarantine ~/Library/QuickLook
+
+echo
+echo "Set Brave Browser as default browser"
+open -a "Brave Browser" --args --make-default-browser
 
 echo
 echo "Installing apps from App Store"
