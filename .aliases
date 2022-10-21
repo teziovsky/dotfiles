@@ -20,14 +20,14 @@ alias nrs="npm run start -s --"
 alias nrd="npm run dev -s --"
 alias nrb="npm run build -s --"
 alias nrt="npm run test -s --"
-alias flush-npm="rm -rf node_modules package-lock.json && npm install"
+alias flush-npm="rm -rf node_modules package-lock.json pnpm-lock.yaml && npm install"
 alias ncupatch="ncu -ui --target patch"
 alias ncuminor="ncu -ui --target minor"
 alias ncumajor="ncu -ui --target major"
-alias ncu="ncu -i"
 
 ## GIT
 alias git=hub
+alias ga="git add ."
 alias gs="git status"
 alias gss="git status -s"
 alias gp="git pull"
@@ -35,8 +35,8 @@ alias gf="git fetch"
 alias gd="git diff"
 alias gpush="git push"
 alias gl="git log"
-alias gc="git commit"
-alias gcm="git commit -m"
+alias gc="git commit -m"
+alias gac="git commit -am"
 alias gsa='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; git -C "$repo" status -s | grep -q -v "^\$" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" status -s || true; done'
 alias gla='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" pull || true; done'
 alias gpa='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; git -C "$repo" status -b | grep "git push" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" push || true; done'
@@ -53,3 +53,4 @@ alias removedashes="find . -name '*-*' -type d | rename 's/-/_/g'; find . -name 
 ## DOTFILES
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotfilesupdate="dotfiles ac '`date +'%Y-%m-%d %H:%M:%S'`: update dotfiles' && dotfiles push"
+

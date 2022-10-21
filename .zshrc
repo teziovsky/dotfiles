@@ -52,3 +52,8 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+# pnpm
+export PNPM_HOME="/Users/kuba/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

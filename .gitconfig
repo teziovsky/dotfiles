@@ -1,6 +1,5 @@
 [alias]
-	a = add
-	aa = add .
+	a = add .
 	ac = commit -am
 	b = branch
 	bd = checkout develop
