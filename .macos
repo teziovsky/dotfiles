@@ -66,6 +66,7 @@ echo "Installing homebrew tools"
 # rename: Perl-powered file rename script with many helpful built-ins
 # ssh-copy-id: Add a public key to a remote machine's authorized_keys file
 # sqlite: Command-line interface for SQLite
+# mysql-client: Command-line interface for MySQL
 # tree: Display directories as trees (with optional color/HTML output)
 # webp: Image format providing lossless and lossy compression for web images
 # xz: General-purpose data compression with high compression ratio
@@ -77,7 +78,7 @@ echo "Installing homebrew tools"
 brew install argon2 bat bitwarden-cli boost ca-certificates \
 curl git git-delta gh hub htop id3lib mas node nvm \
 php pyenv python3 rename ssh-copy-id \
-sqlite tree webp xz zsh zsh-autosuggestions \
+sqlite mysql-client tree webp xz zsh zsh-autosuggestions \
 zsh-completions zsh-syntax-highlighting
 
 echo
@@ -85,7 +86,7 @@ echo "Installing apps with brew --cask"
 
 brew install --cask google-chrome firefox-developer-edition brave-browser \
 iterm2 hyperkey cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro cron \
-docker bitwarden slack jetbrains-toolbox insomnia visual-studio-code \
+docker bitwarden slack jetbrains-toolbox insomnia tableplus visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
 rekordbox iina discord dropbox flux notion messenger
 
