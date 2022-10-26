@@ -112,7 +112,8 @@ mas install 457622435 # Yoink
 echo
 echo "Installing fonts with brew --cask"
 brew tap homebrew/cask-fonts
-brew install --cask font-fira-code-nerd-font font-hack-nerd-font font-inconsolata font-anonymous-pro
+brew install --cask font-fira-code-nerd-font font-hack-nerd-font font-monoid-nerd-font font-ubuntu-mono-nerd-font \
+font-inconsolata font-anonymous-pro font-monoid
 
 echo
 echo "node --version: $(node --version)"
