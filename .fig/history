@@ -2885,3 +2885,21 @@
   session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
   cwd: /Users/kuba
   time: 1667055931
+- command: dotfilesupdate
+  exit_code: 1
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667055942
+- command: dotfiles pull
+  exit_code: 0
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667055948
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667055954
