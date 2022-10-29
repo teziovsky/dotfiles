@@ -1,26 +1,0 @@
-set +m +b +o history
-
-unset HISTFILE
-
-export PATH='/Users/kuba/Library/pnpm:/Users/kuba/.nvm/versions/node/v18.9.0/bin:/usr/local/bin:/usr/local/opt/ruby@2.7/bin:/usr/local/sbin:/usr/local/opt/ruby@2.7/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/kuba/.cargo/bin:/Users/kuba/.fig/bin:/Users/kuba/.local/bin:/Applications/VMware Fusion.app/Contents/Public:/Applications/VMware Fusion.app/Contents/Public'
-
-export HOME=/Users/kuba
-
-
-
-The default interactive shell is now zsh.
-To update your account to use zsh, please run `chsh -s /bin/zsh`.
-For more details, please visit https://support.apple.com/kb/HT208050.
-[?1034hbash-3.2$ set +m +b +o history
-bash-3.2$ 
-bash-3.2$ unset HISTFILE
-bash-3.2$ 
-bash-3.2$ export PATH='/Users/kuba/Library/pnpm:/Users/kuba/.nvm/versions/node/v 18.9.0/bin:/usr/local/bin:/usr/local/opt/ruby@2.7/bin:/usr/local/sbin:/usr/local /opt/ruby@2.7/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/loc al/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications /VMware Fusion.app/Contents/Public:/Library/Apple/usr/bin:/Library/Frameworks/Mo no.framework/Versions/Current/Commands:/Users/kuba/.cargo/bin:/Users/kuba/.fig/b in:/Users/kuba/.local/bin:/Applications/VMware Fusion.app/Contents/Public:/Appli cations/VMware Fusion.app/Contents/Public'
-bash-3.2$ 
-bash-3.2$ export HOME=/Users/kuba
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ { ( which fish ) 1> /var/folders/q7/12b48r513ls0d5sdqk0dlbd40000gn/T/4 5.stdout 2> /var/folders/q7/12b48r513ls0d5sdqk0dlbd40000gn/T/45.stderr; '/Applic ations/Fig.app/Contents/MacOS/fig-darwin-universal' _ callback 45 /var/folders/q 7/12b48r513ls0d5sdqk0dlbd40000gn/T/45 $? ; } &
-[1] 93842
-bash-3.2$ 
-bash-3.2$ 
