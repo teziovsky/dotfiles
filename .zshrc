@@ -1,6 +1,5 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # CONFIG
 for file in ~/.{aliases,exports,functions}; do
         [ -r "$file" ] && [ -f "$file" ] && source "$file";
