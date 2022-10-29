@@ -1,1 +1,2 @@
 [2m2022-10-29T07:33:10.758791Z[0m [31mERROR[0m [2mfigterm::ipc[0m[2m:[0m [2m299:[0m Failed to send message [3merr[0m[2m=[0mBroken pipe (os error 32)
+[2m2022-10-29T14:42:05.580093Z[0m [31mERROR[0m [2mfigterm::ipc[0m[2m:[0m [2m299:[0m Failed to send message [3merr[0m[2m=[0mBroken pipe (os error 32)

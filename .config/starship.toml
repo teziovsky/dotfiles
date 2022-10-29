@@ -1,14 +1,76 @@
-# Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+# Replace the "❯" symbol in the prompt with "❯❯"
+[character]
+format = "[➜](bold green) "
+success_symbol = "[➜](bold green) "
+error_symbol = "[X](bold red) "
 
-# Inserts a blank line between shell prompts
-add_newline = true
+[username]
+disabled = true
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character] # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+[hostname]
+ssh_only = true
+format =  "[$hostname](bold red) [❯](bold green) "
 
-# Disable the package module, hiding it from the prompt completely
-[package]
+# Directory setttings
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncate_to_repo = true
+
+[c]
+symbol = " "
+
+[git_status]
+conflicted = "!$c[!]($style) "
+ahead = "!$c[↑]($style) "
+behind = "!$c[↓]($style) "
+diverged = "!$c[↕]($style) "
+untracked = "!$c[?]($style) "
+stashed = "!$c[$]($style) "
+modified = "!$count($style) "
+staged = "!$c[+]($style) "
+renamed = "!$c[»]($style) "
+deleted = "!$c[✘]($style) "
+
+[golang]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
 disabled = false
+symbol = " "
 
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+format = "[$symbol($version )]($style) "
+symbol = " "
+
+[package]
+format = "[$symbol$version]($style) "
+symbol = " "
+disabled = false
+display_private = true
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "ﳒ "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "

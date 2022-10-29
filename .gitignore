@@ -1,0 +1,4 @@
+.config/github-copilot/hosts.json
+.config/planetscale/access-token
+.config/gh/hosts.yml
+.npmrc

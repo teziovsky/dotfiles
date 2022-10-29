@@ -62,3 +62,13 @@
 [2m2022-10-29T09:16:51.243648Z[0m [31mERROR[0m [2mfig_cli::daemon[0m[2m:[0m [2m145:[0m Error while processing websocket message: Websock next error: Io(Os { code: 60, kind: TimedOut, message: "Operation timed out" })
 [2m2022-10-29T13:22:00.828235Z[0m [31mERROR[0m [2mfig_cli::daemon::websocket[0m[2m:[0m [2m280:[0m Websock next error: Io(Os { code: 60, kind: TimedOut, message: "Operation timed out" })
 [2m2022-10-29T13:22:00.828314Z[0m [31mERROR[0m [2mfig_cli::daemon[0m[2m:[0m [2m145:[0m Error while processing websocket message: Websock next error: Io(Os { code: 60, kind: TimedOut, message: "Operation timed out" })
+[2m2022-10-29T14:41:55.381106Z[0m [31mERROR[0m [2mfig_ipc::unix_socket[0m[2m:[0m [2m21:[0m Failed to connect [3merr[0m[2m=[0mConnection refused (os error 61) [3msocket[0m[2m=[0m"/var/tmp/fig/kuba/fig.socket"
+[2m2022-10-29T14:41:55.381168Z[0m [31mERROR[0m [2mfig_cli::daemon::settings_watcher[0m[2m:[0m [2m153:[0m Failed to send hook: Connection refused (os error 61)
+[2m2022-10-29T14:41:55.381214Z[0m [31mERROR[0m [2mfig_ipc::unix_socket[0m[2m:[0m [2m21:[0m Failed to connect [3merr[0m[2m=[0mConnection refused (os error 61) [3msocket[0m[2m=[0m"/var/tmp/fig/kuba/fig.socket"
+[2m2022-10-29T14:41:55.381221Z[0m [31mERROR[0m [2mfig_cli::daemon::settings_watcher[0m[2m:[0m [2m153:[0m Failed to send hook: Connection refused (os error 61)
+[2m2022-10-29T14:41:55.381251Z[0m [31mERROR[0m [2mfig_ipc::unix_socket[0m[2m:[0m [2m21:[0m Failed to connect [3merr[0m[2m=[0mConnection refused (os error 61) [3msocket[0m[2m=[0m"/var/tmp/fig/kuba/fig.socket"
+[2m2022-10-29T14:41:55.381259Z[0m [31mERROR[0m [2mfig_cli::daemon::settings_watcher[0m[2m:[0m [2m153:[0m Failed to send hook: Connection refused (os error 61)
+[2m2022-10-29T14:41:55.381292Z[0m [31mERROR[0m [2mfig_ipc::unix_socket[0m[2m:[0m [2m21:[0m Failed to connect [3merr[0m[2m=[0mConnection refused (os error 61) [3msocket[0m[2m=[0m"/var/tmp/fig/kuba/fig.socket"
+[2m2022-10-29T14:41:55.381306Z[0m [31mERROR[0m [2mfig_cli::daemon::settings_watcher[0m[2m:[0m [2m153:[0m Failed to send hook: Connection refused (os error 61)
+[2m2022-10-29T14:42:29.728803Z[0m [31mERROR[0m [2mfig_cli::daemon::scheduler[0m[2m:[0m [2m166:[0m Error running task Tag("SendDotfilesLineCountTelemetry"): telemetry is disabled
+[2m2022-10-29T15:04:41.412609Z[0m [31mERROR[0m [2mfig_cli::daemon::scheduler[0m[2m:[0m [2m166:[0m Error running task Tag("SendQueuedTelemetryEvents"): telemetry is disabled
