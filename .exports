@@ -10,3 +10,7 @@ export PATH=$(brew --prefix)/bin:$PATH
 # NVM
 export NVM_DIR="$HOME/.nvm"
 
+# PNPM
+export PNPM_HOME="/Users/kuba/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+

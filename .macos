@@ -79,14 +79,14 @@ echo "Installing homebrew tools"
 brew install argon2 bat bitwarden-cli boost ca-certificates \
 curl git git-delta gh hub htop id3lib mas node nvm \
 php pyenv python3 rename ssh-copy-id \
-sqlite mysql mysql-client tree webp xz zsh zsh-autosuggestions \
-zsh-completions zsh-syntax-highlighting
+sqlite mysql mysql-client tree webp xz \
+zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship
 
 echo
 echo "Installing apps with brew --cask"
 
 brew install --cask google-chrome firefox-developer-edition brave-browser \
-iterm2 cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro cron \
+iterm2 cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro fig cron \
 docker bitwarden slack jetbrains-toolbox insomnia tableplus visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
 rekordbox iina discord dropbox flux notion messenger zoom
