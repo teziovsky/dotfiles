@@ -947,3 +947,399 @@
   session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
   cwd: /Users/kuba
   time: 1667051136
+- command: dotfilesupdate
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051154
+- command: cd .node-gyp/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051176
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.node-gyp
+  time: 1667051177
+- command: ..
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.node-gyp
+  time: 1667051179
+- command: nvm ls
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051185
+- command: nvm ls node
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051190
+- command: nvm install node
+  exit_code: 2
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051193
+- command: nvm install node
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051197
+- command: brew list
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051214
+- command: node -v
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051228
+- command: cd .omnisharp/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051246
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051247
+- command: nvm --help
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051269
+- command: nvm alias default 19
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051274
+- command: nvm use 19
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051277
+- command: nvm use
+  exit_code: 127
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051279
+- command: nvm use default
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051283
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051285
+- command: npm -v
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051287
+- command: pnpm
+  exit_code: 1
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051291
+- command: pnpm update
+  exit_code: 1
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051297
+- command: pnpm add -g pnpm
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051308
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051316
+- command: brew uninstall yarn
+  exit_code: 1
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051334
+- command: rm -rf \"$HOME/.yarn\"
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051342
+- command: npm uninstall -g yarn
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051347
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051353
+- command: yarn
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051354
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051360
+- command: ..
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.omnisharp
+  time: 1667051363
+- command: rm -rf .omnisharp/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051367
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051368
+- command: cd .pm2
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051375
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.pm2
+  time: 1667051376
+- command: ..
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.pm2
+  time: 1667051378
+- command: rm -rf .pm2
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051382
+- command: cat .pnpm-state/
+  exit_code: 1
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051389
+- command: rm -rf .quokka/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051404
+- command: cd .swiftpm/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051409
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.swiftpm
+  time: 1667051410
+- command: ..
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.swiftpm
+  time: 1667051413
+- command: cd .thumbnails/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051420
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.thumbnails
+  time: 1667051420
+- command: cd large/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.thumbnails
+  time: 1667051424
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.thumbnails/large
+  time: 1667051424
+- command: ....
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.thumbnails/large
+  time: 1667051428
+- command: cd ~
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users
+  time: 1667051430
+- command: rm -rff .wallaby/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051434
+- command: rm -rf .yarnrc
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051438
+- command: rm -rf .zcompdump-MacBook\\ Pro\\ \\(Kuba\\)-5.8.1 .zcompdump-MacBook\\ Pro\\ \\(Kuba\\)-5.8.1.zwc .zcompdump-MacBook\\ Pro\\ \\(Kuba\\)-5.9 .zcompdump-MacBook\\ Pro\\ \\(Kuba\\)-5.9.zwc
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051446
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051447
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: b136c61e-7ccd-4d81-b849-7c6f149493cd
+  cwd: /Users/kuba
+  time: 1667051451
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: b136c61e-7ccd-4d81-b849-7c6f149493cd
+  cwd: /Users/kuba
+  time: 1667051451
+- command: cd .gradle/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051459
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.gradle
+  time: 1667051459
+- command: ..
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.gradle
+  time: 1667051461
+- command: rm -rf .gradle/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051463
+- command: cd .mono
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051467
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.mono
+  time: 1667051468
+- command: cd registry/CurrentUser/software/microsoft/visualstudio/
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.mono
+  time: 1667051477
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.mono/registry/CurrentUser/software/microsoft/visualstudio
+  time: 1667051477
+- command: cd ~
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba/.mono/registry/CurrentUser/software/microsoft/visualstudio
+  time: 1667051486
+- command: la
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051486
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051492
+- command: dotfiles s
+  exit_code: 0
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051494
+- command: dotfiles update
+  exit_code: 1
+  shell: zsh
+  session_id: 1feea042-c6e3-4819-b62f-48ab396e9441
+  cwd: /Users/kuba
+  time: 1667051497
