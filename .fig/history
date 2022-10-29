@@ -2903,3 +2903,69 @@
   session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
   cwd: /Users/kuba
   time: 1667055954
+- command: dotfilesupdate
+  exit_code: 0
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667055956
+- command: vim ~/.gitignore
+  exit_code: 0
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667056021
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667056046
+- command: dotfiles s
+  exit_code: 0
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667056048
+- command: dotfiles rm .fig
+  exit_code: 128
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667056051
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667056051
+- command: dotfiles s
+  exit_code: 0
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667056053
+- command: dotfiles rm -r .git
+  exit_code: 128
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667056061
+- command: dotfiles rm -r .fig
+  exit_code: 1
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667056065
+- command: dotfiles s
+  exit_code: 0
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667056067
+- command: clear
+  exit_code: 0
+  shell: zsh
+  session_id: edc20bdf-3597-4d97-ab2a-cf9faee6d324
+  cwd: /Users/kuba
+  time: 1667056068
