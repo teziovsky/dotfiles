@@ -65,9 +65,10 @@ echo "Installing homebrew tools"
 # python3: Interpreted, interactive, object-oriented programming language
 # rename: Perl-powered file rename script with many helpful built-ins
 # ssh-copy-id: Add a public key to a remote machine's authorized_keys file
-# sqlite: Command-line interface for SQLite
-# mysql: MySQL db
-# mysql-client: Command-line interface for MySQL
+# sqlite: SQLite database
+# postgresql: PostgreSQL database
+# mysql: MySQL database
+# mysql-client: Open source relational database management system
 # tree: Display directories as trees (with optional color/HTML output)
 # webp: Image format providing lossless and lossy compression for web images
 # xz: General-purpose data compression with high compression ratio
@@ -79,7 +80,7 @@ echo "Installing homebrew tools"
 brew install argon2 bat bitwarden-cli boost ca-certificates \
 curl git git-delta gh hub htop id3lib mas node nvm \
 php pyenv python3 rename ssh-copy-id \
-sqlite mysql mysql-client tree webp xz \
+sqlite postgresql mysql mysql-client tree webp xz \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship
 
 echo
@@ -108,12 +109,13 @@ mas install 1289197285 # MindNode
 mas install 425424353 # The Unarchiver
 mas install 497799835 # Xcode
 mas install 457622435 # Yoink
+mas install 1452453066 # Hidden Bar
 
 echo
 echo "Installing fonts with brew --cask"
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code font-cascadia-mono-pl font-cascadia-mono \
-font-hack font-recursive font-fantasque-sans-mono
+font-hack font-recursive font-fantasque-sans-mono font-space-mono
 
 echo
 echo "node --version: $(node --version)"

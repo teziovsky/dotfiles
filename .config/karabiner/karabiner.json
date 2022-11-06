@@ -38,32 +38,6 @@
                         ]
                     },
                     {
-                        "description": "Caps Lock → Hyper Key (⌃⌥⇧⌘) (Caps Lock if alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "caps_lock"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "caps_lock"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "shift+fn toggles touchbar mode between 'fullControlStrip' and 'functionKeys'",
                         "manipulators": [
                             {
@@ -78,6 +52,32 @@
                                 "to": [
                                     {
                                         "shell_command": "if [[ $(defaults read com.apple.touchbar.agent PresentationModeGlobal) == 'functionKeys' ]]; then defaults write com.apple.touchbar.agent PresentationModeGlobal 'fullControlStrip'; else defaults write com.apple.touchbar.agent PresentationModeGlobal 'functionKeys'; fi && pkill ControlStrip"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
+                            {
+                                "description": "Change caps_lock to command+control+option+shift.",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_control",
+                                            "left_option"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"

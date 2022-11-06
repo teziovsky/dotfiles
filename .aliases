@@ -25,9 +25,10 @@ alias ncupatch="ncu -ui --target patch"
 alias ncuminor="ncu -ui --target minor"
 alias ncumajor="ncu -ui --target major"
 
-## GIT
+# GIT
 alias git=hub
 alias ga="git add ."
+alias gb="git branch"
 alias gs="git status"
 alias gss="git status -s"
 alias gp="git pull"
@@ -48,11 +49,22 @@ alias dps="docker ps --format 'table {{.ID}}\t{{.Image}}\t{{.RunningFor}}\t{{.St
 alias dpsa="docker ps -a --format 'table {{.ID}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}\t{{.Names}}'"
 alias dkill='docker rm $(docker stop $(docker ps -aq))'
 
-## STRING FORMAT
+# STRING FORMAT
 alias removespaces="find . -name '* *' -type d | rename 's/ /_/g'; find . -name '* *' -type f | rename 's/ /_/g'"
 alias removedashes="find . -name '*-*' -type d | rename 's/-/_/g'; find . -name '*-*' -type f | rename 's/-/_/g'"
 
-## DOTFILES
+# DOTFILES
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotfilesupdate="dotfiles ac '`date +'%Y-%m-%d %H:%M:%S'`: update dotfiles' && dotfiles push"
+
+# POSTGRESQL
+alias psql_start="brew services start postgresql@14"
+alias psql_stop="brew services stop postgresql@14"
+
+# MySQL
+alias mysql_start="brew services start mysql && mysql.server start"
+alias mysql_stop="brew services stop mysql && mysql.server stop"
+
+# SOURCES
+alias sz="source ~/.zshrc"
 
