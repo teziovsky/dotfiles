@@ -87,7 +87,7 @@ echo
 echo "Installing apps with brew --cask"
 
 brew install --cask google-chrome firefox-developer-edition brave-browser \
-iterm2 cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro fig cron \
+iterm2 warp cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro fig cron \
 docker bitwarden slack jetbrains-toolbox insomnia tableplus visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
 rekordbox iina discord dropbox flux notion messenger zoom
