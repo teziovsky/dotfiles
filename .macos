@@ -53,6 +53,7 @@ echo "Installing homebrew tools"
 # curl: Get a file from an HTTP, HTTPS or FTP server
 # git: Distributed revision control system
 # git-delta: Syntax-highlighting pager for git and diff output
+# git-standup: Show your commits from last standup
 # gh: Github CLI
 # hub: Add GitHub support to git on the command-line
 # htop: Improved top (interactive process viewer)
@@ -78,7 +79,7 @@ echo "Installing homebrew tools"
 # zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
 
 brew install argon2 bat bitwarden-cli boost ca-certificates \
-curl git git-delta gh hub htop id3lib mas node nvm \
+curl git git-delta git-standup gh hub htop id3lib mas node nvm \
 php pyenv python3 rename ssh-copy-id \
 sqlite postgresql mysql mysql-client tree webp xz \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship

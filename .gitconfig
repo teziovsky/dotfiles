@@ -31,7 +31,6 @@
 	branches = branch --all
 	contributors = shortlog --summary --numbered
 	remotes = remote --verbose
-	standup = "log --author='$(git config user.name)' --since='yesterday.midnight' --oneline --pretty=format:'%s %Cblue(%ar)%Creset' --color"
 	tags = tag -l
 [color]
 	# Use colors in Git commands that are capable of colored output when
