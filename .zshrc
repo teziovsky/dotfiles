@@ -46,3 +46,4 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 eval "$(starship init zsh)"
+

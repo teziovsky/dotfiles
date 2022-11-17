@@ -91,7 +91,7 @@ brew install --cask google-chrome firefox-developer-edition brave-browser \
 iterm2 warp cyberduck cleanmymac raycast hazel bluesnooze karabiner-elements keyboard-maestro cron \
 docker bitwarden slack jetbrains-toolbox insomnia tableplus visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
-rekordbox iina discord dropbox flux notion messenger zoom
+rekordbox iina discord dropbox flux notion messenger zoom imageoptim
 
 echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
