@@ -11,7 +11,6 @@ shopt -s checkwinsize
 type -p -a mc >/dev/null &&
 alias mc=". /opt/local/share/mc/bin/mc-wrapper.sh"
 
-
 ###-tns-completion-start-###
 if [ -f /Users/kuba/.tnsrc ]; then
     source /Users/kuba/.tnsrc
@@ -21,3 +20,4 @@ fi
 alias dotfiles='/usr/bin/git --git-dir=/Users/$HOME/.dotfiles/ --work-tree=/Users/$HOME'
 
 . "$HOME/.cargo/env"
+
