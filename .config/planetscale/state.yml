@@ -1,5 +1,5 @@
-checked_for_update_at: 2022-11-13T21:33:24.13882+01:00
+checked_for_update_at: 2022-11-30T12:17:16.249518+01:00
 latest_release:
-  version: v0.122.0
-  url: https://github.com/planetscale/cli/releases/tag/v0.122.0
-  publishedat: 2022-10-17T22:04:49Z
+  version: v0.124.0
+  url: https://github.com/planetscale/cli/releases/tag/v0.124.0
+  publishedat: 2022-11-17T22:39:29Z
