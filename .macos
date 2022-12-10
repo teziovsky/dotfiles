@@ -47,7 +47,6 @@ echo
 echo "Installing homebrew tools"
 # argon2: Password hashing library and CLI utility
 # bat: Clone of cat(1) with syntax highlighting and Git integration
-# bitwarden-cli: Secure and free password manager for all of your devices
 # boost: Collection of portable C++ source libraries
 # ca-certificates: Mozilla CA certificate store
 # curl: Get a file from an HTTP, HTTPS or FTP server
@@ -78,7 +77,7 @@ echo "Installing homebrew tools"
 # zsh-completions: Additional completion definitions for zsh
 # zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
 
-brew install argon2 bat bitwarden-cli boost ca-certificates \
+brew install argon2 bat boost ca-certificates \
 curl git git-delta git-standup gh hub htop id3lib mas node nvm llama \
 php pyenv python3 rename ssh-copy-id \
 sqlite postgresql mysql mysql-client tree webp xz \
@@ -89,7 +88,7 @@ echo "Installing apps with brew --cask"
 
 brew install --cask google-chrome firefox-developer-edition brave-browser \
 iterm2 warp cyberduck cleanmymac raycast hazel bluesnooze textsniper karabiner-elements keyboard-maestro cron \
-docker bitwarden slack jetbrains-toolbox insomnia tableplus visual-studio-code \
+docker 1password slack jetbrains-toolbox insomnia tableplus visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
 rekordbox iina discord dropbox flux notion messenger zoom imageoptim
 
