@@ -104,7 +104,6 @@ open -a "Brave Browser" --args --make-default-browser
 echo
 echo "Installing apps from App Store"
 mas install 937984704 # Amphetamine
-mas install 1352778147 # Bitwarden
 mas install 1289197285 # MindNode
 mas install 425424353 # The Unarchiver
 mas install 497799835 # Xcode
