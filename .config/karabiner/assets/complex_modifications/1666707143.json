@@ -1,20 +1,16 @@
 {
   "title": "Function keys work as fn keys (instead of media keys)",
-  "maintainers": [
-    "harmtemolder"
-  ],
+  "maintainers": ["harmtemolder"],
   "rules": [
     {
-      "description": "(Atom, CKII, EUIV, iTerm, muCommander, PyCharm, VSCodium, WebStorm, AndroidStudio) Function keys work as fn keys",
+      "description": "Function keys work as function keys in iTerm2, VSCode, WebStorm, Warp, Pixelmator Pro and Terminal",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "f1",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -25,18 +21,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -46,9 +38,7 @@
           "from": {
             "key_code": "f2",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -59,18 +49,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -80,9 +66,7 @@
           "from": {
             "key_code": "f3",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -93,18 +77,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -114,9 +94,7 @@
           "from": {
             "key_code": "f4",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -127,18 +105,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -148,9 +122,7 @@
           "from": {
             "key_code": "f5",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -161,18 +133,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -182,9 +150,7 @@
           "from": {
             "key_code": "f6",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -195,18 +161,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -216,9 +178,7 @@
           "from": {
             "key_code": "f7",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -229,18 +189,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -250,9 +206,7 @@
           "from": {
             "key_code": "f8",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -263,18 +217,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -284,9 +234,7 @@
           "from": {
             "key_code": "f9",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -297,18 +245,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -318,9 +262,7 @@
           "from": {
             "key_code": "f10",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -331,18 +273,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -352,9 +290,7 @@
           "from": {
             "key_code": "f11",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -365,18 +301,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
@@ -386,9 +318,7 @@
           "from": {
             "key_code": "f12",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -399,18 +329,14 @@
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": [
-                "ck2\\.app",
-                "eu4\\.app"
-              ],
+              "file_paths": ["ck2\\.app", "eu4\\.app"],
               "bundle_identifiers": [
-                "com.github.atom",
                 "com.googlecode.iterm2",
-                "com.mucommander.muCommander",
-                "com.jetbrains.pycharm",
-                "com.visualstudio.code.oss",
+                "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
-                "com.google.android.studio"
+                "dev.warp.Warp-Stable",
+                "com.pixelmatorteam.pixelmator.x.demo",
+                "com.apple.Terminal"
               ]
             }
           ]
