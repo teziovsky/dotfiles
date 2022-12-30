@@ -19,5 +19,5 @@ fi
 
 alias dotfiles='/usr/bin/git --git-dir=/Users/$HOME/.dotfiles/ --work-tree=/Users/$HOME'
 
-. "$HOME/.cargo/env"
 
+. "$HOME/.cargo/env"

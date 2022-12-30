@@ -63,6 +63,7 @@ echo "Installing homebrew tools"
 # php: General-purpose scripting language
 # pyenv: Python version management
 # python3: Interpreted, interactive, object-oriented programming language
+# rustup: rustup is an installer for the systems programming language Rust
 # rename: Perl-powered file rename script with many helpful built-ins
 # ssh-copy-id: Add a public key to a remote machine's authorized_keys file
 # sqlite: SQLite database
@@ -78,8 +79,8 @@ echo "Installing homebrew tools"
 # zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
 
 brew install argon2 bat boost ca-certificates \
-curl git git-delta git-standup gh hub htop id3lib mas node nvm llama \
-php pyenv python3 rename ssh-copy-id \
+curl git git-delta git-standup gh hub htop id3lib mas node pnpm nvm \
+php pyenv python3 rustup rename ssh-copy-id \
 sqlite postgresql mysql mysql-client tree webp xz \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship
 
@@ -90,7 +91,7 @@ brew install --cask google-chrome firefox-developer-edition brave-browser \
 iterm2 warp cyberduck cleanmymac raycast hazel bluesnooze textsniper karabiner-elements keyboard-maestro cron \
 docker 1password slack jetbrains-toolbox insomnia tableplus visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
-rekordbox iina discord dropbox flux notion messenger zoom imageoptim
+rekordbox iina discord dropbox flux notion messenger imageoptim
 
 echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
@@ -110,6 +111,7 @@ mas install 425424353 # The Unarchiver
 mas install 497799835 # Xcode
 mas install 457622435 # Yoink
 mas install 1452453066 # Hidden Bar
+mas install 1236045954 # Canary Mail App
 
 echo
 echo "Installing fonts with brew --cask"
@@ -120,10 +122,11 @@ font-hack font-recursive font-fantasque-sans-mono font-space-mono font-input
 echo
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
+echo "pnpm --version: $(pnpm --version)"
 
 echo
 echo "Installing a few global npm packages"
-npm install --global @gridsome/cli @vue/cli degit gitignore md-generate npm-check-updates npm-quick-run semantic-release-cli
+pnpm add -g degit gitignore md-generate npm-check-updates npm-quick-run semantic-release-cli
 
 echo
 echo "Cloning dotfiles"
