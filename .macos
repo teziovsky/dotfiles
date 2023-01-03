@@ -91,7 +91,7 @@ brew install --cask google-chrome firefox-developer-edition brave-browser \
 iterm2 warp cyberduck cleanmymac raycast hazel bluesnooze textsniper karabiner-elements keyboard-maestro cron \
 docker 1password slack jetbrains-toolbox insomnia tableplus visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
-rekordbox iina discord dropbox flux notion messenger imageoptim
+rekordbox iina discord dropbox readdle-spark flux notion messenger imageoptim
 
 echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
@@ -111,7 +111,6 @@ mas install 425424353 # The Unarchiver
 mas install 497799835 # Xcode
 mas install 457622435 # Yoink
 mas install 1452453066 # Hidden Bar
-mas install 1236045954 # Canary Mail App
 
 echo
 echo "Installing fonts with brew --cask"
