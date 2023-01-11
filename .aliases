@@ -15,6 +15,7 @@ alias week="date +%V"
 alias localip="curl https://ipinfo.io/json"
 
 # NPM
+alias pn="pnpm"
 alias ni="npm install"
 alias nrs="npm run start -s --"
 alias nrd="npm run dev -s --"
