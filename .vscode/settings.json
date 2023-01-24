@@ -130,7 +130,7 @@
 
   //* Default formatters
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -194,10 +194,13 @@
     "javascript": "javascriptreact",
     "vue": "vue",
     "html": "html",
+    "svelte": "html",
     "twig": "twig",
     "django-html": "django-html"
   },
-
+  "postcssSorting.config": {
+    "properties-order": "alphabetical"
+  },
   "yaml.format.printWidth": 100,
 
   //* Git
@@ -532,7 +535,15 @@
     "*": true,
     "yaml": false,
     "plaintext": false,
-    "markdown": false
+    "markdown": true
   },
-  "editor.tabCompletion": "onlySnippets"
+  "editor.tabCompletion": "onlySnippets",
+  "svg.preview.mode": "svg",
+  "template-string-converter.validLanguages": [
+    "svelte",
+    "typescript",
+    "javascript",
+    "typescriptreact",
+    "javascriptreact"
+  ]
 }

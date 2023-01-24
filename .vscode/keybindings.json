@@ -396,7 +396,7 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "alt+cmd+4",
+    "key": "alt+cmd+5",
     "command": "workbench.actions.view.problems"
   },
   {
@@ -529,7 +529,7 @@
     "command": "workbench.view.extension.github-pull-requests"
   },
   {
-    "key": "alt+cmd+5",
+    "key": "alt+cmd+4",
     "command": "workbench.view.extensions",
     "when": "viewContainer.workbench.view.extensions.enabled"
   },
@@ -595,7 +595,7 @@
     "when": "!editorIsOpen && !multipleEditorGroups"
   },
   {
-    "key": "cmd+k o",
+    "key": "cmd+k cmd+o",
     "command": "workbench.action.files.openFolder"
   },
   {

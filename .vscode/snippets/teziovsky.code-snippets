@@ -347,5 +347,160 @@
     "prefix": "hf",
     "body": ["&:hover,", "&:focus {", "  ${0:text-decoration: underline;}", "}"],
     "description": "CSS: Hover and Focus"
+  },
+
+  // Svelte Snippets
+  "Svelte: If Block": {
+    "scope": "svelte",
+    "prefix": "if",
+    "body": ["{#if ${1:condition}}", "  $0", "{/if}"],
+    "description": "Svelte: If Block"
+  },
+  "Svelte: If Else Block": {
+    "scope": "svelte",
+    "prefix": "ifelse",
+    "body": ["{#if ${1:condition}}", "  $2", "{:else}", "  $0", "{/if}"],
+    "description": "Svelte: If Else Block"
+  },
+  "Svelte: Each Block": {
+    "scope": "svelte",
+    "prefix": "each",
+    "body": ["{#each ${1:items} as ${2:item}}", "  $0", "{/each}"],
+    "description": "Svelte: Each Block"
+  },
+  "Svelte: Await Block": {
+    "scope": "svelte",
+    "prefix": "await",
+    "body": [
+      "{#await ${1:thing}}",
+      "  {#then ${2:thing}}",
+      "    $0",
+      "  {/then}",
+      "  {#catch ${3:error}}",
+      "    $0",
+      "  {/catch}",
+      "{/await}"
+    ],
+    "description": "Svelte: Await Block"
+  },
+  "Svelte: Then Block": {
+    "scope": "svelte",
+    "prefix": "then",
+    "body": ["{#then ${1:thing}}", "  $0", "{/then}"],
+    "description": "Svelte: Then Block"
+  },
+  "Svelte: Catch Block": {
+    "scope": "svelte",
+    "prefix": "catch",
+    "body": ["{#catch ${1:error}}", "  $0", "{/catch}"],
+    "description": "Svelte: Catch Block"
+  },
+  "Svelte: Key Block": {
+    "scope": "svelte",
+    "prefix": "key",
+    "body": ["{#key ${1:thing}}", "  $0", "{/key}"],
+    "description": "Svelte: Key Block"
+  },
+  "Svelte: Debug Block": {
+    "scope": "svelte",
+    "prefix": "debug",
+    "body": ["{@debug ${0:thing}}"],
+    "description": "Svelte: Debug Block"
+  },
+  "Svelte: Html Block": {
+    "scope": "svelte",
+    "prefix": "html",
+    "body": ["{@html ${0:thing}}"],
+    "description": "Svelte: Html Block"
+  },
+  "Svelte: Component": {
+    "scope": "svelte",
+    "prefix": "component",
+    "body": ["<svelte:component this={$0} />"],
+    "description": "Svelte: Component"
+  },
+  "Svelte: Window": {
+    "scope": "svelte",
+    "prefix": "window",
+    "body": ["<svelte:window on:${1:resize}={${0:handleWindowResize}} />"],
+    "description": "Svelte: Window"
+  },
+  "Svelte: Head": {
+    "scope": "svelte",
+    "prefix": "head",
+    "body": ["<svelte:head>", "  $0", "</svelte:head>"],
+    "description": "Svelte: Head"
+  },
+  "Svelte: Body": {
+    "scope": "svelte",
+    "prefix": "body",
+    "body": ["<svelte:body on:${1:mouseenter}={${0:handleMouseEnter}} />"],
+    "description": "Svelte: Body"
+  },
+  "Svelte: Options": {
+    "scope": "svelte",
+    "prefix": "options",
+    "body": ["<svelte:options immutable={${0:true}} />"],
+    "description": "Svelte: Options"
+  },
+  "Svelte: Fragment": {
+    "scope": "svelte",
+    "prefix": "fragment",
+    "body": ["<svelte:fragment> slot=\"${1:header}\"", "  $0", "</svelte:fragment>"],
+    "description": "Svelte: Fragment"
+  },
+  "Svelte: Slot": {
+    "scope": "svelte",
+    "prefix": "slot",
+    "body": ["<slot name=\"${1:header}\">", "  $0", "</slot>"],
+    "description": "Svelte: Slot"
+  },
+  "Svelte: Ref": {
+    "scope": "svelte",
+    "prefix": "ref",
+    "body": ["bind:this={${0:elementRef}}"],
+    "description": "Svelte: Ref"
+  },
+  "Svelte: Transition Fade": {
+    "scope": "svelte",
+    "prefix": "fade",
+    "body": ["transition:fade={{ duration: ${0:500} }}"],
+    "description": "Svelte: Transition fade"
+  },
+  "Svelte: Transition Fly": {
+    "scope": "svelte",
+    "prefix": "fly",
+    "body": ["transition:fly={{ x: ${1:100}, y: ${2:100}, duration: ${0:500} }}"],
+    "description": "Svelte: Transition fly"
+  },
+  "Svelte: Transition Slide": {
+    "scope": "svelte",
+    "prefix": "slide",
+    "body": ["transition:slide={{ duration: ${0:500} }}"],
+    "description": "Svelte: Transition slide"
+  },
+  "Svelte: Transition Scale": {
+    "scope": "svelte",
+    "prefix": "scale",
+    "body": ["transition:scale={{ duration: ${0:500} }}"],
+    "description": "Svelte: Transition scale"
+  },
+  "Svelte: Transition Draw": {
+    "scope": "svelte",
+    "prefix": "draw",
+    "body": ["transition:draw={{ duration: ${0:500} }}"],
+    "description": "Svelte: Transition draw"
+  },
+  "Svelte: Transition Crossfade": {
+    "scope": "svelte",
+    "prefix": "crossfade",
+    "body": ["transition:crossfade={{ duration: ${0:500} }}"],
+    "description": "Svelte: Transition crossfade"
+  },
+  "Svelte: Transition Blur": {
+    "scope": "svelte",
+    "prefix": "blur",
+    "body": ["transition:blur={{ duration: ${0:500} }}"],
+    "description": "Svelte: Transition blur"
   }
 }
