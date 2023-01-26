@@ -500,6 +500,7 @@
   "cSpell.userWords": [
     "daisyui",
     "esbenp",
+    "Flexbox",
     "hookfeorm",
     "hookform",
     "jakubsoboczynski",
@@ -516,7 +517,12 @@
     "tanstack",
     "teziovsky",
     "trpc",
-    "typecheck"
+    "typecheck",
+    "viselect",
+    "Vuelidate",
+    "Vuetify",
+    "Vuex",
+    "webp"
   ],
   "keyboard.dispatch": "keyCode",
   "conventionalCommits.gitmoji": false,
