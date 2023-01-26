@@ -88,7 +88,7 @@ echo
 echo "Installing apps with brew --cask"
 
 brew install --cask google-chrome firefox-developer-edition brave-browser \
-iterm2 warp cyberduck cleanmymac raycast hazel bluesnooze textsniper pika \
+iterm2 warp cyberduck cleanmymac raycast hazel bluesnooze textsniper \
 karabiner-elements keyboard-maestro cron llama \
 docker 1password slack jetbrains-toolbox insomnia tableplus visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
@@ -111,7 +111,8 @@ mas install 1289197285 # MindNode
 mas install 425424353 # The Unarchiver
 mas install 497799835 # Xcode
 mas install 457622435 # Yoink
-mas install 1452453066 # Hidden Bar
+mas install 1452453066 # Hidden Bara
+mas install 1287239339 # ColorSlurp
 
 echo
 echo "Installing fonts with brew --cask"
