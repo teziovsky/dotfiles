@@ -78,8 +78,9 @@ echo "Installing homebrew tools"
 # zsh-completions: Additional completion definitions for zsh
 # zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
 
+brew tap oven-sh/bun
 brew install argon2 bat boost ca-certificates \
-curl git git-delta git-standup gh hub htop id3lib mas node pnpm nvm \
+curl git git-delta git-standup gh hub htop id3lib mas node pnpm nvm deno bun \
 php pyenv python3 rustup rename ssh-copy-id \
 sqlite postgresql mysql mysql-client tree webp xz \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship
