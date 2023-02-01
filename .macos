@@ -45,9 +45,7 @@ fi
 
 echo
 echo "Installing homebrew tools"
-# argon2: Password hashing library and CLI utility
 # bat: Clone of cat(1) with syntax highlighting and Git integration
-# boost: Collection of portable C++ source libraries
 # ca-certificates: Mozilla CA certificate store
 # curl: Get a file from an HTTP, HTTPS or FTP server
 # git: Distributed revision control system
@@ -58,13 +56,11 @@ echo "Installing homebrew tools"
 # htop: Improved top (interactive process viewer)
 # id3lib: ID3 tag manipulation
 # mas: Mac App Store command-line interface
-# node: Platform built on V8 to build network applications
 # nvm: Manage multiple Node.js versions
 # php: General-purpose scripting language
 # pyenv: Python version management
 # python3: Interpreted, interactive, object-oriented programming language
 # rustup: rustup is an installer for the systems programming language Rust
-# rename: Perl-powered file rename script with many helpful built-ins
 # ssh-copy-id: Add a public key to a remote machine's authorized_keys file
 # sqlite: SQLite database
 # postgresql: PostgreSQL database
@@ -72,17 +68,16 @@ echo "Installing homebrew tools"
 # mysql-client: Open source relational database management system
 # tree: Display directories as trees (with optional color/HTML output)
 # webp: Image format providing lossless and lossy compression for web images
-# xz: General-purpose data compression with high compression ratio
 # zsh: UNIX shell (command interpreter)
 # zsh-autosuggestions: Fish-like fast/unobtrusive autosuggestions for zsh
 # zsh-completions: Additional completion definitions for zsh
 # zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
 
 brew tap oven-sh/bun
-brew install argon2 bat boost ca-certificates \
-curl git git-delta git-standup gh hub htop id3lib mas node pnpm nvm deno bun \
-php pyenv python3 rustup rename ssh-copy-id \
-sqlite postgresql mysql mysql-client tree webp xz \
+brew install bat ca-certificates \
+curl git git-delta git-standup gh hub htop id3lib mas pnpm nvm deno bun \
+php pyenv python3 rustup ssh-copy-id \
+sqlite postgresql mysql mysql-client tree webp \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship
 
 echo
