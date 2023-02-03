@@ -1,15 +1,17 @@
 ---
-"input:search_command_history": cmd-r
+"editor_view:add_next_occurrence": cmd-d
+"pane_group:add_right": shift-cmd-D
+"pane_group:navigate_next": shift-cmd-right
+"pane_group:navigate_right": alt-shift-cmd-right
+"pane_group:navigate_prev": shift-cmd-left
+"pane_group:navigate_left": alt-shift-cmd-left
+"pane_group:add_down": alt-shift-D
 "editor_view:add_cursor_below": alt-cmd-down
 "pane_group:navigate_up": alt-shift-cmd-up
 "workspace:show_command_search": cmd-r
-"pane_group:navigate_left": alt-shift-cmd-left
-"pane_group:navigate_right": alt-shift-cmd-right
-"workspace:toggle_autosuggestions": "cmd- "
-"editor_view:add_cursor_above": alt-cmd-up
-"pane_group:add_right": shift-cmd-D
+"workspace:toggle_mouse_reporting": ctrl-r
 "editor_view:cmd_down": ctrl-down
 "pane_group:navigate_down": alt-shift-cmd-down
-"pane_group:add_down": alt-shift-D
-"workspace:toggle_mouse_reporting": ctrl-r
-"editor_view:add_next_occurrence": cmd-d
+"editor_view:add_cursor_above": alt-cmd-up
+"input:search_command_history": cmd-r
+"workspace:toggle_autosuggestions": "cmd- "
