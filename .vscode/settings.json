@@ -29,7 +29,7 @@
   "editor.fontWeight": "400",
   "editor.letterSpacing": 0,
   "editor.linkedEditing": true,
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorWidth": 3,
   "editor.cursorBlinking": "expand",
   "editor.cursorStyle": "line",
@@ -552,5 +552,6 @@
     "javascript",
     "typescriptreact",
     "javascriptreact"
-  ]
+  ],
+  "git.openRepositoryInParentFolders": "always"
 }
