@@ -602,5 +602,52 @@
     "key": "cmd+k o",
     "command": "-workbench.action.files.showOpenedFileInNewWindow",
     "when": "emptyWorkspaceSupport"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "workbench.action.showAllSymbols"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "shift+alt+c",
+    "command": "-turboConsoleLog.commentAllLogMessages"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "turboConsoleLog.commentAllLogMessages"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "-workbench.view.debug",
+    "when": "viewContainer.workbench.view.debug.enabled"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "turboConsoleLog.deleteAllLogMessages"
+  },
+  {
+    "key": "shift+alt+d",
+    "command": "-turboConsoleLog.deleteAllLogMessages"
+  },
+  {
+    "key": "shift+cmd+u",
+    "command": "-workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+  },
+  {
+    "key": "shift+alt+u",
+    "command": "-turboConsoleLog.uncommentAllLogMessages"
+  },
+  {
+    "key": "shift+cmd+u",
+    "command": "turboConsoleLog.uncommentAllLogMessages"
   }
 ]

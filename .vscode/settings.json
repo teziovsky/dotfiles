@@ -104,9 +104,13 @@
   //* Terminal
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontFamily": "Input Mono, Space Mono, Recursive, Jetbrains Mono, MesloLGS NF, Monaco, Courier New, monospace",
   "terminal.integrated.allowChords": false,
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.drawBoldTextInBrightColors": false,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
 
   //* Prettier
   "prettier.arrowParens": "always",
@@ -528,9 +532,6 @@
   "keyboard.dispatch": "keyCode",
   "conventionalCommits.gitmoji": false,
   "conventionalCommits.scopes": [],
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
   "errorLens.fontStyleItalic": true,
   "githubPullRequests.pullBranch": "never",
   "workbench.editor.enablePreview": false,
@@ -553,5 +554,6 @@
     "typescriptreact",
     "javascriptreact"
   ],
-  "git.openRepositoryInParentFolders": "always"
+  "git.openRepositoryInParentFolders": "always",
+  "security.workspace.trust.untrustedFiles": "open"
 }

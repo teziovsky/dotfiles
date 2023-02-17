@@ -46,7 +46,6 @@ fi
 echo
 echo "Installing homebrew tools"
 # bat: Clone of cat(1) with syntax highlighting and Git integration
-# ca-certificates: Mozilla CA certificate store
 # curl: Get a file from an HTTP, HTTPS or FTP server
 # git: Distributed revision control system
 # git-delta: Syntax-highlighting pager for git and diff output
@@ -57,9 +56,7 @@ echo "Installing homebrew tools"
 # jq: A lightweight and flexible command-line JSON processor.
 # id3lib: ID3 tag manipulation
 # mas: Mac App Store command-line interface
-# nvm: Manage multiple Node.js versions
 # php: General-purpose scripting language
-# pyenv: Python version management
 # python3: Interpreted, interactive, object-oriented programming language
 # rustup: rustup is an installer for the systems programming language Rust
 # ssh-copy-id: Add a public key to a remote machine's authorized_keys file
@@ -75,9 +72,9 @@ echo "Installing homebrew tools"
 # zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
 
 brew tap oven-sh/bun
-brew install bat ca-certificates \
-curl git git-delta git-standup gh hub htop jq id3lib mas pnpm nvm deno bun \
-php pyenv python3 rustup ssh-copy-id \
+brew install bat \
+curl git git-delta git-standup gh hub htop jq id3lib mas pnpm fnm deno bun \
+php python3 rustup ssh-copy-id \
 sqlite postgresql mysql mysql-client tree webp \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship
 
@@ -109,7 +106,6 @@ mas install 425424353 # The Unarchiver
 mas install 497799835 # Xcode
 mas install 457622435 # Yoink
 mas install 1452453066 # Hidden Bara
-mas install 1287239339 # ColorSlurp
 
 echo
 echo "Installing fonts with brew --cask"
