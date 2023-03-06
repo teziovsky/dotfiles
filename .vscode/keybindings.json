@@ -529,11 +529,6 @@
     "command": "workbench.view.extension.github-pull-requests"
   },
   {
-    "key": "alt+cmd+4",
-    "command": "workbench.view.extensions",
-    "when": "viewContainer.workbench.view.extensions.enabled"
-  },
-  {
     "key": "shift+cmd+x",
     "command": "-workbench.view.extensions",
     "when": "viewContainer.workbench.view.extensions.enabled"
@@ -649,5 +644,22 @@
   {
     "key": "shift+cmd+u",
     "command": "turboConsoleLog.uncommentAllLogMessages"
+  },
+  {
+    "key": "alt+cmd+6",
+    "command": "workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
+  },
+  {
+    "key": "alt+cmd+4",
+    "command": "workbench.view.extension.project-manager"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "projectManager.listProjects"
+  },
+  {
+    "key": "alt+cmd+p",
+    "command": "-projectManager.listProjects"
   }
 ]

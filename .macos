@@ -72,8 +72,8 @@ echo "Installing homebrew tools"
 # zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
 
 brew tap oven-sh/bun
-brew install bat \
-curl git git-delta git-standup gh hub htop jq id3lib mas pnpm fnm deno bun \
+brew install bat curl git git-delta git-standup gh hub htop jq id3lib mas \
+pnpm fnm deno bun \
 php python3 rustup ssh-copy-id \
 sqlite postgresql mysql mysql-client tree webp \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship
@@ -84,9 +84,9 @@ echo "Installing apps with brew --cask"
 brew install --cask google-chrome firefox-developer-edition brave-browser \
 iterm2 warp cyberduck cleanmymac raycast hazel bluesnooze textsniper \
 karabiner-elements keyboard-maestro cron llama \
-docker 1password slack jetbrains-toolbox insomnia tableplus visual-studio-code \
+docker 1password slack insomnia tableplus visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
-rekordbox iina discord dropbox readdle-spark flux notion messenger imageoptim
+rekordbox iina discord dropbox flux notion messenger imageoptim coconutbattery
 
 echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."

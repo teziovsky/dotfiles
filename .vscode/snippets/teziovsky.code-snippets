@@ -18,7 +18,7 @@
   "console.log": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "cl",
-    "body": "console.log(${0:'here'});"
+    "body": "console.log('${0:here}');"
   },
   "console.log('var', var)": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
