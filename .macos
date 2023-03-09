@@ -106,6 +106,9 @@ mas install 425424353 # The Unarchiver
 mas install 497799835 # Xcode
 mas install 457622435 # Yoink
 mas install 1452453066 # Hidden Bara
+mas install 409201541 # Apple Pages
+mas install 409203825 # Apple Numbers
+
 
 echo
 echo "Installing fonts with brew --cask"
