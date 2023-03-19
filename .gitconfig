@@ -29,6 +29,7 @@
 
 	aliases = config --get-regexp alias
 	branches = branch --all
+  remoteupdate = remote update --prune
 	contributors = shortlog --summary --numbered
 	remotes = remote --verbose
 	tags = tag -l

@@ -82,11 +82,11 @@ echo
 echo "Installing apps with brew --cask"
 
 brew install --cask google-chrome firefox-developer-edition brave-browser \
-iterm2 warp cyberduck cleanmymac raycast hazel bluesnooze textsniper \
-karabiner-elements keyboard-maestro cron llama \
-docker 1password slack insomnia tableplus visual-studio-code \
+iterm2 cleanmymac raycast hazel bluesnooze textsniper \
+karabiner-elements keyboard-maestro llama \
+1password slack insomnia tableplus visual-studio-code \
 qlcolorcode qlstephen quicklook-json qlimagesize \
-rekordbox iina discord dropbox flux notion messenger imageoptim coconutbattery
+iina discord dropbox flux notion messenger imageoptim coconutbattery
 
 echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
