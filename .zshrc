@@ -23,3 +23,6 @@ fi
 ###-tns-completion-end-###
 
 eval "$(starship init zsh)"
+
+# bun completions
+[ -s "/usr/local/Cellar/bun/0.5.9/share/zsh/site-functions/_bun" ] && source "/usr/local/Cellar/bun/0.5.9/share/zsh/site-functions/_bun"
