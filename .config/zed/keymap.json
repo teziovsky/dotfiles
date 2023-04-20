@@ -266,43 +266,43 @@
     {
         "context": "Pane",
         "bindings": {
-            "ctrl-1": [
+            "cmd-1": [
                 "pane::ActivateItem",
                 0
             ],
-            "ctrl-2": [
+            "cmd-2": [
                 "pane::ActivateItem",
                 1
             ],
-            "ctrl-3": [
+            "cmd-3": [
                 "pane::ActivateItem",
                 2
             ],
-            "ctrl-4": [
+            "cmd-4": [
                 "pane::ActivateItem",
                 3
             ],
-            "ctrl-5": [
+            "cmd-5": [
                 "pane::ActivateItem",
                 4
             ],
-            "ctrl-6": [
+            "cmd-6": [
                 "pane::ActivateItem",
                 5
             ],
-            "ctrl-7": [
+            "cmd-7": [
                 "pane::ActivateItem",
                 6
             ],
-            "ctrl-8": [
+            "cmd-8": [
                 "pane::ActivateItem",
                 7
             ],
-            "ctrl-9": [
+            "cmd-9": [
                 "pane::ActivateItem",
                 8
             ],
-            "ctrl-0": "pane::ActivateLastItem",
+            "cmd-0": "pane::ActivateLastItem",
             "ctrl--": "pane::GoBack",
             "ctrl-_": "pane::GoForward",
             "cmd-shift-t": "pane::ReopenClosedItem",
@@ -356,7 +356,7 @@
             "cmd-p": "file_finder::Toggle",
             "cmd-shift-p": "command_palette::Toggle",
             "cmd-shift-m": "diagnostics::Deploy",
-            "cmd-shift-e": "project_panel::ToggleFocus",
+            "cmd-alt-1": "project_panel::ToggleFocus",
             "cmd-alt-s": "workspace::SaveAll",
             "cmd-k m": "language_selector::Toggle"
         }
@@ -445,7 +445,7 @@
     {
         "context": "Workspace",
         "bindings": {
-            "shift-escape": "dock::FocusDock"
+            "ctrl-cmd-`": "dock::FocusDock"
         }
     },
     {
@@ -464,7 +464,7 @@
     {
         "context": "Pane && docked",
         "bindings": {
-            "shift-escape": "dock::HideDock",
+            "ctrl-cmd-`": "dock::HideDock",
             "cmd-escape": "dock::RemoveTabFromDock"
         }
     },
