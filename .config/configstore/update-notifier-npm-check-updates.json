@@ -1,10 +1,4 @@
 {
 	"optOut": false,
-	"lastUpdateCheck": 1678727688443,
-	"update": {
-		"latest": "16.7.12",
-		"current": "16.7.5",
-		"type": "patch",
-		"name": "npm-check-updates"
-	}
+	"lastUpdateCheck": 1683570663349
 }

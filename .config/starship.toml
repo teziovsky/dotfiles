@@ -1,3 +1,5 @@
+command_timeout = 1000
+
 [character]
 format = "[➜](bold green) "
 success_symbol = "[➜](bold green) "
@@ -75,4 +77,3 @@ symbol = " "
 [spack]
 symbol = "🅢 "
 
-command_timeout=5000

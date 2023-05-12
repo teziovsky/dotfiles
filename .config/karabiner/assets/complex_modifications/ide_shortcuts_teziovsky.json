@@ -1,8 +1,11 @@
 {
-    "title": "IDE Shortcuts – Teziovsky",
+    "title": "Teziovsky IDE Shortcuts",
+    "maintainers": [
+        "teziovsky"
+    ],
     "rules": [
         {
-            "description": "⌘ + number to ⌥⌘ + number",
+            "description": "Teziovsky IDE Shortcuts - ⌘ + number to ⌥⌘ + number",
             "manipulators": [
                 {
                     "type": "basic",
@@ -347,7 +350,7 @@
             ]
         },
         {
-            "description": "⌥ + ` to ⌃⌥ + `",
+            "description": "Teziovsky IDE Shortcuts - ⌥ + ` to ⌃⌥ + `",
             "manipulators": [
                 {
                     "type": "basic",
@@ -386,7 +389,7 @@
             ]
         },
         {
-            "description": "⌘ + ` to ⌥⌘ + `",
+            "description": "Teziovsky IDE Shortcuts - ⌘ + ` to ⌥⌘ + `",
             "manipulators": [
                 {
                     "type": "basic",

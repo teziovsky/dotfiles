@@ -130,6 +130,7 @@
   "prettier.useTabs": false,
   "prettier.useEditorConfig": false,
   "prettier.vueIndentScriptAndStyle": false,
+  "prettier.documentSelectors": ["**/*.astro"],
 
   //* Default formatters
   "[html]": {
@@ -164,6 +165,12 @@
   },
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   //* Languages
@@ -232,7 +239,7 @@
   },
 
   //* Eslint
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"],
   "eslint.packageManager": "npm",
   "eslint.options": {
     "overrideConfig": {
@@ -501,9 +508,13 @@
   "redhat.telemetry.enabled": false,
   "cSpell.language": "en, pl-PL",
   "cSpell.userWords": [
+    "backendu",
     "daisyui",
     "esbenp",
     "Flexbox",
+    "frameworkach",
+    "frontendzie",
+    "headlessui",
     "hookfeorm",
     "hookform",
     "jakubsoboczynski",
@@ -513,6 +524,7 @@
     "NEXTAUTH",
     "Nuxt",
     "Parens",
+    "partytown",
     "raycast",
     "Renminbi",
     "Soboczyński",
