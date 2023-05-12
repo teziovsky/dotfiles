@@ -170,7 +170,7 @@
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
   "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "astro-build.astro-vscode"
   },
 
   //* Languages

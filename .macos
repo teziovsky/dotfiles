@@ -86,7 +86,7 @@ cleanmymac raycast hazel bluesnooze textsniper \
 karabiner-elements keyboard-maestro llama \
 iterm2 warp 1password slack insomnia tableplus visual-studio-code zed \
 qlcolorcode qlstephen quicklook-json qlimagesize \
-iina discord dropbox flux notion messenger imageoptim coconutbattery
+iina discord dropbox flux notion imageoptim coconutbattery
 
 echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
