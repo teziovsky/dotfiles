@@ -13,5 +13,10 @@
     "diagnostics": false,
     "metrics": false
   },
-  "buffer_font_size": 12
+  "buffer_font_size": 12,
+  "project_panel": {
+    "dock": "right",
+    "default_width": 100,
+    "git_status": true
+  }
 }

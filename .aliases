@@ -16,6 +16,7 @@ alias localip="curl https://ipinfo.io/json"
 
 # NPM
 alias pn="pnpm"
+alias pnx="pnpm dlx"
 alias ni="pnpm install"
 alias nrs="pnpm start -s --"
 alias nrd="pnpm dev -s --"
