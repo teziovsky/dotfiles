@@ -86,7 +86,7 @@ cleanmymac raycast hazel bluesnooze textsniper linearmouse \
 karabiner-elements keyboard-maestro llama \
 warp 1password slack insomnia tableplus visual-studio-code zed \
 qlcolorcode qlstephen quicklook-json qlimagesize \
-iina discord dropbox flux notion imageoptim coconutbattery
+iina discord dropbox flux notion imageoptim
 
 echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
@@ -296,7 +296,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
