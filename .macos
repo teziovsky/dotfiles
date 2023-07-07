@@ -86,7 +86,7 @@ cleanmymac raycast hazel bluesnooze textsniper linearmouse \
 karabiner-elements keyboard-maestro llama \
 warp 1password slack insomnia tableplus visual-studio-code zed \
 qlcolorcode qlstephen quicklook-json qlimagesize \
-iina discord dropbox flux notion imageoptim
+iina discord dropbox figma flux notion imageoptim
 
 echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
@@ -124,7 +124,7 @@ echo "pnpm --version: $(pnpm --version)"
 
 echo
 echo "Installing a few global npm packages"
-pnpm add -g degit gitignore md-generate npm-check-updates npm-quick-run semantic-release-cli
+pnpm add -g degit gitignore md-generate npm-check-updates npm-quick-run semantic-release-cli expo-cli
 
 echo
 echo "Cloning dotfiles"

@@ -198,17 +198,17 @@
   "React: useEffect": {
     "scope": "javascriptreact, typescriptreact",
     "prefix": "rue",
-    "body": ["React.useEffect(() => {", "  $0", "}, [])"]
+    "body": ["useEffect(() => {", "  $0", "}, [])"]
   },
   "React: useReducer": {
     "scope": "javascriptreact, typescriptreact",
     "prefix": "rur",
-    "body": ["const [state, dispatch] = React.useReducer(${0:someReducer}, {", "  ", "})"]
+    "body": ["const [state, dispatch] = useReducer(${0:someReducer}, {", "  ", "})"]
   },
   "React: useRef": {
     "scope": "javascriptreact, typescriptreact",
     "prefix": "ruref",
-    "body": ["const ${1:someRef} = React.useRef($0)"]
+    "body": ["const ${1:someRef} = useRef($0)"]
   },
   "React: Component": {
     "scope": "javascriptreact, typescriptreact",

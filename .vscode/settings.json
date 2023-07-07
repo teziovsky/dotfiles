@@ -509,6 +509,7 @@
   "cSpell.language": "en, pl-PL",
   "cSpell.userWords": [
     "backendu",
+    "clsx",
     "daisyui",
     "esbenp",
     "Flexbox",
@@ -525,10 +526,12 @@
     "Nuxt",
     "Parens",
     "partytown",
+    "Pressable",
     "raycast",
     "Renminbi",
     "Soboczyński",
     "stylelint",
+    "SUPABASE",
     "superjson",
     "tailwindcss",
     "tanstack",
@@ -554,9 +557,10 @@
   "svelte.plugin.svelte.note-new-transformation": false,
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
     "plaintext": false,
-    "markdown": true
+    "markdown": true,
+    "scminput": false,
+    "yaml": false
   },
   "editor.tabCompletion": "onlySnippets",
   "svg.preview.mode": "svg",
@@ -572,7 +576,7 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "//": "Last update at 22/06/2023, 10:15:22",
+    "//": "Last update at 04/07/2023, 20:27:35",
     "*.asax": "$(capture).*.cs, $(capture).*.vb",
     "*.ascx": "$(capture).*.cs, $(capture).*.vb",
     "*.ashx": "$(capture).*.cs, $(capture).*.vb",
