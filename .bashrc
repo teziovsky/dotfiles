@@ -22,4 +22,5 @@ alias dotfiles='/usr/bin/git --git-dir=/Users/$HOME/.dotfiles/ --work-tree=/User
 
 . "$HOME/.cargo/env"
 
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -54,7 +54,6 @@ echo "Installing homebrew tools"
 # hub: Add GitHub support to git on the command-line
 # htop: Improved top (interactive process viewer)
 # jq: A lightweight and flexible command-line JSON processor.
-# fzf: fuzzy finder in terminal
 # id3lib: ID3 tag manipulation
 # mas: Mac App Store command-line interface
 # php: General-purpose scripting language
@@ -80,6 +79,10 @@ sqlite postgresql mysql mysql-client tree webp \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship
 
 echo
+echo "Install useful key bindings and fuzzy completions"
+$(brew --prefix)/opt/fzf/install
+
+echo
 echo "Installing apps with brew --cask"
 
 brew install --cask google-chrome firefox-developer-edition brave-browser \
@@ -93,10 +96,6 @@ echo
 echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
 xattr -r ~/Library/QuickLook
 xattr -d -r com.apple.quarantine ~/Library/QuickLook
-
-echo
-echo "Install fzf keybindings and fuzzy completions"
-$(brew --prefix)/opt/fzf/install
 
 echo
 echo "Set Brave Browser as default browser"

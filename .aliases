@@ -17,6 +17,8 @@ alias la="exa -lah"
 alias ll="exa -lh"
 alias ls="exa -G"
 alias lsa="exa -lah"
+alias fd="find . -type d \( ! -name '.*' \) | fzf"
+alias ff="find . -type f /( ! -name '.*' \) | fzf"
 
 
 # NPM
