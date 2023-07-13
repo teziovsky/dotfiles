@@ -13,6 +13,11 @@ alias pstorm="phpstorm"
 alias clipboard="pbcopy"
 alias week="date +%V"
 alias localip="curl https://ipinfo.io/json"
+alias la="exa -lah"
+alias ll="exa -lh"
+alias ls="exa -G"
+alias lsa="exa -lah"
+
 
 # NPM
 alias pn="pnpm"
