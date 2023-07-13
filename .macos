@@ -72,7 +72,7 @@ echo "Installing homebrew tools"
 # zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
 
 brew tap oven-sh/bun
-brew install bat curl git git-delta git-standup gh hub htop jq fzf exa id3lib ffmpeg mas \
+brew install bat curl git git-delta git-standup gh hub htop jq fzf fd exa id3lib ffmpeg mas \
 pnpm fnm deno bun \
 php python3 rustup ssh-copy-id \
 sqlite postgresql mysql mysql-client tree webp \
