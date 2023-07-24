@@ -76,7 +76,8 @@ brew install bat curl git git-delta git-standup gh hub htop jq fzf fd exa id3lib
 pnpm fnm deno bun \
 php python3 rustup ssh-copy-id \
 sqlite postgresql mysql mysql-client tree webp \
-zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship
+zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship \
+bitwarden-cli
 
 echo
 echo "Install useful key bindings and fuzzy completions"
@@ -88,7 +89,7 @@ echo "Installing apps with brew --cask"
 brew install --cask google-chrome firefox-developer-edition brave-browser \
 cleanmymac raycast hazel bluesnooze textsniper linearmouse \
 karabiner-elements keyboard-maestro llama \
-warp 1password slack insomnia tableplus visual-studio-code zed \
+warp slack insomnia tableplus visual-studio-code zed \
 qlcolorcode qlstephen quicklook-json qlimagesize \
 iina discord dropbox figma flux imageoptim
 
@@ -105,12 +106,12 @@ echo
 echo "Installing apps from App Store"
 mas install 937984704 # Amphetamine
 mas install 1193539993 # Brother iPrint & Scan
-mas install 1569813296 # 1Password For Safari
+mas install 1352778147 # Bitwarden
 mas install 1289197285 # MindNode
 mas install 425424353 # The Unarchiver
 mas install 497799835 # Xcode
 mas install 457622435 # Yoink
-mas install 1452453066 # Hidden Bara
+mas install 1452453066 # Hidden Bar
 mas install 409201541 # Apple Pages
 mas install 409203825 # Apple Numbers
 
