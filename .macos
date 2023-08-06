@@ -21,14 +21,15 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Tezivosky's Customizations                                                  #
 ###############################################################################
 
+echo
 echo "Hello $(whoami)! Let's get you set up."
 
 echo
 echo "Creating developer path"
 if [ ! -d ~/Developer ]; then
     mkdir -p "${HOME}/Developer"
+		echo "${HOME}/Developer - created 🔥"
 else
-    echo
     echo "${HOME}/Developer - already exists! 👌"
 fi
 
@@ -38,8 +39,8 @@ echo "Installing homebrew"
 if ! command -v brew &> /dev/null
 then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+		echo "Brew - installed 🔥"
 else
-    echo
     echo "Brew - already exists! 👌"
 fi
 
@@ -90,10 +91,12 @@ php python3 rustup ssh-copy-id \
 sqlite postgresql mysql mysql-client \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
 id3lib ffmpeg webp
+echo "Homebrew tools - installed 🔥"
 
 echo
 echo "Install useful key bindings and fuzzy completions"
 $(brew --prefix)/opt/fzf/install
+echo "Useful keybindings for fzf - installed 🔥"
 
 echo
 echo "Installing apps with brew --cask"
@@ -102,11 +105,13 @@ brew install --cask arc brave-browser firefox-developer-edition \
 cleanmymac raycast bluesnooze textsniper contexts \
 karabiner-elements keyboard-maestro hazel \
 warp slack discord insomnia tableplus visual-studio-code zed \
-iina dropbox figma flux imageoptim
+iina dropbox figma flux imageoptim logi-options-plus
+echo "Homebrew Apps - installed 🔥"
 
 echo
 echo "Set Arc as default browser"
 open -a "Arc" --args --make-default-browser
+echo "Arc - set as default browser 🔥"
 
 echo
 echo "Installing apps from App Store"
@@ -118,6 +123,7 @@ mas install 497799835 # Xcode
 mas install 457622435 # Yoink
 mas install 409201541 # Apple Pages
 mas install 409203825 # Apple Numbers
+echo "App Store Apps - installed 🔥"
 
 
 echo
@@ -125,6 +131,7 @@ echo "Installing fonts with brew --cask"
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code font-cascadia-mono-pl font-cascadia-mono \
 font-hack font-recursive font-fantasque-sans-mono font-space-mono font-input
+echo "Fonts - installed 🔥"
 
 echo
 echo "node --version: $(node --version)"
@@ -134,16 +141,18 @@ echo "pnpm --version: $(pnpm --version)"
 echo
 echo "Installing a few global npm packages"
 pnpm add -g eas-cli gitignore md-generate npm-check-updates prettier vercel
+echo "Global NPM Packages - installed 🔥"
 
 echo
 echo "Cloning dotfiles"
 if [ ! -d ~/.dotfiles ]; then
     git clone --bare git@github.com:teziovsky/dotfiles.git "$HOME"/.dotfiles
-    /usr/bin/git --git-dir="$HOME"/.dotfiles/ --work-tree="$HOME" config --local status.showUntrackedFiles no
-    source ~/.zshrc
-    dotfiles checkout
+		alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    dotfiles config --local status.showUntrackedFiles no
+    dotfiles checkout -f
+		source ~/.zshrc
+		echo "Dotfiles - installed 🔥"
 else
-    echo
     echo "Dotfiles – already exists! 👌"
 fi
 
@@ -942,6 +951,6 @@ echo "Done. Note that some of these changes require a logout/restart to take eff
 echo
 printf "TODO:\n\
 - Restart System\n\
-- Install NTFS For Mac fro https://www.seagate.com/pl/pl/support/software/paragon/ \n\
-- Login to literally everything \n\
-"
+- Install NTFS For Mac from https://www.seagate.com/pl/pl/support/software/paragon/ \n\
+- Install Pixelmator Pro \n\
+- Login to literally everything"
