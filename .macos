@@ -21,10 +21,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Tezivosky's Customizations                                                  #
 ###############################################################################
 
-echo
 echo "Hello $(whoami)! Let's get you set up."
+echo -e "------------------------\n\n"
 
-echo
 echo "Creating developer path"
 if [ ! -d ~/Developer ]; then
     mkdir -p "${HOME}/Developer"
@@ -32,8 +31,8 @@ if [ ! -d ~/Developer ]; then
 else
     echo "${HOME}/Developer - already exists! 👌"
 fi
+echo -e "------------------------\n\n"
 
-echo
 echo "Installing homebrew"
 # install homebrew https://brew.sh
 if ! command -v brew &> /dev/null
@@ -43,8 +42,8 @@ then
 else
     echo "Brew - already exists! 👌"
 fi
+echo -e "------------------------\n\n"
 
-echo
 echo "Installing homebrew tools"
 # bat: Clone of cat with syntax highlighting and Git integration
 # bitwarden-cli: The command line bitwarden vault (Windows, macOS, & Linux).
@@ -92,28 +91,27 @@ sqlite postgresql mysql mysql-client \
 zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
 id3lib ffmpeg webp
 echo "Homebrew tools - installed 🔥"
+echo -e "------------------------\n\n"
 
-echo
 echo "Install useful key bindings and fuzzy completions"
 $(brew --prefix)/opt/fzf/install
 echo "Useful keybindings for fzf - installed 🔥"
+echo -e "------------------------\n\n"
 
-echo
 echo "Installing apps with brew --cask"
-
 brew install --cask arc brave-browser firefox-developer-edition \
 cleanmymac raycast bluesnooze textsniper contexts \
 karabiner-elements keyboard-maestro hazel \
 warp slack discord insomnia tableplus visual-studio-code zed \
 iina dropbox figma flux imageoptim logi-options-plus
 echo "Homebrew Apps - installed 🔥"
+echo -e "------------------------\n\n"
 
-echo
 echo "Set Arc as default browser"
 open -a "Arc" --args --make-default-browser
 echo "Arc - set as default browser 🔥"
+echo -e "------------------------\n\n"
 
-echo
 echo "Installing apps from App Store"
 mas install 937984704 # Amphetamine
 mas install 1193539993 # Brother iPrint & Scan
@@ -124,26 +122,27 @@ mas install 457622435 # Yoink
 mas install 409201541 # Apple Pages
 mas install 409203825 # Apple Numbers
 echo "App Store Apps - installed 🔥"
+echo -e "------------------------\n\n"
 
-
-echo
 echo "Installing fonts with brew --cask"
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code font-cascadia-mono-pl font-cascadia-mono \
 font-hack font-recursive font-fantasque-sans-mono font-space-mono font-input
 echo "Fonts - installed 🔥"
+echo -e "------------------------\n\n"
 
-echo
+echo "Check node, npm and pnpm versions"
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 echo "pnpm --version: $(pnpm --version)"
+echo "Node, NPM and Pnpm - checked 🔥"
+echo -e "------------------------\n\n"
 
-echo
 echo "Installing a few global npm packages"
 pnpm add -g eas-cli gitignore md-generate npm-check-updates prettier vercel
 echo "Global NPM Packages - installed 🔥"
+echo -e "------------------------\n\n"
 
-echo
 echo "Cloning dotfiles"
 if [ ! -d ~/.dotfiles ]; then
     git clone --bare git@github.com:teziovsky/dotfiles.git "$HOME"/.dotfiles
@@ -155,10 +154,30 @@ if [ ! -d ~/.dotfiles ]; then
 else
     echo "Dotfiles – already exists! 👌"
 fi
+echo -e "------------------------\n\n"
 
-echo
+echo "Generating SSH Keys"
+SSH_GITHUB_FILE=~/.ssh/id_github
+if ! [ -f "$SSH_GITHUB_FILE" ]; then
+  ssh-keygen -t rsa -b 4096 -C "teziovsky@gmail.com" -f "$SSH_GITHUB_FILE"
+  eval "$(ssh-agent -s)"
+  ssh-add "$SSH_GITHUB_FILE"
+  echo "SSH Key - generated 🔥"
+else
+		echo "SSH Key - already exists! 👌"
+fi
+echo -e "------------------------\n\n"
+
+read -p "Do you want to add SSH Key to Github? (Y/n): " WANT_ADD_SSH_TO_GITHUB
+if [[ -z $WANT_ADD_SSH_TO_GITHUB || $WANT_ADD_SSH_TO_GITHUB == "y" || $WANT_ADD_SSH_TO_GITHUB == "Y" ]]; then
+  open https://github.com/settings/ssh/new
+  sleep 5
+  read -p "Press enter to continue..."
+  echo "SSH Key added 🔥"
+fi
+echo -e "------------------------\n\n"
+
 echo "Making system modifications"
-
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
@@ -945,12 +964,21 @@ for app in "Activity Monitor" \
   killall "${app}" &> /dev/null
 done
 
-echo
-echo "Done. Note that some of these changes require a logout/restart to take effect."
+echo "System Modifications - Done 🔥 Note that some of these changes require a logout/restart to take effect."
+echo -e "------------------------\n\n"
 
-echo
 printf "TODO:\n\
 - Restart System\n\
 - Install NTFS For Mac from https://www.seagate.com/pl/pl/support/software/paragon/ \n\
 - Install Pixelmator Pro \n\
 - Login to literally everything"
+
+read -p "Do you want to reboot? (Y/n): " WANT_REBOOT
+if [[ -z $WANT_REBOOT || $WANT_REBOOT == "y" || $WANT_REBOOT == "Y" ]]; then
+  echo "Rebooting..."
+  sleep 2
+  sudo reboot
+else
+  echo -e "\n\n Reboot canceled! 🤷‍♂️"
+fi
+echo -e "------------------------\n\n"
