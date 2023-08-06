@@ -138,6 +138,11 @@ echo "pnpm --version: $(pnpm --version)"
 echo "Node, NPM and Pnpm - checked 🔥"
 echo -e "------------------------\n\n"
 
+echo
+echo "Setup pnpm global dir"
+pnpm setup
+echo -e "------------------------\n\n"
+
 echo "Installing a few global npm packages"
 pnpm add -g eas-cli gitignore md-generate npm-check-updates prettier vercel
 echo "Global NPM Packages - installed 🔥"
