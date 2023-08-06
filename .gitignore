@@ -1,6 +1,7 @@
 .config/github-copilot/hosts.json
 .config/planetscale/access-token
 .config/gh/hosts.yml
+.config/planetscale
 .config/karabiner/automatic_backups
 .config/stetic
 .config/xbuild
