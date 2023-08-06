@@ -27,7 +27,7 @@ echo -e "------------------------\n\n"
 echo "Creating developer path"
 if [ ! -d ~/Developer ]; then
     mkdir -p "${HOME}/Developer"
-		echo "${HOME}/Developer - created 🔥"
+    echo "${HOME}/Developer - created 🔥"
 else
     echo "${HOME}/Developer - already exists! 👌"
 fi
@@ -38,7 +38,7 @@ echo "Installing homebrew"
 if ! command -v brew &> /dev/null
 then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-		echo "Brew - installed 🔥"
+        echo "Brew - installed 🔥"
 else
     echo "Brew - already exists! 👌"
 fi
@@ -151,11 +151,11 @@ echo -e "------------------------\n\n"
 echo "Cloning dotfiles"
 if [ ! -d ~/.dotfiles ]; then
     git clone --bare git@github.com:teziovsky/dotfiles.git "$HOME"/.dotfiles
-		alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+    alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
     dotfiles config --local status.showUntrackedFiles no
     dotfiles checkout -f
-		source ~/.zshrc
-		echo "Dotfiles - installed 🔥"
+    source ~/.zshrc
+    echo "Dotfiles - installed 🔥"
 else
     echo "Dotfiles – already exists! 👌"
 fi
@@ -164,21 +164,21 @@ echo -e "------------------------\n\n"
 echo "Generating SSH Keys"
 SSH_GITHUB_FILE=~/.ssh/id_github
 if ! [ -f "$SSH_GITHUB_FILE" ]; then
-  ssh-keygen -t rsa -b 4096 -C "teziovsky@gmail.com" -f "$SSH_GITHUB_FILE"
-  eval "$(ssh-agent -s)"
-  ssh-add "$SSH_GITHUB_FILE"
-  echo "SSH Key - generated 🔥"
+    ssh-keygen -t rsa -b 4096 -C "teziovsky@gmail.com" -f "$SSH_GITHUB_FILE"
+    eval "$(ssh-agent -s)"
+    ssh-add "$SSH_GITHUB_FILE"
+    echo "SSH Key - generated 🔥"
 else
-		echo "SSH Key - already exists! 👌"
+    echo "SSH Key - already exists! 👌"
 fi
 echo -e "------------------------\n\n"
 
 read -p "Do you want to add SSH Key to Github? (Y/n): " WANT_ADD_SSH_TO_GITHUB
 if [[ -z $WANT_ADD_SSH_TO_GITHUB || $WANT_ADD_SSH_TO_GITHUB == "y" || $WANT_ADD_SSH_TO_GITHUB == "Y" ]]; then
-  open https://github.com/settings/ssh/new
-  sleep 5
-  read -p "Press enter to continue..."
-  echo "SSH Key added 🔥"
+    open https://github.com/settings/ssh/new
+    sleep 5
+    read -p "Press enter to continue..."
+    echo "SSH Key added 🔥"
 fi
 echo -e "------------------------\n\n"
 
@@ -377,7 +377,7 @@ sudo pmset -a displaysleep 10
 sudo pmset -c sleep 0
 
 # Set machine sleep to 5 minutes on battery
-sudo pmset -b sleep 5
+sudo pmset -b sleep 15
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
