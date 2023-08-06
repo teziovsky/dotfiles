@@ -16,6 +16,7 @@ Define the alias in the current shell scope
 ```bash
   alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
   dotfiles config --local status.showUntrackedFiles no
+  dotfiles checkout -f
   source ~/.zshrc
 ```
 
