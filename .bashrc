@@ -24,5 +24,3 @@ alias dotfiles='/usr/bin/git --git-dir=/Users/$HOME/.dotfiles/ --work-tree=/User
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-PATH=~/.console-ninja/.bin:$PATH

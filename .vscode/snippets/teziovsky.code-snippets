@@ -502,5 +502,22 @@
     "prefix": "blur",
     "body": ["transition:blur={{ duration: ${0:500} }}"],
     "description": "Svelte: Transition blur"
+  },
+
+  // Tailwind CSS Utilities
+  "Classnames Utility": {
+    "scope": "javascript, typescript",
+    "prefix": "clsxutility",
+    "body": [
+      "import type { ClassValue } from \"clsx\";",
+      "import { clsx } from \"clsx\";",
+      "import { twMerge } from \"tailwind-merge\";",
+      "",
+      "export function cn(...inputs: ClassValue[]): string {",
+      "\treturn twMerge(clsx(inputs))",
+      "}",
+      ""
+    ],
+    "description": "Small wrapper around clsx and twMerge"
   }
 }

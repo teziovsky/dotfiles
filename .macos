@@ -29,7 +29,7 @@ if [ ! -d ~/Developer ]; then
     mkdir -p "${HOME}/Developer"
 else
     echo
-    echo "${HOME}/Developer – already exists! 👌"
+    echo "${HOME}/Developer - already exists! 👌"
 fi
 
 echo
@@ -40,44 +40,56 @@ then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
     echo
-    echo "Brew – already exists! 👌"
+    echo "Brew - already exists! 👌"
 fi
 
 echo
 echo "Installing homebrew tools"
-# bat: Clone of cat(1) with syntax highlighting and Git integration
+# bat: Clone of cat with syntax highlighting and Git integration
+# bitwarden-cli: The command line bitwarden vault (Windows, macOS, & Linux).
 # curl: Get a file from an HTTP, HTTPS or FTP server
-# git: Distributed revision control system
+# deno: Secure runtime for JavaScript and TypeScript
+# exa: Replacement for 'ls' written in Rust
+# fd: Simple, fast and user-friendly alternative to find
+# ffmpeg: Play, record, convert, and stream audio and video
+# fnm: Fast and simple Node.js version manager, built in Rust
+# fzf: Command-line fuzzy finder written in Go
+# gh: Github CLI
 # git-delta: Syntax-highlighting pager for git and diff output
 # git-standup: Show your commits from last standup
-# gh: Github CLI
-# hub: Add GitHub support to git on the command-line
+# git: Distributed revision control system
 # htop: Improved top (interactive process viewer)
-# jq: A lightweight and flexible command-line JSON processor.
+# hub: Add GitHub support to git on the command-line
 # id3lib: ID3 tag manipulation
+# jq: A lightweight and flexible command-line JSON processor.
+# llama: Midnight Commander alternative
 # mas: Mac App Store command-line interface
+# mysql-client: Open source relational database management system
+# mysql: MySQL database
 # php: General-purpose scripting language
+# pnpm: Fast, disk space efficient node package manager
+# postgresql: PostgreSQL database
 # python3: Interpreted, interactive, object-oriented programming language
 # rustup: rustup is an installer for the systems programming language Rust
-# ssh-copy-id: Add a public key to a remote machine's authorized_keys file
 # sqlite: SQLite database
-# postgresql: PostgreSQL database
-# mysql: MySQL database
-# mysql-client: Open source relational database management system
+# ssh-copy-id: Add a public key to a remote machine's authorized_keys file
 # tree: Display directories as trees (with optional color/HTML output)
 # webp: Image format providing lossless and lossy compression for web images
-# zsh: UNIX shell (command interpreter)
 # zsh-autosuggestions: Fish-like fast/unobtrusive autosuggestions for zsh
 # zsh-completions: Additional completion definitions for zsh
 # zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
+# zsh: UNIX shell (command interpreter)
+
 
 brew tap oven-sh/bun
-brew install bat curl git git-delta git-standup gh hub htop jq fzf fd exa id3lib ffmpeg mas \
+brew install bat curl htop jq fzf fd llama exa mas tree \
+bitwarden-cli \
+git git-delta git-standup hub gh \
 pnpm fnm deno bun \
 php python3 rustup ssh-copy-id \
-sqlite postgresql mysql mysql-client tree webp \
-zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting starship \
-bitwarden-cli
+sqlite postgresql mysql mysql-client \
+zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
+id3lib ffmpeg webp
 
 echo
 echo "Install useful key bindings and fuzzy completions"
@@ -86,32 +98,24 @@ $(brew --prefix)/opt/fzf/install
 echo
 echo "Installing apps with brew --cask"
 
-brew install --cask google-chrome firefox-developer-edition brave-browser \
-cleanmymac raycast hazel bluesnooze textsniper linearmouse \
-karabiner-elements keyboard-maestro llama \
-warp slack insomnia tableplus visual-studio-code zed \
-qlcolorcode qlstephen quicklook-json qlimagesize \
-iina discord dropbox figma flux imageoptim
+brew install --cask arc brave-browser firefox-developer-edition \
+cleanmymac raycast bluesnooze textsniper contexts \
+karabiner-elements keyboard-maestro hazel \
+warp slack discord insomnia tableplus visual-studio-code zed \
+iina dropbox figma flux imageoptim
 
 echo
-echo "To Quick Look plugins working in Catalina, remove the quarantine attribute."
-xattr -r ~/Library/QuickLook
-xattr -d -r com.apple.quarantine ~/Library/QuickLook
-
-echo
-echo "Set Brave Browser as default browser"
-open -a "Brave Browser" --args --make-default-browser
+echo "Set Arc as default browser"
+open -a "Arc" --args --make-default-browser
 
 echo
 echo "Installing apps from App Store"
 mas install 937984704 # Amphetamine
 mas install 1193539993 # Brother iPrint & Scan
 mas install 1352778147 # Bitwarden
-mas install 1289197285 # MindNode
 mas install 425424353 # The Unarchiver
 mas install 497799835 # Xcode
 mas install 457622435 # Yoink
-mas install 1452453066 # Hidden Bar
 mas install 409201541 # Apple Pages
 mas install 409203825 # Apple Numbers
 
@@ -129,7 +133,7 @@ echo "pnpm --version: $(pnpm --version)"
 
 echo
 echo "Installing a few global npm packages"
-pnpm add -g degit gitignore md-generate npm-check-updates npm-quick-run semantic-release-cli expo-cli
+pnpm add -g eas-cli gitignore md-generate npm-check-updates prettier vercel
 
 echo
 echo "Cloning dotfiles"
@@ -173,14 +177,14 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 # Disable the over-the-top focus ring animation
-# defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
+defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
 
 # Disable smooth scrolling
 # (Uncomment if you’re on an older Mac that messes up the animation)
-defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
+#defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
 # Increase window resize speed for Cocoa applications
-# defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -213,7 +217,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
 # Disable the crash reporter
-defaults write com.apple.CrashReporter DialogType -string "none"
+# defaults write com.apple.CrashReporter DialogType -string "none"
 
 # Set Help Viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
@@ -274,16 +278,16 @@ defaults write http://com.apple.driver.AppleBluetoothMultitouch.trackpad Trackpa
 defaults write http://com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -int 1
 
 # Trackpad: map bottom right corner to right-click
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-# defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-# defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Increase sound quality for Bluetooth headphones/headsets
-# defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -331,9 +335,9 @@ sudo pmset -a lidwake 1
 # sudo pmset -a autorestart 1
 
 # Restart automatically if the computer freezes
-# sudo systemsetup -setrestartfreeze on
+sudo systemsetup -setrestartfreeze on
 
-# Sleep the display after 15 minutes
+# Sleep the display after 10 minutes
 sudo pmset -a displaysleep 10
 
 # Disable machine sleep while charging
@@ -393,9 +397,9 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 # defaults write com.apple.finder QuitMenuItem -bool true
 
 # Finder: disable window animations and Get Info animations
-# defaults write com.apple.finder DisableAllAnimations -bool true
+defaults write com.apple.finder DisableAllAnimations -bool true
 
-# Set Desktop as the default location for new Finder windows
+# Set Downloads as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
 defaults write com.apple.finder NewWindowTarget -string "PfDe"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
@@ -531,7 +535,7 @@ defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock static-only -bool false
 
 # Don’t animate opening applications from the Dock
-defaults write com.apple.dock launchanim -bool true
+defaults write com.apple.dock launchanim -bool false
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
@@ -547,12 +551,12 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 # defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
-# defaults write com.apple.dock mru-spaces -bool false
+defaults write com.apple.dock mru-spaces -bool false
 
 # Remove the auto-hiding Dock delay
-# defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
-# defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
@@ -567,8 +571,8 @@ defaults write com.apple.dock showhidden -bool true
 # find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 # Add iOS & Watch Simulator to Launchpad
-# sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
-# sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
+sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
+sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
 
 # Add a spacer to the left side of the Dock (where the applications are)
 # defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
@@ -695,14 +699,14 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 ###############################################################################
 
 # Disable send and reply animations in Mail.app
-# defaults write com.apple.mail DisableReplyAnimations -bool true
-# defaults write com.apple.mail DisableSendAnimations -bool true
+defaults write com.apple.mail DisableReplyAnimations -bool true
+defaults write com.apple.mail DisableSendAnimations -bool true
 
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
-# defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21a9"
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21a9"
 
 # Display emails in threaded mode, sorted by date (oldest at the top)
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
@@ -710,7 +714,7 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreade
 # defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
 
 # Disable inline attachments (just show the icons)
-# defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # Disable automatic spell checking
 # defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
@@ -728,7 +732,7 @@ sudo mdutil -a -i off
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 
 # Change indexing order and disable some search results
 # Yosemite-specific search results (remove them if you are using macOS 10.9 or older):
@@ -775,40 +779,6 @@ sudo mdutil -E / > /dev/null
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Use a modified version of the Solarized Dark theme by default in Terminal.app
-# osascript <<EOD
-# tell application "Terminal"
-#   local allOpenedWindows
-#   local initialOpenedWindows
-#   local windowID
-#   set themeName to "Solarized Dark xterm-256color"
-#   (* Store the IDs of all the open terminal windows. *)
-#   set initialOpenedWindows to id of every window
-#   (* Open the custom theme so that it gets added to the list
-#      of available terminal themes (note: this will open two
-#      additional terminal windows). *)
-#   do shell script "open '$HOME/init/" & themeName & ".terminal'"
-#   (* Wait a little bit to ensure that the custom theme is added. *)
-#   delay 1
-#   (* Set the custom theme as the default terminal theme. *)
-#   set default settings to settings set themeName
-#   (* Get the IDs of all the currently opened terminal windows. *)
-#   set allOpenedWindows to id of every window
-#   repeat with windowID in allOpenedWindows
-#     (* Close the additional windows that were opened in order
-#        to add the custom theme to the list of terminal themes. *)
-#     if initialOpenedWindows does not contain windowID then
-#       close (every window whose id is windowID)
-#     (* Change the theme for the initial opened terminal windows
-#        to remove the need to close them in order for the custom
-#        theme to be applied. *)
-#     else
-#       set current settings of tabs of (every window whose id is windowID) to settings set themeName
-#     end if
-#   end repeat
-# end tell
-# EOD
-
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first
 #defaults write com.apple.terminal FocusFollowsMouse -bool true
@@ -820,18 +790,6 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 
 # Disable the annoying line marks
 defaults write com.apple.Terminal ShowLineMarks -int 0
-
-# Install the Solarized Dark theme for iTerm
-# open "${HOME}/init/Solarized Dark.itermcolors"
-
-# Don’t display the annoying prompt when quitting iTerm
-# defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
-# Specify the preferences directory
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.config/iterm2"
-
-# Tell iTerm2 to use the custom preferences in the directory
-defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 ###############################################################################
 # Time Machine                                                                #
@@ -951,12 +909,12 @@ defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool 
 defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool true
 
 # Use the system-native print preview dialog
-# defaults write com.google.Chrome DisablePrintPreview -bool true
-# defaults write com.google.Chrome.canary DisablePrintPreview -bool true
+defaults write com.google.Chrome DisablePrintPreview -bool true
+defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 
 # Expand the print dialog by default
-# defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
-# defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
+defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
+defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #

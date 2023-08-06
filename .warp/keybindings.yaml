@@ -1,18 +1,19 @@
 ---
-"workspace:show_command_search": cmd-r
 "editor_view:add_cursor_above": alt-cmd-up
-"pane_group:navigate_left": alt-shift-cmd-left
+"pane_group:add_right": shift-cmd-D
+"pane_group:navigate_prev": "cmd-["
+"pane_group:navigate_next": "cmd-]"
+"editor_view:add_next_occurrence": cmd-d
+"input:search_command_history": cmd-r
+"workspace:toggle_autosuggestions": "cmd- "
 "workspace:toggle_ai_assistant": cmd-space
+"pane_group:navigate_right": alt-shift-cmd-right
+"pane_group:navigate_left": alt-shift-cmd-left
+"workspace:toggle_mouse_reporting": ctrl-cmd-r
+"editor_view:cmd_down": ctrl-down
 "editor_view:add_cursor_below": alt-cmd-down
 "pane_group:navigate_up": alt-shift-cmd-up
-"pane_group:navigate_down": alt-shift-cmd-down
-"pane_group:navigate_next": "cmd-]"
-"input:search_command_history": cmd-r
-"pane_group:navigate_prev": "cmd-["
-"editor_view:cmd_down": ctrl-down
-"workspace:toggle_mouse_reporting": ctrl-r
-"pane_group:navigate_right": alt-shift-cmd-right
-"pane_group:add_right": shift-cmd-D
-"editor_view:add_next_occurrence": cmd-d
 "pane_group:add_down": alt-shift-D
-"workspace:toggle_autosuggestions": "cmd- "
+"pane_group:navigate_down": alt-shift-cmd-down
+"workspace:show_command_search": cmd-r
+"input:toggle_workflows": ctrl-r
