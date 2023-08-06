@@ -6,7 +6,7 @@ eval "$(fnm env --use-on-cd)"
 ZSH_THEME="robbyrussell"
 
 ## PLUGINS
-plugins=(zsh-syntax-highlighting zsh-autosuggestions brew)
+plugins=(brew)
 
 ###-tns-completion-start-###
 if [ -f $HOME/.tnsrc ]; then
