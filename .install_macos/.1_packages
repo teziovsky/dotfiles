@@ -1,0 +1,442 @@
+#!/usr/bin/env bash
+
+# File based on mathiasbynens and kentcdodds .macos files!
+# mathiasbynens — https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+# kentcdodds — https://github.com/kentcdodds/dotfiles/blob/master/.macos
+
+# Run without downloading:
+# curl https://raw.githubusercontent.com/teziovsky/dotfiles/main/.install_macos/.1_dotfiles | bash
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.1_dotfiles` has finished
+while true; do
+  sudo -n true
+  sleep 60
+  kill -0 "$$" || exit
+done 2>/dev/null &
+
+###############################################################################
+# Tezivosky's Customizations                                                  #
+###############################################################################
+
+echo -e "\n\n"
+echo "##########################################"
+echo -e "\nHello $(whoami)! Let's set up your dotfiles! 🔥\n"
+echo "##########################################"
+
+# Generate SSH Keys
+echo -e "\n"
+echo "Generating SSH Keys"
+echo "--------------------------------"
+
+SSH_GITHUB_FILE=~/.ssh/id_github
+if ! [ -f "$SSH_GITHUB_FILE" ]; then
+  ssh-keygen -t ed25519 -b 4096 -C "teziovsky@gmail.com" -f "$SSH_GITHUB_FILE"
+  eval "$(ssh-agent -s)"
+  ssh-add --apple-use-keychain "$SSH_GITHUB_FILE"
+  echo "SSH Key - generated 🔥"
+else
+  echo "SSH Key - already exists! 👌"
+fi
+sleep 1
+
+# Add SSH Key to ssh-agent
+echo -e "\n"
+echo "Adding SSH Key to ssh-agent..."
+echo "--------------------------------"
+
+SSH_CONFIG_FILE=~/.ssh/config
+SSH_GITHUB_HOST="Host github.com\n  AddKeysToAgent yes\n  UseKeychain yes\n  IdentityFile $SSH_GITHUB_FILE"
+
+if ! [ -f "$SSH_CONFIG_FILE" ]; then
+  touch "$SSH_CONFIG_FILE"
+  echo "SSH config file - created 🔥"
+
+  echo "$SSH_GITHUB_HOST" >>"$SSH_CONFIG_FILE"
+  echo "Github Host SSH Config - added 🔥"
+else
+  echo "SSH config file - already exists! 👌"
+
+  if ! grep -q "Host github.com" $SSH_CONFIG_FILE; then
+    echo "\n$SSH_GITHUB_HOST" >>"$SSH_CONFIG_FILE"
+    echo "Github Host SSH Config - added 🔥"
+  else
+    echo "Github Host SSH Config - already exists! 👌"
+  fi
+fi
+sleep 1
+
+# Install homebrew https://brew.sh
+echo -e "\n"
+echo "Installing homebrew..."
+echo "--------------------------------"
+
+if ! command -v brew &>/dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Homebrew - installed 🔥"
+else
+  echo "Homebrew - already exists! 👌"
+fi
+sleep 1
+
+# Install Github CLI
+echo -e "\n"
+echo "Installing Github CLI..."
+echo "--------------------------------"
+
+if ! command -v gh &>/dev/null; then
+  brew install gh
+  echo "Github CLI - installed 🔥"
+else
+  echo "Github CLI - already exists! 👌"
+fi
+sleep 1
+
+# Login in Github CLI
+echo -e "\n"
+echo "Loggin in Github CLI..."
+echo "--------------------------------"
+
+if ! gh auth status | grep -i "Logged in to github.com" &>/dev/null; then
+  gh auth login
+  echo "Github CLI - installed 🔥"
+else
+  echo "Github CLI - already exists! 👌"
+fi
+sleep 1
+
+# Install oh-my-zsh
+echo -e "\n"
+echo "Installing oh-my-zsh..."
+echo "--------------------------------"
+
+if ! [ -d ~/.oh-my-zsh ]; then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  echo "oh-my-zsh - installed 🔥"
+else
+  echo "oh-my-zsh - already exists! 👌"
+fi
+sleep 1
+
+# Install zsh-autosuggestions oh-my-zsh plugin
+echo -e "\n"
+echo "Installing zsh-autosuggestions oh-my-zsh plugin..."
+echo "--------------------------------"
+
+ZSH_AUTOSUGGESTIONS_DIR=~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+if ! [ -d $ZSH_AUTOSUGGESTIONS_DIR ]; then
+  git clone -q https://github.com/zsh-users/zsh-autosuggestions $ZSH_AUTOSUGGESTIONS_DIR
+  echo "zsh-autosuggestions - installed 🔥"
+else
+  echo "zsh-autosuggestions - already exists! 👌"
+fi
+sleep 1
+
+# Install zsh-syntax-highlighting oh-my-zsh plugin
+echo -e "\n"
+echo "Installing zsh-syntax-highlighting oh-my-zsh plugin..."
+echo "--------------------------------"
+
+ZSH_SYNTAX_HIGHLIGHTING_DIR=~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+if ! [ -d $ZSH_SYNTAX_HIGHLIGHTING_DIR ]; then
+  git clone -q https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_SYNTAX_HIGHLIGHTING_DIR
+  echo "zsh-syntax-highlighting - installed 🔥"
+else
+  echo "zsh-syntax-highlighting - already exists! 👌"
+fi
+sleep 1
+
+# Install Dotfiles
+echo -e "\n"
+echo "Cloning dotfiles..."
+echo "--------------------------------"
+
+if [ ! -d ~/.dotfiles ]; then
+  git clone -q --bare git@github.com:teziovsky/dotfiles.git "$HOME"/.dotfiles
+  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
+  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout -f
+  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME pull -f
+  source ~/.zshrc
+  echo "Dotfiles - installed 🔥"
+else
+  echo "Dotfiles - already exists! 👌"
+fi
+sleep 1
+
+# Homebrew add taps
+echo -e "\n"
+echo "Adding Homebrew taps..."
+echo "--------------------------------"
+brew tap homebrew/cask-fonts -q
+brew tap oven-sh/bun -q
+
+# Install Homebrew CLI Formulaes
+echo -e "\n"
+echo "Installing Homebrew CLI Formulaes..."
+echo "--------------------------------"
+
+formulaesCli=(bat bitwarden-cli curl htop jq fzf fd llama exa mas tree zsh ssh-copy-id)
+for cliFormulae in "${formulaesCli[@]}"; do
+  if ! ls $(brew --cellar) | grep -w "^$cliFormulae$" &>/dev/null; then
+    brew install $cliFormulae -q
+    echo "$cliFormulae - installed 🔥"
+  else
+    echo "$cliFormulae - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install usefull keybindings for fzf
+echo -e "\n"
+echo "Installing usefull keybindings for fzf..."
+echo "--------------------------------"
+
+SSH_GITHUB_FILE=~/.ssh/id_github
+if ! [ -f ~/.fzf.bash ] || ! [ -f ~/.fzf.zsh ]; then
+  $(brew --prefix)/opt/fzf/install
+  echo "fzf keybindings - generated 🔥"
+else
+  echo "fzf keybindings - already exists! 👌"
+fi
+sleep 1
+
+# Install Homebrew GIT Formulaes
+echo -e "\n"
+echo "Installing Homebrew GIT Formulaes..."
+echo "--------------------------------"
+
+formulaesGit=(git git-delta git-standup hub gh)
+for gitFormulae in "${formulaesGit[@]}"; do
+  if ! ls $(brew --cellar) | grep -w "^$gitFormulae$" &>/dev/null; then
+    brew install $gitFormulae -q
+    echo "$gitFormulae - installed 🔥"
+  else
+    echo "$gitFormulae - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Homebrew Node Formulaes
+echo -e "\n"
+echo "Installing Homebrew Node Formulaes..."
+echo "--------------------------------"
+
+formulaesNode=(pnpm fnm deno bun)
+for nodeFormulae in "${formulaesNode[@]}"; do
+  if ! ls $(brew --cellar) | grep -w "^$nodeFormulae$" &>/dev/null; then
+    brew install $nodeFormulae -q
+    echo "$nodeFormulae - installed 🔥"
+  else
+    echo "$nodeFormulae - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Homebrew Languages Formulaes
+echo -e "\n"
+echo "Installing Homebrew Languages Formulaes..."
+echo "--------------------------------"
+
+formulaesLanguages=(php python@3.11)
+for languageFormulae in "${formulaesLanguages[@]}"; do
+  if ! ls $(brew --cellar) | grep -w "^$languageFormulae$" &>/dev/null; then
+    brew install $languageFormulae -q
+    echo "$languageFormulae - installed 🔥"
+  else
+    echo "$languageFormulae - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Homebrew Database Formulaes
+echo -e "\n"
+echo "Installing Homebrew Database Formulaes..."
+echo "--------------------------------"
+
+formulaesDatabase=(sqlite postgresql@14 mysql mysql-client)
+for databaseFormulae in "${formulaesDatabase[@]}"; do
+  if ! ls $(brew --cellar) | grep -w "^$databaseFormulae$" &>/dev/null; then
+    brew install $databaseFormulae -q
+    echo "$databaseFormulae - installed 🔥"
+  else
+    echo "$databaseFormulae - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Homebrew Media Formulaes
+echo -e "\n"
+echo "Installing Homebrew Media Formulaes..."
+echo "--------------------------------"
+
+formulaesMedia=(id3lib ffmpeg webp)
+for mediaFormulae in "${formulaesMedia[@]}"; do
+  if ! ls $(brew --cellar) | grep -w "^$mediaFormulae$" &>/dev/null; then
+    brew install $mediaFormulae -q
+    echo "$mediaFormulae - installed 🔥"
+  else
+    echo "$mediaFormulae - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Homebrew Browsers Casks
+echo -e "\n"
+echo "Installing Homebrew Browsers Casks..."
+echo "--------------------------------"
+
+casksBrowsers=(arc brave-browser firefox)
+for browserCask in "${casksBrowsers[@]}"; do
+  if ! ls $(brew --caskroom) | grep -w "^$browserCask$" &>/dev/null; then
+    brew install --cask $browserCask -q
+    echo "$browserCask - installed 🔥"
+  else
+    echo "$browserCask - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Homebrew Automations Casks
+echo -e "\n"
+echo "Installing Homebrew Automations Casks..."
+echo "--------------------------------"
+
+casksAutomations=(karabiner-elements keyboard-maestro hazel)
+for automationsCask in "${casksAutomations[@]}"; do
+  if ! ls $(brew --caskroom) | grep -w "^$automationsCask$" &>/dev/null; then
+    brew install --cask $automationsCask -q
+    echo "$automationsCask - installed 🔥"
+  else
+    echo "$automationsCask - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Homebrew Productivity Casks
+echo -e "\n"
+echo "Installing Homebrew Productivity Casks..."
+echo "--------------------------------"
+
+casksProductivity=(raycast bluesnooze textsniper contexts cleanmymac dropbox logi-options-plus)
+for productivityCask in "${casksProductivity[@]}"; do
+  if ! ls $(brew --caskroom) | grep -w "^$productivityCask$" &>/dev/null; then
+    brew install --cask $productivityCask -q
+    echo "$productivityCask - installed 🔥"
+  else
+    echo "$productivityCask - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Homebrew Media Casks
+echo -e "\n"
+echo "Installing Homebrew Media Casks..."
+echo "--------------------------------"
+
+casksMedia=(iina imageoptim)
+for mediaCask in "${casksMedia[@]}"; do
+  if ! ls $(brew --caskroom) | grep -w "^$mediaCask$" &>/dev/null; then
+    brew install --cask $mediaCask -q
+    echo "$mediaCask - installed 🔥"
+  else
+    echo "$mediaCask - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Homebrew Developer Casks
+echo -e "\n"
+echo "Installing Homebrew Developer Casks..."
+echo "--------------------------------"
+
+casksDeveloper=(warp slack figma discord insomnia tableplus visual-studio-code zed)
+for developerCask in "${casksDeveloper[@]}"; do
+  if ! ls $(brew --caskroom) | grep -w "^$developerCask$" &>/dev/null; then
+    brew install --cask $developerCask -q
+    echo "$developerCask - installed 🔥"
+  else
+    echo "$developerCask - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Homebrew Fonts Casks
+echo -e "\n"
+echo "Installing Homebrew Fonts Casks..."
+echo "--------------------------------"
+
+casksFonts=(font-fira-code font-cascadia-mono-pl font-cascadia-mono font-hack font-recursive font-fantasque-sans-mono font-space-mono font-input)
+for fontsCask in "${casksFonts[@]}"; do
+  if ! ls $(brew --caskroom) | grep -w "^$fontsCask$" &>/dev/null; then
+    brew install --cask $fontsCask -q
+    echo "$fontsCask - installed 🔥"
+  else
+    echo "$fontsCask - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Install Apps from App Store
+echo -e "\n"
+echo "Installing Apps from App Store..."
+echo "--------------------------------"
+
+# 937984704  Amphetamine
+# 1193539993 Brother iPrint & Scan
+# 1352778147 Bitwarden
+# 425424353  The Unarchiver
+# 497799835  Xcode
+# 457622435  Yoink
+# 409201541  Apple Pages
+# 409203825  Apple Numbers
+appsAppStore=(937984704 1193539993 1352778147 425424353 497799835 457622435 409201541 409203825)
+for appAppStore in "${appsAppStore[@]}"; do
+  if ! mas list | grep -w "^$appAppStore" &>/dev/null; then
+    mas install $appAppStore -q
+    echo "$appAppStore - installed 🔥"
+  else
+    echo "$appAppStore - already exists! 👌"
+  fi
+  sleep 1
+done
+
+# Check node, npm and pnpm versions
+echo -e "\n"
+echo "Checking node, npm and pnpm versions..."
+echo "--------------------------------"
+
+echo "node --version: $(node --version)"
+echo "npm --version: $(npm --version)"
+echo "pnpm --version: $(pnpm --version)"
+echo "Node, NPM and Pnpm - checked 🔥"
+sleep 1
+
+# Setup pnpm global dir
+echo -e "\n"
+echo "Setting up pnpm global dir..."
+echo "--------------------------------"
+
+pnpm setup
+echo "Pnpm global dir - installed 🔥"
+sleep 1
+
+# Install a few global npm packages
+echo -e "\n"
+echo "Installing a few global npm packages..."
+echo "--------------------------------"
+
+npmPackages=(eas-cli gitignore md-generate npm-check-updates prettier vercel)
+for npmPackage in "${npmPackages[@]}"; do
+  if ! pnpm list -g --depth=0 | grep -w "^$npmPackage" &>/dev/null; then
+    pnpm add -g $npmPackage
+    echo "$npmPackage - installed 🔥"
+  else
+    echo "$npmPackage - already exists! 👌"
+  fi
+  sleep 1
+done
