@@ -32,7 +32,7 @@ echo "##########################################"
 # Generate SSH Keys
 echo -e "\n"
 echo "Generating SSH Keys"
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 SSH_GITHUB_FILE=~/.ssh/id_github
 if ! [ -f "$SSH_GITHUB_FILE" ]; then
@@ -48,7 +48,7 @@ sleep 1
 # Add SSH Key to ssh-agent
 echo -e "\n"
 echo "Adding SSH Key to ssh-agent..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 SSH_CONFIG_FILE=~/.ssh/config
 SSH_GITHUB_HOST="Host github.com\n  AddKeysToAgent yes\n  UseKeychain yes\n  IdentityFile $SSH_GITHUB_FILE"
@@ -74,7 +74,7 @@ sleep 1
 # Install homebrew https://brew.sh
 echo -e "\n"
 echo "Installing homebrew..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 if ! command -v brew &>/dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -87,7 +87,7 @@ sleep 1
 # Install Github CLI
 echo -e "\n"
 echo "Installing Github CLI..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 if ! command -v gh &>/dev/null; then
   brew install gh
@@ -100,7 +100,7 @@ sleep 1
 # Login in Github CLI
 echo -e "\n"
 echo "Loggin in Github CLI..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 if ! gh auth status | grep -i "Logged in to github.com" &>/dev/null; then
   gh auth login
@@ -113,7 +113,7 @@ sleep 1
 # Install oh-my-zsh
 echo -e "\n"
 echo "Installing oh-my-zsh..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 if ! [ -d ~/.oh-my-zsh ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -126,7 +126,7 @@ sleep 1
 # Install zsh-autosuggestions oh-my-zsh plugin
 echo -e "\n"
 echo "Installing zsh-autosuggestions oh-my-zsh plugin..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 ZSH_AUTOSUGGESTIONS_DIR=~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 if ! [ -d $ZSH_AUTOSUGGESTIONS_DIR ]; then
@@ -140,7 +140,7 @@ sleep 1
 # Install zsh-syntax-highlighting oh-my-zsh plugin
 echo -e "\n"
 echo "Installing zsh-syntax-highlighting oh-my-zsh plugin..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 ZSH_SYNTAX_HIGHLIGHTING_DIR=~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 if ! [ -d $ZSH_SYNTAX_HIGHLIGHTING_DIR ]; then
@@ -154,7 +154,7 @@ sleep 1
 # Install Dotfiles
 echo -e "\n"
 echo "Cloning dotfiles..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 if [ ! -d ~/.dotfiles ]; then
   git clone -q --bare git@github.com:teziovsky/dotfiles.git "$HOME"/.dotfiles
@@ -171,14 +171,16 @@ sleep 1
 # Homebrew add taps
 echo -e "\n"
 echo "Adding Homebrew taps..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 brew tap homebrew/cask-fonts -q
 brew tap oven-sh/bun -q
+echo "Homebrew taps - added 🔥"
+sleep 1
 
 # Install Homebrew CLI Formulaes
 echo -e "\n"
 echo "Installing Homebrew CLI Formulaes..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 formulaesCli=(bat bitwarden-cli curl htop jq fzf fd llama exa mas tree zsh ssh-copy-id)
 for cliFormulae in "${formulaesCli[@]}"; do
@@ -194,7 +196,7 @@ done
 # Install usefull keybindings for fzf
 echo -e "\n"
 echo "Installing usefull keybindings for fzf..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 SSH_GITHUB_FILE=~/.ssh/id_github
 if ! [ -f ~/.fzf.bash ] || ! [ -f ~/.fzf.zsh ]; then
@@ -208,7 +210,7 @@ sleep 1
 # Install Homebrew GIT Formulaes
 echo -e "\n"
 echo "Installing Homebrew GIT Formulaes..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 formulaesGit=(git git-delta git-standup hub gh)
 for gitFormulae in "${formulaesGit[@]}"; do
@@ -224,7 +226,7 @@ done
 # Install Homebrew Node Formulaes
 echo -e "\n"
 echo "Installing Homebrew Node Formulaes..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 formulaesNode=(pnpm fnm deno bun)
 for nodeFormulae in "${formulaesNode[@]}"; do
@@ -240,7 +242,7 @@ done
 # Install Homebrew Languages Formulaes
 echo -e "\n"
 echo "Installing Homebrew Languages Formulaes..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 formulaesLanguages=(php python@3.11)
 for languageFormulae in "${formulaesLanguages[@]}"; do
@@ -256,7 +258,7 @@ done
 # Install Homebrew Database Formulaes
 echo -e "\n"
 echo "Installing Homebrew Database Formulaes..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 formulaesDatabase=(sqlite postgresql@14 mysql mysql-client)
 for databaseFormulae in "${formulaesDatabase[@]}"; do
@@ -272,7 +274,7 @@ done
 # Install Homebrew Media Formulaes
 echo -e "\n"
 echo "Installing Homebrew Media Formulaes..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 formulaesMedia=(id3lib ffmpeg webp)
 for mediaFormulae in "${formulaesMedia[@]}"; do
@@ -288,7 +290,7 @@ done
 # Install Homebrew Browsers Casks
 echo -e "\n"
 echo "Installing Homebrew Browsers Casks..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 casksBrowsers=(arc brave-browser firefox)
 for browserCask in "${casksBrowsers[@]}"; do
@@ -304,7 +306,7 @@ done
 # Install Homebrew Automations Casks
 echo -e "\n"
 echo "Installing Homebrew Automations Casks..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 casksAutomations=(karabiner-elements keyboard-maestro hazel)
 for automationsCask in "${casksAutomations[@]}"; do
@@ -320,7 +322,7 @@ done
 # Install Homebrew Productivity Casks
 echo -e "\n"
 echo "Installing Homebrew Productivity Casks..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 casksProductivity=(raycast bluesnooze textsniper contexts cleanmymac dropbox logi-options-plus)
 for productivityCask in "${casksProductivity[@]}"; do
@@ -336,7 +338,7 @@ done
 # Install Homebrew Media Casks
 echo -e "\n"
 echo "Installing Homebrew Media Casks..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 casksMedia=(iina imageoptim)
 for mediaCask in "${casksMedia[@]}"; do
@@ -352,7 +354,7 @@ done
 # Install Homebrew Developer Casks
 echo -e "\n"
 echo "Installing Homebrew Developer Casks..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 casksDeveloper=(warp slack figma discord insomnia tableplus visual-studio-code zed)
 for developerCask in "${casksDeveloper[@]}"; do
@@ -368,7 +370,7 @@ done
 # Install Homebrew Fonts Casks
 echo -e "\n"
 echo "Installing Homebrew Fonts Casks..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 casksFonts=(font-fira-code font-cascadia-mono-pl font-cascadia-mono font-hack font-recursive font-fantasque-sans-mono font-space-mono font-input)
 for fontsCask in "${casksFonts[@]}"; do
@@ -384,7 +386,7 @@ done
 # Install Apps from App Store
 echo -e "\n"
 echo "Installing Apps from App Store..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 # 937984704  Amphetamine
 # 1193539993 Brother iPrint & Scan
@@ -408,7 +410,7 @@ done
 # Check node, npm and pnpm versions
 echo -e "\n"
 echo "Checking node, npm and pnpm versions..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
@@ -419,7 +421,7 @@ sleep 1
 # Setup pnpm global dir
 echo -e "\n"
 echo "Setting up pnpm global dir..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 pnpm setup
 echo "Pnpm global dir - installed 🔥"
@@ -428,7 +430,7 @@ sleep 1
 # Install a few global npm packages
 echo -e "\n"
 echo "Installing a few global npm packages..."
-echo "--------------------------------"
+echo "------------------------------------------------"
 
 npmPackages=(eas-cli gitignore md-generate npm-check-updates prettier vercel)
 for npmPackage in "${npmPackages[@]}"; do

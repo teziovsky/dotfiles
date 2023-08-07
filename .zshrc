@@ -1,6 +1,3 @@
-# FNM CONFIG
-eval "$(fnm env --use-on-cd)"
-
 ## THEMES
 ### See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
@@ -10,7 +7,7 @@ plugins=(brew zsh-autosuggestions zsh-syntax-highlighting)
 
 ###-tns-completion-start-###
 if [ -f $HOME/.tnsrc ]; then
-    source $HOME/.tnsrc
+  source $HOME/.tnsrc
 fi
 ###-tns-completion-end-###
 
@@ -19,9 +16,9 @@ fi
 
 # CONFIG
 for file in ~/.{aliases,exports,functions}; do
-        [ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+  [ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
 
 source $ZSH/oh-my-zsh.sh
 
@@ -30,7 +27,10 @@ source $ZSH/oh-my-zsh.sh
 # pnpm
 export PNPM_HOME="/Users/kuba/Library/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# FNM CONFIG
+eval "$(fnm env --use-on-cd)"
