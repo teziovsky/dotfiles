@@ -5,7 +5,7 @@
 # kentcdodds — https://github.com/kentcdodds/dotfiles/blob/master/.macos
 
 # Run without downloading:
-# curl https://raw.githubusercontent.com/teziovsky/dotfiles/main/.install_macos/.1_developer | bash
+# curl https://raw.githubusercontent.com/teziovsky/dotfiles/main/.install_macos/.2_developer | bash
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -94,6 +94,146 @@ for contributionsRepo in "${contributionsRepos[@]}"; do
     echo "$contributionsRepo repo - cloned 🔥"
   else
     echo "$contributionsRepo repo - already exists 👌"
+  fi
+  sleep 1
+done
+
+# Clone raycast contributions repos
+echo -e "\n"
+echo "Cloning raycast contributions repos..."
+echo "------------------------------------------------"
+
+raycastContributionsRepos=(
+  "extensions"
+  "raycast-teziovsky-airtable"
+  "raycast-multi-translate"
+)
+for raycastContributionsRepo in "${raycastContributionsRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/contributions/raycast/$raycastContributionsRepo" ]; then
+    git clone -q git@github.com:teziovsky/$raycastContributionsRepo.git "$HOME/Developer/contributions/raycast/$raycastContributionsRepo"
+    echo "$raycastContributionsRepo repo - cloned 🔥"
+  else
+    echo "$raycastContributionsRepo repo - already exists 👌"
+  fi
+  sleep 1
+done
+
+# Clone recruitments - makadu repos
+echo -e "\n"
+echo "Cloning recruitments - makadu repos..."
+echo "------------------------------------------------"
+
+recruitmentsMakaduRepos=(
+  "makadu-miedzy-lasem-a-cisza"
+)
+for recruitmentsMakaduRepo in "${recruitmentsMakaduRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/recruitments/makadu/$recruitmentsMakaduRepo" ]; then
+    git clone -q git@github.com:teziovsky/$recruitmentsMakaduRepo.git "$HOME/Developer/recruitments/makadu/$recruitmentsMakaduRepo"
+    echo "$recruitmentsMakaduRepo repo - cloned 🔥"
+  else
+    echo "$recruitmentsMakaduRepo repo - already exists 👌"
+  fi
+  sleep 1
+done
+
+# Clone recruitments - idcom repos
+echo -e "\n"
+echo "Cloning recruitments - idcom repos..."
+echo "------------------------------------------------"
+
+recruitmentsIdcomRepos=(
+  "idcom-vue-test"
+  "idcom-tiles"
+)
+for recruitmentsIdcomRepo in "${recruitmentsIdcomRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/recruitments/idcom/$recruitmentsIdcomRepo" ]; then
+    git clone -q git@github.com:teziovsky/$recruitmentsIdcomRepo.git "$HOME/Developer/recruitments/idcom/$recruitmentsIdcomRepo"
+    echo "$recruitmentsIdcomRepo repo - cloned 🔥"
+  else
+    echo "$recruitmentsIdcomRepo repo - already exists 👌"
+  fi
+  sleep 1
+done
+
+# Clone sites repos
+echo -e "\n"
+echo "Cloning sites repos..."
+echo "------------------------------------------------"
+
+sitesRepos=(
+  "jakubsoboczynski"
+  "jakubsoboczynski-next-v1"
+  "rock-paper-scissors"
+  "images-gallery"
+  "vehicle-service-book"
+  "movie-search-engine"
+  "car-service-book-api"
+  "lenovo-product-card"
+  "car-service-book-v1"
+  "qr-code-component"
+)
+for sitesRepo in "${sitesRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/sites/$sitesRepo" ]; then
+    git clone -q git@github.com:teziovsky/$sitesRepo.git "$HOME/Developer/sites/$sitesRepo"
+    echo "$sitesRepo repo - cloned 🔥"
+  else
+    echo "$sitesRepo repo - already exists 👌"
+  fi
+  sleep 1
+done
+
+# Clone sites - petnal repos
+echo -e "\n"
+echo "Cloning sites - petnal repos..."
+echo "------------------------------------------------"
+
+petnalSitesRepos=(
+  "petnal-web"
+  "petnal-native"
+)
+for petnalSitesRepo in "${petnalSitesRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/sites/petnal/$petnalSitesRepo" ]; then
+    git clone -q git@github.com:teziovsky/$petnalSitesRepo.git "$HOME/Developer/sites/petnal/$petnalSitesRepo"
+    echo "$petnalSitesRepo repo - cloned 🔥"
+  else
+    echo "$petnalSitesRepo repo - already exists 👌"
+  fi
+  sleep 1
+done
+
+# Clone linux macos repos
+echo -e "\n"
+echo "Cloning linux macos repos..."
+echo "------------------------------------------------"
+
+linuxMacosRepos=(
+  "vps-setup-scripts"
+)
+for linuxMacosRepo in "${linuxMacosRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/linux_macos/$linuxMacosRepo" ]; then
+    git clone -q git@github.com:teziovsky/$linuxMacosRepo.git "$HOME/Developer/linux_macos/$linuxMacosRepo"
+    echo "$linuxMacosRepo repo - cloned 🔥"
+  else
+    echo "$linuxMacosRepo repo - already exists 👌"
+  fi
+  sleep 1
+done
+
+# Clone courses repos
+echo -e "\n"
+echo "Cloning courses repos..."
+echo "------------------------------------------------"
+
+coursesRepos=(
+  "js-na-frontach-zadania"
+  "js-na-frontach-w05e02-continous-deployment"
+)
+for coursesRepo in "${coursesRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/courses/$coursesRepo" ]; then
+    git clone -q git@github.com:teziovsky/$coursesRepo.git "$HOME/Developer/courses/$coursesRepo"
+    echo "$coursesRepo repo - cloned 🔥"
+  else
+    echo "$coursesRepo repo - already exists 👌"
   fi
   sleep 1
 done
