@@ -5,8 +5,7 @@
 # kentcdodds — https://github.com/kentcdodds/dotfiles/blob/master/.macos
 
 # Run without downloading:
-# curl https://raw.githubusercontent.com/teziovsky/dotfiles/main/.macos | bash
-
+# curl https://raw.githubusercontent.com/teziovsky/dotfiles/main/.install_macos/.1_dotfiles | bash
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -73,9 +72,10 @@ if [[ -z $WANT_ADD_SSH_TO_GITHUB || $WANT_ADD_SSH_TO_GITHUB == "y" || $WANT_ADD_
     read -p "Press enter to continue..."
     echo -e "SSH Key added 🔥"
 fi
-echo -e "------------------------\n\n"
 
+echo -e "\n"
 echo -e "Cloning dotfiles..."
+echo -e "--------------------------------"
 if [ ! -d ~/.dotfiles ]; then
     git clone --bare git@github.com:teziovsky/dotfiles.git "$HOME"/.dotfiles
     alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
@@ -86,4 +86,3 @@ if [ ! -d ~/.dotfiles ]; then
 else
     echo -e "Dotfiles - already exists! 👌"
 fi
-echo -e "------------------------\n\n"
