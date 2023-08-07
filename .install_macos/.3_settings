@@ -5,8 +5,7 @@
 # kentcdodds — https://github.com/kentcdodds/dotfiles/blob/master/.macos
 
 # Run without downloading:
-# curl https://raw.githubusercontent.com/teziovsky/dotfiles/main/.macos | bash
-
+# curl https://raw.githubusercontent.com/teziovsky/dotfiles/main/.install_macos/.3_settings | bash
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -14,175 +13,22 @@ osascript -e 'tell application "System Preferences" to quit'
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+# Keep-alive: update existing `sudo` time stamp until `.1_dotfiles` has finished
+while true; do
+  sudo -n true
+  sleep 60
+  kill -0 "$$" || exit
+done 2>/dev/null &
 
 ###############################################################################
 # Tezivosky's Customizations                                                  #
 ###############################################################################
 
-echo "Hello $(whoami)! Let's get you set up."
-echo -e "------------------------\n\n"
+echo -e "\n\n"
+echo "##########################################"
+echo -e "\nHello $(whoami)! Let's set up your macos settings! 🔥\n"
+echo "##########################################"
 
-echo "Creating developer path"
-if [ ! -d ~/Developer ]; then
-    mkdir -p "${HOME}/Developer"
-    echo "${HOME}/Developer - created 🔥"
-else
-    echo "${HOME}/Developer - already exists! 👌"
-fi
-echo -e "------------------------\n\n"
-
-echo "Installing homebrew"
-# install homebrew https://brew.sh
-if ! command -v brew &> /dev/null
-then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        echo "Brew - installed 🔥"
-else
-    echo "Brew - already exists! 👌"
-fi
-echo -e "------------------------\n\n"
-
-echo "Installing homebrew tools"
-# bat: Clone of cat with syntax highlighting and Git integration
-# bitwarden-cli: The command line bitwarden vault (Windows, macOS, & Linux).
-# curl: Get a file from an HTTP, HTTPS or FTP server
-# deno: Secure runtime for JavaScript and TypeScript
-# exa: Replacement for 'ls' written in Rust
-# fd: Simple, fast and user-friendly alternative to find
-# ffmpeg: Play, record, convert, and stream audio and video
-# fnm: Fast and simple Node.js version manager, built in Rust
-# fzf: Command-line fuzzy finder written in Go
-# gh: Github CLI
-# git-delta: Syntax-highlighting pager for git and diff output
-# git-standup: Show your commits from last standup
-# git: Distributed revision control system
-# htop: Improved top (interactive process viewer)
-# hub: Add GitHub support to git on the command-line
-# id3lib: ID3 tag manipulation
-# jq: A lightweight and flexible command-line JSON processor.
-# llama: Midnight Commander alternative
-# mas: Mac App Store command-line interface
-# mysql-client: Open source relational database management system
-# mysql: MySQL database
-# php: General-purpose scripting language
-# pnpm: Fast, disk space efficient node package manager
-# postgresql: PostgreSQL database
-# python3: Interpreted, interactive, object-oriented programming language
-# rustup: rustup is an installer for the systems programming language Rust
-# sqlite: SQLite database
-# ssh-copy-id: Add a public key to a remote machine's authorized_keys file
-# tree: Display directories as trees (with optional color/HTML output)
-# webp: Image format providing lossless and lossy compression for web images
-# zsh-autosuggestions: Fish-like fast/unobtrusive autosuggestions for zsh
-# zsh-completions: Additional completion definitions for zsh
-# zsh-syntax-highlighting: Fish shell like syntax highlighting for zsh
-# zsh: UNIX shell (command interpreter)
-
-
-brew tap oven-sh/bun
-brew install bat curl htop jq fzf fd llama exa mas tree \
-bitwarden-cli \
-git git-delta git-standup hub gh \
-pnpm fnm deno bun \
-php python3 rustup ssh-copy-id \
-sqlite postgresql mysql mysql-client \
-zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting \
-id3lib ffmpeg webp
-echo "Homebrew tools - installed 🔥"
-echo -e "------------------------\n\n"
-
-echo "Install useful key bindings and fuzzy completions"
-$(brew --prefix)/opt/fzf/install
-echo "Useful keybindings for fzf - installed 🔥"
-echo -e "------------------------\n\n"
-
-echo "Installing apps with brew --cask"
-brew install --cask arc brave-browser firefox-developer-edition \
-cleanmymac raycast bluesnooze textsniper contexts \
-karabiner-elements keyboard-maestro hazel \
-warp slack discord insomnia tableplus visual-studio-code zed \
-iina dropbox figma flux imageoptim logi-options-plus
-echo "Homebrew Apps - installed 🔥"
-echo -e "------------------------\n\n"
-
-echo "Set Arc as default browser"
-open -a "Arc" --args --make-default-browser
-echo "Arc - set as default browser 🔥"
-echo -e "------------------------\n\n"
-
-echo "Installing apps from App Store"
-mas install 937984704 # Amphetamine
-mas install 1193539993 # Brother iPrint & Scan
-mas install 1352778147 # Bitwarden
-mas install 425424353 # The Unarchiver
-mas install 497799835 # Xcode
-mas install 457622435 # Yoink
-mas install 409201541 # Apple Pages
-mas install 409203825 # Apple Numbers
-echo "App Store Apps - installed 🔥"
-echo -e "------------------------\n\n"
-
-echo "Installing fonts with brew --cask"
-brew tap homebrew/cask-fonts
-brew install --cask font-fira-code font-cascadia-mono-pl font-cascadia-mono \
-font-hack font-recursive font-fantasque-sans-mono font-space-mono font-input
-echo "Fonts - installed 🔥"
-echo -e "------------------------\n\n"
-
-echo "Check node, npm and pnpm versions"
-echo "node --version: $(node --version)"
-echo "npm --version: $(npm --version)"
-echo "pnpm --version: $(pnpm --version)"
-echo "Node, NPM and Pnpm - checked 🔥"
-echo -e "------------------------\n\n"
-
-echo
-echo "Setup pnpm global dir"
-pnpm setup
-echo -e "------------------------\n\n"
-
-echo "Installing a few global npm packages"
-pnpm add -g eas-cli gitignore md-generate npm-check-updates prettier vercel
-echo "Global NPM Packages - installed 🔥"
-echo -e "------------------------\n\n"
-
-echo "Cloning dotfiles"
-if [ ! -d ~/.dotfiles ]; then
-    git clone --bare git@github.com:teziovsky/dotfiles.git "$HOME"/.dotfiles
-    alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-    dotfiles config --local status.showUntrackedFiles no
-    dotfiles checkout -f
-    source ~/.zshrc
-    echo "Dotfiles - installed 🔥"
-else
-    echo "Dotfiles – already exists! 👌"
-fi
-echo -e "------------------------\n\n"
-
-echo "Generating SSH Keys"
-SSH_GITHUB_FILE=~/.ssh/id_github
-if ! [ -f "$SSH_GITHUB_FILE" ]; then
-    ssh-keygen -t rsa -b 4096 -C "teziovsky@gmail.com" -f "$SSH_GITHUB_FILE"
-    eval "$(ssh-agent -s)"
-    ssh-add "$SSH_GITHUB_FILE"
-    echo "SSH Key - generated 🔥"
-else
-    echo "SSH Key - already exists! 👌"
-fi
-echo -e "------------------------\n\n"
-
-read -p "Do you want to add SSH Key to Github? (Y/n): " WANT_ADD_SSH_TO_GITHUB
-if [[ -z $WANT_ADD_SSH_TO_GITHUB || $WANT_ADD_SSH_TO_GITHUB == "y" || $WANT_ADD_SSH_TO_GITHUB == "Y" ]]; then
-    open https://github.com/settings/ssh/new
-    sleep 5
-    read -p "Press enter to continue..."
-    echo "SSH Key added 🔥"
-fi
-echo -e "------------------------\n\n"
-
-echo "Making system modifications"
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
@@ -802,11 +648,11 @@ defaults write com.apple.spotlight orderedItems -array \
   '{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
   '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 # Load new settings before rebuilding the index
-killall mds > /dev/null 2>&1
+killall mds >/dev/null 2>&1
 # Make sure indexing is enabled for the main volume
-sudo mdutil -i on / > /dev/null
+sudo mdutil -i on / >/dev/null
 # Rebuild the index from scratch
-sudo mdutil -E / > /dev/null
+sudo mdutil -E / >/dev/null
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #
@@ -969,24 +815,8 @@ for app in "Activity Monitor" \
   "Safari" \
   "SystemUIServer" \
   "iCal"; do
-  killall "${app}" &> /dev/null
+  killall "${app}" &>/dev/null
 done
 
 echo "System Modifications - Done 🔥 Note that some of these changes require a logout/restart to take effect."
-echo -e "------------------------\n\n"
-
-printf "TODO:\n\
-- Restart System\n\
-- Install NTFS For Mac from https://www.seagate.com/pl/pl/support/software/paragon/ \n\
-- Install Pixelmator Pro \n\
-- Login to literally everything"
-
-read -p "Do you want to reboot? (Y/n): " WANT_REBOOT
-if [[ -z $WANT_REBOOT || $WANT_REBOOT == "y" || $WANT_REBOOT == "Y" ]]; then
-  echo "Rebooting..."
-  sleep 2
-  sudo reboot
-else
-  echo -e "\n\n Reboot canceled! 🤷‍♂️"
-fi
 echo -e "------------------------\n\n"
