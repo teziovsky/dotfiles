@@ -659,7 +659,7 @@ fi
 # 14: Quick Note
 
 # Top left screen corner → Nothing
-if ! defaults read com.apple.dock wvous-tl-corner | grep -w "^1&" &>/dev/null; then
+if ! defaults read com.apple.dock wvous-tl-corner | grep -w "1" &>/dev/null; then
   defaults write com.apple.dock wvous-tl-corner -int 1
   defaults write com.apple.dock wvous-tl-modifier -int 0
   echo "Top left screen corner → Nothing - changed 🔥"
@@ -668,7 +668,7 @@ else
 fi
 
 # Top right screen corner → Nothing
-if ! defaults read com.apple.dock wvous-tr-corner | grep -w "^1&" &>/dev/null; then
+if ! defaults read com.apple.dock wvous-tr-corner | grep -w "1" &>/dev/null; then
   defaults write com.apple.dock wvous-tr-corner -int 1
   defaults write com.apple.dock wvous-tr-modifier -int 0
   echo "Top right screen corner → Nothing - changed 🔥"
@@ -677,7 +677,7 @@ else
 fi
 
 # Bottom left screen corner → Nothing
-if ! defaults read com.apple.dock wvous-bl-corner | grep -w "^1&" &>/dev/null; then
+if ! defaults read com.apple.dock wvous-bl-corner | grep -w "1" &>/dev/null; then
   defaults write com.apple.dock wvous-bl-corner -int 1
   defaults write com.apple.dock wvous-bl-modifier -int 0
   echo "Bottom left screen corner → Nothing - changed 🔥"
@@ -686,7 +686,7 @@ else
 fi
 
 # Bottom right screen corner → Quick Note
-if ! defaults read com.apple.dock wvous-br-corner | grep -i "14" &>/dev/null; then
+if ! defaults read com.apple.dock wvous-br-corner | grep -w "14" &>/dev/null; then
   defaults write com.apple.dock wvous-br-corner -int 14
   defaults write com.apple.dock wvous-br-modifier -int 0
   echo "Bottom right screen corner → Quick Note - changed 🔥"
