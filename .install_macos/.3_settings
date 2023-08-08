@@ -1561,6 +1561,304 @@ else
 fi
 
 ###############################################################################
+# Amphetamine                                                                 #
+###############################################################################
+
+if ls /Applications | grep -i amphetamine &>/dev/null; then
+  echo -e "\n"
+  echo "Setting up Amphetamine settings..."
+  echo "------------------------------------------------"
+
+  # Disallow sleep when lid is closed
+  if ! defaults read com.if.Amphetamine "Allow Closed-Display Sleep" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Allow Closed-Display Sleep" -int 0
+    echo "Disallow sleep when lid is closed - changed 🔥"
+  else
+    echo "Disallow sleep when lid is closed - already set! 👌"
+  fi
+
+  # Disallow display to go sleep
+  if ! defaults read com.if.Amphetamine "Allow Display Sleep" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Allow Display Sleep" -int 0
+    echo "Disallow display to go sleep - changed 🔥"
+  else
+    echo "Disallow display to go sleep - already set! 👌"
+  fi
+
+  # Disallow display sleep when screen is locked
+  if ! defaults read com.if.Amphetamine "Allow Display Sleep When Screen Is Locked" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Allow Display Sleep When Screen Is Locked" -int 0
+    echo "Disallow display sleep when screen is locked - changed 🔥"
+  else
+    echo "Disallow display sleep when screen is locked - already set! 👌"
+  fi
+
+  # Disallow screen saver
+  if ! defaults read com.if.Amphetamine "Allow Screen Saver" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Allow Screen Saver" -int 0
+    echo "Disallow screen saver - changed 🔥"
+  else
+    echo "Disallow screen saver - already set! 👌"
+  fi
+
+  # Stop asking to end for low battery
+  if ! defaults read com.if.Amphetamine "Always Ask to End For Low Battery" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Always Ask to End For Low Battery" -int 0
+    echo "Stop asking to end for low battery - changed 🔥"
+  else
+    echo "Stop asking to end for low battery - already set! 👌"
+  fi
+
+  # Auto remove notifications
+  if ! defaults read com.if.Amphetamine "Auto Remove Notifications" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Auto Remove Notifications" -int 1
+    echo "Auto remove notifications - changed 🔥"
+  else
+    echo "Auto remove notifications - already set! 👌"
+  fi
+
+  # Set default duration to infinite
+  if ! defaults read com.if.Amphetamine "Default Duration" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Default Duration" -int 0
+    echo "Set default duration to infinite - changed 🔥"
+  else
+    echo "Set default duration to infinite - already set! 👌"
+  fi
+
+  # Set default hotkey action to right click
+  if ! defaults read com.if.Amphetamine DefaultHotkeyAction | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine DefaultHotkeyAction -int 0
+    echo "Set default hotkey action to right click - changed 🔥"
+  else
+    echo "Set default hotkey action to right click - already set! 👌"
+  fi
+
+  # Disable drive alive
+  if ! defaults read com.if.Amphetamine "Enable Drive Alive" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Enable Drive Alive" -int 0
+    echo "Disable drive alive - changed 🔥"
+  else
+    echo "Disable drive alive - already set! 👌"
+  fi
+
+  # Disable Mouse Movement
+  if ! defaults read com.if.Amphetamine "Enable Mouse Movement" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Enable Mouse Movement" -int 0
+    echo "Disable Mouse Movement - changed 🔥"
+  else
+    echo "Disable Mouse Movement - already set! 👌"
+  fi
+
+  # Enable Notification Sound
+  if ! defaults read com.if.Amphetamine "Enable Notification Sound" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Enable Notification Sound" -int 1
+    echo "Enable Notification Sound - changed 🔥"
+  else
+    echo "Enable Notification Sound - already set! 👌"
+  fi
+
+  # Enable session auto end notifications
+  if ! defaults read com.if.Amphetamine "Enable Session Auto End Notifications" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Enable Session Auto End Notifications" -int 1
+    echo "Enable session auto end notification - changed 🔥"
+  else
+    echo "Enable session auto end notification - already set! 👌"
+  fi
+
+  # Enable session auto start notifications
+  if ! defaults read com.if.Amphetamine "Enable Session Auto Start Notifications" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Enable Session Auto Start Notifications" -int 1
+    echo "Enable session auto start notification - changed 🔥"
+  else
+    echo "Enable session auto start notification - already set! 👌"
+  fi
+
+  # Disable session notifications
+  if ! defaults read com.if.Amphetamine "Enable Session Notifications" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Enable Session Notifications" -int 0
+    echo "Disable session notifications - changed 🔥"
+  else
+    echo "Disable session notifications - already set! 👌"
+  fi
+
+  # Disable statistics
+  if ! defaults read com.if.Amphetamine "Enable Statistics" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Enable Statistics" -int 0
+    echo "Disable statistics - changed 🔥"
+  else
+    echo "Disable statistics - already set! 👌"
+  fi
+
+  # Disable triggers
+  if ! defaults read com.if.Amphetamine "Enable Triggers" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Enable Triggers" -int 0
+    echo "Disable triggers - changed 🔥"
+  else
+    echo "Disable triggers - already set! 👌"
+  fi
+
+  # End session on low battery
+  if ! defaults read com.if.Amphetamine "End Session On Low Battery" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "End Session On Low Battery" -int 1
+    echo "End session on low battery - changed 🔥"
+  else
+    echo "End session on low battery - already set! 👌"
+  fi
+
+  # Set low battery percent to 10
+  if ! defaults read com.if.Amphetamine "Low Battery Percent" | grep -i "10" &>/dev/null; then
+    defaults write com.if.Amphetamine "Low Battery Percent" -int 10
+    echo "Set low battery percent to 10 - changed 🔥"
+  else
+    echo "Set low battery percent to 10 - already set! 👌"
+  fi
+
+  # Dont end session on forced sleep
+  if ! defaults read com.if.Amphetamine "End Sessions On Forced Sleep" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "End Sessions On Forced Sleep" -int 0
+    echo "Dont end session on forced sleep - changed 🔥"
+  else
+    echo "Dont end session on forced sleep - already set! 👌"
+  fi
+
+  # Dont end session when FUS
+  if ! defaults read com.if.Amphetamine "End Sessions when FUS" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "End Sessions when FUS" -int 0
+    echo "Dont end session when FUS - changed 🔥"
+  else
+    echo "Dont end session when FUS - already set! 👌"
+  fi
+
+  # Hide dock icon
+  if ! defaults read com.if.Amphetamine "Hide Dock Icon" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Hide Dock Icon" -int 1
+    echo "Hide dock icon - changed 🔥"
+  else
+    echo "Hide dock icon - already set! 👌"
+  fi
+
+  # Icon Style to cup of coffee
+  if ! defaults read com.if.Amphetamine "Icon Style" | grep -i "5" &>/dev/null; then
+    defaults write com.if.Amphetamine "Icon Style" -int 5
+    echo "Icon Style to cup of coffee - changed 🔥"
+  else
+    echo "Icon Style to cup of coffee - already set! 👌"
+  fi
+
+  # Lock screen after inactivity
+  if ! defaults read com.if.Amphetamine "Lock Screen After Inactivity" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Lock Screen After Inactivity" -int 1
+    echo "Lock screen after inactivity - changed 🔥"
+  else
+    echo "Lock screen after inactivity - already set! 👌"
+  fi
+
+  # Lock Screen Inactivity Delay to 300
+  if ! defaults read com.if.Amphetamine "Lock Screen Inactivity Delay" | grep -i "300" &>/dev/null; then
+    defaults write com.if.Amphetamine "Lock Screen Inactivity Delay" -int 300
+    echo "Lock Screen Inactivity Delay to 300 - changed 🔥"
+  else
+    echo "Lock Screen Inactivity Delay to 300 - already set! 👌"
+  fi
+
+  # Ignore battery on AC
+  if ! defaults read com.if.Amphetamine "Ignore Battery on AC" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Ignore Battery on AC" -int 0
+    echo "Ignore battery on AC - changed 🔥"
+  else
+    echo "Ignore battery on AC - already set! 👌"
+  fi
+
+  # Disable Lock Screen for CDM
+  if ! defaults read com.if.Amphetamine "Lock Screen For CDM" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Lock Screen For CDM" -int 0
+    echo "Lock Screen for CDM - changed 🔥"
+  else
+    echo "Lock Screen for CDM - already set! 👌"
+  fi
+
+  # Set lower icon opacity to 0
+  if ! defaults read com.if.Amphetamine "Lower Icon Opacity" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Lower Icon Opacity" -int 0
+    echo "Set lower icon opacity to 0 - changed 🔥"
+  else
+    echo "Set lower icon opacity to 0 - already set! 👌"
+  fi
+
+  # Set screen saver delay to 5
+  if ! defaults read com.if.Amphetamine "Screen Saver Delay" | grep -i "5" &>/dev/null; then
+    defaults write com.if.Amphetamine "Screen Saver Delay" -int 5
+    echo "Set screen saver delay to 5 - changed 🔥"
+  else
+    echo "Set screen saver delay to 5 - already set! 👌"
+  fi
+
+  # Session Notification Interval to 60
+  if ! defaults read com.if.Amphetamine "Session Notification Interval" | grep -i "60" &>/dev/null; then
+    defaults write com.if.Amphetamine "Session Notification Interval" -int 60
+    echo "Session Notification Interval to 60 - changed 🔥"
+  else
+    echo "Session Notification Interval to 60 - already set! 👌"
+  fi
+
+  # Show Session Details In Menu
+  if ! defaults read com.if.Amphetamine "Show Session Details In Menu" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Show Session Details In Menu" -int 1
+    echo "Show Session Details In Menu - changed 🔥"
+  else
+    echo "Show Session Details In Menu - already set! 👌"
+  fi
+
+  # Show Session Time In Status Bar
+  if ! defaults read com.if.Amphetamine "Show Session Time In Status Bar" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Show Session Time In Status Bar" -int 1
+    echo "Show Session Time In Status Bar - changed 🔥"
+  else
+    echo "Show Session Time In Status Bar - already set! 👌"
+  fi
+
+  # Not show welcome window
+  if ! defaults read com.if.Amphetamine "Show Welcome Window" | grep -i "0" &>/dev/null; then
+    defaults write com.if.Amphetamine "Show Welcome Window" -int 0
+    echo "Not show welcome window - changed 🔥"
+  else
+    echo "Not show welcome window - already set! 👌"
+  fi
+
+  # Start session at launch
+  if ! defaults read com.if.Amphetamine "Start Session At Launch" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Start Session At Launch" -int 1
+    echo "Start session at launch - changed 🔥"
+  else
+    echo "Start session at launch - already set! 👌"
+  fi
+
+  # Start session on wake
+  if ! defaults read com.if.Amphetamine "Start Session On Wake" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Start Session On Wake" -int 1
+    echo "Start session on wake - changed 🔥"
+  else
+    echo "Start session on wake - already set! 👌"
+  fi
+
+  # Status bar session time format to 1
+  if ! defaults read com.if.Amphetamine "Status Bar Session Time Format" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Status Bar Session Time Format" -int 1
+    echo "Status bar session time format to 1 - changed 🔥"
+  else
+    echo "Status bar session time format to 1 - already set! 👌"
+  fi
+
+  # Use 24 Hour Clock
+  if ! defaults read com.if.Amphetamine "Use 24 Hour Clock" | grep -i "1" &>/dev/null; then
+    defaults write com.if.Amphetamine "Use 24 Hour Clock" -int 1
+    echo "Use 24 Hour Clock - changed 🔥"
+  else
+    echo "Use 24 Hour Clock - already set! 👌"
+  fi
+fi
+
+###############################################################################
 # Arc Browser                                                                 #
 ###############################################################################
 
@@ -1931,16 +2229,26 @@ fi
 for app in "Activity Monitor" \
   "Address Book" \
   "Calendar" \
+  "iCal" \
   "cfprefsd" \
   "Contacts" \
   "Dock" \
   "Finder" \
   "Mail" \
   "Messages" \
+  "Music" \
   "Photos" \
   "Safari" \
   "SystemUIServer" \
-  "iCal"; do
+  "Terminal" \
+  "Amphetamine" \
+  "Arc" \
+  "Google Chrome" \
+  "Hazel" \
+  "Keyboard Maestro" \
+  "TextSniper" \
+  "Warp" \
+  "Yoink"; do
   killall "${app}" &>/dev/null
 done
 
