@@ -2252,4 +2252,5 @@ for app in "Activity Monitor" \
   killall "${app}" &>/dev/null
 done
 
+echo -e "\n"
 echo "System Modifications - Done 🔥 Note that some of these changes require a logout/restart to take effect."
