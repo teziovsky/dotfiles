@@ -1,5 +1,4 @@
 {
-  //* Workbench
   "workbench.colorTheme": "One Hunter Theme Vercel",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.tabCloseButton": "right",
@@ -16,10 +15,8 @@
     "sideBarTitle.foreground": "#EAB780"
   },
 
-  //* Window
   "window.restoreWindows": "all",
 
-  //* Editor
   "editor.stickyScroll.enabled": true,
   "editor.accessibilitySupport": "off",
   "editor.acceptSuggestionOnEnter": "off",
@@ -59,13 +56,11 @@
     "strings": "on"
   },
 
-  //* Explorer
   "explorer.autoReveal": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 1,
 
-  //* Files
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "onFocusChange",
@@ -85,7 +80,6 @@
     "**/.idea": true
   },
 
-  //* Emmet
   "emmet.excludeLanguages": ["markdown"],
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
@@ -100,7 +94,6 @@
     "markdown": "javascriptreact"
   },
 
-  //* Terminal
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontFamily": "Input Mono, Space Mono, Recursive, Jetbrains Mono, MesloLGS NF, Monaco, Courier New, monospace",
@@ -111,7 +104,6 @@
     "FIG_NEW_SESSION": "1"
   },
 
-  //* Prettier
   "prettier.arrowParens": "always",
   "prettier.bracketSameLine": true,
   "prettier.bracketSpacing": true,
@@ -132,7 +124,6 @@
   "prettier.vueIndentScriptAndStyle": false,
   "prettier.documentSelectors": ["**/*.astro"],
 
-  //* Default formatters
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -149,7 +140,7 @@
     "editor.defaultFormatter": "mblode.twig-language-2"
   },
   "[shellscript]": {
-    "editor.defaultFormatter": "shakram02.bash-beautify"
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
@@ -173,7 +164,6 @@
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
 
-  //* Languages
   "css.lint.important": "warning",
   "scss.lint.important": "warning",
   "css.lint.duplicateProperties": "warning",
@@ -213,14 +203,12 @@
   },
   "yaml.format.printWidth": 120,
 
-  //* Git
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "git.autofetch": true,
   "scm.alwaysShowActions": true,
   "scm.alwaysShowRepositories": true,
 
-  //* Gitlens
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.hovers.enabled": false,
   "gitlens.statusBar.enabled": false,
@@ -238,7 +226,6 @@
     "scmItem": false
   },
 
-  //* Eslint
   "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"],
   "eslint.options": {
     "overrideConfig": {
@@ -259,7 +246,6 @@
     }
   },
 
-  //* Advanced New File
   "advancedNewFile.showInformationMessages": true,
   "advancedNewFile.convenienceOptions": ["last", "current", "root"],
   "advancedNewFile.exclude": {
@@ -269,16 +255,13 @@
     "dist": true
   },
 
-  //* NPM
   "npm.runSilent": true,
   "npm.packageManager": "npm",
 
-  //* Colorize
   "colorize.include": ["**/*.css", "**/*.scss", "**/*.sass", "**/*.less", "**/*.styl"],
   "colorize.colorized_variables": ["CSS", "LESS", "SASS", "STYLUS"],
   "colorize.languages": ["css", "sass", "scss", "less", "postcss", "sss", "stylus", "xml", "svg"],
 
-  //* Reszta
   "breadcrumbs.enabled": true,
   "breadcrumbs.showFields": false,
   "trailing-spaces.trimOnSave": true,
@@ -293,7 +276,6 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "telemetry.telemetryLevel": "off",
-  "redhat.telemetry.enabled": false,
   "cSpell.language": "en, pl-PL",
   "cSpell.userWords": [
     "backendu",
@@ -358,5 +340,10 @@
   ],
   "git.openRepositoryInParentFolders": "always",
   "security.workspace.trust.untrustedFiles": "open",
-  "window.zoomLevel": -1
+  "window.zoomLevel": -1,
+  "projectManager.sortList": "Name",
+  "projectManager.removeCurrentProjectFromList": true,
+  "projectManager.showParentFolderInfoOnDuplicates": true,
+  "projectManager.projectsLocation": "~/.vscode",
+  "projectManager.tags": ["configuration", "cli", "contribution", "course", "linux_macos", "recruitment", "site", "wsb"]
 }
