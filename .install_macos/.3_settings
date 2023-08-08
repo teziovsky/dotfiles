@@ -366,7 +366,7 @@ else
 fi
 
 # Automatically open a new Finder window when a volume is mounted
-if ! defaults read com.apple.finder OpenWindowForNewRemovableDisk | grep -i "1" &>/dev/null || defaults read com.apple.frameworks.diskimages auto-open-ro-root | grep -i "1" &>/dev/null || defaults read com.apple.frameworks.diskimages auto-open-rw-root | grep -i "1" &>/dev/null; then
+if ! defaults read com.apple.finder OpenWindowForNewRemovableDisk | grep -i "1" &>/dev/null || ! defaults read com.apple.frameworks.diskimages auto-open-ro-root | grep -i "1" &>/dev/null || ! defaults read com.apple.frameworks.diskimages auto-open-rw-root | grep -i "1" &>/dev/null; then
   defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
   defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
   defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
