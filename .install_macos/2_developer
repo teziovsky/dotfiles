@@ -227,3 +227,45 @@ for coursesRepo in "${coursesRepos[@]}"; do
     echo "$coursesRepo repo - already exists 👌"
   fi
 done
+
+# Creating symlinks for vscode settings
+echo -e "\n"
+echo "Creating symlinks for vscode settings..."
+echo "------------------------------------------------"
+
+if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i keybindings.json &>/dev/null; then
+  ln -s ~/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+  echo "keybindings.json file - symlinked 🔥"
+else
+  echo "keybindings.json file - already exists 👌"
+fi
+
+if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i settings.json &>/dev/null; then
+  ln -s ~/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+  echo "settings.json file - symlinked 🔥"
+else
+  echo "settings.json file - already exists 👌"
+fi
+
+if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i projects.json &>/dev/null; then
+  ln -s ~/.vscode/projects.json ~/Library/Application\ Support/Code/User/projects.json
+  echo "projects.json file - symlinked 🔥"
+else
+  echo "projects.json file - already exists 👌"
+fi
+
+if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i spellright.dict &>/dev/null; then
+  ln -s ~/.vscode/spellright.dict ~/Library/Application\ Support/Code/User/spellright.dict
+  echo "spellright.dict file - symlinked 🔥"
+else
+  echo "spellright.dict file - already exists 👌"
+fi
+
+echo
+
+if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i snippets &>/dev/null; then
+  ln -s ~/.vscode/snippets ~/Library/Application\ Support/Code/User
+  echo "snippets dir - symlinked 🔥"
+else
+  echo "snippets dir - already exists 👌"
+fi

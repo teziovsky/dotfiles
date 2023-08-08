@@ -345,5 +345,5 @@
   "projectManager.removeCurrentProjectFromList": true,
   "projectManager.showParentFolderInfoOnDuplicates": true,
   "projectManager.projectsLocation": "~/.vscode",
-  "projectManager.tags": ["configuration", "cli", "contribution", "course", "linux_macos", "recruitment", "site", "wsb"]
+  "projectManager.tags": ["configuration", "cli", "contribution", "course", "linux_macos", "recruitment", "site"]
 }
