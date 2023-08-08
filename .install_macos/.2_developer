@@ -25,9 +25,9 @@ done 2>/dev/null &
 ###############################################################################
 
 echo -e "\n\n"
-echo "##########################################"
-echo -e "\nHello $(whoami)! Let's set up your dotfiles! 🔥\n"
-echo "##########################################"
+echo "##################################################"
+echo -e "\nHello $(whoami)! Let's set up your developer directory! 🔥\n"
+echo "##################################################"
 
 # Create developer path
 echo -e "\n"
@@ -56,7 +56,6 @@ for wsbRepo in "${wsbRepos[@]}"; do
   else
     echo "$wsbRepo repo - already exists 👌"
   fi
-  sleep 1
 done
 
 # Clone cli repos
@@ -74,7 +73,6 @@ for cliRepo in "${cliRepos[@]}"; do
   else
     echo "$cliRepo repo - already exists 👌"
   fi
-  sleep 1
 done
 
 # Clone contributions repos
@@ -95,7 +93,6 @@ for contributionsRepo in "${contributionsRepos[@]}"; do
   else
     echo "$contributionsRepo repo - already exists 👌"
   fi
-  sleep 1
 done
 
 # Clone raycast contributions repos
@@ -115,7 +112,6 @@ for raycastContributionsRepo in "${raycastContributionsRepos[@]}"; do
   else
     echo "$raycastContributionsRepo repo - already exists 👌"
   fi
-  sleep 1
 done
 
 # Clone recruitments - makadu repos
@@ -133,7 +129,6 @@ for recruitmentsMakaduRepo in "${recruitmentsMakaduRepos[@]}"; do
   else
     echo "$recruitmentsMakaduRepo repo - already exists 👌"
   fi
-  sleep 1
 done
 
 # Clone recruitments - idcom repos
@@ -152,7 +147,6 @@ for recruitmentsIdcomRepo in "${recruitmentsIdcomRepos[@]}"; do
   else
     echo "$recruitmentsIdcomRepo repo - already exists 👌"
   fi
-  sleep 1
 done
 
 # Clone sites repos
@@ -179,7 +173,6 @@ for sitesRepo in "${sitesRepos[@]}"; do
   else
     echo "$sitesRepo repo - already exists 👌"
   fi
-  sleep 1
 done
 
 # Clone sites - petnal repos
@@ -198,7 +191,6 @@ for petnalSitesRepo in "${petnalSitesRepos[@]}"; do
   else
     echo "$petnalSitesRepo repo - already exists 👌"
   fi
-  sleep 1
 done
 
 # Clone linux macos repos
@@ -216,7 +208,6 @@ for linuxMacosRepo in "${linuxMacosRepos[@]}"; do
   else
     echo "$linuxMacosRepo repo - already exists 👌"
   fi
-  sleep 1
 done
 
 # Clone courses repos
@@ -235,5 +226,4 @@ for coursesRepo in "${coursesRepos[@]}"; do
   else
     echo "$coursesRepo repo - already exists 👌"
   fi
-  sleep 1
 done

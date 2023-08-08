@@ -25,9 +25,9 @@ done 2>/dev/null &
 ###############################################################################
 
 echo -e "\n\n"
-echo "##########################################"
+echo "##################################################"
 echo -e "\nHello $(whoami)! Let's set up your dotfiles! 🔥\n"
-echo "##########################################"
+echo "##################################################"
 
 # Generate SSH Keys
 echo -e "\n"
@@ -43,7 +43,6 @@ if ! [ -f "$SSH_GITHUB_FILE" ]; then
 else
   echo "SSH Key - already exists! 👌"
 fi
-sleep 1
 
 # Add SSH Key to ssh-agent
 echo -e "\n"
@@ -69,7 +68,6 @@ else
     echo "Github Host SSH Config - already exists! 👌"
   fi
 fi
-sleep 1
 
 # Install homebrew https://brew.sh
 echo -e "\n"
@@ -82,7 +80,6 @@ if ! command -v brew &>/dev/null; then
 else
   echo "Homebrew - already exists! 👌"
 fi
-sleep 1
 
 # Install Github CLI
 echo -e "\n"
@@ -95,7 +92,6 @@ if ! command -v gh &>/dev/null; then
 else
   echo "Github CLI - already exists! 👌"
 fi
-sleep 1
 
 # Login in Github CLI
 echo -e "\n"
@@ -108,7 +104,6 @@ if ! gh auth status | grep -i "Logged in to github.com" &>/dev/null; then
 else
   echo "Github CLI - already exists! 👌"
 fi
-sleep 1
 
 # Install oh-my-zsh
 echo -e "\n"
@@ -121,7 +116,6 @@ if ! [ -d ~/.oh-my-zsh ]; then
 else
   echo "oh-my-zsh - already exists! 👌"
 fi
-sleep 1
 
 # Install zsh-autosuggestions oh-my-zsh plugin
 echo -e "\n"
@@ -135,7 +129,6 @@ if ! [ -d $ZSH_AUTOSUGGESTIONS_DIR ]; then
 else
   echo "zsh-autosuggestions - already exists! 👌"
 fi
-sleep 1
 
 # Install zsh-syntax-highlighting oh-my-zsh plugin
 echo -e "\n"
@@ -149,7 +142,6 @@ if ! [ -d $ZSH_SYNTAX_HIGHLIGHTING_DIR ]; then
 else
   echo "zsh-syntax-highlighting - already exists! 👌"
 fi
-sleep 1
 
 # Install Dotfiles
 echo -e "\n"
@@ -166,7 +158,6 @@ if [ ! -d ~/.dotfiles ]; then
 else
   echo "Dotfiles - already exists! 👌"
 fi
-sleep 1
 
 # Homebrew add taps
 echo -e "\n"
@@ -175,7 +166,6 @@ echo "------------------------------------------------"
 brew tap homebrew/cask-fonts -q
 brew tap oven-sh/bun -q
 echo "Homebrew taps - added 🔥"
-sleep 1
 
 # Install Homebrew CLI Formulaes
 echo -e "\n"
@@ -190,7 +180,6 @@ for cliFormulae in "${formulaesCli[@]}"; do
   else
     echo "$cliFormulae - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install usefull keybindings for fzf
@@ -205,7 +194,6 @@ if ! [ -f ~/.fzf.bash ] || ! [ -f ~/.fzf.zsh ]; then
 else
   echo "fzf keybindings - already exists! 👌"
 fi
-sleep 1
 
 # Install Homebrew GIT Formulaes
 echo -e "\n"
@@ -220,7 +208,6 @@ for gitFormulae in "${formulaesGit[@]}"; do
   else
     echo "$gitFormulae - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Homebrew Node Formulaes
@@ -236,7 +223,6 @@ for nodeFormulae in "${formulaesNode[@]}"; do
   else
     echo "$nodeFormulae - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Homebrew Languages Formulaes
@@ -252,7 +238,6 @@ for languageFormulae in "${formulaesLanguages[@]}"; do
   else
     echo "$languageFormulae - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Homebrew Database Formulaes
@@ -268,7 +253,6 @@ for databaseFormulae in "${formulaesDatabase[@]}"; do
   else
     echo "$databaseFormulae - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Homebrew Media Formulaes
@@ -284,7 +268,6 @@ for mediaFormulae in "${formulaesMedia[@]}"; do
   else
     echo "$mediaFormulae - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Homebrew Browsers Casks
@@ -300,7 +283,6 @@ for browserCask in "${casksBrowsers[@]}"; do
   else
     echo "$browserCask - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Homebrew Automations Casks
@@ -316,7 +298,6 @@ for automationsCask in "${casksAutomations[@]}"; do
   else
     echo "$automationsCask - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Homebrew Productivity Casks
@@ -332,7 +313,6 @@ for productivityCask in "${casksProductivity[@]}"; do
   else
     echo "$productivityCask - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Homebrew Media Casks
@@ -348,7 +328,6 @@ for mediaCask in "${casksMedia[@]}"; do
   else
     echo "$mediaCask - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Homebrew Developer Casks
@@ -364,7 +343,6 @@ for developerCask in "${casksDeveloper[@]}"; do
   else
     echo "$developerCask - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Homebrew Fonts Casks
@@ -380,7 +358,6 @@ for fontsCask in "${casksFonts[@]}"; do
   else
     echo "$fontsCask - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Install Apps from App Store
@@ -404,7 +381,6 @@ for appAppStore in "${appsAppStore[@]}"; do
   else
     echo "$appAppStore - already exists! 👌"
   fi
-  sleep 1
 done
 
 # Check node, npm and pnpm versions
@@ -416,7 +392,6 @@ echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 echo "pnpm --version: $(pnpm --version)"
 echo "Node, NPM and Pnpm - checked 🔥"
-sleep 1
 
 # Setup pnpm global dir
 echo -e "\n"
@@ -425,7 +400,6 @@ echo "------------------------------------------------"
 
 pnpm setup
 echo "Pnpm global dir - installed 🔥"
-sleep 1
 
 # Install a few global npm packages
 echo -e "\n"
@@ -440,5 +414,4 @@ for npmPackage in "${npmPackages[@]}"; do
   else
     echo "$npmPackage - already exists! 👌"
   fi
-  sleep 1
 done
