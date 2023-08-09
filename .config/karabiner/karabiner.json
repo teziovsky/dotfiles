@@ -44,7 +44,7 @@
                         ]
                     },
                     {
-                        "description": "IDE Shortcut - ⌘ + number to ⌥⌘ + number",
+                        "description": "IDE Shortcut - ⌘ + number to ⌥ + ⌘ + number",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -389,7 +389,7 @@
                         ]
                     },
                     {
-                        "description": "IDE Shortcut - ⌘ + ` to ⌃⌘ + `",
+                        "description": "IDE Shortcut - ⌥ + ` to ⌃ + ⌘ + `",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -428,7 +428,7 @@
                         ]
                     },
                     {
-                        "description": "IDE Shortcut - ⌥ + ` to ⌥⌘ + `",
+                        "description": "IDE Shortcut - ⌘ + ` to ⌥ + ⌘ + `",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -467,7 +467,7 @@
                         ]
                     },
                     {
-                        "description": "Teziovsky Custom - CTRL + Backspace to Forward Delete",
+                        "description": "Teziovsky CTRL - CTRL + Backspace to Forward Delete",
                         "manipulators": [
                             {
                                 "from": {
@@ -488,7 +488,7 @@
                         ]
                     },
                     {
-                        "description": "Teziovsky Custom - CTRL + Left Arrow to Home",
+                        "description": "Teziovsky CTRL - CTRL + Left Arrow to Home",
                         "manipulators": [
                             {
                                 "from": {
@@ -509,7 +509,7 @@
                         ]
                     },
                     {
-                        "description": "Teziovsky Custom - CTRL + Right Arrow to End",
+                        "description": "Teziovsky CTRL - CTRL + Right Arrow to End",
                         "manipulators": [
                             {
                                 "from": {
@@ -530,7 +530,7 @@
                         ]
                     },
                     {
-                        "description": "Teziovsky Custom - CTRL + Up Arrow to Page Up",
+                        "description": "Teziovsky CTRL - CTRL + Up Arrow to Page Up",
                         "manipulators": [
                             {
                                 "from": {
@@ -551,7 +551,7 @@
                         ]
                     },
                     {
-                        "description": "Teziovsky Custom - CTRL + Down Arrow to Page Down",
+                        "description": "Teziovsky CTRL - CTRL + Down Arrow to Page Down",
                         "manipulators": [
                             {
                                 "from": {
@@ -565,6 +565,258 @@
                                 "to": [
                                     {
                                         "key_code": "page_down"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + 1 to F1",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f1"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + 2 to F2",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f2"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + 3 to F3",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f3"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + 4 to F4",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f4"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + 5 to F5",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "5",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f5"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + 6 to F6",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "6",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f6"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + 7 to F7",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "7",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f7"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + 8 to F8",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "8",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f8"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + 9 to F9",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "9",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f9"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + 0 to F10",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "0",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f10"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + - to F11",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "hyphen",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f11"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Function Key - Right ⌥ + = to F12",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "equal_sign",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f12"
                                     }
                                 ],
                                 "type": "basic"
@@ -789,6 +1041,16 @@
             "simple_modifications": [
                 {
                     "from": {
+                        "apple_vendor_top_case_key_code": "keyboard_fn"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_control"
+                        }
+                    ]
+                },
+                {
+                    "from": {
                         "key_code": "grave_accent_and_tilde"
                     },
                     "to": [
@@ -844,16 +1106,6 @@
                     "to": [
                         {
                             "key_code": "right_command"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "apple_vendor_top_case_key_code": "keyboard_fn"
-                    },
-                    "to": [
-                        {
-                            "key_code": "left_control"
                         }
                     ]
                 }
