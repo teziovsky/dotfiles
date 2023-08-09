@@ -194,5 +194,33 @@
     "paths": [],
     "tags": ["site", "vehicle-service-book"],
     "enabled": true
+  },
+  {
+    "name": "raycast-height",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/extensions/extensions/height",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "raycast-infakt",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/extensions/extensions/infakt",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "raycast-raydocs",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/extensions/extensions/raydocs",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "raycast-css-calculations",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/extensions/extensions/css-calculations",
+    "paths": [],
+    "tags": [],
+    "enabled": true
   }
 ]

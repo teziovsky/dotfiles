@@ -3,7 +3,7 @@
   "maintainers": ["teziovsky"],
   "rules": [
     {
-      "description": "Teziovsky IDE Shortcuts - ⌘ + number to ⌥⌘ + number",
+      "description": "IDE Shortcut - ⌘ + number to ⌥⌘ + number",
       "manipulators": [
         {
           "type": "basic",
@@ -228,7 +228,7 @@
       ]
     },
     {
-      "description": "Teziovsky IDE Shortcuts - ⌘ + ` to ⌃⌘ + `",
+      "description": "IDE Shortcut - ⌘ + ` to ⌃⌘ + `",
       "manipulators": [
         {
           "type": "basic",
@@ -255,7 +255,7 @@
       ]
     },
     {
-      "description": "Teziovsky IDE Shortcuts - ⌥ + ` to ⌥⌘ + `",
+      "description": "IDE Shortcut - ⌥ + ` to ⌥⌘ + `",
       "manipulators": [
         {
           "type": "basic",
