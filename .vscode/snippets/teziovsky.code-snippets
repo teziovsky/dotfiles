@@ -18,17 +18,17 @@
   "console.log": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "cl",
-    "body": "console.log('${0:here}');"
+    "body": "console.log('${0:here}')"
   },
   "console.log('var', var)": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "vl",
-    "body": "console.log('$0:', $0);"
+    "body": "console.log('$0:', $0)"
   },
   "console.log({var})": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "ol",
-    "body": "console.log({$0});"
+    "body": "console.log({$0})"
   },
   "console.assert()": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
@@ -39,12 +39,12 @@
   "console.error('var', var)": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "error",
-    "body": "console.error('$0:', $0);"
+    "body": "console.error('$0:', $0)"
   },
   "console.info('var', var)": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "info",
-    "body": "console.info('$0:', $0);"
+    "body": "console.info('$0:', $0)"
   },
   "throw log": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
@@ -87,25 +87,25 @@
     "prefix": "case",
     "body": ["case ${2:'value'}: {", "  return $0", "}"]
   },
-  "ES6 Filter function – JavaScript": {
+  "ES6 Filter function - JavaScript": {
     "scope": "javascript, javascriptreact",
     "prefix": "filter",
     "body": ["$1.filter((${2:item}) => console.log('$2: ', $2)$0);"],
     "description": "ES6 Filter function"
   },
-  "ES6 Filter function – TypeScript": {
+  "ES6 Filter function - TypeScript": {
     "scope": "typescript, typescriptreact",
     "prefix": "filter",
     "body": ["$1.filter((${2:item}: ${3:any}) => console.log('$2: ', $2)$0);"],
     "description": "ES6 Filter function"
   },
-  "ES6 Map function – JavaScript": {
+  "ES6 Map function - JavaScript": {
     "scope": "javascript, javascriptreact",
     "prefix": "map",
     "body": ["$1.map((${2:item}) => $2$0);"],
     "description": "ES6 Map function"
   },
-  "ES6 Map function – TypeScript": {
+  "ES6 Map function - TypeScript": {
     "scope": "typescript, typescriptreact",
     "prefix": "map",
     "body": ["$1.map((${2:item}: ${3:any}) => $2$0);"],
@@ -135,15 +135,27 @@
   },
   "Sleep function TypeScript": {
     "scope": "typescript, typescriptreact",
-    "prefix": "sleep",
+    "prefix": "sleepfn",
     "body": ["const sleep = (time = 3000) => new Promise<void> (resolve => setTimeout (resolve, time));"],
     "description": "Simple sleep function for testing"
   },
   "Sleep function JavaScript": {
     "scope": "javascript, javascriptreact",
-    "prefix": "sleep",
+    "prefix": "sleepfn",
     "body": ["const sleep = (time = 3000) => new Promise (resolve => setTimeout (resolve, time));"],
     "description": "Simple sleep function for testing"
+  },
+  "Sleep TypeScript": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "sleep",
+    "body": ["new Promise<void> (resolve => setTimeout (resolve, ${0:1000}));"],
+    "description": "Simple sleep for testing"
+  },
+  "Sleep JavaScript": {
+    "scope": "javascript, javascriptreact",
+    "prefix": "sleep",
+    "body": ["new Promise (resolve => setTimeout (resolve, ${0:1000}));"],
+    "description": "Simple sleep for testing"
   },
 
   // Jest snippets
@@ -193,7 +205,7 @@
   "React: useState": {
     "scope": "javascriptreact, typescriptreact",
     "prefix": "rus",
-    "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState($2);"]
+    "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = React.useState($2);"]
   },
   "React: useEffect": {
     "scope": "javascriptreact, typescriptreact",
@@ -203,7 +215,7 @@
   "React: useReducer": {
     "scope": "javascriptreact, typescriptreact",
     "prefix": "rur",
-    "body": ["const [state, dispatch] = useReducer(${0:someReducer}, {", "  ", "})"]
+    "body": ["const [state, dispatch] = React.useReducer(${0:someReducer}, {", "  ", "})"]
   },
   "React: useRef": {
     "scope": "javascriptreact, typescriptreact",

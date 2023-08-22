@@ -187,7 +187,16 @@
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.suggest.autoImports": false,
   "scss.lint.duplicateProperties": "warning",
-  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "\\w*[cC]lass(es)*"],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "\\w*[cC]lass(es)*",
+    "cva\\(([^)]*)\\)",
+    "[\"'`]([^\"'`]*).*?[\"'`]",
+    "cn\\(([^)]*)\\)",
+    "[\"'`]([^\"'`]*).*?[\"'`]"
+  ],
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.validate": true,
   "tailwindCSS.includeLanguages": {
@@ -320,7 +329,6 @@
   "githubPullRequests.pullBranch": "never",
   "workbench.editor.enablePreview": false,
   "better-comments.highlightPlainText": true,
-  "turboConsoleLog.addSemicolonInTheEnd": true,
   "svelte.enable-ts-plugin": true,
   "github.copilot.enable": {
     "*": true,
@@ -345,5 +353,10 @@
   "projectManager.removeCurrentProjectFromList": true,
   "projectManager.showParentFolderInfoOnDuplicates": true,
   "projectManager.projectsLocation": "~/.vscode",
-  "projectManager.tags": ["configuration", "cli", "contribution", "course", "linux_macos", "recruitment", "site"]
+  "projectManager.tags": ["configuration", "cli", "contribution", "course", "linux_macos", "recruitment", "site"],
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "turboConsoleLog.insertEnclosingClass": false,
+  "turboConsoleLog.insertEnclosingFunction": false
 }
