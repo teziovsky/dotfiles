@@ -5,7 +5,7 @@
 # kentcdodds — https://github.com/kentcdodds/dotfiles/blob/master/.macos
 
 # Run without downloading:
-# curl https://raw.githubusercontent.com/teziovsky/dotfiles/main/.install_macos/.3_settings | bash
+# curl -s https://raw.githubusercontent.com/teziovsky/dotfiles/main/.install_macos/.3_settings | bash
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'

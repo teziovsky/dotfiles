@@ -4,29 +4,23 @@
 
 ## Get started 🏁
 
-Clone the project
+### Install packages
 
 ```bash
-  cd ~
-  git clone --bare git@github.com:teziovsky/dotfiles.git $HOME/.dotfiles
+  curl -s https://raw.githubusercontent.com/teziovsky/dotfiles/main/.install_macos/.1_packages | bash
 ```
 
-Define the alias in the current shell scope
+### Install developer settings
 
 ```bash
-  alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-  dotfiles config --local status.showUntrackedFiles no
-  dotfiles checkout -f
-  source ~/.zshrc
+  curl -s https://raw.githubusercontent.com/teziovsky/dotfiles/main/.install_macos/.2_developer | bash
 ```
 
-Checkout the actual content from the git repository to your `$HOME`
+# Install system settings
 
 ```bash
-  dotfiles checkout
+  curl -s https://raw.githubusercontent.com/teziovsky/dotfiles/main/.install_macos/.3_settings | bash
 ```
-
-> Note that if you already have some of the files you'll get an error message. You can either (1) delete them or (2) back them up somewhere else. It's up to you.
 
 Awesome! You’re done. 🎊 🥳
 
