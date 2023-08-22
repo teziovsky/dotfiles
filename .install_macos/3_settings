@@ -13,7 +13,7 @@ osascript -e 'tell application "System Preferences" to quit'
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.1_dotfiles` has finished
+# Keep-alive: update existing `sudo` time stamp until `.3_settings` has finished
 while true; do
   sudo -n true
   sleep 60

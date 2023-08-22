@@ -29,7 +29,6 @@ echo "##################################################"
 echo -e "\nHello $(whoami)! Let's set up your packages! 🔥\n"
 echo "##################################################"
 
-# Generate SSH Keys
 echo -e "\n"
 echo "Generating SSH Keys..."
 echo "------------------------------------------------"
@@ -44,7 +43,6 @@ else
   echo "SSH Key - already exists! 👌"
 fi
 
-# Add SSH Key to ssh-agent
 echo -e "\n"
 echo "Adding SSH Key to ssh-agent..."
 echo "------------------------------------------------"
@@ -69,7 +67,6 @@ else
   fi
 fi
 
-# Install homebrew https://brew.sh
 echo -e "\n"
 echo "Installing homebrew..."
 echo "------------------------------------------------"
@@ -81,7 +78,6 @@ else
   echo "Homebrew - already exists! 👌"
 fi
 
-# Install Github CLI
 echo -e "\n"
 echo "Installing Github CLI..."
 echo "------------------------------------------------"
@@ -93,7 +89,6 @@ else
   echo "Github CLI - already exists! 👌"
 fi
 
-# Login in Github CLI
 echo -e "\n"
 echo "Loggin in Github CLI..."
 echo "------------------------------------------------"
@@ -105,7 +100,6 @@ else
   echo "Github CLI - already exists! 👌"
 fi
 
-# Install oh-my-zsh
 echo -e "\n"
 echo "Installing oh-my-zsh..."
 echo "------------------------------------------------"
@@ -117,7 +111,6 @@ else
   echo "oh-my-zsh - already exists! 👌"
 fi
 
-# Install zsh-autosuggestions oh-my-zsh plugin
 echo -e "\n"
 echo "Installing zsh-autosuggestions oh-my-zsh plugin..."
 echo "------------------------------------------------"
@@ -130,7 +123,6 @@ else
   echo "zsh-autosuggestions - already exists! 👌"
 fi
 
-# Install zsh-syntax-highlighting oh-my-zsh plugin
 echo -e "\n"
 echo "Installing zsh-syntax-highlighting oh-my-zsh plugin..."
 echo "------------------------------------------------"
@@ -143,7 +135,6 @@ else
   echo "zsh-syntax-highlighting - already exists! 👌"
 fi
 
-# Install Dotfiles
 echo -e "\n"
 echo "Cloning dotfiles..."
 echo "------------------------------------------------"
@@ -159,7 +150,6 @@ else
   echo "Dotfiles - already exists! 👌"
 fi
 
-# Homebrew add taps
 echo -e "\n"
 echo "Adding Homebrew taps..."
 echo "------------------------------------------------"
@@ -167,7 +157,6 @@ brew tap homebrew/cask-fonts -q
 brew tap oven-sh/bun -q
 echo "Homebrew taps - added 🔥"
 
-# Install Homebrew CLI Formulaes
 echo -e "\n"
 echo "Installing Homebrew CLI Formulaes..."
 echo "------------------------------------------------"
@@ -182,7 +171,6 @@ for cliFormulae in "${formulaesCli[@]}"; do
   fi
 done
 
-# Install usefull keybindings for fzf
 echo -e "\n"
 echo "Installing usefull keybindings for fzf..."
 echo "------------------------------------------------"
@@ -195,7 +183,6 @@ else
   echo "fzf keybindings - already exists! 👌"
 fi
 
-# Install Homebrew GIT Formulaes
 echo -e "\n"
 echo "Installing Homebrew GIT Formulaes..."
 echo "------------------------------------------------"
@@ -210,7 +197,6 @@ for gitFormulae in "${formulaesGit[@]}"; do
   fi
 done
 
-# Install Homebrew Node Formulaes
 echo -e "\n"
 echo "Installing Homebrew Node Formulaes..."
 echo "------------------------------------------------"
@@ -225,7 +211,6 @@ for nodeFormulae in "${formulaesNode[@]}"; do
   fi
 done
 
-# Install Homebrew Languages Formulaes
 echo -e "\n"
 echo "Installing Homebrew Languages Formulaes..."
 echo "------------------------------------------------"
@@ -240,7 +225,6 @@ for languageFormulae in "${formulaesLanguages[@]}"; do
   fi
 done
 
-# Install Homebrew Database Formulaes
 echo -e "\n"
 echo "Installing Homebrew Database Formulaes..."
 echo "------------------------------------------------"
@@ -255,7 +239,6 @@ for databaseFormulae in "${formulaesDatabase[@]}"; do
   fi
 done
 
-# Install Homebrew Media Formulaes
 echo -e "\n"
 echo "Installing Homebrew Media Formulaes..."
 echo "------------------------------------------------"
@@ -270,7 +253,6 @@ for mediaFormulae in "${formulaesMedia[@]}"; do
   fi
 done
 
-# Install Homebrew Browsers Casks
 echo -e "\n"
 echo "Installing Homebrew Browsers Casks..."
 echo "------------------------------------------------"
@@ -285,7 +267,6 @@ for browserCask in "${casksBrowsers[@]}"; do
   fi
 done
 
-# Install Homebrew Automations Casks
 echo -e "\n"
 echo "Installing Homebrew Automations Casks..."
 echo "------------------------------------------------"
@@ -300,7 +281,6 @@ for automationsCask in "${casksAutomations[@]}"; do
   fi
 done
 
-# Install Homebrew Productivity Casks
 echo -e "\n"
 echo "Installing Homebrew Productivity Casks..."
 echo "------------------------------------------------"
@@ -315,7 +295,6 @@ for productivityCask in "${casksProductivity[@]}"; do
   fi
 done
 
-# Install Homebrew Media Casks
 echo -e "\n"
 echo "Installing Homebrew Media Casks..."
 echo "------------------------------------------------"
@@ -330,7 +309,6 @@ for mediaCask in "${casksMedia[@]}"; do
   fi
 done
 
-# Install Homebrew Developer Casks
 echo -e "\n"
 echo "Installing Homebrew Developer Casks..."
 echo "------------------------------------------------"
@@ -345,7 +323,6 @@ for developerCask in "${casksDeveloper[@]}"; do
   fi
 done
 
-# Install Homebrew Fonts Casks
 echo -e "\n"
 echo "Installing Homebrew Fonts Casks..."
 echo "------------------------------------------------"
@@ -360,7 +337,6 @@ for fontsCask in "${casksFonts[@]}"; do
   fi
 done
 
-# Install Apps from App Store
 echo -e "\n"
 echo "Installing Apps from App Store..."
 echo "------------------------------------------------"
@@ -383,7 +359,6 @@ for appAppStore in "${appsAppStore[@]}"; do
   fi
 done
 
-# Check node, npm and pnpm versions
 echo -e "\n"
 echo "Checking node, npm and pnpm versions..."
 echo "------------------------------------------------"
@@ -393,7 +368,6 @@ echo "npm --version: $(npm --version)"
 echo "pnpm --version: $(pnpm --version)"
 echo "Node, NPM and Pnpm - checked 🔥"
 
-# Setup pnpm global dir
 echo -e "\n"
 echo "Setting up pnpm global dir..."
 echo "------------------------------------------------"
@@ -401,7 +375,6 @@ echo "------------------------------------------------"
 pnpm setup
 echo "Pnpm global dir - installed 🔥"
 
-# Install a few global npm packages
 echo -e "\n"
 echo "Installing a few global npm packages..."
 echo "------------------------------------------------"

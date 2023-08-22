@@ -13,7 +13,7 @@ osascript -e 'tell application "System Preferences" to quit'
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.1_dotfiles` has finished
+# Keep-alive: update existing `sudo` time stamp until `.2_developer` has finished
 while true; do
   sudo -n true
   sleep 60
@@ -29,7 +29,6 @@ echo "##################################################"
 echo -e "\nHello $(whoami)! Let's set up your developer directory! 🔥\n"
 echo "##################################################"
 
-# Create developer path
 echo -e "\n"
 echo "Creating developer path..."
 echo "------------------------------------------------"
@@ -41,7 +40,6 @@ else
   echo "Developer path at $HOME/Developer - already exists 👌"
 fi
 
-# Clone wsb repos
 echo -e "\n"
 echo "Cloning wsb repos..."
 echo "------------------------------------------------"
@@ -58,7 +56,6 @@ for wsbRepo in "${wsbRepos[@]}"; do
   fi
 done
 
-# Clone cli repos
 echo -e "\n"
 echo "Cloning cli repos..."
 echo "------------------------------------------------"
@@ -75,7 +72,6 @@ for cliRepo in "${cliRepos[@]}"; do
   fi
 done
 
-# Clone contributions repos
 echo -e "\n"
 echo "Cloning contributions repos..."
 echo "------------------------------------------------"
@@ -95,7 +91,6 @@ for contributionsRepo in "${contributionsRepos[@]}"; do
   fi
 done
 
-# Clone raycast contributions repos
 echo -e "\n"
 echo "Cloning raycast contributions repos..."
 echo "------------------------------------------------"
@@ -114,7 +109,6 @@ for raycastContributionsRepo in "${raycastContributionsRepos[@]}"; do
   fi
 done
 
-# Clone recruitments - makadu repos
 echo -e "\n"
 echo "Cloning recruitments - makadu repos..."
 echo "------------------------------------------------"
@@ -131,7 +125,6 @@ for recruitmentsMakaduRepo in "${recruitmentsMakaduRepos[@]}"; do
   fi
 done
 
-# Clone recruitments - idcom repos
 echo -e "\n"
 echo "Cloning recruitments - idcom repos..."
 echo "------------------------------------------------"
@@ -149,7 +142,6 @@ for recruitmentsIdcomRepo in "${recruitmentsIdcomRepos[@]}"; do
   fi
 done
 
-# Clone sites repos
 echo -e "\n"
 echo "Cloning sites repos..."
 echo "------------------------------------------------"
@@ -175,7 +167,6 @@ for sitesRepo in "${sitesRepos[@]}"; do
   fi
 done
 
-# Clone sites - petnal repos
 echo -e "\n"
 echo "Cloning sites - petnal repos..."
 echo "------------------------------------------------"
@@ -193,7 +184,6 @@ for petnalSitesRepo in "${petnalSitesRepos[@]}"; do
   fi
 done
 
-# Clone linux macos repos
 echo -e "\n"
 echo "Cloning linux macos repos..."
 echo "------------------------------------------------"
@@ -210,7 +200,6 @@ for linuxMacosRepo in "${linuxMacosRepos[@]}"; do
   fi
 done
 
-# Clone courses repos
 echo -e "\n"
 echo "Cloning courses repos..."
 echo "------------------------------------------------"
@@ -228,7 +217,6 @@ for coursesRepo in "${coursesRepos[@]}"; do
   fi
 done
 
-# Creating symlinks for vscode settings
 echo -e "\n"
 echo "Creating symlinks for vscode settings..."
 echo "------------------------------------------------"
