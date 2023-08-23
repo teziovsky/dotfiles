@@ -38,9 +38,9 @@
       "cmd-n": "workspace::NewFile",
       "cmd-shift-n": "workspace::NewWindow",
       "cmd-o": "workspace::Open",
-      "alt-cmd-o": "projects::OpenRecent",
+      "cmd-shift-o": "projects::OpenRecent",
       "ctrl-`": "workspace::NewTerminal",
-      "ctrl-cmd-`": "terminal_panel::ToggleFocus"
+      "ctrl-cmd-`": "workspace::ToggleBottomDock"
     }
   },
   {
@@ -170,7 +170,7 @@
           "focus": true
         }
       ],
-      "cmd-e": [
+      "cmd-r": [
         "buffer_search::Deploy",
         {
           "focus": false
@@ -237,8 +237,8 @@
           "advance_downwards": false
         }
       ],
-      "alt-up": "editor::SelectLargerSyntaxNode",
-      "alt-down": "editor::SelectSmallerSyntaxNode",
+      "cmd+e": "editor::SelectLargerSyntaxNode",
+      "cmd-shift-e": "editor::SelectSmallerSyntaxNode",
       "cmd-u": "editor::UndoSelection",
       "cmd-shift-u": "editor::RedoSelection",
       "f8": "editor::GoToDiagnostic",
@@ -258,7 +258,7 @@
   {
     "context": "Editor && mode == full",
     "bindings": {
-      "cmd-shift-o": "outline::Toggle",
+      "cmd-alt-o": "outline::Toggle",
       "ctrl-g": "go_to_line::Toggle"
     }
   },
@@ -347,7 +347,7 @@
         "workspace::ActivatePane",
         8
       ],
-      "cmd-b": "workspace::ToggleLeftSidebar",
+      "cmd-b": "project_panel::Open",
       "cmd-shift-f": "workspace::NewSearch",
       "cmd-k cmd-t": "theme_selector::Toggle",
       "cmd-k cmd-s": "zed::OpenKeymap",
@@ -355,7 +355,7 @@
       "cmd-p": "file_finder::Toggle",
       "cmd-shift-p": "command_palette::Toggle",
       "cmd-shift-m": "diagnostics::Deploy",
-      "cmd-alt-1": "project_panel::ToggleFocus",
+      "cmd-alt-1": "project_panel::Open",
       "cmd-s": "workspace::SaveAll",
       "cmd-k m": "language_selector::Toggle"
     }
@@ -439,32 +439,6 @@
     "context": "ProjectSearchBar",
     "bindings": {
       "cmd-enter": "project_search::SearchInNew"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-cmd-`": "dock::FocusDock"
-    }
-  },
-  {
-    "bindings": {
-      "cmd-shift-k cmd-shift-right": "dock::AnchorDockRight",
-      "cmd-shift-k cmd-shift-down": "dock::AnchorDockBottom",
-      "cmd-shift-k cmd-shift-up": "dock::ExpandDock"
-    }
-  },
-  {
-    "context": "Pane",
-    "bindings": {
-      "cmd-escape": "dock::AddTabToDock"
-    }
-  },
-  {
-    "context": "Pane && docked",
-    "bindings": {
-      "ctrl-cmd-`": "dock::HideDock",
-      "cmd-escape": "dock::RemoveTabFromDock"
     }
   },
   {

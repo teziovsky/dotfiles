@@ -7,16 +7,39 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 5000
+    }
+  },
   "base_keymap": "VSCode",
-  "theme": "Ayu Dark",
+  "buffer_font_size": 12,
+  "format_on_save": "on",
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "preferred_line_length": 120,
+  "project_panel": {
+    "dock": "right",
+    "default_width": 120,
+    "git_status": true
+  },
+  "remove_trailing_whitespace_on_save": true,
+  "show_completions_on_input": true,
+  "show_copilot_suggestions": true,
+  "show_whitespaces": "selection",
+  "soft_wrap": "preferred_line_length",
+  "tab_size": 2,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
-  "buffer_font_size": 12,
-  "project_panel": {
-    "dock": "right",
-    "default_width": 100,
-    "git_status": true
-  }
+  "terminal": {
+    "copy_on_select": true,
+    "working_directory": "current_project_directory"
+  },
+  "theme": "One Dark"
 }
