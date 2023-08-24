@@ -1,0 +1,54 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "TypeScript: ES6 Filter function": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "filter",
+    "body": ["$1.filter((${2:item}: ${3:any}) => console.log('$2: ', $2)$0);"],
+    "description": "ES6 Filter function"
+  },
+  "TypeScript: ES6 Map function": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "map",
+    "body": ["$1.map((${2:item}: ${3:any}) => $2$0);"],
+    "description": "ES6 Map function"
+  },
+  "TypeScript: Export interface": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "exportinterface",
+    "body": ["export interface $1 {", "  $0", "}"],
+    "description": "Export interface"
+  },
+  "TypeScript: Export type": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "exporttype",
+    "body": ["export type = $1 {", "  $0", "}"],
+    "description": "Export type"
+  },
+  "TypeScript: Sleep function": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "sleepfn",
+    "body": ["const sleep = (time = 3000) => new Promise<void> (resolve => setTimeout (resolve, time));"],
+    "description": "Simple sleep function for testing"
+  },
+  "TypeScript: Sleep": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "sleep",
+    "body": ["new Promise<void> (resolve => setTimeout (resolve, ${0:1000}));"],
+    "description": "Simple sleep for testing"
+  }
+}

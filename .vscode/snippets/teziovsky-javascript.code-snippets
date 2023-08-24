@@ -1,0 +1,130 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "JavaScript: console.log": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "cl",
+    "body": "console.log('${0:here}')"
+  },
+  "JavaScript: console.log('var', var)": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "vl",
+    "body": "console.log('$0:', $0)"
+  },
+  "JavaScript: console.log({var})": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "ol",
+    "body": "console.log({$0})"
+  },
+  "JavaScript: console.assert()": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "assert",
+    "body": ["console.assert(${0:'here'});"],
+    "description": "console.assert()"
+  },
+  "JavaScript: console.error('var', var)": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "error",
+    "body": "console.error('$0:', $0)"
+  },
+  "JavaScript: console.info('var', var)": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "info",
+    "body": "console.info('$0:', $0)"
+  },
+  "JavaScript: throw log": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "tl",
+    "body": "throw new Error(JSON.stringify({$0}, null, 2))"
+  },
+  "JavaScript: Ternary operator": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "ternary",
+    "body": ["${1:cond} ? ${2:true} : ${0:false};"],
+    "description": "Ternary operator"
+  },
+  "JavaScript: if statement": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "if",
+    "body": ["if ($1) {", "  $0", "}"]
+  },
+  "JavaScript: try/catch": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "try",
+    "body": ["try {", "  $0", "} catch (error) {", "  ", "}  finally {", "  ", "}"]
+  },
+  "JavaScript: Switch Statement": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "switch",
+    "body": [
+      "switch (${0:key}) {",
+      "  case 'value': {",
+      "    ",
+      "    break",
+      "  }",
+      "  default: {",
+      "    break",
+      "  }",
+      "}"
+    ]
+  },
+  "JavaScript: Switch case": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "case",
+    "body": ["case ${2:'value'}: {", "  return $0", "}"]
+  },
+  "JavaScript: ES6 Filter function": {
+    "scope": "javascript, javascriptreact",
+    "prefix": "filter",
+    "body": ["$1.filter((${2:item}) => console.log('$2: ', $2)$0);"],
+    "description": "ES6 Filter function"
+  },
+  "JavaScript: ES6 Map function": {
+    "scope": "javascript, javascriptreact",
+    "prefix": "map",
+    "body": ["$1.map((${2:item}) => $2$0);"],
+    "description": "ES6 Map function"
+  },
+  "JavaScript: Import statement - import x from ''": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "imp",
+    "body": "import ${0:*} from '$1';"
+  },
+  "JavaScript: Import statement - const a = require('a')": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "imp",
+    "body": "import ${0:*} from '$1';",
+    "description": "Import statement - const a = require('a')"
+  },
+  "JavaScript: async function": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "afun",
+    "body": ["async function $1($0) {", "  ", "}"]
+  },
+  "JavaScript: Sleep function": {
+    "scope": "javascript, javascriptreact",
+    "prefix": "sleepfn",
+    "body": ["const sleep = (time = 3000) => new Promise (resolve => setTimeout (resolve, time));"],
+    "description": "Simple sleep function for testing"
+  },
+  "JavaScript: Sleep": {
+    "scope": "javascript, javascriptreact",
+    "prefix": "sleep",
+    "body": ["new Promise (resolve => setTimeout (resolve, ${0:1000}));"],
+    "description": "Simple sleep for testing"
+  }
+}

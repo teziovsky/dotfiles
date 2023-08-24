@@ -1,0 +1,94 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "React: Reducer": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "reducer",
+    "body": [
+      "function ${1:someReducer}(state, action) {",
+      "  switch (action.type) {",
+      "    case ${0:'value'}: {",
+      "      return",
+      "    }",
+      "    default: {",
+      "      throw new Error(`Unhandled action type: ${action.type}`)",
+      "    }",
+      "  }",
+      "}"
+    ]
+  },
+  "React: import React": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "imr",
+    "body": ["import React from 'react'\n"]
+  },
+  "React: useState": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rus",
+    "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = React.useState($2);"]
+  },
+  "React: useEffect": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rue",
+    "body": ["useEffect(() => {", "  $0", "}, [])"]
+  },
+  "React: useReducer": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rur",
+    "body": ["const [state, dispatch] = React.useReducer(${0:someReducer}, {", "  ", "})"]
+  },
+  "React: useRef": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "ruref",
+    "body": ["const ${1:someRef} = useRef($0)"]
+  },
+  "React: Component": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rc",
+    "body": ["class $1 extends React.Component {", "  render() {", "    $0", "  }", "}"]
+  },
+  "React: componentWillMount": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rcwm",
+    "body": ["componentWillMount() {", "  $0", "}"]
+  },
+  "React: componentDidMount": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rcdm",
+    "body": ["componentDidMount() {", "  $0", "}"]
+  },
+  "React: componentWillReceiveProps": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rcwrp",
+    "body": ["componentWillReceiveProps(nextProps) {", "  $0", "}"]
+  },
+  "React: componentWillUpdate": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rcwu",
+    "body": ["componentWillUpdate(nextProps, nextState) {", "  $0", "}"]
+  },
+  "React: componentDidUpdate": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rcdu",
+    "body": ["componentDidUpdate(prevProps, prevState) {", "  $0", "}"]
+  },
+  "React: componentWillUnmount": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rcwum",
+    "body": ["componentWillUnmount() {", "  $0", "}"]
+  }
+}

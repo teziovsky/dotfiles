@@ -1,0 +1,59 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "CSS: Important": {
+    "scope": "css, scss, less, sass, stylus, postcss",
+    "prefix": "!",
+    "body": ["!important"]
+  },
+  "CSS: Flex Center": {
+    "scope": "css, scss, less, sass, stylus, postcss",
+    "prefix": "flexcenter",
+    "body": ["display: flex;", "justify-content: center;", "align-items: center;"],
+    "description": "CSS: Flex Center"
+  },
+  "CSS: Grid Center": {
+    "scope": "css, scss, less, sass, stylus, postcss",
+    "prefix": "gridcenter",
+    "body": ["display: grid;", "place-items: center;"],
+    "description": "CSS: Grid Center"
+  },
+  "CSS: Absolute Center": {
+    "scope": "css, scss, less, sass, stylus, postcss",
+    "prefix": "absolutecenter",
+    "body": ["position: absolute;", "top: 50%;", "left: 50%;", "transform: translate(-50%, -50%);"],
+    "description": "CSS: Absolute Center"
+  },
+  "CSS: Width 100%": {
+    "scope": "css, scss, less, sass, stylus, postcss",
+    "prefix": "wfull",
+    "body": ["width: 100%;"],
+    "description": "CSS: Width 100%"
+  },
+  "CSS: Height 100%": {
+    "scope": "css, scss, less, sass, stylus, postcss",
+    "prefix": "hfull",
+    "body": ["height: 100%;"],
+    "description": "CSS: Height 100%"
+  },
+  "CSS: Hover and Focus": {
+    "scope": "css, scss, less, sass, stylus, postcss",
+    "prefix": "hf",
+    "body": ["&:hover,", "&:focus {", "  ${0:text-decoration: underline;}", "}"],
+    "description": "CSS: Hover and Focus"
+  }
+}

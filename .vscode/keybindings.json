@@ -616,10 +616,6 @@
     "command": "-turboConsoleLog.commentAllLogMessages"
   },
   {
-    "key": "shift+cmd+c",
-    "command": "turboConsoleLog.commentAllLogMessages"
-  },
-  {
     "key": "shift+cmd+d",
     "command": "-workbench.view.debug",
     "when": "viewContainer.workbench.view.debug.enabled"
@@ -671,5 +667,9 @@
     "key": "ctrl+cmd+right",
     "command": "-workbench.action.terminal.resizePaneRight",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "turboConsoleLog.commentAllLogMessages"
   }
 ]
