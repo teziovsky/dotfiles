@@ -671,5 +671,13 @@
   {
     "key": "shift+cmd+c",
     "command": "turboConsoleLog.commentAllLogMessages"
+  },
+  {
+    "key": "cmd+k cmd+s",
+    "command": "workbench.action.files.saveAll"
+  },
+  {
+    "key": "cmd+k cmd+s",
+    "command": "-workbench.action.openGlobalKeybindings"
   }
 ]

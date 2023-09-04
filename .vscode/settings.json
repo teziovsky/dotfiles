@@ -73,7 +73,8 @@
     "**/templates/**/*": "django-txt",
     "**/requirements{/**,*}.{txt,in}": "pip-requirements",
     "*.js": "javascript",
-    "*.md": "markdown"
+    "*.md": "markdown",
+    "*.mdx": "markdown"
   },
   "files.exclude": {
     "**/node_modules": true,
@@ -359,5 +360,8 @@
   },
   "turboConsoleLog.insertEnclosingClass": false,
   "turboConsoleLog.insertEnclosingFunction": false,
-  "turboConsoleLog.includeFileNameAndLineNum": false
+  "turboConsoleLog.includeFileNameAndLineNum": false,
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }

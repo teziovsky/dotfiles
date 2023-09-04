@@ -161,7 +161,7 @@ echo -e "\n"
 echo "Installing Homebrew CLI Formulaes..."
 echo "------------------------------------------------"
 
-formulaesCli=(bat bitwarden-cli curl htop jq fzf fd llama exa mas tree zsh ssh-copy-id)
+formulaesCli=(bat bitwarden-cli curl htop jq fzf fd llama exa mas rename tree zsh ssh-copy-id)
 for cliFormulae in "${formulaesCli[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$cliFormulae$" &>/dev/null; then
     brew install $cliFormulae -q

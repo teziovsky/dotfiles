@@ -10,7 +10,7 @@
   // 	"scope": "javascript,typescript",
   // 	"prefix": "log",
   // 	"body": [
-  // 		"console.log('$1');",
+  // 		"console.log(\"$1\");",
   // 		"$2"
   // 	],
   // 	"description": "Log output to console"
@@ -18,12 +18,12 @@
   "JavaScript: console.log": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "cl",
-    "body": "console.log('${0:here}')"
+    "body": "console.log(\"${0:here}\")"
   },
-  "JavaScript: console.log('var', var)": {
+  "JavaScript: console.log(\"var\", var)": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "vl",
-    "body": "console.log('$0:', $0)"
+    "body": "console.log(\"$0:\", $0)"
   },
   "JavaScript: console.log({var})": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
@@ -33,18 +33,18 @@
   "JavaScript: console.assert()": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "assert",
-    "body": ["console.assert(${0:'here'});"],
+    "body": ["console.assert(${0:\"here\"});"],
     "description": "console.assert()"
   },
-  "JavaScript: console.error('var', var)": {
+  "JavaScript: console.error(\"var\", var)": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "error",
-    "body": "console.error('$0:', $0)"
+    "body": "console.error(\"$0:\", $0)"
   },
-  "JavaScript: console.info('var', var)": {
+  "JavaScript: console.info(\"var\", var)": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "info",
-    "body": "console.info('$0:', $0)"
+    "body": "console.info(\"$0:\", $0)"
   },
   "JavaScript: throw log": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
@@ -72,7 +72,7 @@
     "prefix": "switch",
     "body": [
       "switch (${0:key}) {",
-      "  case 'value': {",
+      "  case \"value\": {",
       "    ",
       "    break",
       "  }",
@@ -85,12 +85,12 @@
   "JavaScript: Switch case": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "case",
-    "body": ["case ${2:'value'}: {", "  return $0", "}"]
+    "body": ["case ${2:\"value\"}: {", "  return $0", "}"]
   },
   "JavaScript: ES6 Filter function": {
     "scope": "javascript, javascriptreact",
     "prefix": "filter",
-    "body": ["$1.filter((${2:item}) => console.log('$2: ', $2)$0);"],
+    "body": ["$1.filter((${2:item}) => console.log(\"$2: \", $2)$0);"],
     "description": "ES6 Filter function"
   },
   "JavaScript: ES6 Map function": {
@@ -99,16 +99,16 @@
     "body": ["$1.map((${2:item}) => $2$0);"],
     "description": "ES6 Map function"
   },
-  "JavaScript: Import statement - import x from ''": {
+  "JavaScript: Import statement - import x from \"": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "imp",
-    "body": "import ${0:*} from '$1';"
+    "body": "import ${0:*} from \"$1\";"
   },
-  "JavaScript: Import statement - const a = require('a')": {
+  "JavaScript: Import statement - const a = require(\"a\")": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
     "prefix": "imp",
-    "body": "import ${0:*} from '$1';",
-    "description": "Import statement - const a = require('a')"
+    "body": "import ${0:*} from \"$1\";",
+    "description": "Import statement - const a = require(\"a\")"
   },
   "JavaScript: async function": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
