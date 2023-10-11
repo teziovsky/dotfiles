@@ -44,7 +44,7 @@
   "React: useEffect": {
     "scope": "javascriptreact, typescriptreact",
     "prefix": "rue",
-    "body": ["useEffect(() => {", "  $0", "}, [])"]
+    "body": ["React.useEffect(() => {", "  $0", "}, [])"]
   },
   "React: useReducer": {
     "scope": "javascriptreact, typescriptreact",
@@ -54,11 +54,24 @@
   "React: useRef": {
     "scope": "javascriptreact, typescriptreact",
     "prefix": "ruref",
-    "body": ["const ${1:someRef} = useRef($0)"]
+    "body": ["const ${1:someRef} = React.useRef($0)"]
   },
-  "React: Component": {
+  "React: Functional Component": {
     "scope": "javascriptreact, typescriptreact",
     "prefix": "rc",
+    "body": [
+      "export interface $1Props {",
+      "  $2",
+      "}",
+      "",
+      "export const $1 = (props: $1Props) => {",
+      "  return $3",
+      "}"
+    ]
+  },
+  "React: Class Component": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "rcc",
     "body": ["class $1 extends React.Component {", "  render() {", "    $0", "  }", "}"]
   },
   "React: componentWillMount": {

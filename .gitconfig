@@ -3,7 +3,7 @@
 	ac = commit -am
 	b = branch
 	bd = checkout develop
-	bm = checkout master
+	bm = checkout main
 	c = commit
 	cm = commit -m
 	d = diff
@@ -29,7 +29,7 @@
 
 	aliases = config --get-regexp alias
 	branches = branch --all
-  remoteupdate = remote update --prune
+	remoteupdate = remote update --prune
 	contributors = shortlog --summary --numbered
 	remotes = remote --verbose
 	tags = tag -l

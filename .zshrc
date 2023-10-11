@@ -26,3 +26,6 @@ source $ZSH/oh-my-zsh.sh
 
 # FNM CONFIG
 eval "$(fnm env --use-on-cd)"
+
+# bun completions
+[ -s "/Users/kuba/.bun/_bun" ] && source "/Users/kuba/.bun/_bun"
