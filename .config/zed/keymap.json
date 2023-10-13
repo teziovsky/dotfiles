@@ -40,7 +40,8 @@
       "cmd-o": "workspace::Open",
       "cmd-shift-o": "projects::OpenRecent",
       "ctrl-`": "workspace::NewTerminal",
-      "ctrl-cmd-`": "workspace::ToggleBottomDock"
+      "ctrl-cmd-`": "workspace::ToggleBottomDock",
+      "cmd-alt-1": "workspace::ToggleRightDock"
     }
   },
   {

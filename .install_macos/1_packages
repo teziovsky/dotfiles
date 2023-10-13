@@ -226,6 +226,17 @@ for languageFormulae in "${formulaesLanguages[@]}"; do
 done
 
 echo -e "\n"
+echo "Installing Rust Language..."
+echo "------------------------------------------------"
+
+if ! command -v rustup &>/dev/null || ! command -v rustc &>/dev/null || ! command -v cargo &>/dev/null || ! command -v rustfmt &>/dev/null; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  echo "Rust - installed 🔥"
+else
+  echo "Rust - already exists! 👌"
+fi
+
+echo -e "\n"
 echo "Installing Homebrew Database Formulaes..."
 echo "------------------------------------------------"
 
