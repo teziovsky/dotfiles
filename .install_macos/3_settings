@@ -795,6 +795,13 @@ else
   echo "Save to disk (not to iCloud) by default - already set! 👌"
 fi
 
+if ! ls -laH ~/ | grep -i "^l" | grep -i icloud &>/dev/null; then
+  ln -s "/Users/$USER/Library/Mobile Documents/com~apple~CloudDocs" ~/iCloud
+  echo "icloud drive - symlinked 🔥"
+else
+  echo "icloud drive - already exists 👌"
+fi
+
 # Expand save panel by default
 if ! defaults read NSGlobalDomain NSNavPanelExpandedStateForSaveMode | grep -i "1" &>/dev/null || ! defaults read NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 | grep -i "1" &>/dev/null; then
   defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
