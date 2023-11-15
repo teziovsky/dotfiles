@@ -6,7 +6,6 @@
   "workbench.editor.tabSizing": "shrink",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.activityBar.visible": true,
   "workbench.colorCustomizations": {
     "editor.foreground": "#e2e2e2",
     "editorCursor.foreground": "#e2e2e2",
@@ -225,6 +224,8 @@
   "gitlens.views.commits.showBranchComparison": false,
   "gitlens.views.commits.pullRequests.enabled": false,
   "gitlens.views.formats.commits.label": "${message}",
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
   "gitlens.menus": {
     "editor": false,
     "editorGroup": false,
@@ -349,7 +350,6 @@
   ],
   "git.openRepositoryInParentFolders": "always",
   "security.workspace.trust.untrustedFiles": "open",
-  "window.zoomLevel": -1,
   "projectManager.sortList": "Name",
   "projectManager.removeCurrentProjectFromList": true,
   "projectManager.showParentFolderInfoOnDuplicates": true,
@@ -363,5 +363,7 @@
   "turboConsoleLog.includeFileNameAndLineNum": false,
   "[ignore]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  }
+  },
+  "window.zoomLevel": -1,
+  "workbench.activityBar.location": "top"
 }

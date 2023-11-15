@@ -268,7 +268,7 @@ echo -e "\n"
 echo "Installing Homebrew Browsers Casks..."
 echo "------------------------------------------------"
 
-casksBrowsers=(arc brave-browser firefox)
+casksBrowsers=(arc google-chrome brave-browser firefox)
 for browserCask in "${casksBrowsers[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$browserCask$" &>/dev/null; then
     brew install --cask $browserCask -q
