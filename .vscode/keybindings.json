@@ -679,5 +679,33 @@
   {
     "key": "cmd+k cmd+s",
     "command": "-workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "aipopup.action.modal.generate",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-aipopup.action.modal.generate",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "aichat.insertselectionintochat"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "-aichat.insertselectionintochat"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "addCursorsAtSearchResults",
+    "when": "fileMatchOrMatchFocus && searchViewletVisible"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "-addCursorsAtSearchResults",
+    "when": "fileMatchOrMatchFocus && searchViewletVisible"
   }
 ]

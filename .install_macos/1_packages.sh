@@ -296,7 +296,7 @@ echo -e "\n"
 echo "Installing Homebrew Productivity Casks..."
 echo "------------------------------------------------"
 
-casksProductivity=(raycast bluesnooze textsniper contexts cleanmymac dropbox logi-options-plus paragon-ntfs)
+casksProductivity=(raycast bluesnooze textsniper contexts chatall cleanmymac dropbox logi-options-plus paragon-ntfs)
 for productivityCask in "${casksProductivity[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$productivityCask$" &>/dev/null; then
     brew install --cask $productivityCask -q
@@ -338,7 +338,7 @@ echo -e "\n"
 echo "Installing Homebrew Fonts Casks..."
 echo "------------------------------------------------"
 
-casksFonts=(font-fira-code font-cascadia-mono-pl font-cascadia-mono font-hack font-recursive font-fantasque-sans-mono font-space-mono font-input)
+casksFonts=(font-monaspace font-fira-code font-cascadia-mono-pl font-cascadia-mono font-hack font-recursive font-fantasque-sans-mono font-space-mono font-input)
 for fontsCask in "${casksFonts[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$fontsCask$" &>/dev/null; then
     brew install --cask $fontsCask -q

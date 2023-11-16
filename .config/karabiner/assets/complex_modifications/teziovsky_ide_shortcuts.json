@@ -23,7 +23,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         },
@@ -45,7 +50,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         },
@@ -67,7 +77,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         },
@@ -89,7 +104,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         },
@@ -111,7 +131,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         },
@@ -133,7 +158,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         },
@@ -155,7 +185,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         },
@@ -177,7 +212,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         },
@@ -199,7 +239,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         },
@@ -221,7 +266,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         }
@@ -248,7 +298,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         }
@@ -275,7 +330,12 @@
             {
               "type": "frontmost_application_if",
               "file_paths": ["ck2\\.app", "eu4\\.app"],
-              "bundle_identifiers": ["com.microsoft.VSCode", "com.jetbrains.WebStorm", "dev.zed.Zed"]
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.jetbrains.WebStorm",
+                "dev.zed.Zed",
+                "com.todesktop.230313mzl4w4u92"
+              ]
             }
           ]
         }
