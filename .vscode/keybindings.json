@@ -647,10 +647,6 @@
     "when": "viewContainer.workbench.view.extensions.enabled"
   },
   {
-    "key": "alt+cmd+4",
-    "command": "workbench.view.extension.project-manager"
-  },
-  {
     "key": "shift+cmd+o",
     "command": "projectManager.listProjects"
   },
@@ -707,5 +703,9 @@
     "key": "shift+cmd+l",
     "command": "-addCursorsAtSearchResults",
     "when": "fileMatchOrMatchFocus && searchViewletVisible"
+  },
+  {
+    "key": "alt+cmd+4",
+    "command": "workbench.panel.chat.view.copilot.focus"
   }
 ]
