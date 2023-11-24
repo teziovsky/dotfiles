@@ -1,4 +1,4 @@
 function mc {
-  cd "$(llama "$@")"
+  cd "$(walk "$@")"
 }
 

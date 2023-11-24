@@ -317,5 +317,12 @@
 		"paths": [],
 		"tags": [],
 		"enabled": true
+	},
+	{
+		"name": "raycast-teziovsky-linear",
+		"rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-teziovsky-linear",
+		"paths": [],
+		"tags": [],
+		"enabled": true
 	}
 ]

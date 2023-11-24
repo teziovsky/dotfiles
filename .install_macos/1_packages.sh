@@ -161,7 +161,7 @@ echo -e "\n"
 echo "Installing Homebrew CLI Formulaes..."
 echo "------------------------------------------------"
 
-formulaesCli=(bat bitwarden-cli curl htop jq fzf fd llama exa mas rename tree zsh ssh-copy-id)
+formulaesCli=(bat bitwarden-cli curl htop jq fzf fd walk exa mas rename tree zsh ssh-copy-id)
 for cliFormulae in "${formulaesCli[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$cliFormulae$" &>/dev/null; then
     brew install $cliFormulae -q
@@ -240,7 +240,7 @@ echo -e "\n"
 echo "Installing Homebrew Database Formulaes..."
 echo "------------------------------------------------"
 
-formulaesDatabase=(sqlite postgresql@14 mysql mysql-client)
+formulaesDatabase=(sqlite)
 for databaseFormulae in "${formulaesDatabase[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$databaseFormulae$" &>/dev/null; then
     brew install $databaseFormulae -q
@@ -324,7 +324,7 @@ echo -e "\n"
 echo "Installing Homebrew Developer Casks..."
 echo "------------------------------------------------"
 
-casksDeveloper=(warp slack figma discord httpie tableplus visual-studio-code zed)
+casksDeveloper=(warp slack figma discord httpie dbngin tableplus visual-studio-code zed)
 for developerCask in "${casksDeveloper[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$developerCask$" &>/dev/null; then
     brew install --cask $developerCask -q
