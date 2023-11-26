@@ -296,7 +296,7 @@ echo -e "\n"
 echo "Installing Homebrew Productivity Casks..."
 echo "------------------------------------------------"
 
-casksProductivity=(raycast bluesnooze textsniper contexts chatall cleanmymac dropbox logi-options-plus paragon-ntfs)
+casksProductivity=(raycast bluesnooze textsniper contexts chatall cleanmymac dropbox logi-options-plus)
 for productivityCask in "${casksProductivity[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$productivityCask$" &>/dev/null; then
     brew install --cask $productivityCask -q
