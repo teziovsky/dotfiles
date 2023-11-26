@@ -338,7 +338,7 @@ echo -e "\n"
 echo "Installing Homebrew Fonts Casks..."
 echo "------------------------------------------------"
 
-casksFonts=(font-monaspace font-fira-code font-cascadia-mono-pl font-cascadia-mono font-hack font-recursive font-fantasque-sans-mono font-space-mono font-input)
+casksFonts=(font-monaspace font-fira-code font-hack font-space-mono font-input)
 for fontsCask in "${casksFonts[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$fontsCask$" &>/dev/null; then
     brew install --cask $fontsCask -q
@@ -363,7 +363,7 @@ echo "------------------------------------------------"
 appsAppStore=(937984704 1193539993 1352778147 425424353 497799835 457622435 409201541 409203825)
 for appAppStore in "${appsAppStore[@]}"; do
   if ! mas list | grep -w "^$appAppStore" &>/dev/null; then
-    mas install $appAppStore -q
+    mas install $appAppStore
     echo "$appAppStore - installed 🔥"
   else
     echo "$appAppStore - already exists! 👌"
@@ -390,8 +390,8 @@ echo -e "\n"
 echo "Installing a few global npm packages..."
 echo "------------------------------------------------"
 
-npmPackages=(eas-cli gitignore md-generate npm-check-updates prettier vercel)
-for npmPackage in "${npmPackages[@]}"; do
+npmGlobalPackages=(gitignore npm-check-updates vercel)
+for npmPackage in "${npmGlobalPackages[@]}"; do
   if ! pnpm list -g --depth=0 | grep -w "^$npmPackage" &>/dev/null; then
     pnpm add -g $npmPackage
     echo "$npmPackage - installed 🔥"
