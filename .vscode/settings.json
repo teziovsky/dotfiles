@@ -22,7 +22,7 @@
   "editor.fontFamily": "Monaspace Neon, Input Mono, Space Mono, Recursive, Jetbrains Mono, MesloLGS NF, Monaco, Courier New, monospace",
   "editor.fontSize": 13,
   "editor.fontWeight": "400",
-  "editor.fontLigatures": "'liga' on, 'calt' on, 'dlig' on",
+  "editor.fontLigatures": "off",
   "editor.letterSpacing": 0,
   "editor.inlayHints.enabled": "on",
   "editor.inlayHints.fontFamily": "Monaspace Krypton, Input Mono, Space Mono, Recursive, Jetbrains Mono, MesloLGS NF, Monaco, Courier New, monospace",
@@ -61,6 +61,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 1,
+  "explorer.compactFolders": false,
 
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
