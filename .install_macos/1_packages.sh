@@ -360,7 +360,8 @@ echo "------------------------------------------------"
 # 457622435  Yoink
 # 409201541  Apple Pages
 # 409203825  Apple Numbers
-appsAppStore=(937984704 1193539993 1352778147 425424353 497799835 457622435 409201541 409203825)
+# 1289197285 Mindnode
+appsAppStore=(937984704 1193539993 1352778147 425424353 497799835 457622435 409201541 409203825 1289197285)
 for appAppStore in "${appsAppStore[@]}"; do
   if ! mas list | grep -w "^$appAppStore" &>/dev/null; then
     mas install $appAppStore
