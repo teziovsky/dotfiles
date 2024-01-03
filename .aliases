@@ -29,7 +29,7 @@ alias nrt="pnpm test"
 alias flush-npm="rm -rf node_modules package-lock.json pnpm-lock.yaml && npm install"
 alias ncupatch="ncu -ui --target patch"
 alias ncuminor="ncu -ui --target minor"
-alias ncumajor="ncu -ui --target major"
+alias nculatest="ncu -ui --target latest"
 
 # GIT
 alias git="hub"

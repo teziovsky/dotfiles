@@ -324,7 +324,7 @@ echo -e "\n"
 echo "Installing Homebrew Developer Casks..."
 echo "------------------------------------------------"
 
-casksDeveloper=(warp slack figma linear-linear discord bruno dbngin tableplus visual-studio-code zed)
+casksDeveloper=(warp slack figma linear-linear height orbstack discord bruno dbngin tableplus visual-studio-code zed)
 for developerCask in "${casksDeveloper[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$developerCask$" &>/dev/null; then
     brew install --cask $developerCask -q

@@ -246,7 +246,7 @@
   },
   {
     "name": "advent-of-code",
-    "rootPath": "/Users/kuba/Developer/advent_of_code",
+    "rootPath": "/Users/kuba/Developer/advent-of-code",
     "paths": [],
     "tags": [],
     "enabled": true

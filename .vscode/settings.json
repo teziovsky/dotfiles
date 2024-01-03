@@ -40,7 +40,7 @@
   "editor.minimap.enabled": false,
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 120,
-  "editor.occurrencesHighlight": false,
+  "editor.occurrencesHighlight": "off",
   "editor.snippetSuggestions": "inline",
   "editor.tabSize": 2,
   "editor.smoothScrolling": true,
@@ -48,8 +48,8 @@
   "editor.renderWhitespace": "boundary",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "addMissingImports": true
+    "source.fixAll": "explicit",
+    "addMissingImports": "explicit"
   },
   "editor.hover.delay": 200,
   "editor.quickSuggestions": {
@@ -368,5 +368,6 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "window.zoomLevel": -1,
-  "workbench.activityBar.location": "top"
+  "workbench.activityBar.location": "top",
+  "workbench.editor.tabActionLocation": "right"
 }

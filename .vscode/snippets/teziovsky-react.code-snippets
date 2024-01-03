@@ -79,10 +79,14 @@
     "scope": "javascriptreact, typescriptreact",
     "prefix": "rp",
     "body": [
-      "export default function ${1:${TM_FILENAME_BASE/(\\w+)|./${1:/capitalize}/g}}() {",
+      "interface ${1:${TM_FILENAME_BASE/(\\w+)|./${1:/capitalize}/g}}Props {"
+      "  $2",
+      "}",
+      "",
+      "export default function ${1:${TM_FILENAME_BASE/(\\w+)|./${1:/capitalize}/g}}({ params }: ${1:${TM_FILENAME_BASE/(\\w+)|./${1:/capitalize}/g}}Props) {",
       "  return (",
       "    <div>",
-      "      $0",
+      "      ${1:${TM_FILENAME_BASE/(\\w+)|./${1:/capitalize}/g}}$0",
       "    </div>",
       "  );",
       "}",
