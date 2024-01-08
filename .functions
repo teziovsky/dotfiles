@@ -2,3 +2,19 @@ function mc {
   cd "$(walk "$@")"
 }
 
+function findtext {
+  grep -rnIil "$1" . --color
+}
+
+function drm {
+  docker stop "$1"
+  docker rm "$1"
+}
+
+tcd() {
+  if [ -d ${PWD}/$1 ]; then
+    tmux new-window -c ${PWD}/$1
+  else
+    tmux new-window -c $1
+  fi
+}
