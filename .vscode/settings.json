@@ -367,7 +367,6 @@
   "[ignore]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "window.zoomLevel": -1,
   "workbench.activityBar.location": "top",
   "workbench.editor.tabActionLocation": "right",
   "search.smartCase": true,
@@ -376,5 +375,6 @@
   },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
-  }
+  },
+  "window.zoomLevel": -1
 }

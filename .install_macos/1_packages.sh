@@ -282,7 +282,7 @@ echo -e "\n"
 echo "Installing Homebrew Automations Casks..."
 echo "------------------------------------------------"
 
-casksAutomations=(karabiner-elements keyboard-maestro hazel)
+casksAutomations=(karabiner-elements hazel)
 for automationsCask in "${casksAutomations[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$automationsCask$" &>/dev/null; then
     brew install --cask $automationsCask -q
@@ -291,6 +291,15 @@ for automationsCask in "${casksAutomations[@]}"; do
     echo "$automationsCask - already exists! 👌"
   fi
 done
+
+if ! ls /Applications | grep -i "keyboard maestro" &>/dev/null; then
+  curl -s -o ~/Downloads/keyboardmaestro-1020.zip https://files.stairways.com/keyboardmaestro/keyboardmaestro-1020.zip
+  unzip -q ~/Downloads/keyboardmaestro-1020.zip -d /Applications
+  rm ~/Downloads/keyboardmaestro-1020.zip
+  echo "Keyboard Maestro - installed 🔥"
+else
+  echo "Keyboard Maestro - already exists! 👌"
+fi
 
 echo -e "\n"
 echo "Installing Homebrew Productivity Casks..."
@@ -310,7 +319,7 @@ echo -e "\n"
 echo "Installing Homebrew Media Casks..."
 echo "------------------------------------------------"
 
-casksMedia=(iina imageoptim)
+casksMedia=(iina)
 for mediaCask in "${casksMedia[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$mediaCask$" &>/dev/null; then
     brew install --cask $mediaCask -q
@@ -324,7 +333,7 @@ echo -e "\n"
 echo "Installing Homebrew Developer Casks..."
 echo "------------------------------------------------"
 
-casksDeveloper=(warp slack figma linear-linear height orbstack discord bruno dbngin tableplus visual-studio-code zed)
+casksDeveloper=(warp slack figma linear-linear height orbstack hoppscotch discord tableplus visual-studio-code zed)
 for developerCask in "${casksDeveloper[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$developerCask$" &>/dev/null; then
     brew install --cask $developerCask -q
