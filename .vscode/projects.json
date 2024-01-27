@@ -338,5 +338,12 @@
 		"paths": [],
 		"tags": [],
 		"enabled": true
+	},
+	{
+		"name": "raycast-teziovsky-notion",
+		"rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-teziovsky-notion",
+		"paths": [],
+		"tags": [],
+		"enabled": true
 	}
 ]
