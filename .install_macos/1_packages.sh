@@ -54,13 +54,13 @@ if ! [ -f "$SSH_CONFIG_FILE" ]; then
   touch "$SSH_CONFIG_FILE"
   echo "SSH config file - created 🔥"
 
-  echo "$SSH_GITHUB_HOST" >>"$SSH_CONFIG_FILE"
+  echo -e "$SSH_GITHUB_HOST" >> "$SSH_CONFIG_FILE"
   echo "Github Host SSH Config - added 🔥"
 else
   echo "SSH config file - already exists! 👌"
 
   if ! grep -q "Host github.com" $SSH_CONFIG_FILE; then
-    echo "\n$SSH_GITHUB_HOST" >>"$SSH_CONFIG_FILE"
+    echo -e "\n$SSH_GITHUB_HOST" >>"$SSH_CONFIG_FILE"
     echo "Github Host SSH Config - added 🔥"
   else
     echo "Github Host SSH Config - already exists! 👌"
