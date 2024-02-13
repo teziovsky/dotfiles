@@ -97,8 +97,10 @@ echo "------------------------------------------------"
 
 raycastContributionsRepos=(
   "extensions"
-  "raycast-teziovsky-airtable"
   "raycast-multi-translate"
+  "raycast-teziovsky-airtable"
+  "raycast-teziovsky-linear"
+  "raycast-scripts"
 )
 for raycastContributionsRepo in "${raycastContributionsRepos[@]}"; do
   if [ ! -d "$HOME/Developer/contributions/raycast/$raycastContributionsRepo" ]; then
@@ -147,16 +149,19 @@ echo "Cloning sites repos..."
 echo "------------------------------------------------"
 
 sitesRepos=(
+  "ajwedding"
+  "car-service-book-api"
+  "car-service-book-v1"
+  "foodbase"
+  "idcom-svg-walkthrough"
+  "images-gallery"
   "jakubsoboczynski"
   "jakubsoboczynski-next-v1"
-  "rock-paper-scissors"
-  "images-gallery"
-  "vehicle-service-book"
-  "movie-search-engine"
-  "car-service-book-api"
   "lenovo-product-card"
-  "car-service-book-v1"
+  "movie-search-engine"
   "qr-code-component"
+  "rock-paper-scissors"
+  "vehicle-service-book"
 )
 for sitesRepo in "${sitesRepos[@]}"; do
   if [ ! -d "$HOME/Developer/sites/$sitesRepo" ]; then
@@ -172,8 +177,8 @@ echo "Cloning sites - petnal repos..."
 echo "------------------------------------------------"
 
 petnalSitesRepos=(
-  "petnal-web"
   "petnal-native"
+  "petnal-web"
 )
 for petnalSitesRepo in "${petnalSitesRepos[@]}"; do
   if [ ! -d "$HOME/Developer/sites/petnal/$petnalSitesRepo" ]; then

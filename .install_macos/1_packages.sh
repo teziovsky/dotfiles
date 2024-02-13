@@ -215,7 +215,7 @@ echo -e "\n"
 echo "Installing Homebrew Languages Formulaes..."
 echo "------------------------------------------------"
 
-formulaesLanguages=(php python@3.11)
+formulaesLanguages=(php python@3.12)
 for languageFormulae in "${formulaesLanguages[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$languageFormulae$" &>/dev/null; then
     brew install $languageFormulae -q
@@ -268,7 +268,7 @@ echo -e "\n"
 echo "Installing Homebrew Browsers Casks..."
 echo "------------------------------------------------"
 
-casksBrowsers=(arc google-chrome brave-browser firefox)
+casksBrowsers=(arc google-chrome firefox)
 for browserCask in "${casksBrowsers[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$browserCask$" &>/dev/null; then
     brew install --cask $browserCask -q
@@ -400,7 +400,7 @@ echo -e "\n"
 echo "Installing a few global npm packages..."
 echo "------------------------------------------------"
 
-npmGlobalPackages=(gitignore npm-check-updates vercel)
+npmGlobalPackages=(gitignore npm-check-updates prisma vercel)
 for npmPackage in "${npmGlobalPackages[@]}"; do
   if ! pnpm list -g --depth=0 | grep -w "^$npmPackage" &>/dev/null; then
     pnpm add -g $npmPackage

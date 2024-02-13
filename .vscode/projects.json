@@ -340,8 +340,8 @@
 		"enabled": true
 	},
 	{
-		"name": "raycast-teziovsky-notion",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-teziovsky-notion",
+		"name": "raycast-scripts",
+		"rootPath": "/Users/kuba/Developer/contributions/raycast/scripts",
 		"paths": [],
 		"tags": [],
 		"enabled": true
