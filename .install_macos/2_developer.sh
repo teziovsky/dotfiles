@@ -57,6 +57,22 @@ for wsbRepo in "${wsbRepos[@]}"; do
 done
 
 echo -e "\n"
+echo "Cloning apps repos..."
+echo "------------------------------------------------"
+
+appsRepos=(
+  "meta-music"
+)
+for appsRepo in "${appsRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/apps/$appsRepo" ]; then
+    git clone -q git@github.com:teziovsky/$appsRepo.git "$HOME/Developer/apps/$appsRepo"
+    echo "$appsRepo repo - cloned 🔥"
+  else
+    echo "$appsRepo repo - already exists 👌"
+  fi
+done
+
+echo -e "\n"
 echo "Cloning cli repos..."
 echo "------------------------------------------------"
 

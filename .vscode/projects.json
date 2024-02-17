@@ -345,5 +345,12 @@
 		"paths": [],
 		"tags": [],
 		"enabled": true
+	},
+	{
+		"name": "meta-music",
+		"rootPath": "/Users/kuba/Developer/apps/meta-music",
+		"paths": [],
+		"tags": [],
+		"enabled": true
 	}
 ]

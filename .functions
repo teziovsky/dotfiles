@@ -18,3 +18,8 @@ tcd() {
     tmux new-window -c $1
   fi
 }
+
+pullenvs() {
+  vercel env pull --environment development .env.development.local
+  vercel env pull --environment production .env.production.local
+}

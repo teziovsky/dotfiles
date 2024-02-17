@@ -65,3 +65,5 @@
 	autoSetupRemote = true
 [pull]
 	rebase = false
+[branch]
+	sort = -committerdate

@@ -13,14 +13,21 @@
   "assistant": {
     "dock": "left"
   },
+  "auto_update": true,
   "autosave": {
     "after_delay": {
       "milliseconds": 5000
     }
   },
   "base_keymap": "VSCode",
+  "buffer_font_family": "Monaspace Neon",
   "buffer_font_size": 12,
+  "buffer_line_height": "comfortable",
+  "buffer_font_features": null,
+  "formatter": "prettier",
   "format_on_save": "on",
+  "prettier": {},
+  "enable_language_server": true,
   "inlay_hints": {
     "enabled": true,
     "show_type_hints": true,
@@ -30,11 +37,12 @@
   "preferred_line_length": 120,
   "project_panel": {
     "dock": "right",
-    "default_width": 120,
+    "default_width": 140,
     "git_status": true
   },
   "remove_trailing_whitespace_on_save": true,
   "show_completions_on_input": true,
+  "show_completion_documentation": true,
   "show_copilot_suggestions": true,
   "show_whitespaces": "selection",
   "soft_wrap": "preferred_line_length",
@@ -47,5 +55,6 @@
     "copy_on_select": true,
     "working_directory": "current_project_directory"
   },
-  "theme": "One Dark"
+  "theme": "Rosé Pine Moon",
+  "hour_format": "hour24"
 }
