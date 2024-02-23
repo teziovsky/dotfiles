@@ -52,6 +52,8 @@
     "addMissingImports": "explicit"
   },
   "editor.hover.delay": 200,
+  "editor.wordBasedSuggestions": "off",
+  "editor.quickSuggestionsDelay": 200,
   "editor.quickSuggestions": {
     "comments": "inline",
     "strings": "on"

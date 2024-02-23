@@ -41,6 +41,17 @@ else
 fi
 
 echo -e "\n"
+echo "Cloning advent-of-code repo..."
+echo "------------------------------------------------"
+
+if [ ! -d "$HOME/Developer/advent-of-code" ]; then
+  git clone -q git@github.com:teziovsky/advent-of-code.git "$HOME/Developer/advent-of-code"
+  echo "advent-of-code repo - cloned 🔥"
+else
+  echo "advent-of-code repo - already exists 👌"
+fi
+
+echo -e "\n"
 echo "Cloning wsb repos..."
 echo "------------------------------------------------"
 

@@ -24,9 +24,8 @@
   "buffer_font_size": 12,
   "buffer_line_height": "comfortable",
   "buffer_font_features": null,
-  "formatter": "prettier",
+  "formatter": "auto",
   "format_on_save": "on",
-  "prettier": {},
   "enable_language_server": true,
   "inlay_hints": {
     "enabled": true,
