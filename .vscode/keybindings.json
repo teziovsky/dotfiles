@@ -707,5 +707,10 @@
   {
     "key": "alt+cmd+4",
     "command": "workbench.panel.chat.view.copilot.focus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   }
 ]
