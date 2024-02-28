@@ -67,3 +67,5 @@
 	rebase = false
 [branch]
 	sort = -committerdate
+[pager]
+	branch = false
