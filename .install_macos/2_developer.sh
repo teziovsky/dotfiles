@@ -123,7 +123,6 @@ echo "Cloning raycast contributions repos..."
 echo "------------------------------------------------"
 
 raycastContributionsRepos=(
-  "extensions"
   "raycast-multi-translate"
   "raycast-teziovsky-airtable"
   "raycast-teziovsky-linear"
