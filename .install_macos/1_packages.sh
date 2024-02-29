@@ -305,7 +305,7 @@ echo -e "\n"
 echo "Installing Homebrew Productivity Casks..."
 echo "------------------------------------------------"
 
-casksProductivity=(raycast bluesnooze textsniper notion contexts chatall cleanmymac dropbox logi-options-plus zoom beeper)
+casksProductivity=(raycast bluesnooze textsniper notion contexts chatall cleanmymac dropbox logi-options-plus zoom)
 for productivityCask in "${casksProductivity[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$productivityCask$" &>/dev/null; then
     brew install --cask $productivityCask -q
@@ -333,7 +333,7 @@ echo -e "\n"
 echo "Installing Homebrew Developer Casks..."
 echo "------------------------------------------------"
 
-casksDeveloper=(warp slack figma linear-linear height orbstack hoppscotch discord tableplus visual-studio-code zed)
+casksDeveloper=(warp slack figma linear-linear height orbstack hoppscotch tableplus visual-studio-code zed)
 for developerCask in "${casksDeveloper[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$developerCask$" &>/dev/null; then
     brew install --cask $developerCask -q

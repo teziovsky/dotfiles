@@ -138,6 +138,39 @@ for raycastContributionsRepo in "${raycastContributionsRepos[@]}"; do
 done
 
 echo -e "\n"
+echo "Cloning zed contributions repos..."
+echo "------------------------------------------------"
+
+zedContributionsRepos=(
+  "zed-editor"
+  "zed-extensions"
+)
+for zedContributionsRepo in "${zedContributionsRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/contributions/zed/$zedContributionsRepo" ]; then
+  git clone -q git@github.com:teziovsky/$zedContributionsRepo.git "$HOME/Developer/contributions/zed/$zedContributionsRepo"
+  echo "$zedContributionsRepo repo - cloned 🔥"
+  else
+    echo "$zedContributionsRepo repo - already exists 👌"
+  fi
+done
+
+echo -e "\n"
+echo "Cloning zed contributions themes repos..."
+echo "------------------------------------------------"
+
+zedContributionsThemesRepos=(
+  "zed-one-hunter-theme"
+)
+for zedContributionsThemeRepo in "${zedContributionsThemesRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/contributions/zed/themes/$zedContributionsThemeRepo" ]; then
+  git clone -q git@github.com:teziovsky/$zedContributionsThemeRepo.git "$HOME/Developer/contributions/zed/themes/$zedContributionsThemeRepo"
+  echo "$zedContributionsThemeRepo repo - cloned 🔥"
+  else
+    echo "$zedContributionsThemeRepo repo - already exists 👌"
+  fi
+done
+
+echo -e "\n"
 echo "Cloning recruitments - makadu repos..."
 echo "------------------------------------------------"
 
