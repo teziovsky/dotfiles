@@ -104,7 +104,6 @@ echo "------------------------------------------------"
 contributionsRepos=(
   "vuelidate-vuelidate"
   "awesome-uses"
-  "fig-autocomplete"
   "snippet-explorer"
 )
 for contributionsRepo in "${contributionsRepos[@]}"; do

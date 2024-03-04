@@ -27,7 +27,7 @@ alias nrs="pnpm start -s"
 alias nrd="pnpm dev"
 alias nrb="pnpm build"
 alias nrt="pnpm test"
-alias flush-npm="rm -rf node_modules package-lock.json pnpm-lock.yaml && npm install"
+alias clean-packages="rm -rf ./node_modules ./package-lock.json ./pnpm-lock.yaml ./yarn.lock ./bun.lockb ./dist ./out ./next ./build"
 alias ncu-patch="ncu -ui --target patch"
 alias ncu-minor="ncu -ui --target minor"
 alias ncu-latest="ncu -ui --target latest"
@@ -48,11 +48,9 @@ alias gl="git log"
 alias gc="git commit -m"
 alias gac="git add . && git commit -m"
 alias clean-branches="git branch --merged | egrep -v '(^\*|master|main|develop)' | xargs git branch -d"
-alias deep-clean-branches='find . -type d -name ".git" -execdir sh -c '\''cd "{}" && repo=$(basename "$(dirname "$(pwd)")") && cleaned_branches=$(git branch --merged | grep -v -E "master|main|develop" | xargs) && [ -n "$cleaned_branches" ] && git branch -d $cleaned_branches && echo "Cleaned branches: $cleaned_branches for repo $repo"'\'' \;'
-alias deep-check-branches='find . -type d -name ".git" -execdir sh -c '\''cd "{}" && repo=$(basename "$(dirname "$(pwd)")") && branch=$(git symbolic-ref --short HEAD 2>/dev/null) && [ "$branch" != "develop" ] && echo "Repo: $repo is actually on branch $branch"'\'' \;'
-alias gsa='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; git -C "$repo" status -s | grep -q -v "^\$" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" status -s || true; done'
-alias gla='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" pull || true; done'
-alias gpa='find ~/Developer -name '.git' | while read repo ; do repo=${repo//\.git/}; git -C "$repo" status -b | grep "git push" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" push || true; done'
+alias deep-check-branches='deep_check_branches'
+alias gsa='git_status_all'
+alias gla='git_fetch_all'
 
 # GITHUB
 alias ghmerge="gh pr create && gh pr merge"

@@ -1,16 +1,44 @@
-function mc {
+mc() {
   cd "$(walk "$@")"
 }
 
-function findtext {
+# GREP
+findtext() {
   grep -rnIil "$1" . --color
 }
 
-function drm {
+# GIT
+deep_check_branches() {
+  find . -type d -name ".git" -execdir sh -c '
+        cd "{}" &&
+        repo=$(basename "$(dirname "$(pwd)")") &&
+        branch=$(git symbolic-ref --short HEAD 2>/dev/null) &&
+        [ "$branch" != "develop" ] &&
+        echo "Repo: $repo is actually on branch $branch"
+    ' \;
+}
+
+git_status_all() {
+  find ~/Developer -name '.git' | while read repo; do
+    repo=${repo//\.git/}
+    git -C "$repo" status -s | grep -q -v "^\$" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" status -s || true
+  done
+}
+
+git_fetch_all() {
+  find ~/Developer -name '.git' | while read repo; do
+    repo=${repo//\.git/}
+    echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" fetch --all || true
+  done
+}
+
+# DOCKER
+drm() {
   docker stop "$1"
   docker rm "$1"
 }
 
+# TMUX
 tcd() {
   if [ -d ${PWD}/$1 ]; then
     tmux new-window -c ${PWD}/$1
@@ -19,6 +47,7 @@ tcd() {
   fi
 }
 
+# VERCEL
 pullenvs() {
   vercel env pull --environment development .env.development.local
   vercel env pull --environment production .env.production.local
