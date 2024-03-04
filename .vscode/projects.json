@@ -1,356 +1,268 @@
 [
-	{
-		"name": "Dotfiles .install_macos",
-		"rootPath": "/Users/kuba/.install_macos",
-		"paths": [],
-		"tags": [
-			"configuration",
-			"dotfiles"
-		],
-		"enabled": true
-	},
-	{
-		"name": "Karabiner complex modifications",
-		"rootPath": "/Users/kuba/.config/karabiner/assets/complex_modifications",
-		"paths": [],
-		"tags": [
-			"configuration",
-			"karabiner"
-		],
-		"enabled": true
-	},
-	{
-		"name": "md-generate",
-		"rootPath": "/Users/kuba/Developer/cli/md-generate",
-		"paths": [],
-		"tags": [
-			"cli",
-			"nodejs"
-		],
-		"enabled": true
-	},
-	{
-		"name": "awesome-uses",
-		"rootPath": "/Users/kuba/Developer/contributions/awesome-uses",
-		"paths": [],
-		"tags": [
-			"contribution",
-			"uses"
-		],
-		"enabled": true
-	},
-	{
-		"name": "fig-autocomplete",
-		"rootPath": "/Users/kuba/Developer/contributions/fig-autocomplete",
-		"paths": [],
-		"tags": [
-			"contribution",
-			"fig"
-		],
-		"enabled": true
-	},
-	{
-		"name": "raycast-extensions",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/extensions",
-		"paths": [],
-		"tags": [
-			"contribution",
-			"raycast"
-		],
-		"enabled": true
-	},
-	{
-		"name": "raycast-multi-translate",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-multi-translate",
-		"paths": [],
-		"tags": [
-			"contribution",
-			"raycast"
-		],
-		"enabled": true
-	},
-	{
-		"name": "raycast-teziovsky-airtable",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-teziovsky-airtable",
-		"paths": [],
-		"tags": [
-			"contribution",
-			"raycast"
-		],
-		"enabled": true
-	},
-	{
-		"name": "snippet-explorer",
-		"rootPath": "/Users/kuba/Developer/contributions/snippet-explorer",
-		"paths": [],
-		"tags": [
-			"contribution"
-		],
-		"enabled": true
-	},
-	{
-		"name": "vuelidate-vuelidate",
-		"rootPath": "/Users/kuba/Developer/contributions/vuelidate-vuelidate",
-		"paths": [],
-		"tags": [
-			"contribution",
-			"vuelidate"
-		],
-		"enabled": true
-	},
-	{
-		"name": "js-na-frontach-w05e02-continous-deployment",
-		"rootPath": "/Users/kuba/Developer/courses/js-na-frontach-w05e02-continous-deployment",
-		"paths": [],
-		"tags": [
-			"course",
-			"js-na-frontach"
-		],
-		"enabled": true
-	},
-	{
-		"name": "js-na-frontach-zadania",
-		"rootPath": "/Users/kuba/Developer/courses/js-na-frontach-zadania",
-		"paths": [],
-		"tags": [
-			"course",
-			"js-na-frontach"
-		],
-		"enabled": true
-	},
-	{
-		"name": "vps-setup-scripts",
-		"rootPath": "/Users/kuba/Developer/linux_macos/vps-setup-scripts",
-		"paths": [],
-		"tags": [
-			"linux",
-			"macos",
-			"vps"
-		],
-		"enabled": true
-	},
-	{
-		"name": "idcom-tiles",
-		"rootPath": "/Users/kuba/Developer/recruitments/idcom/idcom-tiles",
-		"paths": [],
-		"tags": [
-			"recruitment",
-			"idcom"
-		],
-		"enabled": true
-	},
-	{
-		"name": "idcom-vue-test",
-		"rootPath": "/Users/kuba/Developer/recruitments/idcom/idcom-vue-test",
-		"paths": [],
-		"tags": [
-			"recruitment",
-			"idcom"
-		],
-		"enabled": true
-	},
-	{
-		"name": "makadu-miedzy-lasem-a-cisza",
-		"rootPath": "/Users/kuba/Developer/recruitments/makadu/makadu-miedzy-lasem-a-cisza",
-		"paths": [],
-		"tags": [
-			"recruitment",
-			"makadu"
-		],
-		"enabled": true
-	},
-	{
-		"name": "car-service-book-api",
-		"rootPath": "/Users/kuba/Developer/sites/car-service-book-api",
-		"paths": [],
-		"tags": [
-			"site",
-			"car-service-book"
-		],
-		"enabled": true
-	},
-	{
-		"name": "car-service-book-v1",
-		"rootPath": "/Users/kuba/Developer/sites/car-service-book-v1",
-		"paths": [],
-		"tags": [
-			"site",
-			"car-service-book"
-		],
-		"enabled": true
-	},
-	{
-		"name": "images-gallery",
-		"rootPath": "/Users/kuba/Developer/sites/images-gallery",
-		"paths": [],
-		"tags": [
-			"site"
-		],
-		"enabled": true
-	},
-	{
-		"name": "jakubsoboczynski",
-		"rootPath": "/Users/kuba/Developer/sites/jakubsoboczynski",
-		"paths": [],
-		"tags": [
-			"site",
-			"jakubsoboczynski"
-		],
-		"enabled": true
-	},
-	{
-		"name": "jakubsoboczynski-next-v1",
-		"rootPath": "/Users/kuba/Developer/sites/jakubsoboczynski-next-v1",
-		"paths": [],
-		"tags": [
-			"site",
-			"jakubsoboczynski"
-		],
-		"enabled": true
-	},
-	{
-		"name": "lenovo-product-card",
-		"rootPath": "/Users/kuba/Developer/sites/lenovo-product-card",
-		"paths": [],
-		"tags": [
-			"site"
-		],
-		"enabled": true
-	},
-	{
-		"name": "movie-search-engine",
-		"rootPath": "/Users/kuba/Developer/sites/movie-search-engine",
-		"paths": [],
-		"tags": [
-			"site"
-		],
-		"enabled": true
-	},
-	{
-		"name": "petnal-native",
-		"rootPath": "/Users/kuba/Developer/sites/petnal/petnal-native",
-		"paths": [],
-		"tags": [
-			"site",
-			"petnal"
-		],
-		"enabled": true
-	},
-	{
-		"name": "petnal-web",
-		"rootPath": "/Users/kuba/Developer/sites/petnal/petnal-web",
-		"paths": [],
-		"tags": [
-			"site",
-			"petnal"
-		],
-		"enabled": true
-	},
-	{
-		"name": "qr-code-component",
-		"rootPath": "/Users/kuba/Developer/sites/qr-code-component",
-		"paths": [],
-		"tags": [
-			"site",
-			"frontend mentor"
-		],
-		"enabled": true
-	},
-	{
-		"name": "rock-paper-scissors",
-		"rootPath": "/Users/kuba/Developer/sites/rock-paper-scissors",
-		"paths": [],
-		"tags": [
-			"site",
-			"frontend mentor"
-		],
-		"enabled": true
-	},
-	{
-		"name": "vehicle-service-book",
-		"rootPath": "/Users/kuba/Developer/sites/vehicle-service-book",
-		"paths": [],
-		"tags": [
-			"site",
-			"vehicle-service-book"
-		],
-		"enabled": true
-	},
-	{
-		"name": "raycast-height",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/extensions/extensions/height",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "raycast-infakt",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/extensions/extensions/infakt",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "raycast-raydocs",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/extensions/extensions/raydocs",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "raycast-css-calculations",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/extensions/extensions/css-calculations",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "foodbase",
-		"rootPath": "/Users/kuba/Developer/sites/foodbase",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "vscode-snippets",
-		"rootPath": "/Users/kuba/.vscode/snippets",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "raycast-teziovsky-linear",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-teziovsky-linear",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "advent-of-code",
-		"rootPath": "/Users/kuba/Developer/advent-of-code",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "ajwedding",
-		"rootPath": "/Users/kuba/Developer/sites/ajwedding",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "raycast-scripts",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/scripts",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	},
-	{
-		"name": "meta-music",
-		"rootPath": "/Users/kuba/Developer/apps/meta-music",
-		"paths": [],
-		"tags": [],
-		"enabled": true
-	}
+  {
+    "name": "Dotfiles .install_macos",
+    "rootPath": "/Users/kuba/.install_macos",
+    "paths": [],
+    "tags": ["configuration", "dotfiles"],
+    "enabled": true
+  },
+  {
+    "name": "Karabiner complex modifications",
+    "rootPath": "/Users/kuba/.config/karabiner/assets/complex_modifications",
+    "paths": [],
+    "tags": ["configuration", "karabiner"],
+    "enabled": true
+  },
+  {
+    "name": "md-generate",
+    "rootPath": "/Users/kuba/Developer/cli/md-generate",
+    "paths": [],
+    "tags": ["cli", "nodejs"],
+    "enabled": true
+  },
+  {
+    "name": "awesome-uses",
+    "rootPath": "/Users/kuba/Developer/contributions/awesome-uses",
+    "paths": [],
+    "tags": ["contribution", "uses"],
+    "enabled": true
+  },
+  {
+    "name": "fig-autocomplete",
+    "rootPath": "/Users/kuba/Developer/contributions/fig-autocomplete",
+    "paths": [],
+    "tags": ["contribution", "fig"],
+    "enabled": true
+  },
+  {
+    "name": "snippet-explorer",
+    "rootPath": "/Users/kuba/Developer/contributions/snippet-explorer",
+    "paths": [],
+    "tags": ["contribution"],
+    "enabled": true
+  },
+  {
+    "name": "vuelidate-vuelidate",
+    "rootPath": "/Users/kuba/Developer/contributions/vuelidate-vuelidate",
+    "paths": [],
+    "tags": ["contribution", "vuelidate"],
+    "enabled": true
+  },
+  {
+    "name": "js-na-frontach-w05e02-continous-deployment",
+    "rootPath": "/Users/kuba/Developer/courses/js-na-frontach-w05e02-continous-deployment",
+    "paths": [],
+    "tags": ["course", "js-na-frontach"],
+    "enabled": true
+  },
+  {
+    "name": "js-na-frontach-zadania",
+    "rootPath": "/Users/kuba/Developer/courses/js-na-frontach-zadania",
+    "paths": [],
+    "tags": ["course", "js-na-frontach"],
+    "enabled": true
+  },
+  {
+    "name": "vps-setup-scripts",
+    "rootPath": "/Users/kuba/Developer/linux_macos/vps-setup-scripts",
+    "paths": [],
+    "tags": ["linux", "macos", "vps"],
+    "enabled": true
+  },
+  {
+    "name": "idcom-tiles",
+    "rootPath": "/Users/kuba/Developer/recruitments/idcom/idcom-tiles",
+    "paths": [],
+    "tags": ["recruitment", "idcom"],
+    "enabled": true
+  },
+  {
+    "name": "idcom-vue-test",
+    "rootPath": "/Users/kuba/Developer/recruitments/idcom/idcom-vue-test",
+    "paths": [],
+    "tags": ["recruitment", "idcom"],
+    "enabled": true
+  },
+  {
+    "name": "makadu-miedzy-lasem-a-cisza",
+    "rootPath": "/Users/kuba/Developer/recruitments/makadu/makadu-miedzy-lasem-a-cisza",
+    "paths": [],
+    "tags": ["recruitment", "makadu"],
+    "enabled": true
+  },
+  {
+    "name": "car-service-book-api",
+    "rootPath": "/Users/kuba/Developer/sites/car-service-book-api",
+    "paths": [],
+    "tags": ["site", "car-service-book"],
+    "enabled": true
+  },
+  {
+    "name": "car-service-book-v1",
+    "rootPath": "/Users/kuba/Developer/sites/car-service-book-v1",
+    "paths": [],
+    "tags": ["site", "car-service-book"],
+    "enabled": true
+  },
+  {
+    "name": "images-gallery",
+    "rootPath": "/Users/kuba/Developer/sites/images-gallery",
+    "paths": [],
+    "tags": ["site"],
+    "enabled": true
+  },
+  {
+    "name": "jakubsoboczynski",
+    "rootPath": "/Users/kuba/Developer/sites/jakubsoboczynski",
+    "paths": [],
+    "tags": ["site", "jakubsoboczynski"],
+    "enabled": true
+  },
+  {
+    "name": "jakubsoboczynski-next-v1",
+    "rootPath": "/Users/kuba/Developer/sites/jakubsoboczynski-next-v1",
+    "paths": [],
+    "tags": ["site", "jakubsoboczynski"],
+    "enabled": true
+  },
+  {
+    "name": "lenovo-product-card",
+    "rootPath": "/Users/kuba/Developer/sites/lenovo-product-card",
+    "paths": [],
+    "tags": ["site"],
+    "enabled": true
+  },
+  {
+    "name": "movie-search-engine",
+    "rootPath": "/Users/kuba/Developer/sites/movie-search-engine",
+    "paths": [],
+    "tags": ["site"],
+    "enabled": true
+  },
+  {
+    "name": "petnal-native",
+    "rootPath": "/Users/kuba/Developer/sites/petnal/petnal-native",
+    "paths": [],
+    "tags": ["site", "petnal"],
+    "enabled": true
+  },
+  {
+    "name": "petnal-web",
+    "rootPath": "/Users/kuba/Developer/sites/petnal/petnal-web",
+    "paths": [],
+    "tags": ["site", "petnal"],
+    "enabled": true
+  },
+  {
+    "name": "qr-code-component",
+    "rootPath": "/Users/kuba/Developer/sites/qr-code-component",
+    "paths": [],
+    "tags": ["site", "frontend mentor"],
+    "enabled": true
+  },
+  {
+    "name": "rock-paper-scissors",
+    "rootPath": "/Users/kuba/Developer/sites/rock-paper-scissors",
+    "paths": [],
+    "tags": ["site", "frontend mentor"],
+    "enabled": true
+  },
+  {
+    "name": "vehicle-service-book",
+    "rootPath": "/Users/kuba/Developer/sites/vehicle-service-book",
+    "paths": [],
+    "tags": ["site", "vehicle-service-book"],
+    "enabled": true
+  },
+  {
+    "name": "foodbase",
+    "rootPath": "/Users/kuba/Developer/sites/foodbase",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "vscode-snippets",
+    "rootPath": "/Users/kuba/.vscode/snippets",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "advent-of-code",
+    "rootPath": "/Users/kuba/Developer/advent-of-code",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "ajwedding",
+    "rootPath": "/Users/kuba/Developer/sites/ajwedding",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "raycast-css-calculations",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-css-calculations",
+    "paths": [],
+    "tags": ["contribution", "raycast"],
+    "enabled": true
+  },
+  {
+    "name": "raycast-height",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-height",
+    "paths": [],
+    "tags": ["contribution", "raycast"],
+    "enabled": true
+  },
+  {
+    "name": "raycast-infakt",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-infakt",
+    "paths": [],
+    "tags": ["contribution", "raycast"],
+    "enabled": true
+  },
+  {
+    "name": "raycast-meta-music",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-meta-music",
+    "paths": [],
+    "tags": ["contribution", "raycast"],
+    "enabled": true
+  },
+  {
+    "name": "raycast-multi-translate",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-multi-translate",
+    "paths": [],
+    "tags": ["contribution", "raycast"],
+    "enabled": true
+  },
+  {
+    "name": "raycast-raydocs",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-raydocs",
+    "paths": [],
+    "tags": ["contribution", "raycast"],
+    "enabled": true
+  },
+  {
+    "name": "raycast-scripts",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-scripts",
+    "paths": [],
+    "tags": ["contribution", "raycast"],
+    "enabled": true
+  },
+  {
+    "name": "raycast-teziovsky-airtable",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-teziovsky-airtable",
+    "paths": [],
+    "tags": ["contribution", "raycast"],
+    "enabled": true
+  },
+  {
+    "name": "raycast-teziovsky-linear",
+    "rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-teziovsky-linear",
+    "paths": [],
+    "tags": ["contribution", "raycast"],
+    "enabled": true
+  }
 ]

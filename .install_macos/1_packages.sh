@@ -400,7 +400,7 @@ echo -e "\n"
 echo "Installing a few global npm packages..."
 echo "------------------------------------------------"
 
-npmGlobalPackages=(gitignore npm-check-updates prisma vercel)
+npmGlobalPackages=(gitignore npm-check-updates prisma vercel license)
 for npmPackage in "${npmGlobalPackages[@]}"; do
   if ! pnpm list -g --depth=0 | grep -w "^$npmPackage" &>/dev/null; then
     pnpm add -g $npmPackage

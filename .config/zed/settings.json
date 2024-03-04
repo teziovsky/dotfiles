@@ -55,6 +55,6 @@
     "copy_on_select": true,
     "working_directory": "current_project_directory"
   },
-  "theme": "One Hunter Flexoki Dark",
+  "theme": "One Hunter Vercel",
   "hour_format": "hour24"
 }

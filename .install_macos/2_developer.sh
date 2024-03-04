@@ -71,9 +71,7 @@ echo -e "\n"
 echo "Cloning apps repos..."
 echo "------------------------------------------------"
 
-appsRepos=(
-  "meta-music"
-)
+appsRepos=()
 for appsRepo in "${appsRepos[@]}"; do
   if [ ! -d "$HOME/Developer/apps/$appsRepo" ]; then
     git clone -q git@github.com:teziovsky/$appsRepo.git "$HOME/Developer/apps/$appsRepo"
@@ -123,10 +121,15 @@ echo "Cloning raycast contributions repos..."
 echo "------------------------------------------------"
 
 raycastContributionsRepos=(
+  "raycast-css-calculations"
+  "raycast-height"
+  "raycast-infakt"
+  "raycast-meta-music"
   "raycast-multi-translate"
+  "raycast-raydocs"
+  "raycast-scripts"
   "raycast-teziovsky-airtable"
   "raycast-teziovsky-linear"
-  "raycast-scripts"
 )
 for raycastContributionsRepo in "${raycastContributionsRepos[@]}"; do
   if [ ! -d "$HOME/Developer/contributions/raycast/$raycastContributionsRepo" ]; then
@@ -147,8 +150,8 @@ zedContributionsRepos=(
 )
 for zedContributionsRepo in "${zedContributionsRepos[@]}"; do
   if [ ! -d "$HOME/Developer/contributions/zed/$zedContributionsRepo" ]; then
-  git clone -q git@github.com:teziovsky/$zedContributionsRepo.git "$HOME/Developer/contributions/zed/$zedContributionsRepo"
-  echo "$zedContributionsRepo repo - cloned 🔥"
+    git clone -q git@github.com:teziovsky/$zedContributionsRepo.git "$HOME/Developer/contributions/zed/$zedContributionsRepo"
+    echo "$zedContributionsRepo repo - cloned 🔥"
   else
     echo "$zedContributionsRepo repo - already exists 👌"
   fi
@@ -163,8 +166,8 @@ zedContributionsThemesRepos=(
 )
 for zedContributionsThemeRepo in "${zedContributionsThemesRepos[@]}"; do
   if [ ! -d "$HOME/Developer/contributions/zed/themes/$zedContributionsThemeRepo" ]; then
-  git clone -q git@github.com:teziovsky/$zedContributionsThemeRepo.git "$HOME/Developer/contributions/zed/themes/$zedContributionsThemeRepo"
-  echo "$zedContributionsThemeRepo repo - cloned 🔥"
+    git clone -q git@github.com:teziovsky/$zedContributionsThemeRepo.git "$HOME/Developer/contributions/zed/themes/$zedContributionsThemeRepo"
+    echo "$zedContributionsThemeRepo repo - cloned 🔥"
   else
     echo "$zedContributionsThemeRepo repo - already exists 👌"
   fi

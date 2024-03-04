@@ -41,7 +41,7 @@
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 120,
   "editor.occurrencesHighlight": "off",
-  "editor.snippetSuggestions": "inline",
+  "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
   "editor.smoothScrolling": true,
   "editor.hover.enabled": true,
@@ -461,5 +461,6 @@
       "bold": false,
       "italic": false
     }
-  ]
+  ],
+  "editor.foldingImportsByDefault": true
 }
