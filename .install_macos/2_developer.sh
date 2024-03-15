@@ -267,6 +267,22 @@ for linuxMacosRepo in "${linuxMacosRepos[@]}"; do
 done
 
 echo -e "\n"
+echo "Cloning scripts repos..."
+echo "------------------------------------------------"
+
+scriptsRepos=(
+  "price-scrapper"
+)
+for scriptsRepo in "${scriptsRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/scripts/$scriptsRepo" ]; then
+  git clone -q git@github.com:teziovsky/$scriptsRepo.git "$HOME/Developer/scripts/$scriptsRepo"
+  echo "$scriptsRepo repo - cloned 🔥"
+  else
+    echo "$scriptsRepo repo - already exists 👌"
+  fi
+done
+
+echo -e "\n"
 echo "Cloning courses repos..."
 echo "------------------------------------------------"
 

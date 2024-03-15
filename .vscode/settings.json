@@ -41,13 +41,14 @@
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 120,
   "editor.occurrencesHighlight": "off",
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "inline",
   "editor.tabSize": 2,
   "editor.smoothScrolling": true,
   "editor.hover.enabled": true,
   "editor.renderWhitespace": "boundary",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
     "source.fixAll": "explicit",
     "addMissingImports": "explicit"
   },
@@ -462,5 +463,8 @@
       "italic": false
     }
   ],
-  "editor.foldingImportsByDefault": true
+  "editor.foldingImportsByDefault": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

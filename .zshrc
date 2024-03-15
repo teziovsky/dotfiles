@@ -1,31 +1,19 @@
-## THEMES
-### See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH THEMES
 ZSH_THEME="robbyrussell"
 
-## PLUGINS
+# ZSH SOURCE
+source "$HOME/.oh-my-zsh/oh-my-zsh.sh"
+
+# ZSH PLUGINS
 plugins=(brew zsh-autosuggestions zsh-syntax-highlighting)
-
-###-tns-completion-start-###
-if [ -f $HOME/.tnsrc ]; then
-  source $HOME/.tnsrc
-fi
-###-tns-completion-end-###
-
-# bun completions
-[ -s "/usr/local/Cellar/bun/0.5.9/share/zsh/site-functions/_bun" ] && source "/usr/local/Cellar/bun/0.5.9/share/zsh/site-functions/_bun"
-
-# CONFIG
-for file in ~/.{aliases,exports,functions}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file"
-done
-unset file
-
-source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # FNM CONFIG
 eval "$(fnm env --use-on-cd)"
 
-# bun completions
-[ -s "/Users/kuba/.bun/_bun" ] && source "/Users/kuba/.bun/_bun"
+# LOAD CONFIGS
+for file in ~/.{aliases,exports,functions}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file

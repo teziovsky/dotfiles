@@ -60,7 +60,7 @@ else
   echo "SSH config file - already exists! 👌"
 
   if ! grep -q "Host github.com" $SSH_CONFIG_FILE; then
-    echo -e "\n$SSH_GITHUB_HOST" >>"$SSH_CONFIG_FILE"
+    echo -e "\n$SSH_GITHUB_HOST" >> "$SSH_CONFIG_FILE"
     echo "Github Host SSH Config - added 🔥"
   else
     echo "Github Host SSH Config - already exists! 👌"
@@ -161,7 +161,7 @@ echo -e "\n"
 echo "Installing Homebrew CLI Formulaes..."
 echo "------------------------------------------------"
 
-formulaesCli=(bat bitwarden-cli curl htop jq fzf fd walk exa mas rename tree zsh ssh-copy-id)
+formulaesCli=(bat bitwarden-cli curl htop jq fzf fd walk eza mas rename tree zsh ssh-copy-id)
 for cliFormulae in "${formulaesCli[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$cliFormulae$" &>/dev/null; then
     brew install $cliFormulae -q
@@ -215,7 +215,7 @@ echo -e "\n"
 echo "Installing Homebrew Languages Formulaes..."
 echo "------------------------------------------------"
 
-formulaesLanguages=(php python@3.12)
+formulaesLanguages=(php pyenv)
 for languageFormulae in "${formulaesLanguages[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$languageFormulae$" &>/dev/null; then
     brew install $languageFormulae -q
@@ -333,7 +333,7 @@ echo -e "\n"
 echo "Installing Homebrew Developer Casks..."
 echo "------------------------------------------------"
 
-casksDeveloper=(warp slack figma linear-linear height orbstack hoppscotch tableplus visual-studio-code zed)
+casksDeveloper=(warp slack figma linear-linear height orbstack bruno tableplus visual-studio-code zed)
 for developerCask in "${casksDeveloper[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$developerCask$" &>/dev/null; then
     brew install --cask $developerCask -q
