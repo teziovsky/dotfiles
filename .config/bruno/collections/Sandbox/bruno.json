@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Sandbox",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
