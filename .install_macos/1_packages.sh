@@ -161,7 +161,7 @@ echo -e "\n"
 echo "Installing Homebrew CLI Formulaes..."
 echo "------------------------------------------------"
 
-formulaesCli=(bat bitwarden-cli curl htop jq fzf fd walk eza mas rename tree zsh ssh-copy-id)
+formulaesCli=(bat bitwarden-cli curl htop jq fzf fd walk eza mas rename tree zsh ssh-copy-id sshs)
 for cliFormulae in "${formulaesCli[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$cliFormulae$" &>/dev/null; then
     brew install $cliFormulae -q
@@ -215,7 +215,7 @@ echo -e "\n"
 echo "Installing Homebrew Languages Formulaes..."
 echo "------------------------------------------------"
 
-formulaesLanguages=(php pyenv)
+formulaesLanguages=(php pyenv golang)
 for languageFormulae in "${formulaesLanguages[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$languageFormulae$" &>/dev/null; then
     brew install $languageFormulae -q

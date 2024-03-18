@@ -7,7 +7,7 @@ alias egrep="egrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox
 alias c="clear"
 alias e="exit"
 alias g="git"
-alias cat="bat"
+alias cat="bat --style=plain,header"
 alias clipboard="pbcopy"
 alias week="date +%V"
 alias localip="curl https://ipinfo.io/json"

@@ -382,5 +382,12 @@
 			"price-scrapper"
 		],
 		"enabled": true
+	},
+	{
+		"name": "raycast-price-scrapper",
+		"rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-price-scrapper",
+		"paths": [],
+		"tags": [],
+		"enabled": true
 	}
 ]
