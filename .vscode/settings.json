@@ -469,5 +469,17 @@
   },
   "[go]": {
     "editor.defaultFormatter": "golang.go"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "workbench.editor.customLabels.patterns": {
+    "**/routes/**/+page.svelte": "${dirname(1)}/${dirname}",
+    "**/routes/**/+page.server.ts": "/${dirname server",
+    "**/app/**/page.tsx": "${dirname}.${extname}",
+    "**/app/**/layout.tsx": "${dirname}/layout.${extname}"
   }
 }

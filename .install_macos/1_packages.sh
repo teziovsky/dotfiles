@@ -161,7 +161,7 @@ echo -e "\n"
 echo "Installing Homebrew CLI Formulaes..."
 echo "------------------------------------------------"
 
-formulaesCli=(bat bitwarden-cli curl htop jq fzf fd walk eza mas rename tree zsh ssh-copy-id sshs)
+formulaesCli=(bat bitwarden-cli curl htop jq fx fzf fd walk eza mas rename tree zsh ssh-copy-id sshs)
 for cliFormulae in "${formulaesCli[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$cliFormulae$" &>/dev/null; then
     brew install $cliFormulae -q
@@ -240,7 +240,7 @@ echo -e "\n"
 echo "Installing Homebrew Database Formulaes..."
 echo "------------------------------------------------"
 
-formulaesDatabase=(sqlite)
+formulaesDatabase=(sqlite postgresql)
 for databaseFormulae in "${formulaesDatabase[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$databaseFormulae$" &>/dev/null; then
     brew install $databaseFormulae -q

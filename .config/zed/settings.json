@@ -7,6 +7,11 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "auto_update_extensions": {
+    "toml": false,
+    "zig": false,
+    "haskell": false
+  },
   "chat_panel": {
     "dock": "left"
   },

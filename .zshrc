@@ -1,11 +1,11 @@
 # ZSH THEMES
 ZSH_THEME="robbyrussell"
 
+# ZSH PLUGINS
+plugins=(zsh-autosuggestions zsh-syntax-highlighting brew)
+
 # ZSH SOURCE
 source "$HOME/.oh-my-zsh/oh-my-zsh.sh"
-
-# ZSH PLUGINS
-plugins=(brew zsh-autosuggestions zsh-syntax-highlighting)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
