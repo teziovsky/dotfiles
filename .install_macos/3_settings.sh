@@ -46,8 +46,8 @@ else
 fi
 
 # Show all processes in Activity Monitor
-if ! defaults read com.apple.ActivityMonitor ShowCategory | grep -i "0" &>/dev/null; then
-  defaults write com.apple.ActivityMonitor ShowCategory -int 0
+if ! defaults read com.apple.ActivityMonitor ShowCategory | grep -i "100" &>/dev/null; then
+  defaults write com.apple.ActivityMonitor ShowCategory -int 100
   echo "Show all processes in Activity Monitor - changed 🔥"
 else
   echo "Show all processes in Activity Monitor - already set! 👌"
@@ -418,7 +418,7 @@ sudo pmset -c sleep 0
 echo "Disable machine sleep while charging - changed 🔥"
 
 # Set machine sleep to 5 minutes on battery
-sudo pmset -b sleep 15
+sudo pmset -b sleep 5
 echo "Set machine sleep to 5 minutes on battery - changed 🔥"
 
 # Set standby delay to 24 hours (default is 1 hour)
@@ -432,7 +432,7 @@ echo "Set standby delay to 24 hours - changed 🔥"
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)
 # 3: Copy RAM to disk so the system state can still be restored in case of a power failure.
-sudo pmset -a hibernatemode 3
+sudo pmset -a hibernatemode 0
 echo "Hibernation mode Copy RAM to disk - changed 🔥"
 
 ###############################################################################
@@ -893,78 +893,6 @@ else
 fi
 
 ###############################################################################
-# Mail                                                                        #
-###############################################################################
-
-echo -e "\n"
-echo "Setting up Mail settings..."
-echo "------------------------------------------------"
-
-# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
-if ! defaults read com.apple.mail AddressesIncludeNameOnPasteboard | grep -i "0" &>/dev/null; then
-  defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
-  echo "Not include name at pasteboard - changed 🔥"
-else
-  echo "Not include name at pasteboard - already set! 👌"
-fi
-
-# Disable inline attachment viewing (just show the icons)
-if ! defaults read com.apple.mail DisableInlineAttachmentViewing | grep -i "1" &>/dev/null; then
-  defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
-  echo "Disable inline attachment viewing - changed 🔥"
-else
-  echo "Disable inline attachment viewing - already set! 👌"
-fi
-
-# Disable reply animations
-if ! defaults read com.apple.mail DisableReplyAnimations | grep -i "1" &>/dev/null; then
-  defaults write com.apple.mail DisableReplyAnimations -bool true
-  echo "Disable reply animations - changed 🔥"
-else
-  echo "Disable reply animations - already set! 👌"
-fi
-
-# Disable send animations
-if ! defaults read com.apple.mail DisableSendAnimations | grep -i "1" &>/dev/null; then
-  defaults write com.apple.mail DisableSendAnimations -bool true
-  echo "Disable send animations - changed 🔥"
-else
-  echo "Disable send animations - already set! 👌"
-fi
-
-# Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
-if ! defaults read com.apple.mail NSUserKeyEquivalents | grep -i "Send" &>/dev/null; then
-  defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21a9"
-  echo "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app - changed 🔥"
-else
-  echo "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app - already set! 👌"
-fi
-
-# Display in threaded mode
-if ! defaults read com.apple.mail DraftsViewerAttributes | grep -i "DisplayInThreadedMode" &>/dev/null; then
-  defaults write com.apple.mail DraftsViewerAttributes -dict-add "DisplayInThreadedMode" -string "yes"
-  echo "Display in threaded mode - changed 🔥"
-else
-  echo "Display in threaded mode - already set! 👌"
-fi
-
-# Sort by received-date
-if ! defaults read com.apple.mail DraftsViewerAttributes | grep -i "SortOrder" &>/dev/null; then
-  defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
-  echo "Sort mails by received-date - changed 🔥"
-else
-  echo "Sort mails by received-date - already set! 👌"
-fi
-
-# Sort mails descending
-if ! defaults read com.apple.mail DraftsViewerAttributes | grep -i "SortedDescending" &>/dev/null; then
-  defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending" -string "yes"
-  echo "Sort mails descending - changed 🔥"
-else
-  echo "Sort mails descending - already set! 👌"
-fi
-
-###############################################################################
 # Messages                                                                    #
 ###############################################################################
 
@@ -1038,7 +966,7 @@ echo "------------------------------------------------"
 
 # Prevent Photos from opening automatically when devices are plugged in
 if ! defaults read com.apple.ImageCapture disableHotPlug | grep -i "1" &>/dev/null; then
-  defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+  defaults write com.apple.ImageCapture disableHotPlug -bool true
   echo "Prevent Photos from opening automatically when devices are plugged in - changed 🔥"
 else
   echo "Prevent Photos from opening automatically when devices are plugged in - already set! 👌"
@@ -1058,214 +986,6 @@ if ! defaults read com.apple.print.PrintingPrefs "Quit When Finished" | grep -i 
   echo "Quit when finishing - changed 🔥"
 else
   echo "Quit when finishing - already set! 👌"
-fi
-
-###############################################################################
-# Safari & WebKit                                                             #
-###############################################################################
-
-echo -e "\n"
-echo "Setting up Safari & WebKit settings..."
-echo "------------------------------------------------"
-
-# Disable autofill credit card
-if ! defaults read com.apple.Safari AutoFillCreditCardData | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari AutoFillCreditCardData -bool false
-  echo "Disable autofill credit card - changed 🔥"
-else
-  echo "Disable autofill credit card - already set! 👌"
-fi
-
-# Disable autofill address info
-if ! defaults read com.apple.Safari AutoFillFromAddressBook | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari AutoFillFromAddressBook -bool false
-  echo "Disable autofill address info - changed 🔥"
-else
-  echo "Disable autofill address info - already set! 👌"
-fi
-
-# Disable autofill miscellaneous forms
-if ! defaults read com.apple.Safari AutoFillMiscellaneousForms | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
-  echo "Disable autofill miscellaneous forms - changed 🔥"
-else
-  echo "Disable autofill miscellaneous forms - already set! 👌"
-fi
-
-# Disable autofill passwords
-if ! defaults read com.apple.Safari AutoFillPasswords | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari AutoFillPasswords -bool false
-  echo "Disable autofill passwords - changed 🔥"
-else
-  echo "Disable autofill passwords - already set! 👌"
-fi
-
-# Disable autoopen safe downloads
-if ! defaults read com.apple.Safari AutoOpenSafeDownloads | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
-  echo "Disable autoopen safe downloads - changed 🔥"
-else
-  echo "Disable autoopen safe downloads - already set! 👌"
-fi
-
-# Enable developer menu
-if ! defaults read com.apple.Safari IncludeDevelopMenu | grep -i "1" &>/dev/null || ! defaults read com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey | grep -i "1" &>/dev/null || ! defaults read com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled | grep -i "1" &>/dev/null || ! defaults read com.apple.Safari.SandboxBroker ShowDevelopMenu | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari IncludeDevelopMenu -bool true
-  defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-  defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-  defaults write com.apple.Safari.SandboxBroker ShowDevelopMenu -bool true
-  echo "Enable developer menu - changed 🔥"
-else
-  echo "Enable developer menu - already set! 👌"
-fi
-
-# Enable debug menu
-if ! defaults read com.apple.Safari IncludeInternalDebugMenu | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-  echo "Enable debug menu - changed 🔥"
-else
-  echo "Enable debug menu - already set! 👌"
-fi
-
-# Install extensions updates automatically
-if ! defaults read com.apple.Safari InstallExtensionUpdatesAutomatically | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
-  echo "Install extensions updates automatically - changed 🔥"
-else
-  echo "Install extensions updates automatically - already set! 👌"
-fi
-
-# Enable do not track
-if ! defaults read com.apple.Safari SendDoNotTrackHTTPHeader | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
-  echo "Enable do not track - changed 🔥"
-else
-  echo "Enable do not track - already set! 👌"
-fi
-
-# Show favorites bar
-if ! defaults read com.apple.Safari ShowFavoritesBar | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari ShowFavoritesBar -bool true
-  echo "Show favorites bar - changed 🔥"
-else
-  echo "Show favorites bar - already set! 👌"
-fi
-
-# Show full URL
-if ! defaults read com.apple.Safari ShowFullURLInSmartSearchField | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
-  echo "Show full URL - changed 🔥"
-else
-  echo "Show full URL - already set! 👌"
-fi
-
-# Hide sidebar in top sites
-if ! defaults read com.apple.Safari ShowSidebarInTopSites | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari ShowSidebarInTopSites -bool false
-  echo "Hide sidebar in top sites - changed 🔥"
-else
-  echo "Hide sidebar in top sites - already set! 👌"
-fi
-
-# Supress search suggestions
-if ! defaults read com.apple.Safari SuppressSearchSuggestions | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-  echo "Supress search suggestions - changed 🔥"
-else
-  echo "Supress search suggestions - already set! 👌"
-fi
-
-# Enable universal search
-if ! defaults read com.apple.Safari UniversalSearchEnabled | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari UniversalSearchEnabled -bool false
-  echo "Enable universal search - changed 🔥"
-else
-  echo "Enable universal search - already set! 👌"
-fi
-
-# Warn about fraudulent websites
-if ! defaults read com.apple.Safari WarnAboutFraudulentWebsites | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
-  echo "Warn about fraudulent websites - changed 🔥"
-else
-  echo "Warn about fraudulent websites - already set! 👌"
-fi
-
-# Disable automatic spelling correction
-if ! defaults read com.apple.Safari WebAutomaticSpellingCorrectionEnabled | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
-  echo "Disable automatic spelling correction - changed 🔥"
-else
-  echo "Disable automatic spelling correction - already set! 👌"
-fi
-
-# Enable continous spell checking
-if ! defaults read com.apple.Safari WebContinuousSpellCheckingEnabled | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
-  echo "Enable continous spell checking - changed 🔥"
-else
-  echo "Enable continous spell checking - already set! 👌"
-fi
-
-# Press Tab to highlight each item on a web page
-if ! defaults read com.apple.Safari WebKitTabToLinksPreferenceKey | grep -i "1" &>/dev/null || ! defaults read com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true
-  defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true
-  echo "Press Tab to highlight each item on a web page - changed 🔥"
-else
-  echo "Press Tab to highlight each item on a web page - already set! 👌"
-fi
-
-# Set Safaris home page to `about:blank` for faster loading
-if ! defaults read com.apple.Safari HomePage | grep -i "about:blank" &>/dev/null; then
-  defaults write com.apple.Safari HomePage -string "about:blank"
-  echo "Set Safaris home page to about:blank for faster loading - changed 🔥"
-else
-  echo "Set Safaris home page to about:blank for faster loading - already set! 👌"
-fi
-
-# Allow hitting the Backspace key to go to the previous page in history
-if ! defaults read com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled | grep -i "1" &>/dev/null; then
-  defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
-  echo "Allow hitting the Backspace key to go to the previous page in history - changed 🔥"
-else
-  echo "Allow hitting the Backspace key to go to the previous page in history - already set! 👌"
-fi
-
-# Disable Safaris thumbnail cache for History and Top Sites
-if ! defaults read com.apple.Safari DebugSnapshotsUpdatePolicy | grep -i "2" &>/dev/null; then
-  defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
-  echo "Disable Safaris thumbnail cache for History and Top Sites - changed 🔥"
-else
-  echo "Disable Safaris thumbnail cache for History and Top Sites - already set! 👌"
-fi
-
-# Make Safaris search banners default to Contains instead of Starts With
-if ! defaults read com.apple.Safari FindOnPageMatchesWordStartsOnly | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
-  echo "Make Safaris search banners default to Contains instead of Starts With - changed 🔥"
-else
-  echo "Make Safaris search banners default to Contains instead of Starts With - already set! 👌"
-fi
-
-# Block pop-up windows
-if ! defaults read com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically | grep -i "0" &>/dev/null || ! defaults read com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
-  defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
-  echo "Block pop-up windows - changed 🔥"
-else
-  echo "Block pop-up windows - already set! 👌"
-fi
-
-# Disable auto-playing video
-if ! defaults read com.apple.Safari WebKitMediaPlaybackAllowsInline | grep -i "0" &>/dev/null || ! defaults read com.apple.SafariTechnologyPreview WebKitMediaPlaybackAllowsInline | grep -i "0" &>/dev/null || ! defaults read com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2AllowsInlineMediaPlayback | grep -i "0" &>/dev/null || ! defaults read com.apple.SafariTechnologyPreview com.apple.Safari.ContentPageGroupIdentifier.WebKit2AllowsInlineMediaPlayback | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Safari WebKitMediaPlaybackAllowsInline -bool false
-  defaults write com.apple.SafariTechnologyPreview WebKitMediaPlaybackAllowsInline -bool false
-  defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2AllowsInlineMediaPlayback -bool false
-  defaults write com.apple.SafariTechnologyPreview com.apple.Safari.ContentPageGroupIdentifier.WebKit2AllowsInlineMediaPlayback -bool false
-  echo "Disable auto-playing video - changed 🔥"
-else
-  echo "Disable auto-playing video - already set! 👌"
 fi
 
 ###############################################################################
@@ -1882,12 +1602,12 @@ if ls /Applications | grep -i arc &>/dev/null; then
     echo "Skip unboxing video - already set! 👌"
   fi
 
-  # Disable user interface sounds
-  if ! defaults read company.thebrowser.Browser playUserInterfaceSoundsDisabled | grep -i "1" &>/dev/null; then
-    defaults write company.thebrowser.Browser playUserInterfaceSoundsDisabled -bool true
-    echo "Disable user interface sounds - changed 🔥"
+  # Enable user interface sounds
+  if ! defaults read company.thebrowser.Browser playUserInterfaceSoundsDisabled | grep -i "0" &>/dev/null; then
+    defaults write company.thebrowser.Browser playUserInterfaceSoundsDisabled -bool false
+    echo "Enable user interface sounds - changed 🔥"
   else
-    echo "Disable user interface sounds - already set! 👌"
+    echo "Enable user interface sounds - already set! 👌"
   fi
 
   # Disable warn before quitting
@@ -1899,11 +1619,95 @@ if ls /Applications | grep -i arc &>/dev/null; then
   fi
 
   # Enable top bar url
-  if ! defaults read company.thebrowser.Browser topBarURLEnabled | grep -i "0" &>/dev/null; then
-    defaults write company.thebrowser.Browser topBarURLEnabled -bool false
-    echo "Disable top bar url - changed 🔥"
+  if ! defaults read company.thebrowser.Browser topBarURLEnabled | grep -i "1" &>/dev/null; then
+    defaults write company.thebrowser.Browser topBarURLEnabled -bool true
+    echo "Enable top bar url - changed 🔥"
   else
-    echo "Disable top bar url - already set! 👌"
+    echo "Enable top bar url - already set! 👌"
+  fi
+fi
+
+###############################################################################
+# Bruno                                                                       #
+###############################################################################
+
+if ls /Applications | grep -i bruno &>/dev/null; then
+  echo -e "\n"
+  echo "Setting up Bruno settings..."
+  echo "------------------------------------------------"
+
+  # Last Root Directory to bruno-api-docs
+  if ! defaults read com.usebruno.app NSNavLastRootDirectory | grep -i "~/Developer/bruno-api-docs" &>/dev/null; then
+    defaults write com.usebruno.app NSNavLastRootDirectory -string "~/Developer/bruno-api-docs"
+    echo "Last Root Directory to bruno-api-docs - changed 🔥"
+  else
+    echo "Last Root Directory to bruno-api-docs - already set! 👌"
+  fi
+fi
+
+###############################################################################
+# Clean My Mac                                                                #
+###############################################################################
+
+if ls /Applications | grep -i "cleanmymac" &>/dev/null; then
+  echo -e "\n"
+  echo "Setting up Clean My Mac settings..."
+  echo "------------------------------------------------"
+
+  # Set isFirstScanClean to 0
+  if ! defaults read com.macpaw.CleanMyMac4 isFirstScanClean | grep -i "0" &>/dev/null; then
+    defaults write com.macpaw.CleanMyMac4 isFirstScanClean -bool false
+    echo "Set isFirstScanClean to 0 - changed 🔥"
+  else
+    echo "Set isFirstScanClean to 0 - already set! 👌"
+  fi
+
+  # Set UpdaterIntroScreenSeen to 1
+  if ! defaults read com.macpaw.CleanMyMac4 UpdaterIntroScreenSeen | grep -i "1" &>/dev/null; then
+    defaults write com.macpaw.CleanMyMac4 UpdaterIntroScreenSeen -bool true
+    echo "Set UpdaterIntroScreenSeen to 1 - changed 🔥"
+  else
+    echo "Set UpdaterIntroScreenSeen to 1 - already set! 👌"
+  fi
+
+  # Set UninstallerIntroScreenSeen to 1
+  if ! defaults read com.macpaw.CleanMyMac4 UninstallerIntroScreenSeen | grep -i "1" &>/dev/null; then
+    defaults write com.macpaw.CleanMyMac4 UninstallerIntroScreenSeen -bool true
+    echo "Set UninstallerIntroScreenSeen to 1 - changed 🔥"
+  else
+    echo "Set UninstallerIntroScreenSeen to 1 - already set! 👌"
+  fi
+
+  # Set TermsOfServiceUpdateShown to 1
+  if ! defaults read com.macpaw.CleanMyMac4 TermsOfServiceUpdateShown | grep -i "1" &>/dev/null; then
+    defaults write com.macpaw.CleanMyMac4 TermsOfServiceUpdateShown -bool true
+    echo "Set TermsOfServiceUpdateShown to 1 - changed 🔥"
+  else
+    echo "Set TermsOfServiceUpdateShown to 1 - already set! 👌"
+  fi
+
+  # Set ShowReleaseNotes to 0
+  if ! defaults read com.macpaw.CleanMyMac4 ShowReleaseNotes | grep -i "0" &>/dev/null; then
+    defaults write com.macpaw.CleanMyMac4 ShowReleaseNotes -bool false
+    echo "Set ShowReleaseNotes to 0 - changed 🔥"
+  else
+    echo "Set ShowReleaseNotes to 0 - already set! 👌"
+  fi
+
+  # Set SeenIntroVideo to 1
+  if ! defaults read com.macpaw.CleanMyMac4 SeenIntroVideo | grep -i "1" &>/dev/null; then
+    defaults write com.macpaw.CleanMyMac4 SeenIntroVideo -bool true
+    echo "Set SeenIntroVideo to 1 - changed 🔥"
+  else
+    echo "Set SeenIntroVideo to 1 - already set! 👌"
+  fi
+
+  # Set MaintenanceIntroScreenSeen to 1
+  if ! defaults read com.macpaw.CleanMyMac4 MaintenanceIntroScreenSeen | grep -i "1" &>/dev/null; then
+    defaults write com.macpaw.CleanMyMac4 MaintenanceIntroScreenSeen -bool true
+    echo "Set MaintenanceIntroScreenSeen to 1 - changed 🔥"
+  else
+    echo "Set MaintenanceIntroScreenSeen to 1 - already set! 👌"
   fi
 fi
 
@@ -1954,7 +1758,7 @@ if ls /Applications | grep -i "google chrome" &>/dev/null; then
 fi
 
 ###############################################################################
-# Hazel                                                                 #
+# Hazel                                                                       #
 ###############################################################################
 
 if ls /Applications | grep -i hazel &>/dev/null; then
@@ -2122,7 +1926,7 @@ if ls /Applications | grep -i textsniper &>/dev/null; then
 fi
 
 ###############################################################################
-# Warp                                                                       #
+# Warp                                                                        #
 ###############################################################################
 
 if ls /Applications | grep -i warp &>/dev/null; then
@@ -2250,7 +2054,9 @@ for app in "Activity Monitor" \
   "Terminal" \
   "Amphetamine" \
   "Arc" \
+  "CleanMyMac X" \
   "Google Chrome" \
+  "Bruno" \
   "Hazel" \
   "Keyboard Maestro" \
   "TextSniper" \
