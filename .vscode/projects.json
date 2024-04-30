@@ -389,5 +389,19 @@
 		"paths": [],
 		"tags": [],
 		"enabled": true
+	},
+	{
+		"name": "logintrade-customer-app-intl",
+		"rootPath": "/Users/kuba/Developer/serio-studio/logintrade/customer-app-intl",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "logintrade-admin-app-intl",
+		"rootPath": "/Users/kuba/Developer/serio-studio/logintrade/admin-app-intl",
+		"paths": [],
+		"tags": [],
+		"enabled": true
 	}
 ]
