@@ -1,28 +1,38 @@
 {
-  "title": "Teziovsky IDE Shortcuts",
-  "maintainers": ["teziovsky"],
+  "title": "Teziovsky IDE Remaps",
+  "maintainers": [
+    "teziovsky"
+  ],
   "rules": [
     {
-      "description": "IDE Shortcut - ⌘ + number to ⌥ + ⌘ + number",
+      "description": "IDE Remap - ⌘ + number to ⌥ + ⌘ + number",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "0",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "0",
-              "modifiers": ["left_command", "left_option"]
+              "modifiers": [
+                "left_command",
+                "left_option"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -37,19 +47,27 @@
           "from": {
             "key_code": "1",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "1",
-              "modifiers": ["left_command", "left_option"]
+              "modifiers": [
+                "left_command",
+                "left_option"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -64,19 +82,27 @@
           "from": {
             "key_code": "2",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "2",
-              "modifiers": ["left_command", "left_option"]
+              "modifiers": [
+                "left_command",
+                "left_option"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -91,19 +117,27 @@
           "from": {
             "key_code": "3",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "3",
-              "modifiers": ["left_command", "left_option"]
+              "modifiers": [
+                "left_command",
+                "left_option"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -118,19 +152,27 @@
           "from": {
             "key_code": "4",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "4",
-              "modifiers": ["left_command", "left_option"]
+              "modifiers": [
+                "left_command",
+                "left_option"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -145,19 +187,27 @@
           "from": {
             "key_code": "5",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "5",
-              "modifiers": ["left_command", "left_option"]
+              "modifiers": [
+                "left_command",
+                "left_option"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -172,19 +222,27 @@
           "from": {
             "key_code": "6",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "6",
-              "modifiers": ["left_command", "left_option"]
+              "modifiers": [
+                "left_command",
+                "left_option"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -199,19 +257,27 @@
           "from": {
             "key_code": "7",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "7",
-              "modifiers": ["left_command", "left_option"]
+              "modifiers": [
+                "left_command",
+                "left_option"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -226,19 +292,27 @@
           "from": {
             "key_code": "8",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "8",
-              "modifiers": ["left_command", "left_option"]
+              "modifiers": [
+                "left_command",
+                "left_option"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -253,19 +327,27 @@
           "from": {
             "key_code": "9",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "9",
-              "modifiers": ["left_command", "left_option"]
+              "modifiers": [
+                "left_command",
+                "left_option"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -278,26 +360,34 @@
       ]
     },
     {
-      "description": "IDE Shortcut - ⌥ + ` to ⌃ + ⌘ + `",
+      "description": "IDE Remap - ⌥ + ` to ⌃ + ⌘ + `",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "grave_accent_and_tilde",
             "modifiers": {
-              "mandatory": ["left_command"]
+              "mandatory": [
+                "left_command"
+              ]
             }
           },
           "to": [
             {
               "key_code": "grave_accent_and_tilde",
-              "modifiers": ["left_command", "left_control"]
+              "modifiers": [
+                "left_command",
+                "left_control"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
@@ -310,26 +400,34 @@
       ]
     },
     {
-      "description": "IDE Shortcut - ⌘ + ` to ⌥ + ⌘ + `",
+      "description": "IDE Remap - ⌘ + ` to ⌥ + ⌘ + `",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "grave_accent_and_tilde",
             "modifiers": {
-              "mandatory": ["left_option"]
+              "mandatory": [
+                "left_option"
+              ]
             }
           },
           "to": [
             {
               "key_code": "grave_accent_and_tilde",
-              "modifiers": ["left_option", "left_command"]
+              "modifiers": [
+                "left_option",
+                "left_command"
+              ]
             }
           ],
           "conditions": [
             {
               "type": "frontmost_application_if",
-              "file_paths": ["ck2\\.app", "eu4\\.app"],
+              "file_paths": [
+                "ck2\\.app",
+                "eu4\\.app"
+              ],
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "com.jetbrains.WebStorm",
