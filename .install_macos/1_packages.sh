@@ -254,7 +254,7 @@ echo -e "\n"
 echo "Installing Homebrew Media Formulaes..."
 echo "------------------------------------------------"
 
-formulaesMedia=(id3lib ffmpeg webp)
+formulaesMedia=(id3lib ffmpeg exiftool webp)
 for mediaFormulae in "${formulaesMedia[@]}"; do
   if ! ls $(brew --cellar) | grep -w "^$mediaFormulae$" &>/dev/null; then
     brew install $mediaFormulae -q
@@ -305,7 +305,7 @@ echo -e "\n"
 echo "Installing Homebrew Productivity Casks..."
 echo "------------------------------------------------"
 
-casksProductivity=(raycast bluesnooze textsniper notion contexts chatall cleanmymac rectangle dropbox logi-options-plus zoom)
+casksProductivity=(raycast bluesnooze textsniper keycastr rocket notion contexts chatall cleanmymac rectangle dropbox logi-options-plus zoom)
 for productivityCask in "${casksProductivity[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$productivityCask$" &>/dev/null; then
     brew install --cask $productivityCask -q
