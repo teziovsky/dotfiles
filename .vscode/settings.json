@@ -167,6 +167,30 @@
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
 
   "css.lint.important": "warning",
   "scss.lint.important": "warning",
@@ -364,24 +388,12 @@
   "projectManager.showParentFolderInfoOnDuplicates": true,
   "projectManager.projectsLocation": "~/.vscode",
   "projectManager.tags": ["configuration", "cli", "contribution", "course", "linux_macos", "recruitment", "site"],
-  "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
   "turboConsoleLog.insertEnclosingClass": false,
   "turboConsoleLog.insertEnclosingFunction": false,
   "turboConsoleLog.includeFileNameAndLineNum": false,
-  "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
   "workbench.activityBar.location": "top",
   "workbench.editor.tabActionLocation": "right",
   "search.smartCase": true,
-  "[properties]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml"
-  },
   "window.zoomLevel": -1,
   "better-comments.tags": [
     {
@@ -467,18 +479,6 @@
     }
   ],
   "editor.foldingImportsByDefault": false,
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[go]": {
-    "editor.defaultFormatter": "golang.go"
-  },
-  "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
-  },
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
   "workbench.editor.customLabels.patterns": {
     "**/routes/**/+page.svelte": "${dirname(1)}/${dirname}",
     "**/routes/**/+page.server.ts": "/${dirname server",
