@@ -102,13 +102,11 @@
 
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.fontFamily": "Input Mono, Space Mono, Recursive, Jetbrains Mono, MesloLGS NF, Monaco, Courier New, monospace",
+  "terminal.integrated.fontFamily": "Monaspace Neon, Input Mono, Space Mono, Recursive, Jetbrains Mono, MesloLGS NF, Monaco, Courier New, monospace",
   "terminal.integrated.allowChords": false,
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.drawBoldTextInBrightColors": false,
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
+  "terminal.integrated.gpuAcceleration": "off",
 
   "prettier.arrowParens": "always",
   "prettier.bracketSameLine": true,
@@ -293,6 +291,7 @@
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "telemetry.telemetryLevel": "off",
+  "redhat.telemetry.enabled": false,
   "cSpell.language": "en, pl-PL",
   "cSpell.userWords": [
     "backendu",
@@ -333,11 +332,15 @@
     "webp"
   ],
   "keyboard.dispatch": "keyCode",
+  "conventionalCommits.gitmoji": false,
+  "conventioanlCommits.scopes": [],
   "errorLens.fontStyleItalic": true,
   "githubPullRequests.pullBranch": "never",
   "workbench.editor.enablePreview": false,
   "better-comments.highlightPlainText": true,
+  "turboConsoleLog.addSemicolonInTheEnd": true,
   "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.note-new-transformation": false,
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
