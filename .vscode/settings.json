@@ -1,7 +1,6 @@
 {
   "workbench.colorTheme": "One Hunter Theme Vercel",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.tabCloseButton": "right",
   "workbench.settings.editor": "json",
   "workbench.editor.tabSizing": "shrink",
   "workbench.sideBar.location": "right",
