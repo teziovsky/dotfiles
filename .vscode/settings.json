@@ -483,5 +483,8 @@
     "**/routes/**/+page.server.ts": "/${dirname server",
     "**/app/**/page.tsx": "${dirname}.${extname}",
     "**/app/**/layout.tsx": "${dirname}/layout.${extname}"
-  }
+  },
+  "conventionalCommits.showNewVersionNotes": false,
+  "conventionalCommits.promptBody": false,
+  "conventionalCommits.promptFooter": false
 }

@@ -54,13 +54,13 @@ if ! [ -f "$SSH_CONFIG_FILE" ]; then
   touch "$SSH_CONFIG_FILE"
   echo "SSH config file - created 🔥"
 
-  echo -e "$SSH_GITHUB_HOST" >> "$SSH_CONFIG_FILE"
+  echo -e "$SSH_GITHUB_HOST" >>"$SSH_CONFIG_FILE"
   echo "Github Host SSH Config - added 🔥"
 else
   echo "SSH config file - already exists! 👌"
 
   if ! grep -q "Host github.com" $SSH_CONFIG_FILE; then
-    echo -e "\n$SSH_GITHUB_HOST" >> "$SSH_CONFIG_FILE"
+    echo -e "\n$SSH_GITHUB_HOST" >>"$SSH_CONFIG_FILE"
     echo "Github Host SSH Config - added 🔥"
   else
     echo "Github Host SSH Config - already exists! 👌"
@@ -305,7 +305,7 @@ echo -e "\n"
 echo "Installing Homebrew Productivity Casks..."
 echo "------------------------------------------------"
 
-casksProductivity=(raycast bluesnooze textsniper keycastr rocket notion contexts chatall cleanmymac rectangle dropbox logi-options-plus zoom)
+casksProductivity=(raycast bluesnooze textsniper keycastr notion contexts chatall cleanmymac rectangle dropbox logi-options-plus zoom)
 for productivityCask in "${casksProductivity[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$productivityCask$" &>/dev/null; then
     brew install --cask $productivityCask -q
