@@ -331,8 +331,6 @@ else
   echo "spellright.dict file - already exists 👌"
 fi
 
-echo
-
 if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i snippets &>/dev/null; then
   rm -rf ~/Library/Application\ Support/Code/User/snippets
   ln -s ~/.vscode/snippets ~/Library/Application\ Support/Code/User
