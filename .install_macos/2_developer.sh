@@ -275,8 +275,8 @@ scriptsRepos=(
 )
 for scriptsRepo in "${scriptsRepos[@]}"; do
   if [ ! -d "$HOME/Developer/scripts/$scriptsRepo" ]; then
-  git clone -q git@github.com:teziovsky/$scriptsRepo.git "$HOME/Developer/scripts/$scriptsRepo"
-  echo "$scriptsRepo repo - cloned 🔥"
+    git clone -q git@github.com:teziovsky/$scriptsRepo.git "$HOME/Developer/scripts/$scriptsRepo"
+    echo "$scriptsRepo repo - cloned 🔥"
   else
     echo "$scriptsRepo repo - already exists 👌"
   fi
@@ -334,6 +334,7 @@ fi
 echo
 
 if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i snippets &>/dev/null; then
+  rm -rf ~/Library/Application\ Support/Code/User/snippets
   ln -s ~/.vscode/snippets ~/Library/Application\ Support/Code/User
   echo "snippets dir - symlinked 🔥"
 else
