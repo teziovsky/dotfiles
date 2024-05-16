@@ -486,5 +486,7 @@
   },
   "conventionalCommits.showNewVersionNotes": false,
   "conventionalCommits.promptBody": false,
-  "conventionalCommits.promptFooter": false
+  "conventionalCommits.promptFooter": false,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "git.mergeEditor": true
 }
