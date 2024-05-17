@@ -1619,8 +1619,8 @@ if ls /Applications | grep -i arc &>/dev/null; then
   fi
 
   # Enable top bar url
-  if ! defaults read company.thebrowser.Browser topBarURLEnabled | grep -i "1" &>/dev/null; then
-    defaults write company.thebrowser.Browser topBarURLEnabled -bool true
+  if ! defaults read company.thebrowser.Browser topBarURLEnabled | grep -i "0" &>/dev/null; then
+    defaults write company.thebrowser.Browser topBarURLEnabled -bool false
     echo "Enable top bar url - changed 🔥"
   else
     echo "Enable top bar url - already set! 👌"
