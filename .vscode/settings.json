@@ -488,5 +488,6 @@
   "conventionalCommits.promptBody": false,
   "conventionalCommits.promptFooter": false,
   "prisma.showPrismaDataPlatformNotification": false,
-  "git.mergeEditor": true
+  "git.mergeEditor": true,
+  "github.copilot.editor.enableAutoCompletions": true
 }

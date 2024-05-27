@@ -305,7 +305,7 @@ echo -e "\n"
 echo "Installing Homebrew Productivity Casks..."
 echo "------------------------------------------------"
 
-casksProductivity=(raycast bluesnooze textsniper shottr keycastr notion contexts chatall cleanmymac rectangle dropbox logi-options-plus zoom)
+casksProductivity=(raycast bluesnooze textsniper keycastr notion contexts chatall cleanmymac rectangle dropbox logi-options-plus zoom)
 for productivityCask in "${casksProductivity[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$productivityCask$" &>/dev/null; then
     brew install --cask $productivityCask -q
@@ -319,7 +319,7 @@ echo -e "\n"
 echo "Installing Homebrew Media Casks..."
 echo "------------------------------------------------"
 
-casksMedia=(iina)
+casksMedia=(vlc)
 for mediaCask in "${casksMedia[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$mediaCask$" &>/dev/null; then
     brew install --cask $mediaCask -q
