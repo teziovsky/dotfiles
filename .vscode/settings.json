@@ -47,8 +47,10 @@
   "editor.renderWhitespace": "boundary",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.organizeImports.biome": "explicit",
+    // "quickfix.biome": "explicit",
+    // "source.organizeImports.biome": "explicit",
     "source.fixAll": "explicit",
+    // "source.organizeImports": "explicit",
     "addMissingImports": "explicit"
   },
   "editor.hover.delay": 200,
@@ -108,8 +110,9 @@
   "terminal.integrated.gpuAcceleration": "off",
 
   "prettier.arrowParens": "always",
-  "prettier.bracketSameLine": true,
+  "prettier.bracketSameLine": false,
   "prettier.bracketSpacing": true,
+  "prettier.documentSelectors": ["**/*.astro"],
   "prettier.embeddedLanguageFormatting": "auto",
   "prettier.htmlWhitespaceSensitivity": "css",
   "prettier.insertPragma": false,
@@ -122,10 +125,9 @@
   "prettier.singleQuote": false,
   "prettier.tabWidth": 2,
   "prettier.trailingComma": "es5",
-  "prettier.useTabs": false,
   "prettier.useEditorConfig": false,
+  "prettier.useTabs": false,
   "prettier.vueIndentScriptAndStyle": false,
-  "prettier.documentSelectors": ["**/*.astro"],
 
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -373,8 +375,10 @@
   },
   "editor.tabCompletion": "onlySnippets",
   "svg.preview.mode": "svg",
+  "template-string-converter.enabled": true,
   "template-string-converter.validLanguages": [
     "svelte",
+    "vue",
     "typescript",
     "javascript",
     "typescriptreact",

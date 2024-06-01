@@ -30,21 +30,50 @@
     "prefix": "ol",
     "body": "console.log({$0})"
   },
-  "JavaScript: console.assert()": {
+  "JavaScript: console.assert": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
-    "prefix": "assert",
-    "body": ["console.assert(${0:\"here\"});"],
-    "description": "console.assert()"
+    "prefix": "ca",
+    "body": "console.assert(\"${0:here}\")"
+  },
+  "JavaScript: console.assert(\"var\", var)": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "va",
+    "body": "console.assert(\"$0:\", $0)"
+  },
+  "JavaScript: console.assert({var})": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "oa",
+    "body": "console.assert({$0})"
+  },
+  "JavaScript: console.error": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "ce",
+    "body": "console.error(\"${0:here}\")"
   },
   "JavaScript: console.error(\"var\", var)": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
-    "prefix": "error",
+    "prefix": "ve",
     "body": "console.error(\"$0:\", $0)"
+  },
+  "JavaScript: console.error({var})": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "oe",
+    "body": "console.error({$0})"
+  },
+  "JavaScript: console.info": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "ci",
+    "body": "console.info(\"${0:here}\")"
   },
   "JavaScript: console.info(\"var\", var)": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
-    "prefix": "info",
+    "prefix": "vi",
     "body": "console.info(\"$0:\", $0)"
+  },
+  "JavaScript: console.info({var})": {
+    "scope": "javascript, javascriptreact, typescript, typescriptreact",
+    "prefix": "oi",
+    "body": "console.info({$0})"
   },
   "JavaScript: throw log": {
     "scope": "javascript, javascriptreact, typescript, typescriptreact",
