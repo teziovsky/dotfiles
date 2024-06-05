@@ -292,15 +292,6 @@ for securityCask in "${casksSecurity[@]}"; do
   fi
 done
 
-if ! ls /Applications | grep -i "keyboard maestro" &>/dev/null; then
-  curl -s -o ~/Downloads/keyboardmaestro-1020.zip https://files.stairways.com/keyboardmaestro/keyboardmaestro-1020.zip
-  unzip -q ~/Downloads/keyboardmaestro-1020.zip -d /Applications
-  rm ~/Downloads/keyboardmaestro-1020.zip
-  echo "Keyboard Maestro - installed 🔥"
-else
-  echo "Keyboard Maestro - already exists! 👌"
-fi
-
 echo -e "\n"
 echo "Installing Homebrew Automations Casks..."
 echo "------------------------------------------------"
