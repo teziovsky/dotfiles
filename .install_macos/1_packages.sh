@@ -282,7 +282,7 @@ echo -e "\n"
 echo "Installing Homebrew Security Casks..."
 echo "------------------------------------------------"
 
-casksSecurity=(1password)
+casksSecurity=(1password 1password-cli)
 for securityCask in "${casksSecurity[@]}"; do
   if ! ls $(brew --caskroom) | grep -w "^$securityCask$" &>/dev/null; then
   brew install --cask $securityCask -q
