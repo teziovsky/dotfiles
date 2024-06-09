@@ -403,12 +403,5 @@
 		"paths": [],
 		"tags": [],
 		"enabled": true
-	},
-	{
-		"name": "raycast-toggl-track",
-		"rootPath": "/Users/kuba/Developer/contributions/raycast/raycast-toggl-track",
-		"paths": [],
-		"tags": [],
-		"enabled": true
 	}
 ]
