@@ -72,6 +72,12 @@
   "files.autoSave": "onFocusChange",
   "files.autoSaveDelay": 7000,
   "files.defaultLanguage": "{activeEditorLanguage}",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true
+  },
   "files.associations": {
     "*.html": "twig",
     "**/*.html": "html",
@@ -493,5 +499,6 @@
   "conventionalCommits.promptFooter": false,
   "prisma.showPrismaDataPlatformNotification": false,
   "git.mergeEditor": true,
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "gitlens.telemetry.enabled": false
 }

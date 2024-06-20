@@ -48,8 +48,8 @@
   },
   "Vue3 CompositionAPI: Emits TypeScript": {
     "scope": "typescript",
-    "prefix": "vemits",
-    "body": ["const emits = defineEmits<{", "  (event: \"$0\"): void,", "}>();"],
+    "prefix": "vemit",
+    "body": ["const emit = defineEmits<{", "  (event: \"$0\"): void,", "}>();"],
     "description": "Vue3 Emits with TypeScript"
   },
   "Vue3 Composition API: Props with Defaults": {

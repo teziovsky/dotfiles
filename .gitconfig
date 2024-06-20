@@ -42,7 +42,7 @@
 	name = Jakub Soboczyński
 [core]
 	autocrlf = input
-	editor = vim
+	editor = zed
 	pager = delta
 [interactive]
 	diffFilter = delta --color-only

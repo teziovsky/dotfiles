@@ -38,7 +38,6 @@
       "escape": "editor::Cancel",
       "backspace": "editor::Backspace",
       "delete": "editor::Delete",
-      "tab": "editor::Tab",
       "shift-tab": "editor::TabPrev",
       "cmd-backspace": "editor::DeleteToBeginningOfLine",
       "cmd-delete": "editor::DeleteToEndOfLine",
@@ -366,6 +365,12 @@
     "context": "Editor && renaming",
     "bindings": {
       "enter": "editor::ConfirmRename"
+    }
+  },
+  {
+    "context": "Editor && !showing_completions",
+    "bindings": {
+      "tab": "editor::Tab"
     }
   },
   {
