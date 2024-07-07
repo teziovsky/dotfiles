@@ -557,11 +557,6 @@
     "when": "terminal.active"
   },
   {
-    "key": "ctrl+cmd+`",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
-  },
-  {
     "key": "ctrl+m",
     "command": "editor.action.jumpToBracket",
     "when": "editorTextFocus"
@@ -575,10 +570,6 @@
     "key": "shift+cmd+l",
     "command": "-selectAllSearchEditorMatches",
     "when": "inSearchEditor"
-  },
-  {
-    "key": "shift+cmd+l",
-    "command": "turboConsoleLog.displayLogMessage"
   },
   {
     "key": "ctrl+alt+l",
@@ -621,10 +612,6 @@
     "when": "viewContainer.workbench.view.debug.enabled"
   },
   {
-    "key": "shift+cmd+d",
-    "command": "turboConsoleLog.deleteAllLogMessages"
-  },
-  {
     "key": "shift+alt+d",
     "command": "-turboConsoleLog.deleteAllLogMessages"
   },
@@ -636,10 +623,6 @@
   {
     "key": "shift+alt+u",
     "command": "-turboConsoleLog.uncommentAllLogMessages"
-  },
-  {
-    "key": "shift+cmd+u",
-    "command": "turboConsoleLog.uncommentAllLogMessages"
   },
   {
     "key": "alt+cmd+6",
@@ -665,10 +648,6 @@
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "shift+cmd+c",
-    "command": "turboConsoleLog.commentAllLogMessages"
-  },
-  {
     "key": "cmd+k cmd+s",
     "command": "workbench.action.files.saveAll"
   },
@@ -677,22 +656,9 @@
     "command": "-workbench.action.openGlobalKeybindings"
   },
   {
-    "key": "shift+alt+k",
-    "command": "aipopup.action.modal.generate",
-    "when": "editorFocus"
-  },
-  {
     "key": "cmd+k",
     "command": "-aipopup.action.modal.generate",
     "when": "editorFocus"
-  },
-  {
-    "key": "shift+alt+l",
-    "command": "aichat.insertselectionintochat"
-  },
-  {
-    "key": "shift+cmd+l",
-    "command": "-aichat.insertselectionintochat"
   },
   {
     "key": "shift+alt+l",
@@ -739,5 +705,17 @@
     "key": "cmd+b",
     "command": "extension.conventionalCommits",
     "when": "!editorTextFocus"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "editor.emmet.action.matchTag"
+  },
+  {
+    "key": "cmd+l",
+    "command": "turboConsoleLog.displayLogMessage"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "turboConsoleLog.deleteAllLogMessages"
   }
 ]

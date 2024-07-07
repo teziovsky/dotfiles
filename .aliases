@@ -79,5 +79,9 @@ alias psql-stop="brew services stop postgresql@14"
 alias mysql-start="brew services start mysql && mysql.server start"
 alias mysql-stop="brew services stop mysql && mysql.server stop"
 
+# HOMEBREW
+alias brewdump='brew bundle dump --file="${HOME}/.config/brew/Brewfile" --force'
+alias brewrestore='brew bundle install --file="${HOME}/.config/brew/Brewfile"'
+
 # SOURCES
 alias sz="source ~/.zshrc"

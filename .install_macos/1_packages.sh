@@ -151,25 +151,10 @@ else
 fi
 
 echo -e "\n"
-echo "Adding Homebrew taps..."
+echo "Install Homebrew Brewfile"
 echo "------------------------------------------------"
-brew tap homebrew/cask-fonts -q
-brew tap oven-sh/bun -q
+brew bundle install --file="${HOME}/.config/brew/Brewfile"
 echo "Homebrew taps - added 🔥"
-
-echo -e "\n"
-echo "Installing Homebrew CLI Formulaes..."
-echo "------------------------------------------------"
-
-formulaesCli=(bat curl htop jq fx fzf fd walk eza mas rename tree zsh ssh-copy-id sshs)
-for cliFormulae in "${formulaesCli[@]}"; do
-  if ! ls $(brew --cellar) | grep -w "^$cliFormulae$" &>/dev/null; then
-    brew install $cliFormulae -q
-    echo "$cliFormulae - installed 🔥"
-  else
-    echo "$cliFormulae - already exists! 👌"
-  fi
-done
 
 echo -e "\n"
 echo "Installing usefull keybindings for fzf..."
@@ -184,48 +169,6 @@ else
 fi
 
 echo -e "\n"
-echo "Installing Homebrew GIT Formulaes..."
-echo "------------------------------------------------"
-
-formulaesGit=(git git-delta git-standup hub gh)
-for gitFormulae in "${formulaesGit[@]}"; do
-  if ! ls $(brew --cellar) | grep -w "^$gitFormulae$" &>/dev/null; then
-    brew install $gitFormulae -q
-    echo "$gitFormulae - installed 🔥"
-  else
-    echo "$gitFormulae - already exists! 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Installing Homebrew Node Formulaes..."
-echo "------------------------------------------------"
-
-formulaesNode=(pnpm fnm deno bun)
-for nodeFormulae in "${formulaesNode[@]}"; do
-  if ! ls $(brew --cellar) | grep -w "^$nodeFormulae$" &>/dev/null; then
-    brew install $nodeFormulae -q
-    echo "$nodeFormulae - installed 🔥"
-  else
-    echo "$nodeFormulae - already exists! 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Installing Homebrew Languages Formulaes..."
-echo "------------------------------------------------"
-
-formulaesLanguages=(php pyenv golang)
-for languageFormulae in "${formulaesLanguages[@]}"; do
-  if ! ls $(brew --cellar) | grep -w "^$languageFormulae$" &>/dev/null; then
-    brew install $languageFormulae -q
-    echo "$languageFormulae - installed 🔥"
-  else
-    echo "$languageFormulae - already exists! 👌"
-  fi
-done
-
-echo -e "\n"
 echo "Installing Rust Language..."
 echo "------------------------------------------------"
 
@@ -236,76 +179,6 @@ else
   echo "Rust - already exists! 👌"
 fi
 
-echo -e "\n"
-echo "Installing Homebrew Database Formulaes..."
-echo "------------------------------------------------"
-
-formulaesDatabase=(sqlite postgresql)
-for databaseFormulae in "${formulaesDatabase[@]}"; do
-  if ! ls $(brew --cellar) | grep -w "^$databaseFormulae$" &>/dev/null; then
-    brew install $databaseFormulae -q
-    echo "$databaseFormulae - installed 🔥"
-  else
-    echo "$databaseFormulae - already exists! 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Installing Homebrew Media Formulaes..."
-echo "------------------------------------------------"
-
-formulaesMedia=(id3lib ffmpeg exiftool webp)
-for mediaFormulae in "${formulaesMedia[@]}"; do
-  if ! ls $(brew --cellar) | grep -w "^$mediaFormulae$" &>/dev/null; then
-    brew install $mediaFormulae -q
-    echo "$mediaFormulae - installed 🔥"
-  else
-    echo "$mediaFormulae - already exists! 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Installing Homebrew Browsers Casks..."
-echo "------------------------------------------------"
-
-casksBrowsers=(arc google-chrome firefox)
-for browserCask in "${casksBrowsers[@]}"; do
-  if ! ls $(brew --caskroom) | grep -w "^$browserCask$" &>/dev/null; then
-    brew install --cask $browserCask -q
-    echo "$browserCask - installed 🔥"
-  else
-    echo "$browserCask - already exists! 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Installing Homebrew Security Casks..."
-echo "------------------------------------------------"
-
-casksSecurity=(1password 1password-cli)
-for securityCask in "${casksSecurity[@]}"; do
-  if ! ls $(brew --caskroom) | grep -w "^$securityCask$" &>/dev/null; then
-  brew install --cask $securityCask -q
-  echo "$securityCask - installed 🔥"
-  else
-    echo "$securityCask - already exists! 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Installing Homebrew Automations Casks..."
-echo "------------------------------------------------"
-
-casksAutomations=(karabiner-elements hazel)
-for automationsCask in "${casksAutomations[@]}"; do
-  if ! ls $(brew --caskroom) | grep -w "^$automationsCask$" &>/dev/null; then
-    brew install --cask $automationsCask -q
-    echo "$automationsCask - installed 🔥"
-  else
-    echo "$automationsCask - already exists! 👌"
-  fi
-done
-
 if ! ls /Applications | grep -i "keyboard maestro" &>/dev/null; then
   curl -s -o ~/Downloads/keyboardmaestro-1020.zip https://files.stairways.com/keyboardmaestro/keyboardmaestro-1020.zip
   unzip -q ~/Downloads/keyboardmaestro-1020.zip -d /Applications
@@ -314,62 +187,6 @@ if ! ls /Applications | grep -i "keyboard maestro" &>/dev/null; then
 else
   echo "Keyboard Maestro - already exists! 👌"
 fi
-
-echo -e "\n"
-echo "Installing Homebrew Productivity Casks..."
-echo "------------------------------------------------"
-
-casksProductivity=(raycast bluesnooze textsniper keycastr notion contexts cleanmymac rectangle dropbox logi-options-plus zoom)
-for productivityCask in "${casksProductivity[@]}"; do
-  if ! ls $(brew --caskroom) | grep -w "^$productivityCask$" &>/dev/null; then
-    brew install --cask $productivityCask -q
-    echo "$productivityCask - installed 🔥"
-  else
-    echo "$productivityCask - already exists! 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Installing Homebrew Media Casks..."
-echo "------------------------------------------------"
-
-casksMedia=(vlc)
-for mediaCask in "${casksMedia[@]}"; do
-  if ! ls $(brew --caskroom) | grep -w "^$mediaCask$" &>/dev/null; then
-    brew install --cask $mediaCask -q
-    echo "$mediaCask - installed 🔥"
-  else
-    echo "$mediaCask - already exists! 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Installing Homebrew Developer Casks..."
-echo "------------------------------------------------"
-
-casksDeveloper=(warp slack figma linear-linear height orbstack tableplus visual-studio-code zed)
-for developerCask in "${casksDeveloper[@]}"; do
-  if ! ls $(brew --caskroom) | grep -w "^$developerCask$" &>/dev/null; then
-    brew install --cask $developerCask -q
-    echo "$developerCask - installed 🔥"
-  else
-    echo "$developerCask - already exists! 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Installing Homebrew Fonts Casks..."
-echo "------------------------------------------------"
-
-casksFonts=(font-monaspace font-fira-code font-hack font-space-mono font-input)
-for fontsCask in "${casksFonts[@]}"; do
-  if ! ls $(brew --caskroom) | grep -w "^$fontsCask$" &>/dev/null; then
-    brew install --cask $fontsCask -q
-    echo "$fontsCask - installed 🔥"
-  else
-    echo "$fontsCask - already exists! 👌"
-  fi
-done
 
 echo -e "\n"
 echo "Installing Apps from App Store..."
@@ -413,7 +230,7 @@ echo -e "\n"
 echo "Installing a few global npm packages..."
 echo "------------------------------------------------"
 
-npmGlobalPackages=(gitignore npm-check-updates prisma vercel license)
+npmGlobalPackages=(gitignore npm-check-updates vercel license)
 for npmPackage in "${npmGlobalPackages[@]}"; do
   if ! pnpm list -g --depth=0 | grep -w "^$npmPackage" &>/dev/null; then
     pnpm add -g $npmPackage

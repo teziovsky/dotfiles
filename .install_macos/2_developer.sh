@@ -52,22 +52,6 @@ else
 fi
 
 echo -e "\n"
-echo "Cloning wsb repos..."
-echo "------------------------------------------------"
-
-wsbRepos=(
-  "cup-tournament"
-)
-for wsbRepo in "${wsbRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/wsb/$wsbRepo" ]; then
-    git clone -q git@github.com:teziovsky/$wsbRepo.git "$HOME/Developer/wsb/$wsbRepo"
-    echo "$wsbRepo repo - cloned 🔥"
-  else
-    echo "$wsbRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
 echo "Cloning apps repos..."
 echo "------------------------------------------------"
 
@@ -102,8 +86,6 @@ echo "Cloning contributions repos..."
 echo "------------------------------------------------"
 
 contributionsRepos=(
-  "vuelidate-vuelidate"
-  "awesome-uses"
   "snippet-explorer"
 )
 for contributionsRepo in "${contributionsRepos[@]}"; do
@@ -125,6 +107,7 @@ raycastContributionsRepos=(
   "raycast-infakt"
   "raycast-meta-music"
   "raycast-multi-translate"
+  "raycast-price-scrapper"
   "raycast-raydocs"
   "raycast-scripts"
   "raycast-teziovsky-airtable"
@@ -173,55 +156,15 @@ for zedContributionsThemeRepo in "${zedContributionsThemesRepos[@]}"; do
 done
 
 echo -e "\n"
-echo "Cloning recruitments - makadu repos..."
-echo "------------------------------------------------"
-
-recruitmentsMakaduRepos=(
-  "makadu-miedzy-lasem-a-cisza"
-)
-for recruitmentsMakaduRepo in "${recruitmentsMakaduRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/recruitments/makadu/$recruitmentsMakaduRepo" ]; then
-    git clone -q git@github.com:teziovsky/$recruitmentsMakaduRepo.git "$HOME/Developer/recruitments/makadu/$recruitmentsMakaduRepo"
-    echo "$recruitmentsMakaduRepo repo - cloned 🔥"
-  else
-    echo "$recruitmentsMakaduRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Cloning recruitments - idcom repos..."
-echo "------------------------------------------------"
-
-recruitmentsIdcomRepos=(
-  "idcom-vue-test"
-  "idcom-tiles"
-)
-for recruitmentsIdcomRepo in "${recruitmentsIdcomRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/recruitments/idcom/$recruitmentsIdcomRepo" ]; then
-    git clone -q git@github.com:teziovsky/$recruitmentsIdcomRepo.git "$HOME/Developer/recruitments/idcom/$recruitmentsIdcomRepo"
-    echo "$recruitmentsIdcomRepo repo - cloned 🔥"
-  else
-    echo "$recruitmentsIdcomRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
 echo "Cloning sites repos..."
 echo "------------------------------------------------"
 
 sitesRepos=(
   "ajwedding"
-  "car-service-book-api"
-  "car-service-book-v1"
   "foodbase"
   "idcom-svg-walkthrough"
-  "images-gallery"
   "jakubsoboczynski"
-  "jakubsoboczynski-next-v1"
-  "lenovo-product-card"
-  "movie-search-engine"
-  "qr-code-component"
-  "rock-paper-scissors"
+  "svg-polygon-builder"
   "vehicle-service-book"
 )
 for sitesRepo in "${sitesRepos[@]}"; do

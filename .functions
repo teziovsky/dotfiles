@@ -52,3 +52,12 @@ pullenvs() {
   vercel env pull --environment development .env.development.local
   vercel env pull --environment production .env.production.local
 }
+
+# HOMEBREW
+brewi() {
+  brew install ${@} && brewdump
+}
+
+brewu() {
+  brew uninstall ${@} && brewdump
+}
