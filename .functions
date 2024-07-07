@@ -54,10 +54,14 @@ pullenvs() {
 }
 
 # HOMEBREW
-brewi() {
-  brew install ${@} && brewdump
-}
+newbrew() {
+  local dump_commands=('install' 'uninstall')
+  local main_command="${1}"
 
-brewu() {
-  brew uninstall ${@} && brewdump
+  brew ${@}
+
+  for command in "${dump_commands[@]}"; do
+    echo "Command: ${command}"
+    [[ "${command}" == "${main_command}" ]] && brew bundle dump --file="${HOME}/.Brewfile" --force
+  done
 }
