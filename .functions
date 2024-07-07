@@ -52,16 +52,3 @@ pullenvs() {
   vercel env pull --environment development .env.development.local
   vercel env pull --environment production .env.production.local
 }
-
-# HOMEBREW
-newbrew() {
-  local dump_commands=('install' 'uninstall')
-  local main_command="${1}"
-
-  brew ${@}
-
-  for command in "${dump_commands[@]}"; do
-    echo "Command: ${command}"
-    [[ "${command}" == "${main_command}" ]] && brew bundle dump --file="${HOME}/.Brewfile" --force
-  done
-}
