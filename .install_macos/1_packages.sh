@@ -151,7 +151,7 @@ else
 fi
 
 echo -e "\n"
-echo "Install Homebrew Brewfile"
+echo "Install Homebrew Brewfile..."
 echo "------------------------------------------------"
 brew bundle install --file="${HOME}/.config/brew/Brewfile"
 echo "Homebrew taps - added 🔥"
