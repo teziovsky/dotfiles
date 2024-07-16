@@ -50,7 +50,8 @@ alias gac="git add . && git commit -m"
 alias clean-branches="git branch --merged | egrep -v '(^\*|master|main|develop)' | xargs git branch -d"
 alias deep-check-branches='deep_check_branches'
 alias gsa='git_status_all'
-alias gla='git_fetch_all'
+alias gfa='git_fetch_all'
+alias gpd='git_pull_dev'
 
 # GITHUB
 alias ghmerge="gh pr create && gh pr merge"

@@ -396,7 +396,7 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "alt+cmd+5",
+    "key": "alt+cmd+4",
     "command": "workbench.actions.view.problems"
   },
   {
@@ -525,10 +525,6 @@
     "when": "terminalFocus"
   },
   {
-    "key": "alt+cmd+3",
-    "command": "workbench.view.extension.github-pull-requests"
-  },
-  {
     "key": "shift+cmd+x",
     "command": "-workbench.view.extensions",
     "when": "viewContainer.workbench.view.extensions.enabled"
@@ -579,10 +575,6 @@
     "key": "cmd+w",
     "command": "-workbench.action.closeWindow",
     "when": "!editorIsOpen && !multipleEditorGroups"
-  },
-  {
-    "key": "cmd+k cmd+o",
-    "command": "workbench.action.files.openFolder"
   },
   {
     "key": "cmd+k o",
@@ -649,10 +641,6 @@
   },
   {
     "key": "cmd+k cmd+s",
-    "command": "workbench.action.files.saveAll"
-  },
-  {
-    "key": "cmd+k cmd+s",
     "command": "-workbench.action.openGlobalKeybindings"
   },
   {
@@ -671,7 +659,7 @@
     "when": "fileMatchOrMatchFocus && searchViewletVisible"
   },
   {
-    "key": "alt+cmd+4",
+    "key": "alt+cmd+3",
     "command": "workbench.panel.chat.view.copilot.focus"
   },
   {
@@ -712,10 +700,78 @@
   },
   {
     "key": "cmd+l",
-    "command": "turboConsoleLog.displayLogMessage"
+    "command": "aichat.newchataction",
+    "when": "!activeAIChatEditor"
   },
   {
-    "key": "shift+cmd+l",
-    "command": "turboConsoleLog.deleteAllLogMessages"
+    "key": "cmd+l",
+    "command": "-aichat.newchataction"
+  },
+  {
+    "key": "cmd+l",
+    "command": "aichat.close-sidebar",
+    "when": "activeAIChatEditor"
+  },
+  {
+    "key": "cmd+k v",
+    "command": "-markdown.extension.closePreview",
+    "when": "activeWebviewPanelId == 'markdown.preview'"
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "-workbench.action.files.saveAs"
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "workbench.action.files.saveAll"
+  },
+  {
+    "key": "cmd+k cmd+r",
+    "command": "-git.revertSelectedRanges",
+    "when": "isInDiffEditor && !operationInProgress"
+  },
+  {
+    "key": "cmd+k alt+cmd+s",
+    "command": "-git.stageSelectedRanges",
+    "when": "isInDiffEditor && !operationInProgress"
+  },
+  {
+    "key": "cmd+k cmd+n",
+    "command": "-git.unstageSelectedRanges",
+    "when": "isInDiffEditor && !operationInProgress"
+  },
+  {
+    "key": "cmd+k v",
+    "command": "-markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-lineBreakInsert",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.files.openFolder"
+  },
+  {
+    "key": "cmd+k",
+    "command": "aipopup.action.modal.generate",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-aipopup.action.modal.generate",
+    "when": "editorFocus"
   }
 ]

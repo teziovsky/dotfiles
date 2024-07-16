@@ -154,7 +154,7 @@ echo -e "\n"
 echo "Install Homebrew Brewfile..."
 echo "------------------------------------------------"
 brew bundle install --file="${HOME}/.config/brew/Brewfile"
-echo "Homebrew taps - added 🔥"
+echo "Homebrew Brewfile - installed 🔥"
 
 echo -e "\n"
 echo "Installing usefull keybindings for fzf..."
@@ -187,28 +187,6 @@ if ! ls /Applications | grep -i "keyboard maestro" &>/dev/null; then
 else
   echo "Keyboard Maestro - already exists! 👌"
 fi
-
-echo -e "\n"
-echo "Installing Apps from App Store..."
-echo "------------------------------------------------"
-
-# 937984704  Amphetamine
-# 1193539993 Brother iPrint & Scan
-# 425424353  The Unarchiver
-# 497799835  Xcode
-# 457622435  Yoink
-# 409201541  Apple Pages
-# 409203825  Apple Numbers
-# 1289197285 Mindnode
-appsAppStore=(937984704 1193539993 1352778147 425424353 497799835 457622435 409201541 409203825 1289197285)
-for appAppStore in "${appsAppStore[@]}"; do
-  if ! mas list | grep -w "^$appAppStore" &>/dev/null; then
-    mas install $appAppStore
-    echo "$appAppStore - installed 🔥"
-  else
-    echo "$appAppStore - already exists! 👌"
-  fi
-done
 
 echo -e "\n"
 echo "Checking node, npm and pnpm versions..."

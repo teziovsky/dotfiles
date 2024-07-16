@@ -44,8 +44,8 @@ echo -e "\n"
 echo "Cloning advent-of-code repo..."
 echo "------------------------------------------------"
 
-if [ ! -d "$HOME/Developer/advent-of-code" ]; then
-  git clone -q git@github.com:teziovsky/advent-of-code.git "$HOME/Developer/advent-of-code"
+if [ ! -d "$HOME/Developer/personal/advent-of-code" ]; then
+  git clone -q git@github.com:teziovsky/advent-of-code.git "$HOME/Developer/personal/advent-of-code"
   echo "advent-of-code repo - cloned 🔥"
 else
   echo "advent-of-code repo - already exists 👌"
@@ -57,8 +57,8 @@ echo "------------------------------------------------"
 
 appsRepos=()
 for appsRepo in "${appsRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/apps/$appsRepo" ]; then
-    git clone -q git@github.com:teziovsky/$appsRepo.git "$HOME/Developer/apps/$appsRepo"
+  if [ ! -d "$HOME/Developer/personal/apps/$appsRepo" ]; then
+    git clone -q git@github.com:teziovsky/$appsRepo.git "$HOME/Developer/personal/apps/$appsRepo"
     echo "$appsRepo repo - cloned 🔥"
   else
     echo "$appsRepo repo - already exists 👌"
@@ -73,8 +73,8 @@ cliRepos=(
   "md-generate"
 )
 for cliRepo in "${cliRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/cli/$cliRepo" ]; then
-    git clone -q git@github.com:teziovsky/$cliRepo.git "$HOME/Developer/cli/$cliRepo"
+  if [ ! -d "$HOME/Developer/personal/cli/$cliRepo" ]; then
+    git clone -q git@github.com:teziovsky/$cliRepo.git "$HOME/Developer/personal/cli/$cliRepo"
     echo "$cliRepo repo - cloned 🔥"
   else
     echo "$cliRepo repo - already exists 👌"
@@ -89,8 +89,8 @@ contributionsRepos=(
   "snippet-explorer"
 )
 for contributionsRepo in "${contributionsRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/contributions/$contributionsRepo" ]; then
-    git clone -q git@github.com:teziovsky/$contributionsRepo.git "$HOME/Developer/contributions/$contributionsRepo"
+  if [ ! -d "$HOME/Developer/personal/contributions/$contributionsRepo" ]; then
+    git clone -q git@github.com:teziovsky/$contributionsRepo.git "$HOME/Developer/personal/contributions/$contributionsRepo"
     echo "$contributionsRepo repo - cloned 🔥"
   else
     echo "$contributionsRepo repo - already exists 👌"
@@ -114,8 +114,8 @@ raycastContributionsRepos=(
   "raycast-teziovsky-linear"
 )
 for raycastContributionsRepo in "${raycastContributionsRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/contributions/raycast/$raycastContributionsRepo" ]; then
-    git clone -q git@github.com:teziovsky/$raycastContributionsRepo.git "$HOME/Developer/contributions/raycast/$raycastContributionsRepo"
+  if [ ! -d "$HOME/Developer/personal/contributions/raycast/$raycastContributionsRepo" ]; then
+    git clone -q git@github.com:teziovsky/$raycastContributionsRepo.git "$HOME/Developer/personal/contributions/raycast/$raycastContributionsRepo"
     echo "$raycastContributionsRepo repo - cloned 🔥"
   else
     echo "$raycastContributionsRepo repo - already exists 👌"
@@ -131,8 +131,8 @@ zedContributionsRepos=(
   "zed-extensions"
 )
 for zedContributionsRepo in "${zedContributionsRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/contributions/zed/$zedContributionsRepo" ]; then
-    git clone -q git@github.com:teziovsky/$zedContributionsRepo.git "$HOME/Developer/contributions/zed/$zedContributionsRepo"
+  if [ ! -d "$HOME/Developer/personal/contributions/zed/$zedContributionsRepo" ]; then
+    git clone -q git@github.com:teziovsky/$zedContributionsRepo.git "$HOME/Developer/personal/contributions/zed/$zedContributionsRepo"
     echo "$zedContributionsRepo repo - cloned 🔥"
   else
     echo "$zedContributionsRepo repo - already exists 👌"
@@ -147,11 +147,57 @@ zedContributionsThemesRepos=(
   "zed-one-hunter-theme"
 )
 for zedContributionsThemeRepo in "${zedContributionsThemesRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/contributions/zed/themes/$zedContributionsThemeRepo" ]; then
-    git clone -q git@github.com:teziovsky/$zedContributionsThemeRepo.git "$HOME/Developer/contributions/zed/themes/$zedContributionsThemeRepo"
+  if [ ! -d "$HOME/Developer/personal/contributions/zed/themes/$zedContributionsThemeRepo" ]; then
+    git clone -q git@github.com:teziovsky/$zedContributionsThemeRepo.git "$HOME/Developer/personal/contributions/zed/themes/$zedContributionsThemeRepo"
     echo "$zedContributionsThemeRepo repo - cloned 🔥"
   else
     echo "$zedContributionsThemeRepo repo - already exists 👌"
+  fi
+done
+
+echo -e "\n"
+echo "Cloning courses repos..."
+echo "------------------------------------------------"
+
+coursesRepos=()
+for coursesRepo in "${coursesRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/personal/courses/$coursesRepo" ]; then
+    git clone -q git@github.com:teziovsky/$coursesRepo.git "$HOME/Developer/personal/courses/$coursesRepo"
+    echo "$coursesRepo repo - cloned 🔥"
+  else
+    echo "$coursesRepo repo - already exists 👌"
+  fi
+done
+
+echo -e "\n"
+echo "Cloning linux macos repos..."
+echo "------------------------------------------------"
+
+linuxMacosRepos=(
+  "vps-setup-scripts"
+)
+for linuxMacosRepo in "${linuxMacosRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/personal/linux_macos/$linuxMacosRepo" ]; then
+    git clone -q git@github.com:teziovsky/$linuxMacosRepo.git "$HOME/Developer/personal/linux_macos/$linuxMacosRepo"
+    echo "$linuxMacosRepo repo - cloned 🔥"
+  else
+    echo "$linuxMacosRepo repo - already exists 👌"
+  fi
+done
+
+echo -e "\n"
+echo "Cloning scripts repos..."
+echo "------------------------------------------------"
+
+scriptsRepos=(
+  "price-scrapper"
+)
+for scriptsRepo in "${scriptsRepos[@]}"; do
+  if [ ! -d "$HOME/Developer/personal/scripts/$scriptsRepo" ]; then
+    git clone -q git@github.com:teziovsky/$scriptsRepo.git "$HOME/Developer/personal/scripts/$scriptsRepo"
+    echo "$scriptsRepo repo - cloned 🔥"
+  else
+    echo "$scriptsRepo repo - already exists 👌"
   fi
 done
 
@@ -168,8 +214,8 @@ sitesRepos=(
   "vehicle-service-book"
 )
 for sitesRepo in "${sitesRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/sites/$sitesRepo" ]; then
-    git clone -q git@github.com:teziovsky/$sitesRepo.git "$HOME/Developer/sites/$sitesRepo"
+  if [ ! -d "$HOME/Developer/personal/sites/$sitesRepo" ]; then
+    git clone -q git@github.com:teziovsky/$sitesRepo.git "$HOME/Developer/personal/sites/$sitesRepo"
     echo "$sitesRepo repo - cloned 🔥"
   else
     echo "$sitesRepo repo - already exists 👌"
@@ -185,8 +231,8 @@ petnalSitesRepos=(
   "petnal-web"
 )
 for petnalSitesRepo in "${petnalSitesRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/sites/petnal/$petnalSitesRepo" ]; then
-    git clone -q git@github.com:teziovsky/$petnalSitesRepo.git "$HOME/Developer/sites/petnal/$petnalSitesRepo"
+  if [ ! -d "$HOME/Developer/personal/sites/petnal/$petnalSitesRepo" ]; then
+    git clone -q git@github.com:teziovsky/$petnalSitesRepo.git "$HOME/Developer/personal/sites/petnal/$petnalSitesRepo"
     echo "$petnalSitesRepo repo - cloned 🔥"
   else
     echo "$petnalSitesRepo repo - already exists 👌"
@@ -194,90 +240,35 @@ for petnalSitesRepo in "${petnalSitesRepos[@]}"; do
 done
 
 echo -e "\n"
-echo "Cloning linux macos repos..."
-echo "------------------------------------------------"
-
-linuxMacosRepos=(
-  "vps-setup-scripts"
-)
-for linuxMacosRepo in "${linuxMacosRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/linux_macos/$linuxMacosRepo" ]; then
-    git clone -q git@github.com:teziovsky/$linuxMacosRepo.git "$HOME/Developer/linux_macos/$linuxMacosRepo"
-    echo "$linuxMacosRepo repo - cloned 🔥"
-  else
-    echo "$linuxMacosRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Cloning scripts repos..."
-echo "------------------------------------------------"
-
-scriptsRepos=(
-  "price-scrapper"
-)
-for scriptsRepo in "${scriptsRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/scripts/$scriptsRepo" ]; then
-    git clone -q git@github.com:teziovsky/$scriptsRepo.git "$HOME/Developer/scripts/$scriptsRepo"
-    echo "$scriptsRepo repo - cloned 🔥"
-  else
-    echo "$scriptsRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Cloning courses repos..."
-echo "------------------------------------------------"
-
-coursesRepos=(
-  "js-na-frontach-zadania"
-  "js-na-frontach-w05e02-continous-deployment"
-)
-for coursesRepo in "${coursesRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/courses/$coursesRepo" ]; then
-    git clone -q git@github.com:teziovsky/$coursesRepo.git "$HOME/Developer/courses/$coursesRepo"
-    echo "$coursesRepo repo - cloned 🔥"
-  else
-    echo "$coursesRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
 echo "Creating symlinks for vscode settings..."
 echo "------------------------------------------------"
 
-if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i keybindings.json &>/dev/null; then
-  ln -s ~/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-  echo "keybindings.json file - symlinked 🔥"
-else
-  echo "keybindings.json file - already exists 👌"
-fi
+vscodeFiles=(
+  "keybindings.json"
+  "settings.json"
+  "projects.json"
+  "spellright.dict"
+  "snippets"
+)
 
-if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i settings.json &>/dev/null; then
-  ln -s ~/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-  echo "settings.json file - symlinked 🔥"
-else
-  echo "settings.json file - already exists 👌"
-fi
+for fileName in "${vscodeFiles[@]}"; do
+  if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i "$fileName" &>/dev/null; then
+    rm -rf ~/Library/Application\ Support/Code/User/$fileName
+    ln -s ~/.vscode/$fileName ~/Library/Application\ Support/Code/User/$fileName
+    echo "Code $fileName - symlinked 🔥"
+  else
+    rm -rf ~/Library/Application\ Support/Code/User/$fileName
+    ln -s ~/.vscode/$fileName ~/Library/Application\ Support/Code/User/$fileName
+    echo "Code $fileName - updated 👌"
+  fi
 
-if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i projects.json &>/dev/null; then
-  ln -s ~/.vscode/projects.json ~/Library/Application\ Support/Code/User/projects.json
-  echo "projects.json file - symlinked 🔥"
-else
-  echo "projects.json file - already exists 👌"
-fi
-
-if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i spellright.dict &>/dev/null; then
-  ln -s ~/.vscode/spellright.dict ~/Library/Application\ Support/Code/User/spellright.dict
-  echo "spellright.dict file - symlinked 🔥"
-else
-  echo "spellright.dict file - already exists 👌"
-fi
-
-if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i snippets &>/dev/null; then
-  rm -rf ~/Library/Application\ Support/Code/User/snippets
-  ln -s ~/.vscode/snippets ~/Library/Application\ Support/Code/User
-  echo "snippets dir - symlinked 🔥"
-else
-  echo "snippets dir - already exists 👌"
-fi
+  if ! ls -laH ~/Library/Application\ Support/Cursor/User | grep -i "^l" | grep -i "$fileName" &>/dev/null; then
+    rm -rf ~/Library/Application\ Support/Cursor/User/$fileName
+    ln -s ~/.vscode/$fileName ~/Library/Application\ Support/Cursor/User/$fileName
+    echo "Cursor $fileName - symlinked 🔥"
+  else
+    rm -rf ~/Library/Application\ Support/Cursor/User/$fileName
+    ln -s ~/.vscode/$fileName ~/Library/Application\ Support/Cursor/User/$fileName
+    echo "Cursor $fileName - updated 👌"
+  fi
+done

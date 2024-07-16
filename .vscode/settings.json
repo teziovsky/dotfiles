@@ -3,7 +3,6 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.editor": "json",
   "workbench.editor.tabSizing": "shrink",
-  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorCustomizations": {
     "editor.foreground": "#e2e2e2",
@@ -12,9 +11,7 @@
     "tab.hoverBorder": "#E76572",
     "sideBarTitle.foreground": "#EAB780"
   },
-
   "window.restoreWindows": "all",
-
   "editor.stickyScroll.enabled": true,
   "editor.accessibilitySupport": "off",
   "editor.acceptSuggestionOnEnter": "off",
@@ -47,10 +44,7 @@
   "editor.renderWhitespace": "boundary",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    // "quickfix.biome": "explicit",
-    // "source.organizeImports.biome": "explicit",
     "source.fixAll": "explicit",
-    // "source.organizeImports": "explicit",
     "addMissingImports": "explicit"
   },
   "editor.hover.delay": 200,
@@ -60,13 +54,11 @@
     "comments": "inline",
     "strings": "on"
   },
-
   "explorer.autoReveal": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 1,
   "explorer.compactFolders": false,
-
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "onFocusChange",
@@ -92,7 +84,6 @@
     "**/node_modules": true,
     "**/.idea": true
   },
-
   "emmet.excludeLanguages": ["markdown"],
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
@@ -106,7 +97,6 @@
     "django-html": "html",
     "markdown": "javascriptreact"
   },
-
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontFamily": "Monaspace Neon, Input Mono, Space Mono, Recursive, Jetbrains Mono, MesloLGS NF, Monaco, Courier New, monospace",
@@ -114,7 +104,6 @@
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.gpuAcceleration": "off",
-
   "prettier.arrowParens": "always",
   "prettier.bracketSameLine": false,
   "prettier.bracketSpacing": true,
@@ -134,7 +123,6 @@
   "prettier.useEditorConfig": false,
   "prettier.useTabs": false,
   "prettier.vueIndentScriptAndStyle": false,
-
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -198,7 +186,6 @@
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-
   "css.lint.important": "warning",
   "scss.lint.important": "warning",
   "css.lint.duplicateProperties": "warning",
@@ -246,13 +233,11 @@
     "properties-order": "alphabetical"
   },
   "yaml.format.printWidth": 120,
-
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "git.autofetch": true,
   "scm.alwaysShowActions": true,
   "scm.alwaysShowRepositories": true,
-
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.hovers.enabled": false,
   "gitlens.statusBar.enabled": false,
@@ -271,7 +256,6 @@
     "scmGroup": false,
     "scmItem": false
   },
-
   "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"],
   "eslint.options": {
     "overrideConfig": {
@@ -291,7 +275,6 @@
       }
     }
   },
-
   "advancedNewFile.showInformationMessages": true,
   "advancedNewFile.convenienceOptions": ["last", "current", "root"],
   "advancedNewFile.exclude": {
@@ -300,14 +283,11 @@
     "dev": true,
     "dist": true
   },
-
   "npm.runSilent": true,
   "npm.packageManager": "npm",
-
   "colorize.include": ["**/*.css", "**/*.scss", "**/*.sass", "**/*.less", "**/*.styl"],
   "colorize.colorized_variables": ["CSS", "LESS", "SASS", "STYLUS"],
   "colorize.languages": ["css", "sass", "scss", "less", "postcss", "sss", "stylus", "xml", "svg"],
-
   "breadcrumbs.enabled": true,
   "breadcrumbs.showFields": false,
   "trailing-spaces.trimOnSave": true,
@@ -373,7 +353,7 @@
   "svelte.enable-ts-plugin": true,
   "svelte.plugin.svelte.note-new-transformation": false,
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": true,
     "scminput": false,
@@ -400,7 +380,6 @@
   "turboConsoleLog.insertEnclosingClass": false,
   "turboConsoleLog.insertEnclosingFunction": false,
   "turboConsoleLog.includeFileNameAndLineNum": false,
-  "workbench.activityBar.location": "top",
   "workbench.editor.tabActionLocation": "right",
   "search.smartCase": true,
   "window.zoomLevel": -1,
@@ -500,5 +479,12 @@
   "prisma.showPrismaDataPlatformNotification": false,
   "git.mergeEditor": true,
   "github.copilot.editor.enableAutoCompletions": true,
-  "gitlens.telemetry.enabled": false
+  "gitlens.telemetry.enabled": false,
+  "supermaven.otherWarning": false,
+  "supermaven.enable": {
+    "*": false
+  },
+  "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "top"
 }
