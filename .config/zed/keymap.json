@@ -113,7 +113,6 @@
       "shift-enter": "editor::Newline",
       "cmd-shift-enter": "editor::NewlineAbove",
       "cmd-enter": "editor::NewlineBelow",
-      "alt-z": "editor::ToggleSoftWrap",
       "cmd-f": [
         "buffer_search::Deploy",
         {
