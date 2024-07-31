@@ -2,9 +2,22 @@ mc() {
   cd "$(walk "$@")"
 }
 
-# GREP
-findtext() {
-  grep -rnIil "$1" . --color
+# HOMEBREW
+brew() {
+  command brew "$@"
+
+  if [[ "$1" == "install" || "$1" == "uninstall" ]]; then
+    echo ""
+    echo -e "\e[34mUpdating Brewfile...\e[0m"
+    brew bundle dump --file="${HOME}/.config/brew/Brewfile" --force
+    echo -e "\e[32mBrewfile updated successfully!\e[0m"
+  fi
+}
+
+# DOCKER
+drm() {
+  docker stop "$1"
+  docker rm "$1"
 }
 
 # GIT
@@ -63,10 +76,9 @@ git_pull_dev() {
   echo -e "\n${green}Switched back to the original branch: $actual_branch.${no_color}"
 }
 
-# DOCKER
-drm() {
-  docker stop "$1"
-  docker rm "$1"
+# GREP
+findtext() {
+  grep -rnIil "$1" . --color
 }
 
 # TMUX
@@ -79,7 +91,7 @@ tcd() {
 }
 
 # VERCEL
-pullenvs() {
+vercelpullenvs() {
   vercel env pull --environment development .env.development.local
   vercel env pull --environment production .env.production.local
 }

@@ -486,5 +486,7 @@
   },
   "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
   "workbench.sideBar.location": "right",
-  "workbench.activityBar.location": "top"
+  "workbench.activityBar.location": "top",
+  "turboConsoleLog.insertEmptyLineBeforeLogMessage": true,
+  "turboConsoleLog.insertEmptyLineAfterLogMessage": true
 }

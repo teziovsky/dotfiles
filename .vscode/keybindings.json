@@ -690,11 +690,6 @@
     "command": "-workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "cmd+b",
-    "command": "extension.conventionalCommits",
-    "when": "!editorTextFocus"
-  },
-  {
     "key": "ctrl+m",
     "command": "editor.emmet.action.matchTag"
   },
@@ -783,5 +778,15 @@
     "key": "cmd+d",
     "command": "-editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
+  },
+  {
+    "key": "shift+alt+/",
+    "command": "turboConsoleLog.deleteAllLogMessages",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+/",
+    "command": "turboConsoleLog.displayLogMessage",
+    "when": "editorTextFocus"
   }
 ]
