@@ -373,9 +373,9 @@
     }
   },
   {
-    "context": "Editor && showing_completions",
+    "context": "Editor && inline_completion && !showing_completions",
     "bindings": {
-      "tab": "editor::ConfirmCompletion"
+      "tab": "editor::AcceptInlineCompletion"
     }
   },
   {

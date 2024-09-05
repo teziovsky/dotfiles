@@ -7,21 +7,15 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "auto_update_extensions": {
-    "toml": false,
-    "zig": false,
-    "haskell": false
-  },
-  "chat_panel": {
-    "dock": "left"
-  },
+  "always_treat_brackets_as_autoclosed": false,
   "assistant": {
+    "enabled": true,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-5-sonnet-20240620"
     },
-    "version": "2",
-    "dock": "left"
+    "dock": "right",
+    "version": "2"
   },
   "auto_update": true,
   "autosave": {
@@ -33,38 +27,97 @@
   "buffer_font_family": "Monaspace Neon",
   "buffer_font_size": 11,
   "buffer_line_height": "comfortable",
-  "buffer_font_features": null,
-  "formatter": "auto",
-  "format_on_save": "on",
   "enable_language_server": true,
+  "chat_panel": {
+    "dock": "left"
+  },
+  "confirm_quit": false,
+  "cursor_blink": true,
+  "features": {
+    "inline_completion_provider": "copilot"
+  },
+  "format_on_save": "on",
+  "formatter": "auto",
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true,
+      "delay_ms": 500
+    }
+  },
+  "hour_format": "hour24",
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 1,
+    "coloring": "indent_aware",
+    "background_coloring": "disabled"
+  },
   "inlay_hints": {
     "enabled": false,
     "show_type_hints": true,
     "show_parameter_hints": true,
-    "show_other_hints": true
+    "show_other_hints": true,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50
   },
-  "preferred_line_length": 120,
+  "languages": {
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true
+      }
+    }
+  },
+  "lsp": {
+    "scls": {
+      "initialization_options": {
+        "snippets_first": true
+      }
+    }
+  },
+  "preferred_line_length": 140,
   "project_panel": {
     "dock": "right",
-    "default_width": 140,
+    "default_width": 120,
     "git_status": true
   },
   "remove_trailing_whitespace_on_save": true,
   "show_completions_on_input": true,
   "show_completion_documentation": true,
   "show_copilot_suggestions": true,
+  "show_inline_completions": true,
   "show_whitespaces": "selection",
   "soft_wrap": "preferred_line_length",
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
   "tab_size": 2,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
   "terminal": {
-    "dock": "bottom",
     "copy_on_select": true,
+    "dock": "bottom",
     "working_directory": "current_project_directory"
   },
   "theme": "One Hunter Vercel",
-  "hour_format": "hour24"
+  "use_autoclose": true
 }

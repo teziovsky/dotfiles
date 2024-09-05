@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Vercel",
+  "workbench.colorTheme": "One Hunter Theme Vercel",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.editor": "json",
   "workbench.editor.tabSizing": "shrink",
@@ -44,6 +44,7 @@
   "editor.renderWhitespace": "boundary",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
     "source.fixAll": "explicit",
     "addMissingImports": "explicit"
   },
@@ -482,11 +483,13 @@
   "gitlens.telemetry.enabled": false,
   "supermaven.otherWarning": false,
   "supermaven.enable": {
-    "*": false
+    "*": true
   },
   "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
-  "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "top",
   "turboConsoleLog.insertEmptyLineBeforeLogMessage": true,
-  "turboConsoleLog.insertEmptyLineAfterLogMessage": true
+  "turboConsoleLog.insertEmptyLineAfterLogMessage": true,
+  "workbench.sideBar.location": "right",
+  "conventionalCommits.autoCommit": false,
+  "conventionalCommits.storeScopesGlobally": true
 }
