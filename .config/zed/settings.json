@@ -32,10 +32,80 @@
     "dock": "left"
   },
   "confirm_quit": false,
+  "current_line_highlight": "all",
   "cursor_blink": true,
+  "cursor_shape": "bar",
   "features": {
     "inline_completion_provider": "copilot"
   },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/node_modules",
+    "**/.zed",
+    "**/.gitkeep",
+    "**/.gitignore",
+    "**/.gitattributes",
+    "**/.editorconfig",
+    "**/__pycache__",
+    "**/__pypackages__",
+    "**/*.pyc",
+    "**/*.pyo",
+    "**/*.pyd",
+    "**/*.egg-info",
+    "**/*.egg",
+    "**/*.eggs",
+    "**/pip-log.txt",
+    "**/pip-delete-this-directory.txt",
+    "**/target",
+    "**/site-packages",
+    "**/dist",
+    "**/build",
+    "**/venv",
+    "**/env",
+    "**/.venv",
+    "**/.env",
+    "**/venvs",
+    "**/test",
+    "**/tests",
+    "**/*_test.py",
+    "**/*_tests.py",
+    "**/pytest_cache",
+    "**/.pytest_cache",
+    "**/coverage",
+    "**/.coverage",
+    "**/coverage.xml",
+    "**/nosetests.xml",
+    "**/htmlcov",
+    "**/instance",
+    "**/.ipynb_checkpoints",
+    "**/.mypy_cache",
+    "**/.ruff_cache",
+    "**/.pylint_cache",
+    "**/out",
+    "**/output",
+    "**/outputs",
+    "**/bower_components",
+    "**/*.lock",
+    "**/package-lock.json",
+    "**/yarn.lock",
+    "**/pnpm-lock.yaml",
+    "**/.idea",
+    "**/.vscode",
+    "**/.vs",
+    "**/tmp",
+    "**/temp",
+    "**/logs",
+    "**/*.log",
+    "**/*.bak",
+    "**/*.swp",
+    "**/*.tmp",
+    "**/*.temp"
+  ],
   "format_on_save": "on",
   "formatter": "auto",
   "git": {
@@ -45,7 +115,6 @@
       "delay_ms": 500
     }
   },
-  "hour_format": "hour24",
   "indent_guides": {
     "enabled": true,
     "line_width": 1,
@@ -54,12 +123,15 @@
     "background_coloring": "disabled"
   },
   "inlay_hints": {
-    "enabled": false,
+    "enabled": true,
     "show_type_hints": true,
     "show_parameter_hints": true,
     "show_other_hints": true,
     "edit_debounce_ms": 700,
     "scroll_debounce_ms": 50
+  },
+  "inline_completions": {
+    "disabled_globs": [".env"]
   },
   "languages": {
     "JavaScript": {
@@ -81,9 +153,20 @@
     }
   },
   "lsp": {
-    "scls": {
-      "initialization_options": {
-        "snippets_first": true
+    "biome": {
+      "settings": {
+        "config_path": "<path>/biome.json",
+        "require_config_file": true
+      }
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "keyOrdering": true,
+          "format": {
+            "singleQuote": true
+          }
+        }
       }
     }
   },

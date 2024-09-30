@@ -617,7 +617,7 @@
     "command": "-turboConsoleLog.uncommentAllLogMessages"
   },
   {
-    "key": "alt+cmd+6",
+    "key": "alt+cmd+5",
     "command": "workbench.view.extensions",
     "when": "viewContainer.workbench.view.extensions.enabled"
   },
@@ -659,10 +659,6 @@
     "when": "fileMatchOrMatchFocus && searchViewletVisible"
   },
   {
-    "key": "alt+cmd+3",
-    "command": "workbench.panel.chat.view.copilot.focus"
-  },
-  {
     "key": "enter",
     "command": "-renameFile",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
@@ -695,17 +691,7 @@
   },
   {
     "key": "cmd+l",
-    "command": "aichat.newchataction",
-    "when": "!activeAIChatEditor"
-  },
-  {
-    "key": "cmd+l",
     "command": "-aichat.newchataction"
-  },
-  {
-    "key": "cmd+l",
-    "command": "aichat.close-sidebar",
-    "when": "activeAIChatEditor"
   },
   {
     "key": "cmd+k v",
@@ -788,5 +774,13 @@
     "key": "alt+/",
     "command": "turboConsoleLog.displayLogMessage",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+3",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "alt+cmd+b",
+    "command": "-workbench.action.toggleAuxiliaryBar"
   }
 ]

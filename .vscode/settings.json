@@ -44,7 +44,6 @@
   "editor.renderWhitespace": "boundary",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.organizeImports.biome": "explicit",
     "source.fixAll": "explicit",
     "addMissingImports": "explicit"
   },
@@ -105,25 +104,6 @@
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.gpuAcceleration": "off",
-  "prettier.arrowParens": "always",
-  "prettier.bracketSameLine": false,
-  "prettier.bracketSpacing": true,
-  "prettier.documentSelectors": ["**/*.astro"],
-  "prettier.embeddedLanguageFormatting": "auto",
-  "prettier.htmlWhitespaceSensitivity": "css",
-  "prettier.insertPragma": false,
-  "prettier.jsxSingleQuote": false,
-  "prettier.printWidth": 120,
-  "prettier.proseWrap": "preserve",
-  "prettier.quoteProps": "as-needed",
-  "prettier.requirePragma": false,
-  "prettier.semi": true,
-  "prettier.singleQuote": false,
-  "prettier.tabWidth": 2,
-  "prettier.trailingComma": "es5",
-  "prettier.useEditorConfig": false,
-  "prettier.useTabs": false,
-  "prettier.vueIndentScriptAndStyle": false,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -197,7 +177,12 @@
   "html-css-class-completion.enableEmmetSupport": true,
   "html-css-class-completion.CSSLanguages": ["css", "sass", "scss"],
   "html-css-class-completion.includeGlobPattern": "**/*.{scss,vue,css,html}",
-  "html-css-class-completion.JavaScriptLanguages": ["vue", "javascript", "javascriptreact", "typescriptreact"],
+  "html-css-class-completion.JavaScriptLanguages": [
+    "vue",
+    "javascript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
   "javascript.format.enable": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.preferences.importModuleSpecifier": "non-relative",
@@ -257,25 +242,13 @@
     "scmGroup": false,
     "scmItem": false
   },
-  "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"],
-  "eslint.options": {
-    "overrideConfig": {
-      "env": {
-        "browser": true,
-        "es6": true
-      },
-      "parserOptions": {
-        "ecmaVersion": 2019,
-        "sourceType": "module",
-        "ecmaFeatures": {
-          "jsx": true
-        }
-      },
-      "rules": {
-        "no-debugger": "off"
-      }
-    }
-  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro",
+    "typescript",
+    "typescriptreact"
+  ],
   "advancedNewFile.showInformationMessages": true,
   "advancedNewFile.convenienceOptions": ["last", "current", "root"],
   "advancedNewFile.exclude": {
@@ -286,9 +259,25 @@
   },
   "npm.runSilent": true,
   "npm.packageManager": "npm",
-  "colorize.include": ["**/*.css", "**/*.scss", "**/*.sass", "**/*.less", "**/*.styl"],
+  "colorize.include": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "**/*.styl"
+  ],
   "colorize.colorized_variables": ["CSS", "LESS", "SASS", "STYLUS"],
-  "colorize.languages": ["css", "sass", "scss", "less", "postcss", "sss", "stylus", "xml", "svg"],
+  "colorize.languages": [
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg"
+  ],
   "breadcrumbs.enabled": true,
   "breadcrumbs.showFields": false,
   "trailing-spaces.trimOnSave": true,
@@ -377,7 +366,15 @@
   "projectManager.removeCurrentProjectFromList": true,
   "projectManager.showParentFolderInfoOnDuplicates": true,
   "projectManager.projectsLocation": "~/.vscode",
-  "projectManager.tags": ["configuration", "cli", "contribution", "course", "linux_macos", "recruitment", "site"],
+  "projectManager.tags": [
+    "configuration",
+    "cli",
+    "contribution",
+    "course",
+    "linux_macos",
+    "recruitment",
+    "site"
+  ],
   "turboConsoleLog.insertEnclosingClass": false,
   "turboConsoleLog.insertEnclosingFunction": false,
   "turboConsoleLog.includeFileNameAndLineNum": false,
@@ -427,6 +424,15 @@
       "strikethrough": false,
       "underline": false,
       "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "biome-ignore",
+      "color": "#FFFFFF",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "#F06292",
       "bold": false,
       "italic": false
     },
@@ -491,5 +497,12 @@
   "turboConsoleLog.insertEmptyLineAfterLogMessage": true,
   "workbench.sideBar.location": "right",
   "conventionalCommits.autoCommit": false,
-  "conventionalCommits.storeScopesGlobally": true
+  "conventionalCommits.storeScopesGlobally": true,
+  "github.copilot.chat.experimental.generateTests.codeLens": true,
+  "github.copilot.chat.experimental.inlineChatCompletionTrigger.enabled": true,
+  "github.copilot.chat.experimental.codeGeneration.instructions": [
+    {
+      "file": ".copilot-instructions.md"
+    }
+  ]
 }

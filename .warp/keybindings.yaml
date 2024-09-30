@@ -1,19 +1,21 @@
 ---
-"workspace:show_command_search": cmd-r
-"pane_group:navigate_up": alt-shift-cmd-up
-"pane_group:add_right": shift-cmd-D
-"pane_group:navigate_down": alt-shift-cmd-down
 "editor_view:cmd_down": ctrl-down
-"input:toggle_workflows": ctrl-r
-"pane_group:add_down": alt-shift-D
-"workspace:toggle_ai_assistant": cmd-space
-"workspace:toggle_mouse_reporting": ctrl-cmd-r
-"input:search_command_history": cmd-r
-"pane_group:navigate_prev": "cmd-["
-"editor_view:add_cursor_below": alt-cmd-down
 "pane_group:navigate_right": alt-shift-cmd-right
-"pane_group:navigate_next": "cmd-]"
-"pane_group:navigate_left": alt-shift-cmd-left
-"editor_view:add_next_occurrence": cmd-d
+"workspace:toggle_mouse_reporting": ctrl-cmd-r
+"pane_group:navigate_down": alt-shift-cmd-down
 "editor_view:add_cursor_above": alt-cmd-up
+"pane_group:add_down": alt-shift-D
+"editor_view:add_next_occurrence": cmd-d
 "workspace:toggle_autosuggestions": "cmd- "
+"pane_group:navigate_left": alt-shift-cmd-left
+"input:search_command_history": cmd-r
+"input:toggle_workflows": ctrl-r
+"pane_group:navigate_next": "cmd-]"
+"workspace:toggle_command_palette": shift-cmd-P
+"editor_view:add_cursor_below": alt-cmd-down
+"workspace:toggle_navigation_palette": cmd-p
+"pane_group:navigate_up": alt-shift-cmd-up
+"pane_group:navigate_prev": "cmd-["
+"pane_group:add_right": shift-cmd-D
+"workspace:show_command_search": cmd-r
+"workspace:toggle_ai_assistant": cmd-space
