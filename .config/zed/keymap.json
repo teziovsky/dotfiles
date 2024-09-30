@@ -13,7 +13,6 @@
       "cmd-up": "menu::SelectFirst",
       "cmd-down": "menu::SelectLast",
       "enter": "menu::Confirm",
-      "ctrl-enter": "menu::ShowContextMenu",
       "cmd-enter": "menu::SecondaryConfirm",
       "escape": "menu::Cancel",
       "ctrl-c": "menu::Cancel",
@@ -157,8 +156,7 @@
       "tab": "buffer_search::FocusEditor",
       "enter": "search::SelectNextMatch",
       "shift-enter": "search::SelectPrevMatch",
-      "alt-enter": "search::SelectAllMatches",
-      "alt-tab": "search::CycleMode"
+      "alt-enter": "search::SelectAllMatches"
     }
   },
   {
@@ -179,11 +177,7 @@
     "context": "ProjectSearchBar",
     "bindings": {
       "escape": "project_search::ToggleFocus",
-      "alt-tab": "search::CycleMode",
-      "cmd-shift-h": "search::ToggleReplace",
-      "alt-cmd-g": "search::ActivateRegexMode",
-      "alt-cmd-s": "search::ActivateSemanticMode",
-      "alt-cmd-x": "search::ActivateTextMode"
+      "cmd-shift-h": "search::ToggleReplace"
     }
   },
   {
@@ -204,11 +198,7 @@
     "context": "ProjectSearchView",
     "bindings": {
       "escape": "project_search::ToggleFocus",
-      "alt-tab": "search::CycleMode",
-      "cmd-shift-h": "search::ToggleReplace",
-      "alt-cmd-g": "search::ActivateRegexMode",
-      "alt-cmd-s": "search::ActivateSemanticMode",
-      "alt-cmd-x": "search::ActivateTextMode"
+      "cmd-shift-h": "search::ToggleReplace"
     }
   },
   {
@@ -230,11 +220,7 @@
       "alt-enter": "search::SelectAllMatches",
       "alt-cmd-c": "search::ToggleCaseSensitive",
       "alt-cmd-w": "search::ToggleWholeWord",
-      "alt-tab": "search::CycleMode",
-      "alt-cmd-f": "project_search::ToggleFilters",
-      "alt-cmd-g": "search::ActivateRegexMode",
-      "alt-cmd-s": "search::ActivateSemanticMode",
-      "alt-cmd-x": "search::ActivateTextMode"
+      "alt-cmd-f": "project_search::ToggleFilters"
     }
   },
   // Bindings from VS Code
@@ -276,12 +262,10 @@
       "alt-cmd-]": "editor::UnfoldLines",
       "cmd-space": "editor::ShowCompletions",
       "cmd-.": "editor::ToggleCodeActions",
-      "alt-cmd-r": "editor::RevealInFinder",
       "ctrl-cmd-c": "editor::DisplayCursorNames",
       "alt-up": "editor::MoveLineUp",
       "alt-down": "editor::MoveLineDown",
       "cmd-shift-k": "editor::DeleteLine",
-      "alt-shift-down": "editor::DuplicateLine",
       "cmd-k up": "pane::SplitUp",
       "cmd-k down": "pane::SplitDown",
       "cmd-k left": "pane::SplitLeft",
@@ -431,7 +415,6 @@
       "enter": "project_panel::Open",
       "backspace": "project_panel::Delete",
       "delete": "project_panel::Delete",
-      "alt-cmd-r": "project_panel::RevealInFinder",
       "alt-shift-f": "project_panel::NewSearchInDirectory"
     }
   },
@@ -468,9 +451,7 @@
   },
   {
     "context": "ChatPanel > MessageEditor",
-    "bindings": {
-      "escape": "chat_panel::CloseReplyPreview"
-    }
+    "bindings": {}
   },
   {
     "context": "Terminal",
