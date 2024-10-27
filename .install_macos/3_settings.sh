@@ -95,14 +95,6 @@ echo -e "\n"
 echo "Setting up Calendar settings..."
 echo "------------------------------------------------"
 
-# Open events in window type
-if ! defaults read com.apple.iCal OpenEventsInWindowType | grep -i "1" &>/dev/null; then
-  defaults write com.apple.iCal OpenEventsInWindowType -bool true
-  echo "Open events in window type - changed 🔥"
-else
-  echo "Open events in window type - already set! 👌"
-fi
-
 # Enable shared calendar notifications
 if ! defaults read com.apple.iCal SharedCalendarNotificationsDisabled | grep -i "0" &>/dev/null; then
   defaults write com.apple.iCal SharedCalendarNotificationsDisabled -bool false
@@ -151,14 +143,6 @@ else
   echo "Show battery icon - already set! 👌"
 fi
 
-# Show BentoBox icon
-if ! defaults read com.apple.controlcenter "NSStatusItem Visible BentoBox" | grep -i "1" &>/dev/null; then
-  defaults write com.apple.controlcenter "NSStatusItem Visible BentoBox" -bool true
-  echo "Show BentoBox icon - changed 🔥"
-else
-  echo "Show BentoBox icon - already set! 👌"
-fi
-
 # Show Bluetooth icon
 if ! defaults read com.apple.controlcenter "NSStatusItem Visible Bluetooth" | grep -i "1" &>/dev/null; then
   defaults write com.apple.controlcenter "NSStatusItem Visible Bluetooth" -bool true
@@ -173,14 +157,6 @@ if ! defaults read com.apple.controlcenter "NSStatusItem Visible Clock" | grep -
   echo "Show Clock icon - changed 🔥"
 else
   echo "Show Clock icon - already set! 👌"
-fi
-
-# Show Sound icon
-if ! defaults read com.apple.controlcenter "NSStatusItem Visible Sound" | grep -i "1" &>/dev/null; then
-  defaults write com.apple.controlcenter "NSStatusItem Visible Sound" -bool true
-  echo "Show Sound icon - changed 🔥"
-else
-  echo "Show Sound icon - already set! 👌"
 fi
 
 # Show WiFi icon
@@ -368,29 +344,13 @@ else
   echo "Bottom left screen corner → Nothing - already set! 👌"
 fi
 
-# Bottom right screen corner → Quick Note
-if ! defaults read com.apple.dock wvous-br-corner | grep -w "14" &>/dev/null; then
-  defaults write com.apple.dock wvous-br-corner -int 14
+# Bottom right screen corner → Nothing
+if ! defaults read com.apple.dock wvous-br-corner | grep -w "1" &>/dev/null; then
+  defaults write com.apple.dock wvous-br-corner -int 1
   defaults write com.apple.dock wvous-br-modifier -int 0
-  echo "Bottom right screen corner → Quick Note - changed 🔥"
+  echo "Bottom right screen corner → Nothing - changed 🔥"
 else
-  echo "Bottom right screen corner → Quick Note - already set! 👌"
-fi
-
-# Add iOS Simulator to Launchpad
-if ! ls /Applications | grep -i "simulator.app" &>/dev/null; then
-  sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
-  echo "Add iOS Simulator to Launchpad - changed 🔥"
-else
-  echo "Add iOS Simulator to Launchpad - already set! 👌"
-fi
-
-# Add Watch Simulator to Launchpad
-if ! ls /Applications | grep -i "simulator (watch).app" &>/dev/null; then
-  sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
-  echo "Add Watch Simulator to Launchpad - changed 🔥"
-else
-  echo "Add Watch Simulator to Launchpad - already set! 👌"
+  echo "Bottom right screen corner → Nothing - already set! 👌"
 fi
 
 ###############################################################################
@@ -400,14 +360,6 @@ fi
 echo -e "\n"
 echo "Setting up Energy saving settings..."
 echo "------------------------------------------------"
-
-# Enable lid wakeup
-sudo pmset -a lidwake 1
-echo "Enable lid wakeup - changed 🔥"
-
-# Restart automatically on power loss
-# sudo pmset -a autorestart 1
-# echo "Restart automatically on power loss - changed 🔥"
 
 # Sleep the display after 10 minutes
 sudo pmset -a displaysleep 10
@@ -420,20 +372,6 @@ echo "Disable machine sleep while charging - changed 🔥"
 # Set machine sleep to 5 minutes on battery
 sudo pmset -b sleep 5
 echo "Set machine sleep to 5 minutes on battery - changed 🔥"
-
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
-echo "Set standby delay to 24 hours - changed 🔥"
-
-# Never go into computer sleep mode
-# sudo systemsetup -setcomputersleep Off > /dev/null
-# echo "Never go into computer sleep mode - changed 🔥"
-
-# Hibernation mode
-# 0: Disable hibernation (speeds up entering sleep mode)
-# 3: Copy RAM to disk so the system state can still be restored in case of a power failure.
-sudo pmset -a hibernatemode 0
-echo "Hibernation mode Copy RAM to disk - changed 🔥"
 
 ###############################################################################
 # Finder                                                                      #
@@ -1069,14 +1007,6 @@ else
   echo "Enable automatic check - already set! 👌"
 fi
 
-# Check for software updates daily, not just once per week
-if ! defaults read com.apple.SoftwareUpdate ScheduleFrequency | grep -i "1" &>/dev/null; then
-  defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-  echo "Check for software updates daily - changed 🔥"
-else
-  echo "Check for software updates daily - already set! 👌"
-fi
-
 # Enable automatic download
 if ! defaults read com.apple.SoftwareUpdate AutomaticDownload | grep -i "1" &>/dev/null; then
   defaults write com.apple.SoftwareUpdate AutomaticDownload -bool true
@@ -1624,24 +1554,6 @@ if ls /Applications | grep -i arc &>/dev/null; then
     echo "Enable top bar url - changed 🔥"
   else
     echo "Enable top bar url - already set! 👌"
-  fi
-fi
-
-###############################################################################
-# Bruno                                                                       #
-###############################################################################
-
-if ls /Applications | grep -i bruno &>/dev/null; then
-  echo -e "\n"
-  echo "Setting up Bruno settings..."
-  echo "------------------------------------------------"
-
-  # Last Root Directory to bruno-api-docs
-  if ! defaults read com.usebruno.app NSNavLastRootDirectory | grep -i "~/Developer/bruno-api-docs" &>/dev/null; then
-    defaults write com.usebruno.app NSNavLastRootDirectory -string "~/Developer/bruno-api-docs"
-    echo "Last Root Directory to bruno-api-docs - changed 🔥"
-  else
-    echo "Last Root Directory to bruno-api-docs - already set! 👌"
   fi
 fi
 
