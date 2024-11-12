@@ -33,3 +33,6 @@ eval "$(fnm env --use-on-cd)"
 
 # STARSHIP
 eval "$(starship init zsh)"
+
+# ZOXIDE
+eval "$(zoxide init zsh)"

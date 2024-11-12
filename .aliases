@@ -1,7 +1,7 @@
 # GREP
-alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
-alias fgrep="fegrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
-alias egrep="egrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}"
+alias grep="rg --hidden --glob '!.git/' --glob '!node_modules/' --glob '!.bzr/' --glob '!CVS/' --glob '!.hg/' --glob '!.svn/' --glob '!.idea/' --glob '!.tox/'"
+alias fgrep="rg -F --hidden --glob '!.git/' --glob '!node_modules/' --glob '!.bzr/' --glob '!CVS/' --glob '!.hg/' --glob '!.svn/' --glob '!.idea/' --glob '!.tox/'"
+alias egrep="rg -e --hidden --glob '!.git/' --glob '!node_modules/' --glob '!.bzr/' --glob '!CVS/' --glob '!.hg/' --glob '!.svn/' --glob '!.idea/' --glob '!.tox/'"
 
 # GENERAL
 alias c="clear"
@@ -18,6 +18,7 @@ alias lsa="eza -lah"
 alias fsf='vim "$(fd . -t f --full-path "$HOME/" | fzf -i)"'
 alias fsd='cd "$(fd . -t d --full-path "$HOME/" | fzf -i)"'
 alias find-large-files='du -h . | grep "[0-9\,]\+G"'
+alias cd="z"
 
 # NPM
 alias pn="pnpm"

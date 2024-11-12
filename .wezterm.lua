@@ -40,7 +40,6 @@ end
 
 -- THEME
 local scheme = wezterm.color.get_builtin_schemes()[G.colorscheme]
-scheme.background = G.background or scheme.background
 
 for colorscheme, overrides in pairs({
   ["catppuccin-mocha"] = { background = "#11111b" },
@@ -73,7 +72,7 @@ config.window_padding = G.padding
 config.window_close_confirmation = "NeverPrompt"
 config.macos_window_background_blur = 30
 config.window_background_opacity = G.opacity
-config.window_decorations = "RESIZE | MACOS_FORCE_DISABLE_SHADOW"
+config.window_decorations = "RESIZE"
 config.adjust_window_size_when_changing_font_size = false
 config.initial_cols = 140
 config.initial_rows = 40
