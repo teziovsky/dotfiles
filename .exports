@@ -19,3 +19,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
 export PATH="${HOME}/.pyenv/shims:${PATH}"
+
