@@ -23,12 +23,12 @@ drm() {
 # GIT
 deep_check_branches() {
   find . -type d -name ".git" -execdir sh -c '
-        cd "{}" &&
-        repo=$(basename "$(dirname "$(pwd)")") &&
-        branch=$(git symbolic-ref --short HEAD 2>/dev/null) &&
-        [ "$branch" != "develop" ] &&
-        echo "Repo: $repo is actually on branch $branch"
-    ' \;
+      cd "{}" &&
+      repo=$(basename "$(dirname "$(pwd)")") &&
+      branch=$(git symbolic-ref --short HEAD 2>/dev/null) &&
+      [ "$branch" != "develop" ] &&
+      echo "Repo: $repo is actually on branch $branch"
+  ' \;
 }
 
 git_status_all() {
@@ -94,4 +94,23 @@ tcd() {
 vercelpullenvs() {
   vercel env pull --environment development .env.development.local
   vercel env pull --environment production .env.production.local
+}
+
+# POSTGRES
+pgdump() {
+  if [ "$#" -ne 2 ]; then
+    echo "Usage: pgdumpb <connection_string> <file_name>"
+    echo "Config: Configure function in .functions file"
+    return 1
+  fi
+  pg_dump "$1" --no-owner --no-privileges -F c -b -v -f "$2.dump"
+}
+
+pgrestore() {
+  if [ "$#" -ne 2 ]; then
+    echo "Usage: pgrestore <connection_string> <dump_file>"
+    echo "Config: Configure function in .functions file"
+    return 1
+  fi
+  pg_restore -d "$1" --no-owner --role={{role}} "$2.dump"
 }
