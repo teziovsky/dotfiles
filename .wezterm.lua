@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 local config = wezterm.config_builder()
+local mux = wezterm.mux
 
 local G = {
   opacity = 1,
@@ -20,10 +21,23 @@ local G = {
   },
 }
 
--- NOTIFICATION WHEN THE CONFIGURATION IS RELOADED
+if G.OLED then
+  G.background = "#000000"
+end
+
+-- Functions
 local function toast(window, message)
   window:toast_notification('wezterm', message .. ' - ' .. os.date('%I:%M:%S %p'), nil, 1000)
 end
+
+wezterm.on('window-config-reloaded', function(window, pane)
+  toast(window, 'Configuration reloaded!')
+end)
+
+wezterm.on("gui-startup", function()
+  local tab, pane, window = mux.spawn_window {}
+  window:gui_window():maximize()
+end)
 
 -- FONTS
 local font
@@ -33,10 +47,6 @@ font = wezterm.font_with_fallback({
 
 config.font_rules = { { intensity = "Bold", font = font }, { intensity = "Normal", font = font } }
 config.font_size = G.font.size
-
-if G.OLED then
-  G.background = "#000000"
-end
 
 -- THEME
 local scheme = wezterm.color.get_builtin_schemes()[G.colorscheme]
@@ -65,6 +75,7 @@ config.command_palette_fg_color = scheme.foreground
 
 -- WINDOW
 config.enable_tab_bar = true
+config.tab_max_width = 30
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = false
@@ -93,6 +104,13 @@ config.set_environment_variables = { PATH = "/opt/homebrew/bin:" .. os.getenv("P
 -- KEYBINDINGS
 config.keys = {
   {
+    key = "t",
+    mods = "CMD",
+    action = act.SpawnCommandInNewTab({
+      cwd = wezterm.home_dir
+    })
+  },
+  {
     key = "w",
     mods = "CMD",
     action = act.CloseCurrentPane({ confirm = true }),
@@ -118,6 +136,16 @@ config.keys = {
     action = act.ActivatePaneDirection("Right"),
   },
   {
+    key = "LeftArrow",
+    mods = "CMD|SHIFT",
+    action = act.ActivatePaneDirection("Left")
+  },
+  {
+    key = "RightArrow",
+    mods = "CMD|SHIFT",
+    action = act.ActivatePaneDirection("Right")
+  },
+  {
     key = "[",
     mods = "ALT",
     action = act.ActivatePaneDirection("Up"),
@@ -127,28 +155,46 @@ config.keys = {
     mods = "ALT",
     action = act.ActivatePaneDirection("Down"),
   },
-  -- activate pane selection mode with numeric labels
   {
-    key = "9",
-    mods = "CTRL",
-    action = act.PaneSelect({
-      alphabet = "1234567890",
-    }),
-  },
-  -- show the pane selection mode, but have it swap the active and selected panes
-  {
-    key = "0",
-    mods = "CTRL",
-    action = act.PaneSelect({
-      mode = "SwapWithActive",
-    }),
+    key = "LeftArrow",
+    mods = "ALT",
+    action = act.ActivateTabRelative(-1)
   },
   {
-    key = "\r",
-    mods = "CTRL",
-    action = act.TogglePaneZoomState,
+    key = "RightArrow",
+    mods = "ALT",
+    action = act.ActivateTabRelative(1)
   },
+  {
+    key = "v",
+    mods = "CMD",
+    action = act.PasteFrom("Clipboard")
+  },
+  {
+    key = "v",
+    mods = "CMD|SHIFT",
+    action = act.PasteFrom("Clipboard")
+  },
+  {
+    key = "c",
+    mods = "CMD",
+    action = act.CopyTo("ClipboardAndPrimarySelection")
+  },
+  {
+    key = "c",
+    mods = "CMD|SHIFT",
+    action = act.CopyTo("ClipboardAndPrimarySelection")
+  }
 }
+
+for i = 1, 9 do
+  -- CMD + number to activate that tab
+  table.insert(config.keys, {
+    key = tostring(i),
+    mods = 'CMD',
+    action = act.ActivateTab(i - 1)
+  })
+end
 
 -- HYPERLINKS
 config.hyperlink_rules = {
@@ -208,9 +254,5 @@ table.insert(config.hyperlink_rules, {
   regex = [[\b(?:[a-zA-Z0-9_-]+(?:/[a-zA-Z0-9_-]+)*)+\.html\b]],
   format = 'file://$0',
 })
-
-wezterm.on('window-config-reloaded', function(window, pane)
-  toast(window, 'Configuration reloaded!')
-end)
 
 return config

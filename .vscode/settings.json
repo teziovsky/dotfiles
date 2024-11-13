@@ -504,5 +504,8 @@
     {
       "file": ".copilot-instructions.md"
     }
-  ]
+  ],
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  }
 }

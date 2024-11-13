@@ -78,7 +78,7 @@ git_pull_dev() {
 
 # GREP
 findtext() {
-  grep -rnIil "$1" . --color
+  rg -H --no-heading --color=always -i --files-with-matches --hidden "$1"
 }
 
 # TMUX
