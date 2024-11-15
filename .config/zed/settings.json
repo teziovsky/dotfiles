@@ -7,6 +7,20 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "ssh_connections": [
+    {
+      "host": "srv27.mikr.us",
+      "username": "kuba",
+      "port": 10142,
+      "projects": [
+        {
+          "paths": [
+            "~/apps"
+          ]
+        }
+      ]
+    }
+  ],
   "always_treat_brackets_as_autoclosed": false,
   "assistant": {
     "enabled": true,

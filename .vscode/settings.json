@@ -507,5 +507,11 @@
   ],
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[nginx]": {
+    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
   }
 }

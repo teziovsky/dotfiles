@@ -7,7 +7,6 @@ cbn = "!f() { git checkout -b $*; } ; f"
 cbd = checkout develop
 cbm = checkout main
 c = commit
-cm = commit -m
 d = diff
 f = fetch
 go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"

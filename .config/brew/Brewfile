@@ -48,6 +48,7 @@ brew "oven-sh/bun/bun"
 brew "tursodatabase/tap/turso"
 cask "1password"
 cask "1password-cli"
+cask "alacritty"
 cask "arc"
 cask "audacity"
 cask "bluesnooze"
@@ -84,6 +85,7 @@ cask "webstorm"
 cask "wezterm"
 cask "zed"
 mas "1Password for Safari", id: 1569813296
+mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Brother iPrint&Scan", id: 1193539993
 mas "Hidden Bar", id: 1452453066
