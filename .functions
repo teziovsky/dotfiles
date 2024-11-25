@@ -1,9 +1,9 @@
-mc() {
+function mc() {
   cd "$(walk "$@")"
 }
 
 # HOMEBREW
-brew() {
+function brew() {
   command brew "$@"
 
   if [[ "$1" == "install" || "$1" == "uninstall" ]]; then
@@ -15,13 +15,13 @@ brew() {
 }
 
 # DOCKER
-drm() {
+function drm() {
   docker stop "$1"
   docker rm "$1"
 }
 
 # GIT
-deep_check_branches() {
+function deep_check_branches() {
   find . -type d -name ".git" -execdir sh -c '
       cd "{}" &&
       repo=$(basename "$(dirname "$(pwd)")") &&
@@ -31,21 +31,21 @@ deep_check_branches() {
   ' \;
 }
 
-git_status_all() {
+function git_status_all() {
   find ~/Developer -name '.git' | while read repo; do
     repo=${repo//\.git/}
     git -C "$repo" status -s | grep -q -v "^\$" && echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" status -s || true
   done
 }
 
-git_fetch_all() {
+function git_fetch_all() {
   find ~/Developer -name '.git' | while read repo; do
     repo=${repo//\.git/}
     echo -e "\n\033[1m${repo}\033[m" && git -C "$repo" fetch --all || true
   done
 }
 
-git_pull_dev() {
+function git_pull_dev() {
   local actual_branch=$(git symbolic-ref --short HEAD)
   local branches=("develop" "udev")
   local remote="origin"
@@ -77,12 +77,12 @@ git_pull_dev() {
 }
 
 # GREP
-findtext() {
+function findtext() {
   rg -H --no-heading --color=always -i --files-with-matches --hidden "$1"
 }
 
 # TMUX
-tcd() {
+function tcd() {
   if [ -d ${PWD}/$1 ]; then
     tmux new-window -c ${PWD}/$1
   else
@@ -91,13 +91,13 @@ tcd() {
 }
 
 # VERCEL
-vercelpullenvs() {
+function vercelpullenvs() {
   vercel env pull --environment development .env.development.local
   vercel env pull --environment production .env.production.local
 }
 
 # POSTGRES
-pgdump() {
+function pgdump() {
   if [ "$#" -ne 2 ]; then
     echo "Usage: pgdumpb <connection_string> <file_name>"
     echo "Config: Configure function in .functions file"
@@ -106,7 +106,7 @@ pgdump() {
   pg_dump "$1" --no-owner --no-privileges -F c -b -v -f "$2.dump"
 }
 
-pgrestore() {
+function pgrestore() {
   if [ "$#" -ne 2 ]; then
     echo "Usage: pgrestore <connection_string> <dump_file>"
     echo "Config: Configure function in .functions file"

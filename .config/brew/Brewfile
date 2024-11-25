@@ -30,6 +30,7 @@ brew "livekit"
 brew "mas"
 brew "mcfly"
 brew "php"
+brew "pkgconf"
 brew "pnpm"
 brew "postgresql@16"
 brew "pyenv"
@@ -38,6 +39,7 @@ brew "ripgrep"
 brew "ssh-copy-id"
 brew "sshs"
 brew "starship"
+brew "tmux"
 brew "tree"
 brew "walk"
 brew "wget"
@@ -48,15 +50,13 @@ brew "oven-sh/bun/bun"
 brew "tursodatabase/tap/turso"
 cask "1password"
 cask "1password-cli"
-cask "alacritty"
+cask "alt-tab"
 cask "arc"
 cask "audacity"
 cask "bluesnooze"
-cask "brave-browser"
 cask "cleanmymac"
 cask "cleanshot"
 cask "cloudflare-warp"
-cask "contexts"
 cask "cursor"
 cask "daisydisk"
 cask "dbngin"
@@ -82,16 +82,15 @@ cask "tableplus"
 cask "vlc"
 cask "warp"
 cask "webstorm"
-cask "wezterm"
 cask "zed"
 mas "1Password for Safari", id: 1569813296
-mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Brother iPrint&Scan", id: 1193539993
 mas "Hidden Bar", id: 1452453066
 mas "MindNode", id: 1289197285
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Raycast Companion", id: 6738274497
 mas "The Unarchiver", id: 425424353
 mas "Xcode", id: 497799835
 mas "Yoink", id: 457622435

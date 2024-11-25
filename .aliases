@@ -19,6 +19,7 @@ alias fsf='vim "$(fd . -t f --full-path "$HOME/" | fzf -i)"'
 alias fsd='cd "$(fd . -t d --full-path "$HOME/" | fzf -i)"'
 alias find-large-files='du -h . | grep "[0-9\,]\+G"'
 alias cd="z"
+alias code="cursor"
 
 # NPM
 alias pn="pnpm"
@@ -68,6 +69,7 @@ alias dkill='docker rm $(docker stop $(docker ps -aq))'
 alias recursive-docker-up="find . -type d -name develop -exec bash -c 'cd '{}' && ./docker_up.sh' \;"
 alias docker-watch-stats="watch -n 1 'docker stats --no-stream --format \"table {{.Name}}\t{{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}\" | sort -k 3 -h -r'"
 alias docker-logs-current='docker logs -f $(basename "$PWD")'
+alias lzd="lazydocker"
 
 # STRING FORMAT
 alias remove-spaces="find . -name '* *' -type d | rename 's/ /_/g'; find . -name '* *' -type f | rename 's/ /_/g'"

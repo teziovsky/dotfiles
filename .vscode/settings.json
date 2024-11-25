@@ -513,5 +513,6 @@
   },
   "[nginx]": {
     "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
-  }
+  },
+  "sherlock.userId": "ef2800e7-960b-4844-8c10-d780b95b8725"
 }

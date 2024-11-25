@@ -1,6 +1,4 @@
-[env]
-TERM = "xterm-256color"
-
+# COLORS
 [colors.normal]
 black = "#2E2E2E"
 blue = "#43AAF9"
@@ -15,137 +13,296 @@ yellow = "#FAC760"
 background = "#000000"
 foreground = "#DCE3EA"
 
-[font]
-size = 11
-bold = { family = "Monaspace Neon", style = "Bold" }
-bold_italic = { family = "Monaspace Neon", style = "Bold Italic" }
-italic = { family = "Monaspace Neon", style = "Italic" }
-normal = { family = "Monaspace Neon", style = "Regular" }
-offset = { x = 1, y = 1 }
 
+# CURSOR
 [cursor]
 blink_interval = 500
 blink_timeout = 0
-style = { shape = "Block", blinking = "Always" }
 
-[selection]
-save_to_clipboard = true
-semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+[cursor.style]
+blinking = "Never"
+shape = "Block"
 
+[env]
+TERM = "xterm-256color"
+
+
+# FONT
+[font]
+size = 10
+
+[font.bold]
+family = "Monaspace Neon"
+style = "Bold"
+
+[font.bold_italic]
+family = "Monaspace Neon"
+style = "Bold Italic"
+
+[font.italic]
+family = "Monaspace Neon"
+style = "Italic"
+
+[font.normal]
+family = "Monaspace Neon"
+style = "Regular"
+
+[font.offset]
+x = 1
+y = 1
+
+
+# KEYBOARD BINDINGS
+[[keyboard.bindings]]
+key = "T"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["new-window"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["kill-window"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "D"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["split-window", "-h"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "D"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["split-window", "-v"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "["
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-pane", "-L"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "]"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["select-pane", "-R"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["select-pane", "-L"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Command|Shift"
+
+[keyboard.bindings.command]
+args = ["select-pane", "-R"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "["
+mods = "Alt"
+
+[keyboard.bindings.command]
+args = ["select-pane", "-U"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "]"
+mods = "Alt"
+
+[keyboard.bindings.command]
+args = ["select-pane", "-D"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+
+[keyboard.bindings.command]
+args = ["select-window", "-p"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+
+[keyboard.bindings.command]
+args = ["select-window", "-n"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+action = "SearchForward"
+key = "F"
+mode = "~Search"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "SearchBackward"
+key = "B"
+mode = "~Search"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mode = "AppCursor"
+mods = "Command"
+
+[[keyboard.bindings]]
+key = "Key1"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["selectw", "-t", "1"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key2"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["selectw", "-t", "2"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key3"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["selectw", "-t", "3"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key4"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["selectw", "-t", "4"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key5"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["selectw", "-t", "5"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key6"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["selectw", "-t", "6"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key7"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["selectw", "-t", "7"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key8"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["selectw", "-t", "8"]
+program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+key = "Key9"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["selectw", "-t", "9"]
+program = "/usr/local/bin/tmux"
+
+
+# SCROLLING
 [scrolling]
 history = 5000
 
-[shell]
-args = ["-l", "-c", "tmux attach || tmux"]
-program = "/usr/local/bin/zsh"
 
+# SELECTION
+[selection]
+save_to_clipboard = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+
+# TERMINAL
+[terminal.shell]
+args = ["-l", "-c", "tmux attach || tmux"]
+program = "/usr/local/bin/tmux"
+
+
+# WINDOW
 [window]
-padding = { x = 12, y = 12 }
-class = { general = "Alacritty", instance = "Alacritty" }
+dynamic_title = false
 decorations = "buttonless"
 startup_mode = "Maximized"
 title = "Alacritty"
 
-[keyboard]
-bindings = [
-  { key = "V", mods = "Command", action = "Paste" },
-  { key = "C", mods = "Command", action = "Copy" },
-  { key = "F", mods = "Command", action = "SearchForward", mode = "~Search" },
-  { key = "B", mods = "Command", action = "SearchBackward", mode = "~Search" },
-  { key = "Key0", mods = "Command", action = "ResetFontSize" },
-  { key = "Equals", mods = "Command", action = "IncreaseFontSize" },
-  { key = "Minus", mods = "Command", action = "DecreaseFontSize" },
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
 
-  { key = "Left", mods = "Option", chars = "\u001bb" },
-  { key = "Right", mods = "Option", chars = "\u001bf" },
-  { key = "Left", mods = "Command", chars = "\u001bOH", mode = "AppCursor" },
-  { key = "Right", mods = "Command", chars = "\u001bOF", mode = "AppCursor" },
-  { key = "Back", mods = "Command", chars = "\u0015", mode = "AppCursor" },
-  { key = "Back", mods = "Option", chars = "\u001b\u007f", mode = "AppCursor" },
-
-  { key = "D", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "split-window",
-    "-h",
-  ] } },
-  { key = "D", mods = "Command|Shift", command = { program = "/usr/local/bin/tmux", args = [
-    "split-window",
-    "-v",
-  ] } },
-
-  { key = "T", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "new-window",
-  ] } },
-  { key = "W", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "kill-window",
-  ] } },
-
-  { key = "Key1", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "selectw",
-    "-t",
-    "1",
-  ] } },
-  { key = "Key2", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "selectw",
-    "-t",
-    "2",
-  ] } },
-  { key = "Key3", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "selectw",
-    "-t",
-    "3",
-  ] } },
-  { key = "Key4", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "selectw",
-    "-t",
-    "4",
-  ] } },
-  { key = "Key5", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "selectw",
-    "-t",
-    "5",
-  ] } },
-  { key = "Key6", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "selectw",
-    "-t",
-    "6",
-  ] } },
-  { key = "Key7", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "selectw",
-    "-t",
-    "7",
-  ] } },
-  { key = "Key8", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "selectw",
-    "-t",
-    "8",
-  ] } },
-  { key = "Key9", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "selectw",
-    "-t",
-    "9",
-  ] } },
-
-  { key = "[", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "previous-window",
-  ] } },
-  { key = "]", mods = "Command", command = { program = "/usr/local/bin/tmux", args = [
-    "next-window",
-  ] } },
-
-  { key = "Left", mods = "Command|Shift", command = { program = "/usr/local/bin/tmux", args = [
-    "select-pane",
-    "-L",
-  ] } },
-  { key = "Right", mods = "Command|Shift", command = { program = "/usr/local/bin/tmux", args = [
-    "select-pane",
-    "-R",
-  ] } },
-  { key = "Up", mods = "Command|Shift", command = { program = "/usr/local/bin/tmux", args = [
-    "select-pane",
-    "-U",
-  ] } },
-  { key = "Down", mods = "Command|Shift", command = { program = "/usr/local/bin/tmux", args = [
-    "select-pane",
-    "-D",
-  ] } },
-]
+[window.padding]
+x = 12
+y = 12
