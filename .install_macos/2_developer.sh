@@ -25,9 +25,9 @@ done 2>/dev/null &
 ###############################################################################
 
 echo -e "\n\n"
-echo "##################################################"
+echo "######################################################"
 echo -e "\nHello $(whoami)! Let's set up your developer directory! 🔥\n"
-echo "##################################################"
+echo "######################################################"
 
 echo -e "\n"
 echo "Creating developer path..."
@@ -52,66 +52,12 @@ else
 fi
 
 echo -e "\n"
-echo "Cloning apps repos..."
-echo "------------------------------------------------"
-
-appsRepos=()
-for appsRepo in "${appsRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/personal/apps/$appsRepo" ]; then
-    git clone -q git@github.com:teziovsky/$appsRepo.git "$HOME/Developer/personal/apps/$appsRepo"
-    echo "$appsRepo repo - cloned 🔥"
-  else
-    echo "$appsRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Cloning cli repos..."
-echo "------------------------------------------------"
-
-cliRepos=(
-  "md-generate"
-)
-for cliRepo in "${cliRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/personal/cli/$cliRepo" ]; then
-    git clone -q git@github.com:teziovsky/$cliRepo.git "$HOME/Developer/personal/cli/$cliRepo"
-    echo "$cliRepo repo - cloned 🔥"
-  else
-    echo "$cliRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Cloning contributions repos..."
-echo "------------------------------------------------"
-
-contributionsRepos=(
-  "snippet-explorer"
-)
-for contributionsRepo in "${contributionsRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/personal/contributions/$contributionsRepo" ]; then
-    git clone -q git@github.com:teziovsky/$contributionsRepo.git "$HOME/Developer/personal/contributions/$contributionsRepo"
-    echo "$contributionsRepo repo - cloned 🔥"
-  else
-    echo "$contributionsRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
 echo "Cloning raycast contributions repos..."
 echo "------------------------------------------------"
 
 raycastContributionsRepos=(
-  "raycast-css-calculations"
-  "raycast-height"
-  "raycast-infakt"
-  "raycast-meta-music"
   "raycast-multi-translate"
-  "raycast-price-scrapper"
-  "raycast-raydocs"
   "raycast-scripts"
-  "raycast-teziovsky-airtable"
-  "raycast-teziovsky-linear"
 )
 for raycastContributionsRepo in "${raycastContributionsRepos[@]}"; do
   if [ ! -d "$HOME/Developer/personal/contributions/raycast/$raycastContributionsRepo" ]; then
@@ -119,53 +65,6 @@ for raycastContributionsRepo in "${raycastContributionsRepos[@]}"; do
     echo "$raycastContributionsRepo repo - cloned 🔥"
   else
     echo "$raycastContributionsRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Cloning zed contributions repos..."
-echo "------------------------------------------------"
-
-zedContributionsRepos=(
-  "zed-editor"
-  "zed-extensions"
-)
-for zedContributionsRepo in "${zedContributionsRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/personal/contributions/zed/$zedContributionsRepo" ]; then
-    git clone -q git@github.com:teziovsky/$zedContributionsRepo.git "$HOME/Developer/personal/contributions/zed/$zedContributionsRepo"
-    echo "$zedContributionsRepo repo - cloned 🔥"
-  else
-    echo "$zedContributionsRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Cloning zed contributions themes repos..."
-echo "------------------------------------------------"
-
-zedContributionsThemesRepos=(
-  "zed-one-hunter-theme"
-)
-for zedContributionsThemeRepo in "${zedContributionsThemesRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/personal/contributions/zed/themes/$zedContributionsThemeRepo" ]; then
-    git clone -q git@github.com:teziovsky/$zedContributionsThemeRepo.git "$HOME/Developer/personal/contributions/zed/themes/$zedContributionsThemeRepo"
-    echo "$zedContributionsThemeRepo repo - cloned 🔥"
-  else
-    echo "$zedContributionsThemeRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
-echo "Cloning courses repos..."
-echo "------------------------------------------------"
-
-coursesRepos=()
-for coursesRepo in "${coursesRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/personal/courses/$coursesRepo" ]; then
-    git clone -q git@github.com:teziovsky/$coursesRepo.git "$HOME/Developer/personal/courses/$coursesRepo"
-    echo "$coursesRepo repo - cloned 🔥"
-  else
-    echo "$coursesRepo repo - already exists 👌"
   fi
 done
 
@@ -186,27 +85,10 @@ for linuxMacosRepo in "${linuxMacosRepos[@]}"; do
 done
 
 echo -e "\n"
-echo "Cloning scripts repos..."
-echo "------------------------------------------------"
-
-scriptsRepos=(
-  "price-scrapper"
-)
-for scriptsRepo in "${scriptsRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/personal/scripts/$scriptsRepo" ]; then
-    git clone -q git@github.com:teziovsky/$scriptsRepo.git "$HOME/Developer/personal/scripts/$scriptsRepo"
-    echo "$scriptsRepo repo - cloned 🔥"
-  else
-    echo "$scriptsRepo repo - already exists 👌"
-  fi
-done
-
-echo -e "\n"
 echo "Cloning sites repos..."
 echo "------------------------------------------------"
 
 sitesRepos=(
-  "ajwedding"
   "foodbase"
   "idcom-svg-walkthrough"
   "jakubsoboczynski"
@@ -222,46 +104,46 @@ for sitesRepo in "${sitesRepos[@]}"; do
   fi
 done
 
-echo -e "\n"
-echo "Cloning sites - petnal repos..."
-echo "------------------------------------------------"
+if [ -d "/Applications/Visual Studio Code.app" ]; then
+  echo -e "\n"
+  echo "Creating symlinks for vscode settings..."
+  echo "------------------------------------------------"
 
-petnalSitesRepos=(
-  "petnal-native"
-  "petnal-web"
-)
-for petnalSitesRepo in "${petnalSitesRepos[@]}"; do
-  if [ ! -d "$HOME/Developer/personal/sites/petnal/$petnalSitesRepo" ]; then
-    git clone -q git@github.com:teziovsky/$petnalSitesRepo.git "$HOME/Developer/personal/sites/petnal/$petnalSitesRepo"
-    echo "$petnalSitesRepo repo - cloned 🔥"
-  else
-    echo "$petnalSitesRepo repo - already exists 👌"
-  fi
-done
+  vscodeFiles=(
+    "keybindings.json"
+    "settings.json"
+    "projects.json"
+    "spellright.dict"
+    "snippets"
+  )
 
-echo -e "\n"
-echo "Creating symlinks for vscode settings..."
-echo "------------------------------------------------"
+  for fileName in "${vscodeFiles[@]}"; do
+    if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i "$fileName" &>/dev/null; then
+      rm -rf ~/Library/Application\ Support/Code/User/$fileName
+      ln -s ~/.vscode/$fileName ~/Library/Application\ Support/Code/User/$fileName
+      echo "Code $fileName - symlinked 🔥"
+    else
+      rm -rf ~/Library/Application\ Support/Code/User/$fileName
+      ln -s ~/.vscode/$fileName ~/Library/Application\ Support/Code/User/$fileName
+      echo "Code $fileName - updated 👌"
+    fi
+  done
+fi
 
-vscodeFiles=(
-  "keybindings.json"
-  "settings.json"
-  "projects.json"
-  "spellright.dict"
-  "snippets"
-)
+if [ -d "/Applications/Cursor.app" ]; then
+  echo -e "\n"
+  echo "Creating symlinks for cursor settings..."
+  echo "------------------------------------------------"
 
-for fileName in "${vscodeFiles[@]}"; do
-  if ! ls -laH ~/Library/Application\ Support/Code/User | grep -i "^l" | grep -i "$fileName" &>/dev/null; then
-    rm -rf ~/Library/Application\ Support/Code/User/$fileName
-    ln -s ~/.vscode/$fileName ~/Library/Application\ Support/Code/User/$fileName
-    echo "Code $fileName - symlinked 🔥"
-  else
-    rm -rf ~/Library/Application\ Support/Code/User/$fileName
-    ln -s ~/.vscode/$fileName ~/Library/Application\ Support/Code/User/$fileName
-    echo "Code $fileName - updated 👌"
-  fi
+  cursorFiles=(
+    "keybindings.json"
+    "settings.json"
+    "projects.json"
+    "spellright.dict"
+    "snippets"
+  )
 
+  for fileName in "${cursorFiles[@]}"; do
   if ! ls -laH ~/Library/Application\ Support/Cursor/User | grep -i "^l" | grep -i "$fileName" &>/dev/null; then
     rm -rf ~/Library/Application\ Support/Cursor/User/$fileName
     ln -s ~/.vscode/$fileName ~/Library/Application\ Support/Cursor/User/$fileName
@@ -271,4 +153,5 @@ for fileName in "${vscodeFiles[@]}"; do
     ln -s ~/.vscode/$fileName ~/Library/Application\ Support/Cursor/User/$fileName
     echo "Cursor $fileName - updated 👌"
   fi
-done
+  done
+fi

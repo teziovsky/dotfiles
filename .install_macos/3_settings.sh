@@ -45,9 +45,9 @@ else
   echo "Show the main window when launching Activity Monitor - already set! 👌"
 fi
 
-# Show all processes in Activity Monitor
-if ! defaults read com.apple.ActivityMonitor ShowCategory | grep -i "100" &>/dev/null; then
-  defaults write com.apple.ActivityMonitor ShowCategory -int 100
+# Show my processes in Activity Monitor
+if ! defaults read com.apple.ActivityMonitor ShowCategory | grep -i "102" &>/dev/null; then
+  defaults write com.apple.ActivityMonitor ShowCategory -int 102
   echo "Show all processes in Activity Monitor - changed 🔥"
 else
   echo "Show all processes in Activity Monitor - already set! 👌"
@@ -886,14 +886,6 @@ else
   echo "Enable crossfade - already set! 👌"
 fi
 
-# Hide apple music
-if ! defaults read com.apple.Music showAppleMusic | grep -i "0" &>/dev/null; then
-  defaults write com.apple.Music showAppleMusic -bool false
-  echo "Hide apple music - changed 🔥"
-else
-  echo "Hide apple music - already set! 👌"
-fi
-
 ###############################################################################
 # Photos                                                                      #
 ###############################################################################
@@ -933,15 +925,6 @@ fi
 echo -e "\n"
 echo "Setting up Screen settings..."
 echo "------------------------------------------------"
-
-# Require password immediately after sleep or screen saver begins
-if ! defaults read com.apple.screensaver askForPassword | grep -i "1" &>/dev/null || ! defaults read com.apple.screensaver askForPasswordDelay | grep -i "0" &>/dev/null; then
-  defaults write com.apple.screensaver askForPassword -int 1
-  defaults write com.apple.screensaver askForPasswordDelay -int 0
-  echo "Require password immediately after sleep or screen saver begins - changed 🔥"
-else
-  echo "Require password immediately after sleep or screen saver begins - already set! 👌"
-fi
 
 # Enable HiDPI display modes (requires restart)
 if ! defaults read /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled | grep -i "1" &>/dev/null; then
@@ -1098,14 +1081,6 @@ sudo mdutil -E / >/dev/null
 echo -e "\n"
 echo "Setting up Terminal settings..."
 echo "------------------------------------------------"
-
-# Enable Secure Keyboard Entry
-if ! defaults read com.apple.terminal SecureKeyboardEntry | grep -i "1" &>/dev/null; then
-  defaults write com.apple.terminal SecureKeyboardEntry -bool true
-  echo "Enable Secure Keyboard Entry - changed 🔥"
-else
-  echo "Enable Secure Keyboard Entry - already set! 👌"
-fi
 
 # Only use UTF-8 in Terminal.app
 if ! defaults read com.apple.terminal StringEncodings | grep -i "4" &>/dev/null; then
@@ -1554,118 +1529,6 @@ if ls /Applications | grep -i arc &>/dev/null; then
     echo "Enable top bar url - changed 🔥"
   else
     echo "Enable top bar url - already set! 👌"
-  fi
-fi
-
-###############################################################################
-# Clean My Mac                                                                #
-###############################################################################
-
-if ls /Applications | grep -i "cleanmymac" &>/dev/null; then
-  echo -e "\n"
-  echo "Setting up Clean My Mac settings..."
-  echo "------------------------------------------------"
-
-  # Set isFirstScanClean to 0
-  if ! defaults read com.macpaw.CleanMyMac4 isFirstScanClean | grep -i "0" &>/dev/null; then
-    defaults write com.macpaw.CleanMyMac4 isFirstScanClean -bool false
-    echo "Set isFirstScanClean to 0 - changed 🔥"
-  else
-    echo "Set isFirstScanClean to 0 - already set! 👌"
-  fi
-
-  # Set UpdaterIntroScreenSeen to 1
-  if ! defaults read com.macpaw.CleanMyMac4 UpdaterIntroScreenSeen | grep -i "1" &>/dev/null; then
-    defaults write com.macpaw.CleanMyMac4 UpdaterIntroScreenSeen -bool true
-    echo "Set UpdaterIntroScreenSeen to 1 - changed 🔥"
-  else
-    echo "Set UpdaterIntroScreenSeen to 1 - already set! 👌"
-  fi
-
-  # Set UninstallerIntroScreenSeen to 1
-  if ! defaults read com.macpaw.CleanMyMac4 UninstallerIntroScreenSeen | grep -i "1" &>/dev/null; then
-    defaults write com.macpaw.CleanMyMac4 UninstallerIntroScreenSeen -bool true
-    echo "Set UninstallerIntroScreenSeen to 1 - changed 🔥"
-  else
-    echo "Set UninstallerIntroScreenSeen to 1 - already set! 👌"
-  fi
-
-  # Set TermsOfServiceUpdateShown to 1
-  if ! defaults read com.macpaw.CleanMyMac4 TermsOfServiceUpdateShown | grep -i "1" &>/dev/null; then
-    defaults write com.macpaw.CleanMyMac4 TermsOfServiceUpdateShown -bool true
-    echo "Set TermsOfServiceUpdateShown to 1 - changed 🔥"
-  else
-    echo "Set TermsOfServiceUpdateShown to 1 - already set! 👌"
-  fi
-
-  # Set ShowReleaseNotes to 0
-  if ! defaults read com.macpaw.CleanMyMac4 ShowReleaseNotes | grep -i "0" &>/dev/null; then
-    defaults write com.macpaw.CleanMyMac4 ShowReleaseNotes -bool false
-    echo "Set ShowReleaseNotes to 0 - changed 🔥"
-  else
-    echo "Set ShowReleaseNotes to 0 - already set! 👌"
-  fi
-
-  # Set SeenIntroVideo to 1
-  if ! defaults read com.macpaw.CleanMyMac4 SeenIntroVideo | grep -i "1" &>/dev/null; then
-    defaults write com.macpaw.CleanMyMac4 SeenIntroVideo -bool true
-    echo "Set SeenIntroVideo to 1 - changed 🔥"
-  else
-    echo "Set SeenIntroVideo to 1 - already set! 👌"
-  fi
-
-  # Set MaintenanceIntroScreenSeen to 1
-  if ! defaults read com.macpaw.CleanMyMac4 MaintenanceIntroScreenSeen | grep -i "1" &>/dev/null; then
-    defaults write com.macpaw.CleanMyMac4 MaintenanceIntroScreenSeen -bool true
-    echo "Set MaintenanceIntroScreenSeen to 1 - changed 🔥"
-  else
-    echo "Set MaintenanceIntroScreenSeen to 1 - already set! 👌"
-  fi
-fi
-
-###############################################################################
-# Google Chrome                                                               #
-###############################################################################
-
-if ls /Applications | grep -i "google chrome" &>/dev/null; then
-  echo -e "\n"
-  echo "Setting up Google Chrome settings..."
-  echo "------------------------------------------------"
-
-  # Enable mouse swipe nawigate with scrolls
-  if ! defaults read com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls | grep -i "1" &>/dev/null || ! defaults read com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls | grep -i "1" &>/dev/null; then
-    defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool true
-    defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool true
-    echo "Enable mouse swipe nawigate with scrolls - changed 🔥"
-  else
-    echo "Enable mouse swipe nawigate with scrolls - already set! 👌"
-  fi
-
-  # Enable swipe nawigate with scrolls
-  if ! defaults read com.google.Chrome AppleEnableSwipeNavigateWithScrolls | grep -i "1" &>/dev/null || ! defaults read com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls | grep -i "1" &>/dev/null; then
-    defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool true
-    defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool true
-    echo "Enable mouse swipe nawigate with scrolls - changed 🔥"
-  else
-    echo "Enable mouse swipe nawigate with scrolls - already set! 👌"
-  fi
-
-  # Disable print preview
-  if ! defaults read com.google.Chrome DisablePrintPreview | grep -i "1" &>/dev/null || ! defaults read com.google.Chrome.canary DisablePrintPreview | grep -i "1" &>/dev/null; then
-    defaults write com.google.Chrome DisablePrintPreview -bool true
-    defaults write com.google.Chrome.canary DisablePrintPreview -bool true
-    echo "Disable print preview - changed 🔥"
-  else
-    echo "Disable print preview - already set! 👌"
-  fi
-
-  # Expand print dialog by default
-  if ! defaults read com.google.Chrome PMPrintingExpandedStateForPrint2 | grep -i "1" &>/dev/null || ! defaults read com.google.Chrome.canary PMPrintingExpandedStateForPrint2 | grep -i "1" &>/dev/null; then
-    defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
-    defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
-    echo "Expand print dialog by default - changed 🔥"
-  else
-    echo "Expand print dialog by default - already set! 👌"
   fi
 fi
 
